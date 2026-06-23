@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Star, Shield, Clock } from "lucide-react";
-import { siteConfig } from "@/lib/catalog";
+import { siteConfig, getWhatsAppUrl } from "@/lib/catalog";
 import { useDictionary } from "@/lib/i18n/locale-context";
 import { ArabicCalligraphy } from "@/components/ArabicCalligraphy";
 
@@ -87,7 +87,7 @@ export function Hero() {
                 {t.ctaCircuits}
               </Link>
               <a
-                href={`https://wa.me/${siteConfig.whatsapp}`}
+                href={getWhatsAppUrl(dict.common.whatsappMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-sm bg-[#25D366] px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-[#20bd5a]"

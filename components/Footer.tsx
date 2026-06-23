@@ -11,7 +11,7 @@ import {
   CreditCard,
   Award,
 } from "lucide-react";
-import { siteConfig, navLinkIds } from "@/lib/catalog";
+import { siteConfig, getWhatsAppUrl, navLinkIds } from "@/lib/catalog";
 import { useDictionary } from "@/lib/i18n/locale-context";
 import { ArabicCalligraphy } from "@/components/ArabicCalligraphy";
 import { Logo } from "@/components/Logo";
@@ -43,7 +43,7 @@ export function Footer() {
             <p className="text-sand-200/80">{t.ctaDescription}</p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
-                href={`https://wa.me/${siteConfig.whatsapp}`}
+                href={getWhatsAppUrl(dict.common.whatsappMessage)}
                 className="border-2 border-gold bg-gold px-8 py-4 font-semibold text-burgundy-dark transition hover:bg-gold-light"
               >
                 {t.customTrip}
@@ -79,13 +79,6 @@ export function Footer() {
                 >
                   <Phone className="h-4 w-4 shrink-0 text-gold-light" />
                   {siteConfig.phone}
-                </a>
-                <a
-                  href={`tel:${siteConfig.phoneAlt.replace(/\s/g, "")}`}
-                  className="flex items-center gap-2 hover:text-gold-light"
-                >
-                  <Phone className="h-4 w-4 shrink-0 text-gold-light" />
-                  {siteConfig.phoneAlt}
                 </a>
                 <a
                   href={`mailto:${siteConfig.email}`}

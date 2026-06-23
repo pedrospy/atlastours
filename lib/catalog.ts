@@ -1,14 +1,20 @@
 export const siteConfig = {
   name: "Sahara Star Tour",
-  phone: "+212 623-032286",
-  phoneAlt: "+212 661-948113",
-  whatsapp: "212623032286",
+  whatsappName: "Sahara Travel",
+  phone: "+212634411760",
+  whatsapp: "212634411760",
   email: "contact@saharatravel.com",
   googleRating: 4.9,
   reviewCount: 36,
   travelers: 300,
   responseTime: "2h",
 };
+
+export function getWhatsAppUrl(message?: string) {
+  const base = `https://wa.me/${siteConfig.whatsapp}`;
+  if (!message) return base;
+  return `${base}?text=${encodeURIComponent(message)}`;
+}
 
 export const circuitsCatalog = [
   {

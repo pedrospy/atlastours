@@ -1,9 +1,8 @@
 export const siteConfig = {
   name: "Sahara Star Tour",
   tagline: "Aventures premium au Maroc",
-  phone: "+212 623-032286",
-  phoneAlt: "+212 661-948113",
-  whatsapp: "212623032286",
+  phone: "+212634411760",
+  whatsapp: "212634411760",
   email: "contact@saharatravel.com",
   address: "Marrakech, Maroc",
   googleRating: 4.9,

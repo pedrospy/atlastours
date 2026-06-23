@@ -32,6 +32,7 @@ export type Dictionary = {
     discover: string;
     whatsapp: string;
     whatsappAria: string;
+    whatsappMessage: string;
     excursionsCount: string;
     close: string;
   };
