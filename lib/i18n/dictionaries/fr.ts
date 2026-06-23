@@ -1,0 +1,271 @@
+import type { Dictionary } from "../types";
+
+export const fr: Dictionary = {
+  locale: "fr",
+  meta: {
+    title: "Aventures premium au Maroc | Sahara Star Tour",
+    description:
+      "Bivouacs confidentiels, treks berbères, vallées oubliées. Vos aventures sur mesure conçues par des guides locaux qui connaissent le vrai Maroc.",
+    keywords: [
+      "Maroc",
+      "voyage sur mesure",
+      "Sahara",
+      "Marrakech",
+      "excursions",
+      "circuits Maroc",
+    ],
+    ogTitle: "Sahara Star Tour — Le Maroc hors des sentiers battus",
+    ogDescription:
+      "Aventures premium au Maroc avec guides berbères locaux.",
+  },
+  site: {
+    tagline: "Aventures premium au Maroc",
+    address: "Marrakech, Maroc",
+  },
+  nav: {
+    destinations: { label: "Destinations", href: "#destinations" },
+    excursions: { label: "Excursions", href: "#excursions" },
+    circuits: { label: "Circuits", href: "#circuits" },
+    activities: { label: "Activités", href: "#activites" },
+    transfers: { label: "Transferts", href: "#contact" },
+    discover: { label: "Découvrir", href: "#pourquoi" },
+  },
+  common: {
+    contact: "Contact",
+    contactUs: "Contactez-nous",
+    login: "Connexion",
+    from: "Dès",
+    perPerson: "/pers.",
+    menu: "Menu",
+    discover: "Découvrir",
+    whatsapp: "WhatsApp",
+    whatsappAria: "Contacter via WhatsApp",
+    excursionsCount: "excursions",
+    close: "Fermer",
+  },
+  hero: {
+    imageAlt: "Dunes du Sahara au coucher du soleil",
+    badge: "Voyages authentiques au Maroc",
+    title: "Le Maroc traditionnel,",
+    titleHighlight: "l'âme du désert",
+    description:
+      "Bivouacs berbères, médinas ancestrales, routes du Sahara. Des voyages sur mesure guidés par des familles locales qui perpétuent l'hospitalité marocaine.",
+    googleRating: "/5 sur Google",
+    travelers: "voyageurs satisfaits",
+    responseTime: "Réponse en",
+    ctaCircuits: "Découvrir nos circuits",
+    scrollHint: "Découvrir",
+  },
+  trustBar: {
+    securePayment: "Paiement sécurisé",
+    rated: "Noté 4.9/5",
+    confirmation: "Confirmation sous 2 heures",
+    documents: "Documents sous 24 h",
+  },
+  circuits: {
+    eyebrow: "Circuits multi-jours",
+    title: "Nos circuits sur mesure",
+    description:
+      "Du court séjour 3 jours au grand tour 17 jours. Sur mesure, petits groupes, guide francophone berbère.",
+    viewAll: "Tous nos circuits",
+    items: {
+      "circuit-11-jours": {
+        title: "Circuit 11 jours Marrakech, Sahara & Atlas",
+        badge: "Best-seller",
+        duration: "11 jours",
+        description:
+          "Le grand classique : médina de Marrakech, désert de Merzouga (2 nuits bivouac), Aït Benhaddou, Atlas, vallée du Drâa, retour côté Imlil.",
+      },
+      "grand-tour-17": {
+        title: "Grand Tour Maroc 17 jours",
+        badge: "Tour complet",
+        duration: "17 jours",
+        description:
+          "Tour complet du Maroc : Casablanca, Rabat, Fès, Meknès, désert, Atlas, Essaouira. Pour explorer toutes les facettes du pays.",
+      },
+      "merzouga-3j": {
+        title: "Désert Merzouga Erg Chebbi",
+        badge: "Court séjour",
+        duration: "3 jours",
+        description:
+          "Trois jours pour vivre le Sahara : route via Ouarzazate, dromadaire, nuit en camp de luxe sur les dunes, lever de soleil inoubliable.",
+      },
+      "megdaz-3j": {
+        title: "Vallée de Megdaz",
+        badge: "Authentique",
+        duration: "3 jours",
+        description:
+          "L'Atlas authentique : trek dans un village berbère préservé, nuit chez l'habitant, marche dans les terrasses agricoles.",
+      },
+    },
+  },
+  excursions: {
+    eyebrow: "Excursions à la journée",
+    title: "Excursions phares depuis Marrakech",
+    description:
+      "Une journée, un guide local, votre véhicule privé. Retour le soir à votre riad.",
+    viewAll: "Toutes les excursions",
+    items: {
+      ouzoud: {
+        title: "Cascades d'Ouzoud",
+        badge: "Best-seller",
+        description:
+          "Les plus grandes cascades du Maroc (110m), singes magots en liberté, déjeuner face aux chutes.",
+      },
+      essaouira: {
+        title: "Essaouira — Médina UNESCO",
+        badge: "Populaire",
+        description:
+          "Médina UNESCO, port de pêche, fruits de mer, ambiance bohème au bord de l'Atlantique.",
+      },
+      "ait-benhaddou": {
+        title: "Aït Benhaddou & Ouarzazate",
+        badge: "Incontournable",
+        description:
+          "Kasbah UNESCO d'Aït Benhaddou, studios Atlas, vues sur l'Atlas.",
+      },
+      ourika: {
+        title: "Vallée de l'Ourika",
+        badge: "Nature",
+        description:
+          "Villages berbères, cascade Setti Fatma, marché authentique au cœur du Haut Atlas.",
+      },
+    },
+  },
+  activities: {
+    eyebrow: "Ce que vous allez vivre",
+    title: "Activités traditionnelles",
+    description:
+      "Des expériences authentiques sélectionnées par notre équipe berbère",
+    viewAll: "Voir toutes les activités",
+    items: {
+      camel: "Balade à dos de dromadaire",
+      tent: "Bivouac de luxe dans le désert",
+      balloon: "Vol en montgolfière au-dessus de Marrakech",
+      chef: "Cours de cuisine marocaine",
+      sunset: "Dîner & coucher de soleil dans le désert",
+      spa: "Hammam & spa traditionnel marocain",
+      hiking: "Randonnée & nature dans l'Atlas",
+      quad: "Quad & Buggy dans le désert",
+    },
+  },
+  whyUs: {
+    eyebrow: "Pourquoi nous",
+    title: "Le Maroc authentique, par ceux qui le vivent",
+    description:
+      "Pas une agence étrangère qui sous-traite. Une équipe berbère qui conçoit chaque voyage avec l'hospitalité et la tradition du vrai Maroc.",
+    cta: "Créer mon voyage sur mesure",
+    features: {
+      guides: {
+        title: "Guides berbères locaux",
+        description:
+          "Nés et grandis dans l'Atlas, le Sahara, les vallées. Ils connaissent les villages, les passes, les familles.",
+      },
+      custom: {
+        title: "Aventures sur mesure",
+        description:
+          "Bivouac privatisé, trek hors GPS, route off-road. On dessine votre itinéraire selon votre tempo.",
+      },
+      support: {
+        title: "Un humain joignable 24/7",
+        description:
+          "WhatsApp direct avec votre conseiller pendant tout le séjour. Pas un chatbot, pas un standard.",
+      },
+      tested: {
+        title: "Tout testé sur le terrain",
+        description:
+          "Aucun hôtel, bivouac ou chauffeur que nous n'ayons personnellement testé. Zéro mauvaise surprise.",
+      },
+    },
+    stats: {
+      "0": "Années d'expérience",
+      "1": "Voyages réalisés",
+      "2": "Destinations",
+      "3": "Note moyenne",
+    },
+  },
+  testimonials: {
+    eyebrow: "Avis vérifiés Google",
+    title: "Ce que disent nos voyageurs",
+    subtitle:
+      "avis vérifiés sur Google · {rating}/5 en moyenne · 96% de voyageurs satisfaits",
+    readAll: "Lire les {count} avis sur Google",
+    items: {
+      claire: {
+        date: "il y a 2 mois",
+        text: "Nous avons fait appel aux services de cette entreprise pour nos trajets lors de nos vacances à Marrakech. Service parfait avec 2 enfants en bas âge, sièges auto et communication impeccable. Nous contacterons Hamid sans aucun doute !",
+      },
+      adil: {
+        date: "il y a un mois",
+        text: "Une agence sérieuse avec un service de grande qualité. Toujours à l'écoute, réactive et fiable. C'est un vrai plaisir de travailler avec eux.",
+      },
+      genevieve: {
+        date: "il y a 7 mois",
+        text: "Service parfait, gentillesse, patience car nous étions souvent en retard, véhicule récent et très propre. Merci.",
+      },
+      salvatore: {
+        date: "il y a 3 mois",
+        text: "Super service et professionnalisme. Merci beaucoup Hamid et à bientôt.",
+      },
+    },
+  },
+  destinations: {
+    eyebrow: "Destinations",
+    title: "Destinations d'Exception",
+    viewAll: "Toutes les destinations",
+    names: {
+      marrakech: "Marrakech",
+      merzouga: "Merzouga",
+      chefchaouen: "Chefchaouen",
+      fes: "Fès",
+      essaouira: "Essaouira",
+      megdaz: "Megdaz",
+      agadir: "Agadir",
+      ouarzazate: "Ouarzazate",
+    },
+  },
+  newsletter: {
+    badge: "Guide gratuit offert",
+    title: "Restez Inspiré",
+    description:
+      "Recevez nos meilleures offres et conseils de voyage au Maroc",
+    placeholder: "Votre adresse email",
+    submit: "S'abonner",
+    success: "Merci ! Vérifiez votre boîte mail.",
+    disclaimer: "Pas de spam. Désabonnement en un clic.",
+  },
+  footer: {
+    ctaTitle: "Prêt à vivre l'aventure ?",
+    ctaDescription:
+      "Créez votre voyage sur mesure au cœur du Maroc traditionnel",
+    customTrip: "Voyage sur mesure",
+    about:
+      "Votre partenaire de confiance pour découvrir les merveilles du Maroc — du Sahara aux médinas ancestrales.",
+    discover: "Découvrir",
+    company: "Entreprise",
+    newsletter: "Newsletter",
+    newsletterDescription:
+      "Recevez nos meilleures offres et inspirations voyage",
+    blog: "Blog",
+    companyLinks: [
+      "À propos",
+      "Contact",
+      "FAQ",
+      "Conditions",
+      "Confidentialité",
+      "Remboursement",
+    ],
+    securePayment: "Paiement sécurisé",
+    multiCurrency: "Multi-devises",
+    certified: "Certifié Tourisme",
+    copyright: "Tous droits réservés.",
+    legal:
+      "RC : 152895 · ICE : 00356224500026 · Autorisation transport touristique N° 2674/TOUR/2024",
+  },
+  cookies: {
+    message:
+      "Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre politique de confidentialité.",
+    decline: "Refuser",
+    accept: "Accepter",
+  },
+};
