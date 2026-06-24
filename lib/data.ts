@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Sahara Star Tour",
-  tagline: "Aventures premium au Maroc",
+  name: "Atlas Routes & Transfer",
+  tagline: "Circuits & transferts privés au Maroc",
   phone: "+212634411760",
   whatsapp: "212634411760",
-  email: "contact@saharatravel.com",
+  email: "contact@atlasroutes.ma",
   address: "Marrakech, Maroc",
   googleRating: 4.9,
   reviewCount: 36,

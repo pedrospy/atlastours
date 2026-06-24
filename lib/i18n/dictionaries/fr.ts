@@ -3,23 +3,23 @@ import type { Dictionary } from "../types";
 export const fr: Dictionary = {
   locale: "fr",
   meta: {
-    title: "Aventures premium au Maroc | Sahara Star Tour",
+    title: "Circuits & transferts au Maroc | Atlas Routes & Transfer",
     description:
-      "Bivouacs confidentiels, treks berbères, vallées oubliées. Vos aventures sur mesure conçues par des guides locaux qui connaissent le vrai Maroc.",
+      "Transferts aéroport, excursions et circuits privés au Maroc. Véhicules récents, chauffeurs locaux, voyages sur mesure de Marrakech au Sahara.",
     keywords: [
       "Maroc",
-      "voyage sur mesure",
-      "Sahara",
+      "transfert Marrakech",
+      "circuits Maroc",
+      "transport touristique",
       "Marrakech",
       "excursions",
-      "circuits Maroc",
     ],
-    ogTitle: "Sahara Star Tour — Le Maroc hors des sentiers battus",
+    ogTitle: "Atlas Routes & Transfer — Circuits et transferts au Maroc",
     ogDescription:
-      "Aventures premium au Maroc avec guides berbères locaux.",
+      "Transferts aéroport, excursions et circuits privés au Maroc avec chauffeurs locaux.",
   },
   site: {
-    tagline: "Aventures premium au Maroc",
+    tagline: "Circuits & transferts privés au Maroc",
     address: "Marrakech, Maroc",
   },
   nav: {
@@ -38,9 +38,9 @@ export const fr: Dictionary = {
     perPerson: "/pers.",
     menu: "Menu",
     discover: "Découvrir",
-    whatsapp: "Sahara Travel",
-    whatsappAria: "Contacter Sahara Travel via WhatsApp",
-    whatsappMessage: "Bonjour Sahara Travel, ",
+    whatsapp: "Atlas Routes & Transfer",
+    whatsappAria: "Contacter Atlas Routes & Transfer via WhatsApp",
+    whatsappMessage: "Bonjour Atlas Routes & Transfer, ",
     excursionsCount: "excursions",
     close: "Fermer",
   },
@@ -241,7 +241,7 @@ export const fr: Dictionary = {
       "Créez votre voyage sur mesure au cœur du Maroc traditionnel",
     customTrip: "Voyage sur mesure",
     about:
-      "Votre partenaire de confiance pour découvrir les merveilles du Maroc — du Sahara aux médinas ancestrales.",
+      "Votre partenaire de confiance pour circuits sur mesure et transferts privés au Maroc — de l'aéroport aux dunes du Sahara.",
     discover: "Découvrir",
     company: "Entreprise",
     newsletter: "Newsletter",

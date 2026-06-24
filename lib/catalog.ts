@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Sahara Star Tour",
-  whatsappName: "Sahara Travel",
+  name: "Atlas Routes & Transfer",
+  whatsappName: "Atlas Routes & Transfer",
   phone: "+212634411760",
   whatsapp: "212634411760",
-  email: "contact@saharatravel.com",
+  email: "contact@atlasroutes.ma",
   googleRating: 4.9,
   reviewCount: 36,
   travelers: 300,

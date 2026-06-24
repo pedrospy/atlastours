@@ -3,23 +3,23 @@ import type { Dictionary } from "../types";
 export const en: Dictionary = {
   locale: "en",
   meta: {
-    title: "Premium Adventures in Morocco | Sahara Star Tour",
+    title: "Tours & Transfers in Morocco | Atlas Routes & Transfer",
     description:
-      "Private desert camps, Berber treks, hidden valleys. Tailor-made adventures designed by local guides who know the real Morocco.",
+      "Airport transfers, day trips and private tours in Morocco. Modern vehicles, local drivers, tailor-made journeys from Marrakech to the Sahara.",
     keywords: [
       "Morocco",
-      "tailor-made travel",
-      "Sahara",
+      "Marrakech transfer",
+      "Morocco tours",
+      "tourist transport",
       "Marrakech",
       "day trips",
-      "Morocco tours",
     ],
-    ogTitle: "Sahara Star Tour — Morocco Off the Beaten Path",
+    ogTitle: "Atlas Routes & Transfer — Tours and transfers in Morocco",
     ogDescription:
-      "Premium adventures in Morocco with local Berber guides.",
+      "Airport transfers, excursions and private tours in Morocco with local drivers.",
   },
   site: {
-    tagline: "Premium adventures in Morocco",
+    tagline: "Private tours & transfers in Morocco",
     address: "Marrakech, Morocco",
   },
   nav: {
@@ -38,9 +38,9 @@ export const en: Dictionary = {
     perPerson: "/person",
     menu: "Menu",
     discover: "Discover",
-    whatsapp: "Sahara Travel",
-    whatsappAria: "Contact Sahara Travel via WhatsApp",
-    whatsappMessage: "Hello Sahara Travel, ",
+    whatsapp: "Atlas Routes & Transfer",
+    whatsappAria: "Contact Atlas Routes & Transfer via WhatsApp",
+    whatsappMessage: "Hello Atlas Routes & Transfer, ",
     excursionsCount: "trips",
     close: "Close",
   },
@@ -241,7 +241,7 @@ export const en: Dictionary = {
       "Create your tailor-made journey in the heart of traditional Morocco",
     customTrip: "Custom trip",
     about:
-      "Your trusted partner to discover the wonders of Morocco — from the Sahara to ancient medinas.",
+      "Your trusted partner for tailor-made tours and private transfers in Morocco — from the airport to the Sahara dunes.",
     discover: "Discover",
     company: "Company",
     newsletter: "Newsletter",

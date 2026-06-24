@@ -15,8 +15,8 @@ const sans = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Sahara Star Tour",
-  description: "Aventures premium au Maroc",
+  title: "Atlas Routes & Transfer",
+  description: "Circuits & transferts privés au Maroc",
 };
 
 export default function RootLayout({

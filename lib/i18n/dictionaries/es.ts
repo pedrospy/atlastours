@@ -3,23 +3,23 @@ import type { Dictionary } from "../types";
 export const es: Dictionary = {
   locale: "es",
   meta: {
-    title: "Aventuras premium en Marruecos | Sahara Star Tour",
+    title: "Circuitos y traslados en Marruecos | Atlas Routes & Transfer",
     description:
-      "Campamentos privados en el desierto, treks bereberes, valles ocultos. Aventuras a medida diseñadas por guías locales que conocen el auténtico Marruecos.",
+      "Traslados al aeropuerto, excursiones y circuitos privados en Marruecos. Vehículos modernos, conductores locales, viajes a medida de Marrakech al Sahara.",
     keywords: [
       "Marruecos",
-      "viaje a medida",
-      "Sahara",
+      "traslado Marrakech",
+      "circuitos Marruecos",
+      "transporte turístico",
       "Marrakech",
       "excursiones",
-      "circuitos Marruecos",
     ],
-    ogTitle: "Sahara Star Tour — Marruecos fuera de lo común",
+    ogTitle: "Atlas Routes & Transfer — Circuitos y traslados en Marruecos",
     ogDescription:
-      "Aventuras premium en Marruecos con guías bereberes locales.",
+      "Traslados al aeropuerto, excursiones y circuitos privados en Marruecos con conductores locales.",
   },
   site: {
-    tagline: "Aventuras premium en Marruecos",
+    tagline: "Circuitos y traslados privados en Marruecos",
     address: "Marrakech, Marruecos",
   },
   nav: {
@@ -38,9 +38,9 @@ export const es: Dictionary = {
     perPerson: "/pers.",
     menu: "Menú",
     discover: "Descubrir",
-    whatsapp: "Sahara Travel",
-    whatsappAria: "Contactar Sahara Travel por WhatsApp",
-    whatsappMessage: "Hola Sahara Travel, ",
+    whatsapp: "Atlas Routes & Transfer",
+    whatsappAria: "Contactar Atlas Routes & Transfer por WhatsApp",
+    whatsappMessage: "Hola Atlas Routes & Transfer, ",
     excursionsCount: "excursiones",
     close: "Cerrar",
   },
@@ -241,7 +241,7 @@ export const es: Dictionary = {
       "Cree su viaje a medida en el corazón del Marruecos tradicional",
     customTrip: "Viaje a medida",
     about:
-      "Su socio de confianza para descubrir las maravillas de Marruecos — del Sahara a las medinas ancestrales.",
+      "Su socio de confianza para circuitos a medida y traslados privados en Marruecos — del aeropuerto a las dunas del Sahara.",
     discover: "Descubrir",
     company: "Empresa",
     newsletter: "Newsletter",
