@@ -266,12 +266,12 @@ export const en: Dictionary = {
     names: {
       marrakech: "Marrakech",
       merzouga: "Merzouga",
-      chefchaouen: "Chefchaouen",
+      "nord-maroc": "Northern Morocco",
       fes: "Fes",
       essaouira: "Essaouira",
       megdaz: "Megdaz",
       agadir: "Agadir",
-      ouarzazate: "Ouarzazate",
+      oualili: "Fes (Oualili)",
     },
   },
   newsletter: {

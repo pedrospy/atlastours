@@ -140,7 +140,7 @@ export const destinationsCatalog = [
     image: "/images/dest-desert-oasis.png",
   },
   {
-    id: "chefchaouen",
+    id: "nord-maroc",
     count: 5,
     image: "/images/dest-cape-spartel.png",
   },
@@ -165,7 +165,7 @@ export const destinationsCatalog = [
     image: "/images/dest-sunset-lake.png",
   },
   {
-    id: "ouarzazate",
+    id: "oualili",
     count: 8,
     image: "/images/dest-volubilis-mosaic.png",
   },
