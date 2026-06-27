@@ -46,13 +46,32 @@ export function CircuitsSection() {
                 className="card-traditional group"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={circuit.image}
-                    alt={content.title}
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                  {"images" in circuit && circuit.images ? (
+                    <div className="grid h-full w-full grid-cols-2 grid-rows-2">
+                      {circuit.images.map((src, idx) => (
+                        <div key={src} className="relative overflow-hidden">
+                          <Image
+                            src={src}
+                            alt={idx === 0 ? content.title : ""}
+                            fill
+                            unoptimized
+                            className="object-cover transition duration-700 group-hover:scale-105"
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                            aria-hidden={idx > 0}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <Image
+                      src={circuit.image}
+                      alt={content.title}
+                      fill
+                      unoptimized
+                      className="object-cover transition duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-burgundy-dark/90 via-burgundy/30 to-transparent" />
                   <div className="absolute left-0 top-0 h-1 w-full bg-gold-gradient" />
                   <div className="absolute left-4 top-5 flex gap-2">

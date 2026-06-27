@@ -22,7 +22,13 @@ export const circuitsCatalog = [
     rating: 4.9,
     reviews: 56,
     price: 1290,
-    image: "/images/dest-marrakech-medina.jpg",
+    image: "/images/dest-desert-oasis.png",
+    images: [
+      "/images/dest-marrakech-jemaa.jpg",
+      "/images/dest-desert-oasis.png",
+      "/images/fleet-suv-kasbah.png",
+      "/images/route-mountain-pass.png",
+    ],
   },
   {
     id: "grand-tour-17",
@@ -43,7 +49,7 @@ export const circuitsCatalog = [
     rating: 4.9,
     reviews: 31,
     price: 420,
-    image: "/images/route-dades-gorges.png",
+    image: "/images/dest-megdaz-village.jpg",
   },
 ] as const;
 
@@ -156,7 +162,7 @@ export const destinationsCatalog = [
   {
     id: "megdaz",
     count: 3,
-    image: "/images/route-dades-gorges.png",
+    image: "/images/dest-megdaz-valley.jpg",
   },
   {
     id: "agadir",
