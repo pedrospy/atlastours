@@ -37,6 +37,7 @@ const numberFormats: Record<Locale, string> = {
   fr: "fr-FR",
   en: "en-GB",
   es: "es-ES",
+  de: "de-DE",
 };
 
 export function formatPrice(price: number, locale: Locale) {

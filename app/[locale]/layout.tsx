@@ -20,6 +20,7 @@ const ogLocales: Record<Locale, string> = {
   fr: "fr_FR",
   en: "en_GB",
   es: "es_ES",
+  de: "de_DE",
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
