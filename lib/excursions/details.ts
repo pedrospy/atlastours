@@ -1,0 +1,1216 @@
+import type { ExcursionDetailsByLocale } from "./types";
+
+export const excursionDetails: ExcursionDetailsByLocale = {
+  fr: {
+    "ait-benhaddou": {
+      metaTitle:
+        "Aït Benhaddou UNESCO & Ouarzazate — Hollywood du Maroc | 1j | Red Nomad",
+      metaDescription:
+        "Excursion d'une journée depuis Marrakech : Col du Tizi n'Tichka, kasbah UNESCO d'Aït Benhaddou, studios de cinéma et Ouarzazate. Chauffeur privé et guide local.",
+      subtitle: "Hollywood du Maroc",
+      difficulty: "Facile",
+      duration: "1 jour",
+      groupSize: "1–17 personnes",
+      departure: "Marrakech",
+      languages: "Français, English",
+      about:
+        "Franchir le Col du Tizi n'Tichka (2260 m) pour rejoindre le Sud marocain est déjà une aventure en soi. La Kasbah d'Aït Benhaddou, forteresse de pisé rouge inscrite au Patrimoine Mondial de l'UNESCO, servit de décor à Gladiator, Lawrence d'Arabie, Game of Thrones et Babel. Puis Ouarzazate, « Porte du Désert » et « Hollywood de l'Afrique », abrite les Atlas Corporation Studios et la Kasbah Taourirt.",
+      highlights: [
+        "Col du Tizi n'Tichka (2260 m) — panoramas sur le Grand Atlas",
+        "Kasbah d'Aït Benhaddou — UNESCO, décor de Gladiator & GOT",
+        "Visite guidée du ksar avec guide local",
+        "Ouarzazate — Atlas Corporation Studios & Kasbah Taourirt",
+        "Paysages du Haut Atlas Sud : ocre, pisé et villages berbères",
+      ],
+      itinerary: [
+        {
+          dayLabel: "J1",
+          title: "Programme — Aït Benhaddou & Ouarzazate",
+          description:
+            "Journée complète avec montée du col, visite UNESCO et retour au coucher du soleil.",
+          steps: [
+            "07h00 — Prise en charge à Marrakech, route vers le Haut Atlas",
+            "Col du Tizi n'Tichka (2260 m) — arrêt photo panoramique",
+            "Kasbah d'Aït Benhaddou — visite guidée UNESCO (1h–1h30)",
+            "Déjeuner libre à Ouarzazate",
+            "Atlas Corporation Studios & Kasbah Taourirt",
+            "~20h00 — Retour à Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Transport en 4x4 ou minibus climatisé",
+        "Chauffeur professionnel bilingue (FR/EN)",
+        "Guide local à Aït Benhaddou",
+        "Eau minérale (1 bouteille/personne)",
+        "Prise en charge à votre hébergement",
+      ],
+      notIncluded: [
+        "Déjeuner et boissons",
+        "Entrée Kasbah d'Aït Benhaddou (~30 MAD)",
+        "Entrée Studios de cinéma (~80 MAD, optionnelle)",
+        "Dépenses personnelles et pourboires",
+      ],
+      groupPricing: [
+        { travelers: "2 voyageurs", price: "90 €/pers." },
+        { travelers: "3–4 voyageurs", price: "45–60 €/pers." },
+        { travelers: "5–7 voyageurs", price: "28–38 €/pers." },
+        { travelers: "8–14 voyageurs", price: "16–28 €/pers." },
+        { travelers: "15–17 voyageurs", price: "18 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "Peut-on annuler sans frais ?",
+          answer:
+            "Oui, annulation gratuite jusqu'à 48 h avant le départ. Au-delà, des frais peuvent s'appliquer selon les prestations engagées.",
+        },
+        {
+          question: "Qu'est-ce qui est inclus dans le prix ?",
+          answer:
+            "Transport privé climatisé, chauffeur bilingue, guide local à Aït Benhaddou et eau à bord. Repas et entrées optionnelles sont à votre charge.",
+        },
+        {
+          question: "Combien de personnes maximum ?",
+          answer:
+            "De 1 à 17 personnes. Privatisation possible pour votre groupe — demandez un devis personnalisé.",
+        },
+        {
+          question: "Que dois-je apporter ?",
+          answer:
+            "Chaussures confortables, casquette, crème solaire, veste légère (frais au col). Vêtements adaptés à la saison.",
+        },
+        {
+          question: "Meilleure période ?",
+          answer:
+            "Toute l'année. Mars–mai et septembre–novembre offrent les températures les plus douces et une lumière idéale.",
+        },
+      ],
+    },
+    ouzoud: {
+      metaTitle: "Cascades d'Ouzoud — Excursion d'une journée | Red Nomad",
+      metaDescription:
+        "Excursion aux cascades d'Ouzoud (110 m) depuis Marrakech. Singes magots, balade au pied des chutes, déjeuner face aux cascades. Chauffeur privé.",
+      subtitle: "Les plus grandes chutes du Maroc",
+      difficulty: "Facile",
+      duration: "1 jour",
+      groupSize: "1–17 personnes",
+      departure: "Marrakech",
+      languages: "Français, English",
+      about:
+        "À 150 km de Marrakech, les cascades d'Ouzoud plongent de 110 mètres dans une vallée verdoyante de oliviers et de figuiers. Singes magots en liberté, moulin à huile traditionnel, bateaux au pied des chutes : une escapade nature incontournable, rafraîchissante en été et spectaculaire toute l'année.",
+      highlights: [
+        "Cascades de 110 m — les plus hautes du Maroc",
+        "Singes magots en liberté dans la vallée",
+        "Balade au pied des chutes et petit bateau (option)",
+        "Moulins traditionnels et oliviers centenaires",
+        "Déjeuner terrasse face aux cascades",
+      ],
+      itinerary: [
+        {
+          dayLabel: "J1",
+          title: "Programme — Cascades d'Ouzoud",
+          description: "Journée nature avec 3 h sur place aux cascades.",
+          steps: [
+            "08h00 — Prise en charge à Marrakech, route vers le Moyen Atlas",
+            "10h30 — Arrivée à Ouzoud, accueil par les guides locaux",
+            "Visite des cascades, sentier jusqu'à la base des chutes",
+            "Temps libre : photos, singes, déjeuner en terrasse",
+            "16h00 — Départ retour vers Marrakech",
+            "~18h30 — Arrivée à Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Transport privé climatisé aller-retour",
+        "Chauffeur professionnel bilingue",
+        "Accompagnement local aux cascades",
+        "Eau minérale à bord",
+        "Prise en charge à votre riad ou hôtel",
+      ],
+      notIncluded: [
+        "Déjeuner et boissons",
+        "Balade en barque (~20 MAD, optionnelle)",
+        "Guide officiel (~30 MAD, optionnel)",
+        "Dépenses personnelles",
+      ],
+      groupPricing: [
+        { travelers: "2 voyageurs", price: "80 €/pers." },
+        { travelers: "3–4 voyageurs", price: "40–53 €/pers." },
+        { travelers: "5–7 voyageurs", price: "25–34 €/pers." },
+        { travelers: "8–14 voyageurs", price: "14–25 €/pers." },
+        { travelers: "15–17 voyageurs", price: "16 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "Peut-on se baigner aux cascades ?",
+          answer:
+            "Oui, des zones de baignade existent en été. Prévoyez maillot et serviette si vous souhaitez vous rafraîchir.",
+        },
+        {
+          question: "L'excursion convient-elle aux enfants ?",
+          answer:
+            "Oui, le sentier principal est accessible. Surveillez les jeunes enfants près des singes et des rebords.",
+        },
+        {
+          question: "Faut-il une bonne condition physique ?",
+          answer:
+            "Non, marche modérée sur 30–45 minutes avec escaliers. Possibilité de rester en haut si besoin.",
+        },
+        {
+          question: "Annulation gratuite ?",
+          answer: "Oui, jusqu'à 48 h avant le départ sans frais.",
+        },
+      ],
+    },
+    essaouira: {
+      metaTitle: "Essaouira Médina UNESCO — Excursion Atlantique | Red Nomad",
+      metaDescription:
+        "Excursion d'une journée à Essaouira depuis Marrakech : médina UNESCO, port de pêche, remparts et plage. Chauffeur privé, retour le soir.",
+      subtitle: "Perle de l'Atlantique",
+      difficulty: "Facile",
+      duration: "1 jour",
+      groupSize: "1–17 personnes",
+      departure: "Marrakech",
+      languages: "Français, English",
+      about:
+        "Essaouira, ancienne Mogador, est une cité fortifiée au bord de l'Atlantique. Médina UNESCO aux ruelles bleues et blanches, port animé de barques bleues, remparts du XVIIIe siècle et plage ventée prisée des surfeurs. Une escapade bohème à 2h30 de Marrakech, entre arganiers, fruits de mer et artisanat.",
+      highlights: [
+        "Médina UNESCO — ruelles, souks et artisans",
+        "Port de pêche — barques bleues et grillades",
+        "Remparts Skala — vue sur l'océan Atlantique",
+        "Route des arganiers — coopératives féminines",
+        "Plage et ambiance bohème",
+      ],
+      itinerary: [
+        {
+          dayLabel: "J1",
+          title: "Programme — Essaouira",
+          description: "100 % libre à Essaouira après la route matinale.",
+          steps: [
+            "08h00 — Prise en charge à Marrakech",
+            "Route via Chichaoua — arrêt coopérative d'argan (option)",
+            "11h00 — Arrivée à Essaouira, découverte libre de la médina",
+            "Déjeuner au port — poisson grillé frais",
+            "Après-midi : remparts, plage, shopping artisanal",
+            "17h00 — Départ retour, arrivée ~20h00 à Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Transport privé climatisé aller-retour",
+        "Chauffeur professionnel bilingue",
+        "Eau minérale à bord",
+        "Prise en charge à votre hébergement",
+        "Conseils et recommandations locales",
+      ],
+      notIncluded: [
+        "Déjeuner et boissons",
+        "Entrées musées ou monuments",
+        "Activités nautiques (surf, kitesurf)",
+        "Dépenses personnelles",
+      ],
+      groupPricing: [
+        { travelers: "2 voyageurs", price: "80 €/pers." },
+        { travelers: "3–4 voyageurs", price: "40–53 €/pers." },
+        { travelers: "5–7 voyageurs", price: "25–34 €/pers." },
+        { travelers: "8–14 voyageurs", price: "14–25 €/pers." },
+        { travelers: "15–17 voyageurs", price: "16 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "Combien de temps libre à Essaouira ?",
+          answer:
+            "Environ 5 à 6 heures sur place — suffisant pour la médina, le port et les remparts.",
+        },
+        {
+          question: "Essaouira est-elle venteuse ?",
+          answer:
+            "Oui, l'Alizé souffle souvent l'après-midi. Prévoyez une veste légère même en été.",
+        },
+        {
+          question: "Peut-on nager ?",
+          answer:
+            "La plage est accessible mais l'eau reste fraîche. Idéal pour se promener plutôt que pour la baignade.",
+        },
+        {
+          question: "Annulation gratuite ?",
+          answer: "Oui, jusqu'à 48 h avant le départ.",
+        },
+      ],
+    },
+    ourika: {
+      metaTitle: "Vallée de l'Ourika — Excursion Atlas | Red Nomad",
+      metaDescription:
+        "Excursion d'une journée dans la vallée de l'Ourika depuis Marrakech : villages berbères, cascade Setti Fatma, marché local. Chauffeur privé.",
+      subtitle: "Nature & villages berbères",
+      difficulty: "Modéré",
+      duration: "1 jour",
+      groupSize: "1–17 personnes",
+      departure: "Marrakech",
+      languages: "Français, English",
+      about:
+        "À seulement 60 km de Marrakech, la vallée de l'Ourika serpente le long de l'Atlas avec ses villages berbères accrochés aux flancs vertigineux, ses terrasses cultivées et sa cascade de Setti Fatma. Marché hebdomadaire authentique, thé à la menthe chez l'habitant et randonnée légère jusqu'aux sept cascades.",
+      highlights: [
+        "Vallée verdoyante du Haut Atlas à 1 h de Marrakech",
+        "Villages berbères traditionnels en pisé",
+        "Cascade de Setti Fatma — randonnée légère",
+        "Marché local (lundi) et coopératives",
+        "Thé à la menthe chez l'habitant (option)",
+      ],
+      itinerary: [
+        {
+          dayLabel: "J1",
+          title: "Programme — Vallée de l'Ourika",
+          description: "Journée nature dans l'Atlas proche de Marrakech.",
+          steps: [
+            "08h30 — Prise en charge à Marrakech",
+            "09h30 — Entrée dans la vallée, arrêts villages photo",
+            "10h30 — Arrivée Setti Fatma, randonnée vers les cascades",
+            "Déjeuner local en terrasse au bord de la rivière",
+            "Après-midi : marché, artisanat, retour par la vallée",
+            "~17h00 — Retour à Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Transport privé climatisé",
+        "Chauffeur professionnel bilingue",
+        "Eau minérale à bord",
+        "Prise en charge à votre hébergement",
+        "Conseils randonnée et villages",
+      ],
+      notIncluded: [
+        "Déjeuner et boissons",
+        "Guide local Setti Fatma (~50 MAD, recommandé)",
+        "Thé chez l'habitant (donation ~20 MAD)",
+        "Dépenses personnelles",
+      ],
+      groupPricing: [
+        { travelers: "2 voyageurs", price: "72 €/pers." },
+        { travelers: "3–4 voyageurs", price: "36–48 €/pers." },
+        { travelers: "5–7 voyageurs", price: "22–30 €/pers." },
+        { travelers: "8–14 voyageurs", price: "13–22 €/pers." },
+        { travelers: "15–17 voyageurs", price: "14 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "La randonnée est-elle difficile ?",
+          answer:
+            "Modérée : 1h30–2h aller-retour avec escaliers. Bonnes chaussures recommandées.",
+        },
+        {
+          question: "Peut-on y aller en hiver ?",
+          answer:
+            "Oui, mais prévoyez des vêtements chauds. Neige possible en altitude.",
+        },
+        {
+          question: "Convient aux enfants ?",
+          answer:
+            "Oui à partir de 6–7 ans avec accompagnement. Les tout-petits peuvent rester en bas de vallée.",
+        },
+        {
+          question: "Annulation gratuite ?",
+          answer: "Oui, jusqu'à 48 h avant le départ.",
+        },
+      ],
+    },
+  },
+  en: {
+    "ait-benhaddou": {
+      metaTitle:
+        "Aït Benhaddou UNESCO & Ouarzazate — Morocco's Hollywood | 1 day | Red Nomad",
+      metaDescription:
+        "Day trip from Marrakech: Tizi n'Tichka pass, UNESCO Aït Benhaddou kasbah, film studios and Ouarzazate. Private driver and local guide.",
+      subtitle: "Morocco's Hollywood",
+      difficulty: "Easy",
+      duration: "1 day",
+      groupSize: "1–17 people",
+      departure: "Marrakech",
+      languages: "French, English",
+      about:
+        "Crossing the Tizi n'Tichka pass (2,260 m) to reach southern Morocco is an adventure in itself. Aït Benhaddou, a red earthen UNESCO fortress, starred in Gladiator, Lawrence of Arabia, Game of Thrones and Babel. Ouarzazate — the Gateway to the Desert and Africa's Hollywood — hosts Atlas Corporation Studios and Taourirt Kasbah.",
+      highlights: [
+        "Tizi n'Tichka pass (2,260 m) — Grand Atlas panoramas",
+        "Aït Benhaddou kasbah — UNESCO, Gladiator & GOT filming location",
+        "Guided visit with a local guide",
+        "Ouarzazate — Atlas Corporation Studios & Taourirt Kasbah",
+        "Southern High Atlas landscapes: ochre, pisé and Berber villages",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Program — Aït Benhaddou & Ouarzazate",
+          description: "Full day with pass crossing, UNESCO visit and sunset return.",
+          steps: [
+            "7:00 AM — Pickup in Marrakech, drive to the High Atlas",
+            "Tizi n'Tichka pass (2,260 m) — panoramic photo stop",
+            "Aït Benhaddou — guided UNESCO visit (1–1.5 h)",
+            "Free lunch in Ouarzazate",
+            "Atlas Corporation Studios & Taourirt Kasbah",
+            "~8:00 PM — Return to Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Air-conditioned 4x4 or minibus",
+        "Professional bilingual driver (FR/EN)",
+        "Local guide at Aït Benhaddou",
+        "Mineral water (1 bottle/person)",
+        "Pickup at your accommodation",
+      ],
+      notIncluded: [
+        "Lunch and drinks",
+        "Aït Benhaddou entrance (~30 MAD)",
+        "Film studio entrance (~80 MAD, optional)",
+        "Personal expenses and tips",
+      ],
+      groupPricing: [
+        { travelers: "2 travelers", price: "€90/person" },
+        { travelers: "3–4 travelers", price: "€45–60/person" },
+        { travelers: "5–7 travelers", price: "€28–38/person" },
+        { travelers: "8–14 travelers", price: "€16–28/person" },
+        { travelers: "15–17 travelers", price: "€18/person" },
+      ],
+      faqs: [
+        {
+          question: "Can I cancel for free?",
+          answer: "Yes, free cancellation up to 48 hours before departure.",
+        },
+        {
+          question: "What's included in the price?",
+          answer:
+            "Private air-conditioned transport, bilingual driver, local guide at Aït Benhaddou and water on board.",
+        },
+        {
+          question: "Maximum group size?",
+          answer: "1 to 17 people. Private booking available — ask for a quote.",
+        },
+        {
+          question: "What should I bring?",
+          answer: "Comfortable shoes, hat, sunscreen, light jacket (cool at the pass).",
+        },
+        {
+          question: "Best time of year?",
+          answer: "Year-round. March–May and September–November offer the mildest weather.",
+        },
+      ],
+    },
+    ouzoud: {
+      metaTitle: "Ouzoud Waterfalls — Day Trip | Red Nomad",
+      metaDescription:
+        "Day trip to Ouzoud Falls (110 m) from Marrakech. Barbary macaques, walk at the base of the falls. Private driver.",
+      subtitle: "Morocco's tallest waterfalls",
+      difficulty: "Easy",
+      duration: "1 day",
+      groupSize: "1–17 people",
+      departure: "Marrakech",
+      languages: "French, English",
+      about:
+        "150 km from Marrakech, the Ouzoud Falls drop 110 metres into a green valley of olive and fig trees. Wild Barbary macaques, traditional olive mills and optional boat rides make this a refreshing nature escape.",
+      highlights: [
+        "110 m waterfalls — tallest in Morocco",
+        "Wild Barbary macaques in the valley",
+        "Walk to the base of the falls",
+        "Traditional mills and ancient olive trees",
+        "Lunch on a terrace facing the falls",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Program — Ouzoud Waterfalls",
+          description: "Nature day with 3 hours at the falls.",
+          steps: [
+            "8:00 AM — Pickup in Marrakech",
+            "10:30 AM — Arrival at Ouzoud",
+            "Visit the falls, trail to the base",
+            "Free time: photos, macaques, lunch",
+            "4:00 PM — Return drive",
+            "~6:30 PM — Arrival in Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Private air-conditioned round-trip transport",
+        "Professional bilingual driver",
+        "Local assistance at the falls",
+        "Mineral water on board",
+        "Pickup at your riad or hotel",
+      ],
+      notIncluded: [
+        "Lunch and drinks",
+        "Boat ride (~20 MAD, optional)",
+        "Official guide (~30 MAD, optional)",
+        "Personal expenses",
+      ],
+      groupPricing: [
+        { travelers: "2 travelers", price: "€80/person" },
+        { travelers: "3–4 travelers", price: "€40–53/person" },
+        { travelers: "5–7 travelers", price: "€25–34/person" },
+        { travelers: "8–14 travelers", price: "€14–25/person" },
+        { travelers: "15–17 travelers", price: "€16/person" },
+      ],
+      faqs: [
+        {
+          question: "Can we swim at the falls?",
+          answer: "Yes, swimming areas exist in summer. Bring swimwear and a towel.",
+        },
+        {
+          question: "Is it suitable for children?",
+          answer: "Yes, the main trail is accessible. Watch young children near macaques.",
+        },
+        {
+          question: "Good fitness required?",
+          answer: "No, moderate 30–45 minute walk with stairs.",
+        },
+        {
+          question: "Free cancellation?",
+          answer: "Yes, up to 48 hours before departure.",
+        },
+      ],
+    },
+    essaouira: {
+      metaTitle: "Essaouira UNESCO Medina — Atlantic Day Trip | Red Nomad",
+      metaDescription:
+        "Day trip to Essaouira from Marrakech: UNESCO medina, fishing port, ramparts and beach. Private driver, evening return.",
+      subtitle: "Pearl of the Atlantic",
+      difficulty: "Easy",
+      duration: "1 day",
+      groupSize: "1–17 people",
+      departure: "Marrakech",
+      languages: "French, English",
+      about:
+        "Essaouira, ancient Mogador, is a fortified Atlantic city. UNESCO medina with blue-and-white alleys, animated fishing port, 18th-century ramparts and windy beach beloved by surfers — a bohemian escape 2.5 hours from Marrakech.",
+      highlights: [
+        "UNESCO medina — alleys, souks and artisans",
+        "Fishing port — blue boats and grilled seafood",
+        "Skala ramparts — Atlantic ocean views",
+        "Argan tree route — women's cooperatives",
+        "Beach and bohemian atmosphere",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Program — Essaouira",
+          description: "Free time in Essaouira after the morning drive.",
+          steps: [
+            "8:00 AM — Pickup in Marrakech",
+            "Drive via Chichaoua — argan cooperative stop (optional)",
+            "11:00 AM — Arrival, free exploration of the medina",
+            "Lunch at the port — fresh grilled fish",
+            "Afternoon: ramparts, beach, artisan shopping",
+            "5:00 PM — Return, ~8:00 PM in Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Private air-conditioned round-trip transport",
+        "Professional bilingual driver",
+        "Mineral water on board",
+        "Pickup at your accommodation",
+        "Local tips and recommendations",
+      ],
+      notIncluded: [
+        "Lunch and drinks",
+        "Museum or monument entries",
+        "Water sports (surf, kitesurf)",
+        "Personal expenses",
+      ],
+      groupPricing: [
+        { travelers: "2 travelers", price: "€80/person" },
+        { travelers: "3–4 travelers", price: "€40–53/person" },
+        { travelers: "5–7 travelers", price: "€25–34/person" },
+        { travelers: "8–14 travelers", price: "€14–25/person" },
+        { travelers: "15–17 travelers", price: "€16/person" },
+      ],
+      faqs: [
+        {
+          question: "How much free time in Essaouira?",
+          answer: "About 5–6 hours — enough for the medina, port and ramparts.",
+        },
+        {
+          question: "Is it windy?",
+          answer: "Yes, the trade wind often blows in the afternoon. Bring a light jacket.",
+        },
+        {
+          question: "Can we swim?",
+          answer: "The beach is accessible but water stays cool. Better for walking than swimming.",
+        },
+        {
+          question: "Free cancellation?",
+          answer: "Yes, up to 48 hours before departure.",
+        },
+      ],
+    },
+    ourika: {
+      metaTitle: "Ourika Valley — Atlas Day Trip | Red Nomad",
+      metaDescription:
+        "Day trip to Ourika Valley from Marrakech: Berber villages, Setti Fatma waterfall, local market. Private driver.",
+      subtitle: "Nature & Berber villages",
+      difficulty: "Moderate",
+      duration: "1 day",
+      groupSize: "1–17 people",
+      departure: "Marrakech",
+      languages: "French, English",
+      about:
+        "Just 60 km from Marrakech, the Ourika Valley winds through the Atlas with Berber villages, cultivated terraces and Setti Fatma waterfall. Authentic weekly market, mint tea with locals and a light hike to the seven cascades.",
+      highlights: [
+        "Green High Atlas valley 1 hour from Marrakech",
+        "Traditional Berber pisé villages",
+        "Setti Fatma waterfall — light hike",
+        "Local market (Mondays) and cooperatives",
+        "Mint tea with locals (optional)",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Program — Ourika Valley",
+          description: "Nature day in the Atlas near Marrakech.",
+          steps: [
+            "8:30 AM — Pickup in Marrakech",
+            "9:30 AM — Enter the valley, photo stops",
+            "10:30 AM — Setti Fatma, hike to the cascades",
+            "Local lunch on a riverside terrace",
+            "Afternoon: market, crafts, return via the valley",
+            "~5:00 PM — Return to Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Private air-conditioned transport",
+        "Professional bilingual driver",
+        "Mineral water on board",
+        "Pickup at your accommodation",
+        "Hiking and village tips",
+      ],
+      notIncluded: [
+        "Lunch and drinks",
+        "Setti Fatma local guide (~50 MAD, recommended)",
+        "Tea with locals (~20 MAD donation)",
+        "Personal expenses",
+      ],
+      groupPricing: [
+        { travelers: "2 travelers", price: "€72/person" },
+        { travelers: "3–4 travelers", price: "€36–48/person" },
+        { travelers: "5–7 travelers", price: "€22–30/person" },
+        { travelers: "8–14 travelers", price: "€13–22/person" },
+        { travelers: "15–17 travelers", price: "€14/person" },
+      ],
+      faqs: [
+        {
+          question: "How difficult is the hike?",
+          answer: "Moderate: 1.5–2 h round trip with stairs. Good shoes recommended.",
+        },
+        {
+          question: "Can we go in winter?",
+          answer: "Yes, but bring warm clothes. Snow possible at altitude.",
+        },
+        {
+          question: "Suitable for children?",
+          answer: "Yes from 6–7 years with supervision. Younger children can stay in the valley.",
+        },
+        {
+          question: "Free cancellation?",
+          answer: "Yes, up to 48 hours before departure.",
+        },
+      ],
+    },
+  },
+  es: {
+    "ait-benhaddou": {
+      metaTitle:
+        "Aït Benhaddou UNESCO y Ouarzazate — Hollywood de Marruecos | 1 día | Red Nomad",
+      metaDescription:
+        "Excursión de un día desde Marrakech: paso Tizi n'Tichka, kasbah UNESCO, estudios de cine y Ouarzazate. Chófer privado y guía local.",
+      subtitle: "Hollywood de Marruecos",
+      difficulty: "Fácil",
+      duration: "1 día",
+      groupSize: "1–17 personas",
+      departure: "Marrakech",
+      languages: "Francés, English",
+      about:
+        "Cruzar el paso del Tizi n'Tichka (2260 m) hacia el sur marroquí ya es una aventura. La kasbah de Aït Benhaddou, fortaleza de adobe rojo patrimonio UNESCO, fue escenario de Gladiator, Juego de Tronos y Babel. Ouarzazate, la Puerta del Desierto y Hollywood de África, alberga los Atlas Corporation Studios.",
+      highlights: [
+        "Paso Tizi n'Tichka (2260 m) — panoramas del Gran Atlas",
+        "Kasbah de Aït Benhaddou — UNESCO, escenario de Gladiator y GOT",
+        "Visita guiada con guía local",
+        "Ouarzazate — estudios Atlas y Kasbah Taourirt",
+        "Paisajes del Alto Atlas Sur: ocre, adobe y pueblos bereberes",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Programa — Aït Benhaddou y Ouarzazate",
+          description: "Día completo con paso de montaña, visita UNESCO y regreso al atardecer.",
+          steps: [
+            "07h00 — Recogida en Marrakech",
+            "Paso Tizi n'Tichka (2260 m) — parada fotográfica",
+            "Aït Benhaddou — visita guiada UNESCO (1h–1h30)",
+            "Almuerzo libre en Ouarzazate",
+            "Atlas Corporation Studios y Kasbah Taourirt",
+            "~20h00 — Regreso a Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Transporte en 4x4 o minibus climatizado",
+        "Chófer profesional bilingüe (FR/EN)",
+        "Guía local en Aït Benhaddou",
+        "Agua mineral (1 botella/persona)",
+        "Recogida en su alojamiento",
+      ],
+      notIncluded: [
+        "Almuerzo y bebidas",
+        "Entrada kasbah (~30 MAD)",
+        "Entrada estudios (~80 MAD, opcional)",
+        "Gastos personales y propinas",
+      ],
+      groupPricing: [
+        { travelers: "2 viajeros", price: "90 €/pers." },
+        { travelers: "3–4 viajeros", price: "45–60 €/pers." },
+        { travelers: "5–7 viajeros", price: "28–38 €/pers." },
+        { travelers: "8–14 viajeros", price: "16–28 €/pers." },
+        { travelers: "15–17 viajeros", price: "18 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "¿Cancelación gratuita?",
+          answer: "Sí, hasta 48 h antes del salida sin cargo.",
+        },
+        {
+          question: "¿Qué incluye el precio?",
+          answer: "Transporte privado, chófer bilingüe, guía local y agua a bordo.",
+        },
+        {
+          question: "¿Tamaño máximo del grupo?",
+          answer: "De 1 a 17 personas. Privatización disponible.",
+        },
+        {
+          question: "¿Qué debo llevar?",
+          answer: "Calzado cómodo, gorra, protector solar, chaqueta ligera.",
+        },
+        {
+          question: "¿Mejor época?",
+          answer: "Todo el año. Marzo–mayo y septiembre–noviembre son ideales.",
+        },
+      ],
+    },
+    ouzoud: {
+      metaTitle: "Cascadas de Ouzoud — Excursión de un día | Red Nomad",
+      metaDescription:
+        "Excursión a las cascadas de Ouzoud (110 m) desde Marrakech. Monos, paseo al pie de las cataratas. Chófer privado.",
+      subtitle: "Las cascadas más altas de Marruecos",
+      difficulty: "Fácil",
+      duration: "1 día",
+      groupSize: "1–17 personas",
+      departure: "Marrakech",
+      languages: "Francés, English",
+      about:
+        "A 150 km de Marrakech, las cascadas de Ouzoud caen 110 metros en un valle verde de olivos e higueras. Monos en libertad, molinos tradicionales y barcas al pie de las cataratas.",
+      highlights: [
+        "Cascadas de 110 m — las más altas de Marruecos",
+        "Monos magotes en libertad",
+        "Paseo al pie de las cataratas",
+        "Molinos tradicionales y olivos centenarios",
+        "Almuerzo en terraza frente a las cascadas",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Programa — Cascadas de Ouzoud",
+          description: "Día de naturaleza con 3 h en las cascadas.",
+          steps: [
+            "08h00 — Recogida en Marrakech",
+            "10h30 — Llegada a Ouzoud",
+            "Visita de las cascadas y sendero",
+            "Tiempo libre: fotos, monos, almuerzo",
+            "16h00 — Regreso",
+            "~18h30 — Llegada a Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Transporte privado climatizado ida y vuelta",
+        "Chófer profesional bilingüe",
+        "Acompañamiento local",
+        "Agua mineral a bordo",
+        "Recogida en su riad u hotel",
+      ],
+      notIncluded: [
+        "Almuerzo y bebidas",
+        "Barca (~20 MAD, opcional)",
+        "Guía oficial (~30 MAD, opcional)",
+        "Gastos personales",
+      ],
+      groupPricing: [
+        { travelers: "2 viajeros", price: "80 €/pers." },
+        { travelers: "3–4 viajeros", price: "40–53 €/pers." },
+        { travelers: "5–7 viajeros", price: "25–34 €/pers." },
+        { travelers: "8–14 viajeros", price: "14–25 €/pers." },
+        { travelers: "15–17 viajeros", price: "16 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "¿Se puede bañar?",
+          answer: "Sí en verano. Traje de baño y toalla recomendados.",
+        },
+        {
+          question: "¿Apto para niños?",
+          answer: "Sí, sendero accesible. Supervisar cerca de los monos.",
+        },
+        {
+          question: "¿Buena forma física necesaria?",
+          answer: "No, caminata moderada de 30–45 minutos.",
+        },
+        {
+          question: "¿Cancelación gratuita?",
+          answer: "Sí, hasta 48 h antes.",
+        },
+      ],
+    },
+    essaouira: {
+      metaTitle: "Essaouira Medina UNESCO — Excursión Atlántica | Red Nomad",
+      metaDescription:
+        "Excursión de un día a Essaouira desde Marrakech: medina UNESCO, puerto pesquero, murallas y playa.",
+      subtitle: "Perla del Atlántico",
+      difficulty: "Fácil",
+      duration: "1 día",
+      groupSize: "1–17 personas",
+      departure: "Marrakech",
+      languages: "Francés, English",
+      about:
+        "Essaouira, antigua Mogador, es una ciudad fortificada junto al Atlántico. Medina UNESCO, puerto de barcas azules, murallas del siglo XVIII y playa ventosa — escapada bohemia a 2h30 de Marrakech.",
+      highlights: [
+        "Medina UNESCO — callejuelas y artesanos",
+        "Puerto pesquero — barcas azules y pescado",
+        "Murallas Skala — vista al océano",
+        "Ruta de argán — cooperativas",
+        "Playa y ambiente bohemio",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Programa — Essaouira",
+          description: "Tiempo libre en Essaouira tras el trayecto matinal.",
+          steps: [
+            "08h00 — Recogida en Marrakech",
+            "Ruta por Chichaoua — parada argán (opcional)",
+            "11h00 — Llegada, medina libre",
+            "Almuerzo en el puerto",
+            "Tarde: murallas, playa, artesanía",
+            "17h00 — Regreso (~20h00 Marrakech)",
+          ],
+        },
+      ],
+      included: [
+        "Transporte privado climatizado",
+        "Chófer bilingüe",
+        "Agua mineral",
+        "Recogida en alojamiento",
+        "Recomendaciones locales",
+      ],
+      notIncluded: [
+        "Almuerzo y bebidas",
+        "Entradas museos",
+        "Deportes acuáticos",
+        "Gastos personales",
+      ],
+      groupPricing: [
+        { travelers: "2 viajeros", price: "80 €/pers." },
+        { travelers: "3–4 viajeros", price: "40–53 €/pers." },
+        { travelers: "5–7 viajeros", price: "25–34 €/pers." },
+        { travelers: "8–14 viajeros", price: "14–25 €/pers." },
+        { travelers: "15–17 viajeros", price: "16 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "¿Cuánto tiempo libre?",
+          answer: "Unas 5–6 horas en Essaouira.",
+        },
+        {
+          question: "¿Hace viento?",
+          answer: "Sí, a menudo por la tarde. Chaqueta ligera recomendada.",
+        },
+        {
+          question: "¿Se puede nadar?",
+          answer: "Playa accesible pero agua fresca.",
+        },
+        {
+          question: "¿Cancelación gratuita?",
+          answer: "Sí, hasta 48 h antes.",
+        },
+      ],
+    },
+    ourika: {
+      metaTitle: "Valle de Ourika — Excursión Atlas | Red Nomad",
+      metaDescription:
+        "Excursión al valle de Ourika desde Marrakech: pueblos bereberes, cascada Setti Fatma, mercado local.",
+      subtitle: "Naturaleza y pueblos bereberes",
+      difficulty: "Moderado",
+      duration: "1 día",
+      groupSize: "1–17 personas",
+      departure: "Marrakech",
+      languages: "Francés, English",
+      about:
+        "A solo 60 km de Marrakech, el valle de Ourika serpentea por el Atlas con pueblos bereberes, terrazas cultivadas y la cascada de Setti Fatma.",
+      highlights: [
+        "Valle verde del Alto Atlas a 1 h de Marrakech",
+        "Pueblos bereberes tradicionales",
+        "Cascada Setti Fatma — senderismo ligero",
+        "Mercado local (lunes)",
+        "Té a la menta con locales (opcional)",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Programa — Valle de Ourika",
+          description: "Día de naturaleza cerca de Marrakech.",
+          steps: [
+            "08h30 — Recogida en Marrakech",
+            "09h30 — Entrada al valle",
+            "10h30 — Setti Fatma, caminata a cascadas",
+            "Almuerzo local junto al río",
+            "Tarde: mercado y regreso",
+            "~17h00 — Marrakech",
+          ],
+        },
+      ],
+      included: [
+        "Transporte privado climatizado",
+        "Chófer bilingüe",
+        "Agua mineral",
+        "Recogida en alojamiento",
+        "Consejos de senderismo",
+      ],
+      notIncluded: [
+        "Almuerzo y bebidas",
+        "Guía local Setti Fatma (~50 MAD)",
+        "Té con locales (~20 MAD)",
+        "Gastos personales",
+      ],
+      groupPricing: [
+        { travelers: "2 viajeros", price: "72 €/pers." },
+        { travelers: "3–4 viajeros", price: "36–48 €/pers." },
+        { travelers: "5–7 viajeros", price: "22–30 €/pers." },
+        { travelers: "8–14 viajeros", price: "13–22 €/pers." },
+        { travelers: "15–17 viajeros", price: "14 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "¿Dificultad del senderismo?",
+          answer: "Moderada: 1h30–2h ida y vuelta con escaleras.",
+        },
+        {
+          question: "¿En invierno?",
+          answer: "Sí, ropa de abrigo. Posible nieve en altura.",
+        },
+        {
+          question: "¿Para niños?",
+          answer: "Sí desde 6–7 años con supervisión.",
+        },
+        {
+          question: "¿Cancelación gratuita?",
+          answer: "Sí, hasta 48 h antes.",
+        },
+      ],
+    },
+  },
+  de: {
+    "ait-benhaddou": {
+      metaTitle:
+        "Aït Benhaddou UNESCO & Ouarzazate — Hollywood Marokkos | 1 Tag | Red Nomad",
+      metaDescription:
+        "Tagesausflug ab Marrakesch: Tizi n'Tichka-Pass, UNESCO-Kasbah, Filmstudios und Ouarzazate. Privatchauffeur und lokaler Guide.",
+      subtitle: "Hollywood Marokkos",
+      difficulty: "Leicht",
+      duration: "1 Tag",
+      groupSize: "1–17 Personen",
+      departure: "Marrakesch",
+      languages: "Französisch, Englisch",
+      about:
+        "Die Überquerung des Tizi n'Tichka-Passes (2260 m) in den Süden Marokkos ist schon ein Abenteuer. Die UNESCO-Kasbah Aït Benhaddou diente als Kulisse für Gladiator, Game of Thrones und Babel. Ouarzazate — Tor zur Wüste und Hollywood Afrikas.",
+      highlights: [
+        "Tizi n'Tichka-Pass (2260 m) — Panorama auf den Hohen Atlas",
+        "Kasbah Aït Benhaddou — UNESCO, Gladiator & GOT",
+        "Geführte Besichtigung mit lokalem Guide",
+        "Ouarzazate — Atlas Corporation Studios & Taourirt-Kasbah",
+        "Landschaften des südlichen Hohen Atlas",
+      ],
+      itinerary: [
+        {
+          dayLabel: "T1",
+          title: "Programm — Aït Benhaddou & Ouarzazate",
+          description: "Ganzer Tag mit Pass, UNESCO-Besuch und Rückfahrt bei Sonnenuntergang.",
+          steps: [
+            "07:00 — Abholung in Marrakesch",
+            "Tizi n'Tichka-Pass (2260 m) — Fotostopp",
+            "Aït Benhaddou — geführte UNESCO-Besichtigung",
+            "Freies Mittagessen in Ouarzazate",
+            "Filmstudios & Taourirt-Kasbah",
+            "~20:00 — Rückkehr nach Marrakesch",
+          ],
+        },
+      ],
+      included: [
+        "Klimatisierter 4x4 oder Minibus",
+        "Professioneller zweisprachiger Fahrer",
+        "Lokaler Guide in Aït Benhaddou",
+        "Mineralwasser (1 Flasche/Person)",
+        "Abholung an der Unterkunft",
+      ],
+      notIncluded: [
+        "Mittagessen und Getränke",
+        "Kasbah-Eintritt (~30 MAD)",
+        "Studio-Eintritt (~80 MAD, optional)",
+        "Persönliche Ausgaben und Trinkgeld",
+      ],
+      groupPricing: [
+        { travelers: "2 Reisende", price: "90 €/Pers." },
+        { travelers: "3–4 Reisende", price: "45–60 €/Pers." },
+        { travelers: "5–7 Reisende", price: "28–38 €/Pers." },
+        { travelers: "8–14 Reisende", price: "16–28 €/Pers." },
+        { travelers: "15–17 Reisende", price: "18 €/Pers." },
+      ],
+      faqs: [
+        {
+          question: "Kostenlose Stornierung?",
+          answer: "Ja, bis 48 Stunden vor Abfahrt kostenlos.",
+        },
+        {
+          question: "Was ist im Preis enthalten?",
+          answer: "Privattransport, Fahrer, lokaler Guide und Wasser an Bord.",
+        },
+        {
+          question: "Maximale Gruppengröße?",
+          answer: "1 bis 17 Personen. Privatisierung möglich.",
+        },
+        {
+          question: "Was mitbringen?",
+          answer: "Bequeme Schuhe, Mütze, Sonnencreme, leichte Jacke.",
+        },
+        {
+          question: "Beste Reisezeit?",
+          answer: "Ganzjährig. März–Mai und September–November ideal.",
+        },
+      ],
+    },
+    ouzoud: {
+      metaTitle: "Ouzoud-Wasserfälle — Tagesausflug | Red Nomad",
+      metaDescription:
+        "Tagesausflug zu den Ouzoud-Wasserfällen (110 m) ab Marrakesch. Berberaffen, Spaziergang am Fuß der Fälle.",
+      subtitle: "Marokkos höchste Wasserfälle",
+      difficulty: "Leicht",
+      duration: "1 Tag",
+      groupSize: "1–17 Personen",
+      departure: "Marrakesch",
+      languages: "Französisch, Englisch",
+      about:
+        "150 km von Marrakesch entfernt stürzen die Ouzoud-Fälle 110 Meter in ein grünes Tal. Wilde Berberaffen, traditionelle Ölmühlen und Bootsfahrten.",
+      highlights: [
+        "110 m Wasserfälle — höchste in Marokko",
+        "Wilde Berberaffen",
+        "Wanderung zum Fuß der Fälle",
+        "Traditionelle Mühlen und Olivenbäume",
+        "Mittagessen mit Blick auf die Fälle",
+      ],
+      itinerary: [
+        {
+          dayLabel: "T1",
+          title: "Programm — Ouzoud-Wasserfälle",
+          description: "Naturtag mit 3 Stunden an den Fällen.",
+          steps: [
+            "08:00 — Abholung Marrakesch",
+            "10:30 — Ankunft Ouzoud",
+            "Besichtigung und Wanderweg",
+            "Freizeit: Fotos, Affen, Mittagessen",
+            "16:00 — Rückfahrt",
+            "~18:30 — Marrakesch",
+          ],
+        },
+      ],
+      included: [
+        "Privater klimatisierter Hin- und Rücktransport",
+        "Professioneller Fahrer",
+        "Lokale Begleitung",
+        "Mineralwasser",
+        "Abholung an der Unterkunft",
+      ],
+      notIncluded: [
+        "Mittagessen und Getränke",
+        "Boot (~20 MAD, optional)",
+        "Offizieller Guide (~30 MAD, optional)",
+        "Persönliche Ausgaben",
+      ],
+      groupPricing: [
+        { travelers: "2 Reisende", price: "80 €/Pers." },
+        { travelers: "3–4 Reisende", price: "40–53 €/Pers." },
+        { travelers: "5–7 Reisende", price: "25–34 €/Pers." },
+        { travelers: "8–14 Reisende", price: "14–25 €/Pers." },
+        { travelers: "15–17 Reisende", price: "16 €/Pers." },
+      ],
+      faqs: [
+        {
+          question: "Kann man baden?",
+          answer: "Ja im Sommer. Badekleidung mitbringen.",
+        },
+        {
+          question: "Für Kinder geeignet?",
+          answer: "Ja, Hauptweg zugänglich. Kinder nahe Affen beaufsichtigen.",
+        },
+        {
+          question: "Gute Kondition nötig?",
+          answer: "Nein, moderate 30–45 Minuten Wanderung.",
+        },
+        {
+          question: "Kostenlose Stornierung?",
+          answer: "Ja, bis 48 Stunden vorher.",
+        },
+      ],
+    },
+    essaouira: {
+      metaTitle: "Essaouira UNESCO-Medina — Atlantik-Tagesausflug | Red Nomad",
+      metaDescription:
+        "Tagesausflug nach Essaouira ab Marrakesch: UNESCO-Medina, Fischhafen, Stadtmauer und Strand.",
+      subtitle: "Perle des Atlantiks",
+      difficulty: "Leicht",
+      duration: "1 Tag",
+      groupSize: "1–17 Personen",
+      departure: "Marrakesch",
+      languages: "Französisch, Englisch",
+      about:
+        "Essaouira, das alte Mogador, ist eine befestigte Atlantikstadt. UNESCO-Medina, blauer Fischerhafen, Stadtmauer und windiger Strand — bohemische Auszeit 2,5 Stunden von Marrakesch.",
+      highlights: [
+        "UNESCO-Medina — Gassen und Handwerk",
+        "Fischhafen — blaue Boote",
+        "Skala-Stadtmauer — Meerblick",
+        "Arganbaum-Route — Kooperativen",
+        "Strand und bohemische Atmosphäre",
+      ],
+      itinerary: [
+        {
+          dayLabel: "T1",
+          title: "Programm — Essaouira",
+          description: "Freizeit in Essaouira nach der Morgenfahrt.",
+          steps: [
+            "08:00 — Abholung Marrakesch",
+            "Fahrt über Chichaoua — Argan-Stop (optional)",
+            "11:00 — Ankunft, freie Medina",
+            "Mittagessen am Hafen",
+            "Nachmittag: Mauer, Strand, Shopping",
+            "17:00 — Rückfahrt (~20:00 Marrakesch)",
+          ],
+        },
+      ],
+      included: [
+        "Privater klimatisierter Transport",
+        "Zweisprachiger Fahrer",
+        "Mineralwasser",
+        "Abholung",
+        "Lokale Tipps",
+      ],
+      notIncluded: [
+        "Mittagessen und Getränke",
+        "Museumseintritte",
+        "Wassersport",
+        "Persönliche Ausgaben",
+      ],
+      groupPricing: [
+        { travelers: "2 Reisende", price: "80 €/Pers." },
+        { travelers: "3–4 Reisende", price: "40–53 €/Pers." },
+        { travelers: "5–7 Reisende", price: "25–34 €/Pers." },
+        { travelers: "8–14 Reisende", price: "14–25 €/Pers." },
+        { travelers: "15–17 Reisende", price: "16 €/Pers." },
+      ],
+      faqs: [
+        {
+          question: "Wie viel Freizeit?",
+          answer: "Etwa 5–6 Stunden in Essaouira.",
+        },
+        {
+          question: "Ist es windig?",
+          answer: "Ja, oft am Nachmittag. Leichte Jacke mitbringen.",
+        },
+        {
+          question: "Baden möglich?",
+          answer: "Strand zugänglich, Wasser eher kühl.",
+        },
+        {
+          question: "Kostenlose Stornierung?",
+          answer: "Ja, bis 48 Stunden vorher.",
+        },
+      ],
+    },
+    ourika: {
+      metaTitle: "Ourika-Tal — Atlas-Tagesausflug | Red Nomad",
+      metaDescription:
+        "Tagesausflug ins Ourika-Tal ab Marrakesch: Berberdörfer, Setti-Fatma-Wasserfall, lokaler Markt.",
+      subtitle: "Natur & Berberdörfer",
+      difficulty: "Mittel",
+      duration: "1 Tag",
+      groupSize: "1–17 Personen",
+      departure: "Marrakesch",
+      languages: "Französisch, Englisch",
+      about:
+        "Nur 60 km von Marrakesch entfernt schlängelt sich das Ourika-Tal durch den Atlas mit Berberdörfern, Terrassenfeldern und dem Setti-Fatma-Wasserfall.",
+      highlights: [
+        "Grünes Atlas-Tal 1 Stunde von Marrakesch",
+        "Traditionelle Berberdörfer",
+        "Setti-Fatma-Wasserfall — leichte Wanderung",
+        "Lokaler Markt (Montags)",
+        "Minztee bei Einheimischen (optional)",
+      ],
+      itinerary: [
+        {
+          dayLabel: "T1",
+          title: "Programm — Ourika-Tal",
+          description: "Naturtag im Atlas nahe Marrakesch.",
+          steps: [
+            "08:30 — Abholung Marrakesch",
+            "09:30 — Einfahrt ins Tal",
+            "10:30 — Setti Fatma, Wanderung",
+            "Lokales Mittagessen am Fluss",
+            "Nachmittag: Markt und Rückfahrt",
+            "~17:00 — Marrakesch",
+          ],
+        },
+      ],
+      included: [
+        "Privater klimatisierter Transport",
+        "Professioneller Fahrer",
+        "Mineralwasser",
+        "Abholung",
+        "Wander- und Dorftipps",
+      ],
+      notIncluded: [
+        "Mittagessen und Getränke",
+        "Lokaler Guide Setti Fatma (~50 MAD)",
+        "Tee bei Einheimischen (~20 MAD)",
+        "Persönliche Ausgaben",
+      ],
+      groupPricing: [
+        { travelers: "2 Reisende", price: "72 €/Pers." },
+        { travelers: "3–4 Reisende", price: "36–48 €/Pers." },
+        { travelers: "5–7 Reisende", price: "22–30 €/Pers." },
+        { travelers: "8–14 Reisende", price: "13–22 €/Pers." },
+        { travelers: "15–17 Reisende", price: "14 €/Pers." },
+      ],
+      faqs: [
+        {
+          question: "Wie anstrengend die Wanderung?",
+          answer: "Mittel: 1,5–2 h Hin- und Rückweg mit Treppen.",
+        },
+        {
+          question: "Im Winter?",
+          answer: "Ja, warme Kleidung. Schnee möglich.",
+        },
+        {
+          question: "Für Kinder?",
+          answer: "Ab 6–7 Jahren mit Aufsicht.",
+        },
+        {
+          question: "Kostenlose Stornierung?",
+          answer: "Ja, bis 48 Stunden vorher.",
+        },
+      ],
+    },
+  },
+};

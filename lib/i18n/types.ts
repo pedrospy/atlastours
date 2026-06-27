@@ -81,6 +81,33 @@ export type Dictionary = {
     viewAll: string;
     items: Record<string, { title: string; badge: string; description: string }>;
   };
+  excursionDetail: {
+    breadcrumbHome: string;
+    breadcrumbAll: string;
+    about: string;
+    highlights: string;
+    itinerary: string;
+    included: string;
+    notIncluded: string;
+    groupPricing: string;
+    faq: string;
+    whyBook: string;
+    book: string;
+    requestQuote: string;
+    freeCancel: string;
+    instantConfirm: string;
+    duration: string;
+    group: string;
+    departure: string;
+    languages: string;
+    reviews: string;
+    from: string;
+    perPerson: string;
+    totalFor2: string;
+    discover: string;
+    readyTitle: string;
+    readyCta: string;
+  };
   activities: {
     eyebrow: string;
     title: string;

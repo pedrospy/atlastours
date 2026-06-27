@@ -45,11 +45,13 @@ export function ExcursionsSection() {
                 transition={{ delay: i * 0.08 }}
                 className="card-traditional group cursor-pointer"
               >
+                <Link href={`/${locale}/excursions/${excursion.slug}`}>
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={excursion.image}
                     alt={content.title}
                     fill
+                    unoptimized
                     className="object-cover transition duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
@@ -79,6 +81,7 @@ export function ExcursionsSection() {
                     </p>
                   </div>
                 </div>
+                </Link>
               </motion.article>
             );
           })}

@@ -15,6 +15,9 @@ const sans = Lora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3003"
+  ),
   title: "Red Nomad",
   description: "Transferts aéroport · Excursions · Circuits privés au Maroc",
   icons: {

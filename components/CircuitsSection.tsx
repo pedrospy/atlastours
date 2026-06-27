@@ -45,6 +45,7 @@ export function CircuitsSection() {
                 transition={{ delay: i * 0.1 }}
                 className="card-traditional group"
               >
+                <Link href={`/${locale}/circuits/${circuit.slug}`}>
                 <div className="relative aspect-[16/10] overflow-hidden">
                   {"images" in circuit && circuit.images ? (
                     <div className="grid h-full w-full grid-cols-2 grid-rows-2">
@@ -114,6 +115,7 @@ export function CircuitsSection() {
                     </div>
                   </div>
                 </div>
+                </Link>
               </motion.article>
             );
           })}

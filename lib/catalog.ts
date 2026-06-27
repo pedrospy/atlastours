@@ -19,6 +19,7 @@ export function getWhatsAppUrl(message?: string) {
 export const circuitsCatalog = [
   {
     id: "circuit-11-jours",
+    slug: "marrakech-sahara-atlas-11-days",
     rating: 4.9,
     reviews: 56,
     price: 1290,
@@ -32,6 +33,7 @@ export const circuitsCatalog = [
   },
   {
     id: "grand-tour-17",
+    slug: "grand-tour-maroc-17-jours",
     rating: 4.9,
     reviews: 38,
     price: 2190,
@@ -39,6 +41,7 @@ export const circuitsCatalog = [
   },
   {
     id: "merzouga-3j",
+    slug: "desert-merzouga-3-jours",
     rating: 4.9,
     reviews: 142,
     price: 380,
@@ -46,6 +49,7 @@ export const circuitsCatalog = [
   },
   {
     id: "megdaz-3j",
+    slug: "vallee-megdaz-3-jours",
     rating: 4.9,
     reviews: 31,
     price: 420,
@@ -56,6 +60,7 @@ export const circuitsCatalog = [
 export const excursionsCatalog = [
   {
     id: "ouzoud",
+    slug: "cascades-ouzoud-day-trip",
     rating: 4.9,
     reviews: 112,
     price: 80,
@@ -63,6 +68,7 @@ export const excursionsCatalog = [
   },
   {
     id: "essaouira",
+    slug: "essaouira-medina-day-trip",
     rating: 4.8,
     reviews: 103,
     price: 80,
@@ -70,6 +76,7 @@ export const excursionsCatalog = [
   },
   {
     id: "ait-benhaddou",
+    slug: "ait-benhaddou-ouarzazate-unesco-day-trip",
     rating: 4.9,
     reviews: 87,
     price: 90,
@@ -77,6 +84,7 @@ export const excursionsCatalog = [
   },
   {
     id: "ourika",
+    slug: "ourika-valley-day-trip",
     rating: 4.8,
     reviews: 134,
     price: 72,
