@@ -17,6 +17,10 @@ const sans = Lora({
 export const metadata: Metadata = {
   title: "Red Nomad",
   description: "Transferts aéroport · Excursions · Circuits privés au Maroc",
+  icons: {
+    icon: "/red-nomad-logo.png",
+    apple: "/red-nomad-logo.png",
+  },
 };
 
 export default function RootLayout({

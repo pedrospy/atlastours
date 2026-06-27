@@ -8,14 +8,15 @@ type LogoProps = {
   priority?: boolean;
 };
 
-export function Logo({ size = 44, className = "", priority = false }: LogoProps) {
+export function Logo({ size = 56, className = "", priority = false }: LogoProps) {
   return (
     <Image
-      src="/logo.png"
+      src="/red-nomad-logo.png"
       alt="Red Nomad"
       width={size}
       height={size}
-      className={`shrink-0 rounded-sm ${className}`}
+      unoptimized
+      className={`shrink-0 rounded-lg object-contain shadow-gold ${className}`}
       priority={priority}
     />
   );

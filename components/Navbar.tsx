@@ -38,8 +38,8 @@ export function Navbar() {
     >
       <nav className="container-wide flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href={`/${locale}`} className="group flex items-center gap-3">
-          <Logo size={44} priority />
-          <div className="hidden sm:block">
+          <Logo size={56} priority />
+          <div>
             <p className="font-display text-xl font-semibold leading-tight text-white">
               {siteConfig.name}
             </p>

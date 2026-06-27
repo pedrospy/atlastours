@@ -68,7 +68,7 @@ export function Footer() {
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="flex items-center gap-3">
-                <Logo size={44} />
+                <Logo size={56} />
                 <span className="font-display text-xl font-bold text-gold-light">
                   {siteConfig.name}
                 </span>
