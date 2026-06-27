@@ -20,10 +20,10 @@ export default function Home() {
       <TransfersSection />
       <CircuitsSection />
       <ExcursionsSection />
+      <DestinationsSection />
       <ActivitiesSection />
       <WhyUsSection />
       <TestimonialsSection />
-      <DestinationsSection />
       <NewsletterSection />
       <Footer />
     </main>

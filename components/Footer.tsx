@@ -21,7 +21,13 @@ export function Footer() {
   const dict = useDictionary();
   const t = dict.footer;
 
-  const navLinks = navLinkIds.slice(0, 4).map((id) => ({
+  const footerNavIds = [
+    "discover",
+    "destinations",
+    ...navLinkIds.filter((id) => id !== "discover" && id !== "destinations"),
+  ] as const;
+
+  const navLinks = footerNavIds.map((id) => ({
     ...dict.nav[id],
     id,
   }));

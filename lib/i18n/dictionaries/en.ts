@@ -291,6 +291,7 @@ export const en: Dictionary = {
     eyebrow: "Destinations",
     title: "Exceptional Destinations",
     viewAll: "All destinations",
+    breadcrumbAll: "All destinations",
     names: {
       marrakech: "Marrakech",
       merzouga: "Merzouga",
@@ -300,6 +301,16 @@ export const en: Dictionary = {
       megdaz: "Megdaz",
       agadir: "Agadir",
       oualili: "Fes (Oualili)",
+    },
+    items: {
+      marrakech: { badge: "Imperial city" },
+      merzouga: { badge: "Sahara desert" },
+      "nord-maroc": { badge: "Coast & Rif" },
+      fes: { badge: "UNESCO medina" },
+      essaouira: { badge: "Atlantic gem" },
+      megdaz: { badge: "Authentic Atlas" },
+      agadir: { badge: "Southern coast" },
+      oualili: { badge: "Ancient sites" },
     },
   },
   newsletter: {

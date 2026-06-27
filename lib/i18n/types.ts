@@ -134,7 +134,9 @@ export type Dictionary = {
     eyebrow: string;
     title: string;
     viewAll: string;
+    breadcrumbAll: string;
     names: Record<string, string>;
+    items: Record<string, { badge: string }>;
   };
   newsletter: {
     badge: string;

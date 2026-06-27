@@ -34,7 +34,7 @@ type Props = {
   detail: ExperienceDetailContent;
   cardTitle: string;
   badge: string;
-  listAnchor: "#excursions" | "#circuits";
+  listAnchor: "#excursions" | "#circuits" | "#destinations";
   listLabel: string;
 };
 
