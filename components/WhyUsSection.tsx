@@ -62,17 +62,19 @@ export function WhyUsSection() {
   const t = dict.whyUs;
 
   return (
-    <section id="pourquoi" className="section-padding pattern-section">
+    <section id="pourquoi" className="section-padding section-surface-light pattern-section">
       <div className="container-wide">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <div>
-            <SectionArabic phrase="hospitality" />
-            <span className="section-eyebrow">{t.eyebrow}</span>
-            <h2 className="section-title mt-4 text-balance">{t.title}</h2>
-            <div className="ornament-divider !mx-0 !max-w-[180px]" />
-            <p className="text-lg leading-relaxed text-midnight/70">
-              {t.description}
-            </p>
+            <div className="section-intro">
+              <SectionArabic phrase="hospitality" />
+              <span className="section-eyebrow">{t.eyebrow}</span>
+              <h2 className="section-title text-balance">{t.title}</h2>
+              <div className="ornament-divider !mx-0 !max-w-[180px]" />
+              <p className="text-lg leading-relaxed text-midnight/70">
+                {t.description}
+              </p>
+            </div>
 
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {featuresCatalog.map((feature, i) => {

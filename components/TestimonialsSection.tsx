@@ -14,11 +14,11 @@ export function TestimonialsSection() {
     .replace("{count}", String(siteConfig.reviewCount));
 
   return (
-    <section className="section-padding bg-sand-100">
+    <section className="section-padding section-surface-light bg-sand-100">
       <div className="container-wide">
-        <div className="mb-14 text-center">
+        <div className="section-intro section-intro-center mx-auto mb-16 max-w-3xl">
           <span className="section-eyebrow">{t.eyebrow}</span>
-          <h2 className="section-title mt-4">{t.title}</h2>
+          <h2 className="section-title">{t.title}</h2>
           <div className="ornament-divider" />
           <p className="text-midnight/65">
             {siteConfig.reviewCount} {subtitle}

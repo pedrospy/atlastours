@@ -20,6 +20,7 @@ export const en: Dictionary = {
   },
   site: {
     tagline: "Airport transfers · Day trips · Private tours in Morocco",
+    logoSubtitle: "Tours · Transport",
     address: "Marrakech, Morocco",
   },
   nav: {
@@ -71,6 +72,14 @@ export const en: Dictionary = {
     viewAll: "Request a quote",
     cta: "Book a transfer",
     galleryTitle: "Our fleet & routes in Morocco",
+    fleetTitle: "Tourist fleet",
+    fleet: {
+      sedan: { name: "Comfort sedan", detail: "Airport & city" },
+      van: { name: "Premium van", detail: "Families & day trips" },
+      suv: { name: "4×4 SUV", detail: "Desert & Atlas" },
+      minibus: { name: "Minibus", detail: "Groups & events" },
+    },
+    fleetFeatures: ["Air-conditioned", "FR/EN driver", "Child seats", "Insurance included"],
     items: {
       airport: {
         title: "Marrakech airport transfer",

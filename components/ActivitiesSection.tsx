@@ -15,7 +15,7 @@ import {
 import Link from "next/link";
 import { activitiesCatalog } from "@/lib/catalog";
 import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
-import { ArabicCalligraphy } from "@/components/ArabicCalligraphy";
+import { SectionArabic } from "@/components/ArabicCalligraphy";
 
 const iconMap: Record<string, React.ElementType> = {
   camel: Compass,
@@ -36,21 +36,19 @@ export function ActivitiesSection() {
   return (
     <section
       id="activites"
-      className="section-padding bg-burgundy-dark bg-moroccan-pattern text-white"
+      className="section-padding section-surface-dark bg-burgundy-dark bg-moroccan-pattern text-white"
     >
       <div className="container-wide">
-        <div className="mb-14 text-center">
-          <ArabicCalligraphy
+        <div className="section-intro section-intro-center mx-auto mb-16 max-w-3xl text-center">
+          <SectionArabic
             phrase="desertSoul"
-            variant="section"
-            className="mb-4 block text-gold-light/70"
+            centered
+            className="text-gold-light/70"
           />
           <span className="section-eyebrow text-gold-light">{t.eyebrow}</span>
-          <h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">
-            {t.title}
-          </h2>
+          <h2 className="section-title text-white">{t.title}</h2>
           <div className="ornament-divider" />
-          <p className="mx-auto max-w-xl text-sand-200/75">{t.description}</p>
+          <p className="text-sand-200/75">{t.description}</p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

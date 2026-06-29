@@ -98,6 +98,13 @@ export const excursionsCatalog = [
   },
 ] as const;
 
+export const fleetCatalog = [
+  { id: "sedan", icon: "sedan" as const, seats: "1-3" },
+  { id: "van", icon: "van" as const, seats: "4-7" },
+  { id: "suv", icon: "suv" as const, seats: "1-4" },
+  { id: "minibus", icon: "minibus" as const, seats: "8-17" },
+] as const;
+
 export const transfersCatalog = [
   {
     id: "airport",

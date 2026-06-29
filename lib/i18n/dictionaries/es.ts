@@ -20,6 +20,7 @@ export const es: Dictionary = {
   },
   site: {
     tagline: "Traslados aeropuerto · Excursiones · Circuitos privados en Marruecos",
+    logoSubtitle: "Turismo · Transporte",
     address: "Marrakech, Marruecos",
   },
   nav: {
@@ -71,6 +72,14 @@ export const es: Dictionary = {
     viewAll: "Solicitar presupuesto",
     cta: "Reservar un traslado",
     galleryTitle: "Nuestra flota y rutas en Marruecos",
+    fleetTitle: "Flota turística",
+    fleet: {
+      sedan: { name: "Berlina confort", detail: "Aeropuerto y ciudad" },
+      van: { name: "Van premium", detail: "Familias y excursiones" },
+      suv: { name: "SUV 4×4", detail: "Desierto y Atlas" },
+      minibus: { name: "Minibús", detail: "Grupos y eventos" },
+    },
+    fleetFeatures: ["Climatizado", "Conductor FR/EN", "Sillas infantiles", "Seguro incluido"],
     items: {
       airport: {
         title: "Traslado aeropuerto Marrakech",

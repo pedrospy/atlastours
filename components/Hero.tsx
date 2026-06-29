@@ -32,7 +32,7 @@ export function Hero() {
         className="absolute -right-4 top-1/2 hidden -translate-y-1/2 lg:block xl:right-8"
       />
 
-      <div className="relative flex min-h-screen flex-col justify-center section-padding pt-32">
+      <div className="relative flex min-h-screen flex-col justify-center section-padding pb-32 pt-24 lg:pb-40 lg:pt-28">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

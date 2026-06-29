@@ -16,7 +16,7 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="section-padding bg-burgundy bg-moroccan-pattern">
+    <section className="section-padding section-surface-dark bg-burgundy bg-moroccan-pattern">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

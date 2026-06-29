@@ -1,0 +1,44 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#452828"/>
+      <stop offset="55%" stop-color="#2d1212"/>
+      <stop offset="100%" stop-color="#120808"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="12" y1="10" x2="52" y2="54">
+      <stop offset="0%" stop-color="#f4d875"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#9a7618"/>
+    </linearGradient>
+    <linearGradient id="duneFar" x1="0" y1="42" x2="64" y2="64">
+      <stop offset="0%" stop-color="#6b3830"/>
+      <stop offset="100%" stop-color="#3d2018"/>
+    </linearGradient>
+    <linearGradient id="duneNear" x1="0" y1="48" x2="64" y2="64">
+      <stop offset="0%" stop-color="#d4784a"/>
+      <stop offset="100%" stop-color="#8f4528"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <circle cx="32" cy="32" r="31"/>
+    </clipPath>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="30" stroke="url(#gold)" stroke-width="1.15" fill="none"/>
+  <circle cx="32" cy="32" r="26.5" stroke="#c9a227" stroke-width="0.45" fill="none" opacity="0.25"/>
+  <g clip-path="url(#clip)">
+    <path d="M0 44C11 38 21 40 32 42C43 44 53 42 64 39V64H0V44Z" fill="url(#duneFar)" opacity="0.6"/>
+    <path d="M0 49C13 45 23 47 32 48C41 49 51 47 64 44V64H0V49Z" fill="url(#duneNear)"/>
+    <path d="M32 9.5L33.4 12.1 36.2 12.4 34.1 14.3 34.7 17.1 32 15.6 29.3 17.1 29.9 14.3 27.8 12.4 30.6 12.1 32 9.5Z" fill="none" stroke="url(#gold)" stroke-width="0.9" stroke-linejoin="round"/>
+    <path d="M8 50 Q32 46 56 50" stroke="#e0bc4a" stroke-width="0.7" stroke-linecap="round" stroke-dasharray="2.5 2" opacity="0.4"/>
+    <g stroke="url(#gold)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M11 38h40c1.4 0 2.5-1.1 2.5-2.5v-3.2c0-.7-.3-1.4-.9-1.8l-4.8-4.4H18.2l-5 4.4c-.6.4-.9 1.1-.9 1.8v2.9c0 1.4 1.1 2.5 2.5 2.5Z"/>
+      <path d="M17.5 25.5h15l3.2 3.8H16.8l.7-3.8Z" opacity="0.85"/>
+      <path d="M35.5 25.5h12l2.8 3.8H34l1.5-3.8Z" opacity="0.85"/>
+      <path d="M17.5 25.5V38M49.5 25.5V38" opacity="0.35"/>
+      <circle cx="18.5" cy="38" r="2.6"/>
+      <circle cx="45.5" cy="38" r="2.6"/>
+    </g>
+    <path d="M14 34C22 28 28 22 32 18" stroke="#f0d060" stroke-width="0.75" stroke-linecap="round" opacity="0.45"/>
+    <circle cx="32" cy="18" r="1.4" fill="#f4d875" opacity="0.85"/>
+  </g>
+</svg>

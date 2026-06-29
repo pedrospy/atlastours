@@ -14,7 +14,7 @@ import {
 import { siteConfig, getWhatsAppUrl, navLinkIds } from "@/lib/catalog";
 import { useDictionary } from "@/lib/i18n/locale-context";
 import { ArabicCalligraphy } from "@/components/ArabicCalligraphy";
-import { Logo } from "@/components/Logo";
+import { Logo, BrandWordmark } from "@/components/Logo";
 import { ContactForm } from "@/components/ContactForm";
 
 export function Footer() {
@@ -33,7 +33,7 @@ export function Footer() {
   }));
 
   return (
-    <footer id="contact" className="bg-burgundy-dark text-white">
+    <footer id="contact" className="scroll-mt-20 bg-burgundy-dark text-white">
       <div className="section-padding pb-8">
         <div className="container-wide">
           <div className="relative mb-16 overflow-hidden border-2 border-gold/30 bg-burgundy p-10 sm:p-14">
@@ -73,11 +73,9 @@ export function Footer() {
 
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <div className="flex items-center gap-3">
-                <Logo size={56} />
-                <span className="font-display text-xl font-bold text-gold-light">
-                  {siteConfig.name}
-                </span>
+              <div className="flex items-center gap-3.5">
+                <Logo size={52} className="logo-svg-frame" />
+                <BrandWordmark className="text-xl sm:text-2xl" />
               </div>
               <p className="mt-4 text-sm leading-relaxed text-sand-200/65">
                 {t.about}

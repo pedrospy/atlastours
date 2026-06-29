@@ -19,6 +19,7 @@ export type Dictionary = {
   };
   site: {
     tagline: string;
+    logoSubtitle: string;
     address: string;
   };
   nav: Record<NavLinkId, { label: string; href: string }>;
@@ -61,6 +62,9 @@ export type Dictionary = {
     viewAll: string;
     cta: string;
     galleryTitle: string;
+    fleetTitle: string;
+    fleet: Record<string, { name: string; detail: string }>;
+    fleetFeatures: string[];
     items: Record<string, { title: string; badge: string; description: string }>;
     gallery: Record<string, string>;
   };

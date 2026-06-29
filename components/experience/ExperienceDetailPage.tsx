@@ -56,7 +56,7 @@ export function ExperienceDetailPage({
     <main className="overflow-x-hidden">
       <Navbar />
 
-      <section className="relative pt-24">
+      <section className="relative pt-20">
         <div className="relative h-[45vh] min-h-[320px] w-full overflow-hidden md:h-[55vh]">
           {item.images && item.images.length > 0 ? (
             <div className="grid h-full w-full grid-cols-2 grid-rows-2">
@@ -90,7 +90,7 @@ export function ExperienceDetailPage({
           <div className="absolute left-0 top-0 h-1 w-full bg-gold-gradient" />
         </div>
 
-        <div className="container-wide relative z-10 -mt-32 px-4 pb-8 sm:px-6 lg:px-8">
+        <div className="container-wide page-gutter relative z-10 -mt-24 pb-10 sm:-mt-28 lg:-mt-32">
           <nav className="mb-6 flex flex-wrap items-center gap-2 text-sm text-sand-200/80">
             <Link href={`/${locale}`} className="hover:text-gold-light">
               {t.breadcrumbHome}
@@ -243,7 +243,7 @@ export function ExperienceDetailPage({
             </motion.div>
           </div>
 
-          <aside className="lg:sticky lg:top-28 lg:self-start">
+          <aside className="lg:sticky lg:top-20 lg:self-start">
             <div className="border border-gold/30 bg-white p-6 shadow-card">
               <p className="text-xs uppercase tracking-wider text-midnight/50">{t.from}</p>
               <p className="font-display text-4xl font-bold text-terracotta">
@@ -305,7 +305,7 @@ export function ExperienceDetailPage({
       </section>
 
       <section className="border-t border-gold/20 bg-burgundy-dark py-16 text-center text-white">
-        <div className="container-wide px-4">
+        <div className="container-wide page-gutter">
           <h2 className="font-display text-2xl font-bold text-gold-light sm:text-3xl">{t.readyTitle}</h2>
           <p className="mt-2 text-sand-200/80">{siteConfig.name} — {dict.site.tagline}</p>
           <Link href={`/${locale}#contact`} className="btn-primary mt-8 inline-flex">

@@ -4,11 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { siteConfig } from "@/lib/catalog";
 import { navLinkIds } from "@/lib/catalog";
 import { useDictionary, useLocale } from "@/lib/i18n/locale-context";
-import { ArabicCalligraphy } from "@/components/ArabicCalligraphy";
-import { Logo } from "@/components/Logo";
+import { Logo, BrandWordmark } from "@/components/Logo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export function Navbar() {
@@ -33,57 +31,56 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "glass-dark border-b border-gold/20 shadow-lg shadow-black/20"
-          : "bg-transparent"
+          ? "glass-dark border-b border-gold/20 py-0 shadow-md shadow-black/20"
+          : "border-b border-transparent bg-transparent py-0.5"
       }`}
     >
-      <nav className="container-wide flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <nav className="container-wide page-gutter flex items-center justify-between py-2 lg:py-2.5">
         <Link href={`/${locale}`} className="group flex items-center gap-3">
-          <Logo size={56} priority />
-          <div>
-            <p className="font-display text-xl font-semibold leading-tight text-white">
-              {siteConfig.name}
-            </p>
-            <p className="text-xs tracking-wide text-gold-light/80">
-              {dict.site.tagline}
-            </p>
-            <ArabicCalligraphy phrase="saharaTravel" variant="nav" />
+          <Logo
+            size={46}
+            priority
+            className="logo-svg-frame transition duration-300 group-hover:scale-[1.04]"
+          />
+          <div className="hidden h-9 w-px bg-gradient-to-b from-transparent via-gold/40 to-transparent sm:block" aria-hidden />
+          <div className="min-w-0">
+            <BrandWordmark />
           </div>
         </Link>
 
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-0.5 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.id}
               href={link.href}
-              className="rounded-sm px-4 py-2 text-sm tracking-wide text-white/85 transition hover:bg-gold/10 hover:text-gold-light"
+              className="rounded-sm px-2.5 py-1.5 text-xs tracking-wide text-white/85 transition hover:bg-gold/10 hover:text-gold-light"
             >
               {link.label}
             </Link>
           ))}
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <LanguageSwitcher />
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center gap-2 lg:flex">
             <Link
               href="#contact"
-              className="rounded-sm border border-gold/40 px-5 py-2.5 text-sm font-medium text-white transition hover:border-gold hover:bg-gold/10"
+              className="rounded-sm border border-gold/40 px-3 py-1.5 text-xs font-medium text-white transition hover:border-gold hover:bg-gold/10"
             >
               {dict.common.login}
             </Link>
-            <Link href="#contact" className="btn-primary px-5 py-2.5 text-sm">
+            <Link href="#contact" className="btn-primary px-3 py-1.5 text-xs">
               {dict.common.contact}
             </Link>
           </div>
           <button
             onClick={() => setOpen(!open)}
-            className="rounded-sm p-2 text-white lg:hidden"
+            className="rounded-sm p-1.5 text-white lg:hidden"
             aria-label={dict.common.menu}
           >
-            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </nav>

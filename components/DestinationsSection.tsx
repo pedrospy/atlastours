@@ -14,13 +14,13 @@ export function DestinationsSection() {
   const t = dict.destinations;
 
   return (
-    <section id="destinations" className="section-padding bg-white">
+    <section id="destinations" className="section-padding section-surface-light bg-white">
       <div className="container-wide">
-        <div className="mb-14 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
+        <div className="section-block">
+          <div className="section-intro">
             <SectionArabic phrase="morocco" />
             <span className="section-eyebrow">{t.eyebrow}</span>
-            <h2 className="section-title mt-4">{t.title}</h2>
+            <h2 className="section-title">{t.title}</h2>
             <div className="ornament-divider !mx-0 !max-w-[180px]" />
           </div>
           <Link

@@ -9,7 +9,7 @@ const variantStyles: Record<Variant, string> = {
     "font-display text-xl font-semibold italic text-gold-light sm:text-2xl",
   nav: "font-display text-sm italic text-gold-light/70",
   section:
-    "font-display text-xl font-semibold italic text-gold-dark/80 sm:text-2xl",
+    "font-display block text-lg font-medium italic leading-snug text-gold-dark/55 sm:text-xl",
   footer: "font-display text-3xl font-bold italic text-gold/40 sm:text-4xl",
 };
 
@@ -39,12 +39,26 @@ export function ArabicCalligraphy({
 
 interface SectionArabicProps {
   phrase: DecorativePhraseKey;
+  centered?: boolean;
+  className?: string;
 }
 
-export function SectionArabic({ phrase }: SectionArabicProps) {
+export function SectionArabic({
+  phrase,
+  centered = false,
+  className = "",
+}: SectionArabicProps) {
   return (
-    <div className="mb-3 flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-4">
-      <ArabicCalligraphy phrase={phrase} variant="section" />
+    <div
+      className={`flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4 ${
+        centered ? "items-center" : "items-start"
+      }`}
+    >
+      <ArabicCalligraphy
+        phrase={phrase}
+        variant="section"
+        className={className}
+      />
       <span className="hidden h-px w-12 bg-gold/40 sm:block" aria-hidden />
     </div>
   );

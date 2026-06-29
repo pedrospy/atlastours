@@ -14,7 +14,7 @@ export function TrustBar() {
   ];
 
   return (
-    <section className="relative z-10 -mt-8 px-4 sm:px-6 lg:px-8">
+    <section className="relative z-10 -mt-6 page-gutter pb-2">
       <div className="container-wide">
         <div className="grid gap-4 border border-gold/30 bg-white p-6 shadow-gold sm:grid-cols-2 lg:grid-cols-4">
           {items.map(({ icon: Icon, label }) => (

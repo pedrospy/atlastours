@@ -20,6 +20,7 @@ export const de: Dictionary = {
   },
   site: {
     tagline: "Flughafentransfers · Tagesausflüge · Private Touren in Marokko",
+    logoSubtitle: "Tourismus · Transport",
     address: "Marrakesch, Marokko",
   },
   nav: {
@@ -71,6 +72,14 @@ export const de: Dictionary = {
     viewAll: "Angebot anfordern",
     cta: "Transfer buchen",
     galleryTitle: "Unsere Flotte & Routen in Marokko",
+    fleetTitle: "Touristische Flotte",
+    fleet: {
+      sedan: { name: "Komfort-Limousine", detail: "Flughafen & Stadt" },
+      van: { name: "Premium-Van", detail: "Familien & Ausflüge" },
+      suv: { name: "4×4 SUV", detail: "Wüste & Atlas" },
+      minibus: { name: "Minibus", detail: "Gruppen & Events" },
+    },
+    fleetFeatures: ["Klimatisiert", "FR/EN Fahrer", "Kindersitze", "Versicherung inkl."],
     items: {
       airport: {
         title: "Flughafentransfer Marrakesch",

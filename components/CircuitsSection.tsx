@@ -14,13 +14,13 @@ export function CircuitsSection() {
   const t = dict.circuits;
 
   return (
-    <section id="circuits" className="section-padding pattern-section">
+    <section id="circuits" className="section-padding section-surface-dark pattern-section">
       <div className="container-wide">
-        <div className="mb-14 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
+        <div className="section-block">
+          <div className="section-intro">
             <SectionArabic phrase="trips" />
             <span className="section-eyebrow">{t.eyebrow}</span>
-            <h2 className="section-title mt-4">{t.title}</h2>
+            <h2 className="section-title">{t.title}</h2>
             <div className="ornament-divider !mx-0 !max-w-[180px]" />
             <p className="max-w-xl text-midnight/70">{t.description}</p>
           </div>

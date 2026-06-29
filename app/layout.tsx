@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   title: "Red Nomad",
   description: "Transferts aéroport · Excursions · Circuits privés au Maroc",
   icons: {
-    icon: "/red-nomad-logo.png",
-    apple: "/red-nomad-logo.png",
+    icon: "/red-nomad-mark.svg",
+    apple: "/red-nomad-mark.svg",
   },
 };
 
