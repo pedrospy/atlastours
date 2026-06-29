@@ -1,7 +1,7 @@
 "use client";
 
 import { ExperienceDetailPage } from "@/components/experience/ExperienceDetailPage";
-import { circuitCardTextClasses } from "@/lib/catalog";
+import { circuitDetailTextClasses } from "@/lib/catalog";
 import type { CircuitDetailContent } from "@/lib/circuits/types";
 import { useDictionary } from "@/lib/i18n/locale-context";
 
@@ -29,7 +29,7 @@ export function CircuitDetailPage({ circuit, detail, cardTitle, badge }: Props) 
       cardTitle={cardTitle}
       badge={badge}
       badgeClass={circuit.badgeClass}
-      textClasses={circuitCardTextClasses}
+      textClasses={circuitDetailTextClasses}
       listAnchor="#circuits"
       listLabel={dict.circuits.viewAll}
     />

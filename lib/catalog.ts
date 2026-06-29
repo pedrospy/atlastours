@@ -16,25 +16,29 @@ export function getWhatsAppUrl(message?: string) {
   return `${base}?text=${encodeURIComponent(message)}`;
 }
 
-export const circuitCardTextClasses = {
-  title: "text-gold-light",
-  description: "text-midnight/90",
-  muted: "text-midnight/75",
-  price: "text-burgundy",
+export const tourCardTextClasses = {
+  title: "text-midnight",
+  description: "text-midnight",
+  muted: "text-midnight/85",
+  price: "text-midnight",
 } as const;
 
-export const excursionCardTextClasses = {
-  title: "text-burgundy",
-  description: "text-midnight/90",
-  muted: "text-midnight/75",
-  price: "text-burgundy",
+export const circuitCardTextClasses = tourCardTextClasses;
+
+export const circuitDetailTextClasses = {
+  title: "text-gold-light",
+  description: "text-midnight",
+  muted: "text-midnight/85",
+  price: "text-midnight",
 } as const;
+
+export const excursionCardTextClasses = tourCardTextClasses;
 
 export const excursionDetailTextClasses = {
   title: "text-gold-light",
-  description: "text-midnight/90",
-  muted: "text-midnight/75",
-  price: "text-burgundy",
+  description: "text-midnight",
+  muted: "text-midnight/85",
+  price: "text-midnight",
 } as const;
 
 export const circuitsCatalog = [
@@ -59,7 +63,13 @@ export const circuitsCatalog = [
     rating: 4.9,
     reviews: 38,
     price: 1680,
-    image: "/images/dest-volubilis-site.png",
+    image: "/images/dest-fes-medina.jpg",
+    images: [
+      "/images/dest-fes-medina.jpg",
+      "/images/dest-volubilis-site.png",
+      "/images/dest-merzouga-dunes.jpg",
+      "/images/dest-essaouira-port.png",
+    ],
   },
   {
     id: "merzouga-3j",

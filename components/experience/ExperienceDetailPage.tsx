@@ -64,35 +64,35 @@ export function ExperienceDetailPage({
       <Navbar />
 
       <section className="relative pt-20">
-        <div className="relative h-[45vh] min-h-[320px] w-full overflow-hidden md:h-[55vh]">
-          {item.images && item.images.length > 0 ? (
-            <div className="grid h-full w-full grid-cols-2 grid-rows-2">
-              {item.images.map((src, idx) => (
-                <div key={src} className="relative overflow-hidden">
-                  <Image
-                    src={src}
-                    alt={idx === 0 ? cardTitle : ""}
-                    fill
-                    priority={idx === 0}
-                    unoptimized
-                    className="object-cover"
-                    sizes="50vw"
-                    aria-hidden={idx > 0}
-                  />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <Image
-              src={item.image}
-              alt={cardTitle}
-              fill
-              priority
-              unoptimized
-              className="object-cover"
-              sizes="100vw"
-            />
-          )}
+        <div className="tour-card-media !aspect-auto h-[42vh] min-h-[280px] md:h-[50vh]">
+          <div className="absolute inset-0 overflow-hidden">
+            {item.images && item.images.length > 0 ? (
+              <div className="grid h-full w-full grid-cols-2 grid-rows-2 gap-px bg-sand-200">
+                {item.images.slice(0, 4).map((src, idx) => (
+                  <div key={`${src}-${idx}`} className="relative min-h-0 min-w-0 overflow-hidden">
+                    <img
+                      src={src}
+                      alt={idx === 0 ? cardTitle : ""}
+                      className="absolute inset-0 h-full w-full object-cover object-center"
+                      loading={idx === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      aria-hidden={idx > 0}
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <Image
+                src={item.image}
+                alt={cardTitle}
+                fill
+                priority
+                unoptimized
+                className="object-cover object-center"
+                sizes="100vw"
+              />
+            )}
+          </div>
           <div className="absolute inset-0 bg-gradient-to-t from-burgundy-dark via-burgundy-dark/60 to-burgundy-dark/30" />
           <div className="absolute left-0 top-0 h-1 w-full bg-gold-gradient" />
         </div>
@@ -253,7 +253,7 @@ export function ExperienceDetailPage({
           <aside className="lg:sticky lg:top-20 lg:self-start">
             <div className="border border-gold/30 bg-white p-6 shadow-card">
               <p className="text-xs uppercase tracking-wider text-midnight/50">{t.from}</p>
-              <p className={`font-display text-4xl font-bold ${textClasses?.price ?? "text-terracotta"}`}>
+              <p className={`font-display text-4xl font-bold ${textClasses?.price ?? "text-midnight"}`}>
                 {formatPrice(item.price, locale)}
                 <span className="text-base font-normal text-midnight/50">{t.perPerson}</span>
               </p>
@@ -281,7 +281,7 @@ export function ExperienceDetailPage({
                 {detail.groupPricing.map((tier) => (
                   <li key={tier.travelers} className="flex justify-between text-sm text-midnight/75">
                     <span>{tier.travelers}</span>
-                    <span className={`font-medium ${textClasses?.price ?? "text-terracotta"}`}>{tier.price}</span>
+                    <span className={`font-medium ${textClasses?.price ?? "text-midnight"}`}>{tier.price}</span>
                   </li>
                 ))}
               </ul>
