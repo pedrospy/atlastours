@@ -1,6 +1,7 @@
 "use client";
 
 import { ExperienceDetailPage } from "@/components/experience/ExperienceDetailPage";
+import { excursionDetailTextClasses } from "@/lib/catalog";
 import type { ExcursionDetailContent } from "@/lib/excursions/types";
 import { useDictionary } from "@/lib/i18n/locale-context";
 
@@ -25,6 +26,7 @@ export function ExcursionDetailPage({ excursion, detail, cardTitle, badge }: Pro
       detail={detail}
       cardTitle={cardTitle}
       badge={badge}
+      textClasses={excursionDetailTextClasses}
       listAnchor="#excursions"
       listLabel={dict.excursionDetail.breadcrumbAll}
     />

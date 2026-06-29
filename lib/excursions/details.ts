@@ -52,7 +52,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Dépenses personnelles et pourboires",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "90 €/pers." },
+        { travelers: "2 voyageurs", price: "19 €/pers." },
         { travelers: "3–4 voyageurs", price: "45–60 €/pers." },
         { travelers: "5–7 voyageurs", price: "28–38 €/pers." },
         { travelers: "8–14 voyageurs", price: "16–28 €/pers." },
@@ -134,7 +134,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Dépenses personnelles",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "80 €/pers." },
+        { travelers: "2 voyageurs", price: "14 €/pers." },
         { travelers: "3–4 voyageurs", price: "40–53 €/pers." },
         { travelers: "5–7 voyageurs", price: "25–34 €/pers." },
         { travelers: "8–14 voyageurs", price: "14–25 €/pers." },
@@ -210,7 +210,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Dépenses personnelles",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "80 €/pers." },
+        { travelers: "2 voyageurs", price: "14 €/pers." },
         { travelers: "3–4 voyageurs", price: "40–53 €/pers." },
         { travelers: "5–7 voyageurs", price: "25–34 €/pers." },
         { travelers: "8–14 voyageurs", price: "14–25 €/pers." },
@@ -297,7 +297,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Pourboires (usage local)",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "72 €/pers." },
+        { travelers: "2 voyageurs", price: "11 €/pers." },
         { travelers: "3–4 voyageurs", price: "36–48 €/pers." },
         { travelers: "5–7 voyageurs", price: "22–30 €/pers." },
         { travelers: "8–14 voyageurs", price: "13–22 €/pers." },
@@ -376,7 +376,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Personal expenses and tips",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€90/person" },
+        { travelers: "2 travelers", price: "€19/person" },
         { travelers: "3–4 travelers", price: "€45–60/person" },
         { travelers: "5–7 travelers", price: "€28–38/person" },
         { travelers: "8–14 travelers", price: "€16–28/person" },
@@ -454,7 +454,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Personal expenses",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€80/person" },
+        { travelers: "2 travelers", price: "€14/person" },
         { travelers: "3–4 travelers", price: "€40–53/person" },
         { travelers: "5–7 travelers", price: "€25–34/person" },
         { travelers: "8–14 travelers", price: "€14–25/person" },
@@ -527,7 +527,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Personal expenses",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€80/person" },
+        { travelers: "2 travelers", price: "€14/person" },
         { travelers: "3–4 travelers", price: "€40–53/person" },
         { travelers: "5–7 travelers", price: "€25–34/person" },
         { travelers: "8–14 travelers", price: "€14–25/person" },
@@ -611,7 +611,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Tips (local custom)",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€72/person" },
+        { travelers: "2 travelers", price: "€11/person" },
         { travelers: "3–4 travelers", price: "€36–48/person" },
         { travelers: "5–7 travelers", price: "€22–30/person" },
         { travelers: "8–14 travelers", price: "€13–22/person" },
@@ -690,7 +690,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Gastos personales y propinas",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "90 €/pers." },
+        { travelers: "2 viajeros", price: "19 €/pers." },
         { travelers: "3–4 viajeros", price: "45–60 €/pers." },
         { travelers: "5–7 viajeros", price: "28–38 €/pers." },
         { travelers: "8–14 viajeros", price: "16–28 €/pers." },
@@ -767,7 +767,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Gastos personales",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "80 €/pers." },
+        { travelers: "2 viajeros", price: "14 €/pers." },
         { travelers: "3–4 viajeros", price: "40–53 €/pers." },
         { travelers: "5–7 viajeros", price: "25–34 €/pers." },
         { travelers: "8–14 viajeros", price: "14–25 €/pers." },
@@ -840,7 +840,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Gastos personales",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "80 €/pers." },
+        { travelers: "2 viajeros", price: "14 €/pers." },
         { travelers: "3–4 viajeros", price: "40–53 €/pers." },
         { travelers: "5–7 viajeros", price: "25–34 €/pers." },
         { travelers: "8–14 viajeros", price: "14–25 €/pers." },
@@ -924,7 +924,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Propinas (costumbre local)",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "72 €/pers." },
+        { travelers: "2 viajeros", price: "11 €/pers." },
         { travelers: "3–4 viajeros", price: "36–48 €/pers." },
         { travelers: "5–7 viajeros", price: "22–30 €/pers." },
         { travelers: "8–14 viajeros", price: "13–22 €/pers." },
@@ -1003,7 +1003,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Persönliche Ausgaben und Trinkgeld",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "90 €/Pers." },
+        { travelers: "2 Reisende", price: "19 €/Pers." },
         { travelers: "3–4 Reisende", price: "45–60 €/Pers." },
         { travelers: "5–7 Reisende", price: "28–38 €/Pers." },
         { travelers: "8–14 Reisende", price: "16–28 €/Pers." },
@@ -1080,7 +1080,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Persönliche Ausgaben",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "80 €/Pers." },
+        { travelers: "2 Reisende", price: "14 €/Pers." },
         { travelers: "3–4 Reisende", price: "40–53 €/Pers." },
         { travelers: "5–7 Reisende", price: "25–34 €/Pers." },
         { travelers: "8–14 Reisende", price: "14–25 €/Pers." },
@@ -1153,7 +1153,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Persönliche Ausgaben",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "80 €/Pers." },
+        { travelers: "2 Reisende", price: "14 €/Pers." },
         { travelers: "3–4 Reisende", price: "40–53 €/Pers." },
         { travelers: "5–7 Reisende", price: "25–34 €/Pers." },
         { travelers: "8–14 Reisende", price: "14–25 €/Pers." },
@@ -1237,7 +1237,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Trinkgelder (lokaler Brauch)",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "72 €/Pers." },
+        { travelers: "2 Reisende", price: "11 €/Pers." },
         { travelers: "3–4 Reisende", price: "36–48 €/Pers." },
         { travelers: "5–7 Reisende", price: "22–30 €/Pers." },
         { travelers: "8–14 Reisende", price: "13–22 €/Pers." },

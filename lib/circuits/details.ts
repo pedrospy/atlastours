@@ -82,7 +82,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Pourboires guide et personnel (usage local)",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "1 290 €/pers." },
+        { travelers: "2 voyageurs", price: "1 050 €/pers." },
         { travelers: "3–4 voyageurs", price: "1 150–1 220 €/pers." },
         { travelers: "5–7 voyageurs", price: "1 020–1 100 €/pers." },
         { travelers: "8–14 voyageurs", price: "920–1 020 €/pers." },
@@ -209,7 +209,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Pourboires guide et personnel d'hébergement",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "2 190 €/pers." },
+        { travelers: "2 voyageurs", price: "1 680 €/pers." },
         { travelers: "3–4 voyageurs", price: "1 980–2 100 €/pers." },
         { travelers: "5–7 voyageurs", price: "1 780–1 920 €/pers." },
         { travelers: "8–14 voyageurs", price: "1 620–1 780 €/pers." },
@@ -315,7 +315,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Pourboires (usage local)",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "380 €/pers." },
+        { travelers: "2 voyageurs", price: "78 €/pers." },
         { travelers: "3–4 voyageurs", price: "330–350 €/pers." },
         { travelers: "5–7 voyageurs", price: "290–320 €/pers." },
         { travelers: "8–14 voyageurs", price: "260–290 €/pers." },
@@ -417,7 +417,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Pourboires pour la famille d'accueil (optionnel)",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "420 €/pers." },
+        { travelers: "2 voyageurs", price: "95 €/pers." },
         { travelers: "3–4 voyageurs", price: "370–390 €/pers." },
         { travelers: "5–7 voyageurs", price: "330–360 €/pers." },
         { travelers: "8–14 voyageurs", price: "300–330 €/pers." },
@@ -532,7 +532,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Tips for guide and staff (local custom)",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€1,290/person" },
+        { travelers: "2 travelers", price: "€1,050/person" },
         { travelers: "3–4 travelers", price: "€1,150–1,220/person" },
         { travelers: "5–7 travelers", price: "€1,020–1,100/person" },
         { travelers: "8–14 travelers", price: "€920–1,020/person" },
@@ -659,7 +659,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Tips for guide and hotel staff",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€2,190/person" },
+        { travelers: "2 travelers", price: "€1,680/person" },
         { travelers: "3–4 travelers", price: "€1,980–2,100/person" },
         { travelers: "5–7 travelers", price: "€1,780–1,920/person" },
         { travelers: "8–14 travelers", price: "€1,620–1,780/person" },
@@ -765,7 +765,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Tips (local custom)",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€380/person" },
+        { travelers: "2 travelers", price: "€78/person" },
         { travelers: "3–4 travelers", price: "€330–350/person" },
         { travelers: "5–7 travelers", price: "€290–320/person" },
         { travelers: "8–14 travelers", price: "€260–290/person" },
@@ -867,7 +867,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Tips for host family (optional)",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€420/person" },
+        { travelers: "2 travelers", price: "€95/person" },
         { travelers: "3–4 travelers", price: "€370–390/person" },
         { travelers: "5–7 travelers", price: "€330–360/person" },
         { travelers: "8–14 travelers", price: "€300–330/person" },
@@ -982,7 +982,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Propinas para guía y personal (costumbre local)",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "1 290 €/pers." },
+        { travelers: "2 viajeros", price: "1 050 €/pers." },
         { travelers: "3–4 viajeros", price: "1 150–1 220 €/pers." },
         { travelers: "5–7 viajeros", price: "1 020–1 100 €/pers." },
         { travelers: "8–14 viajeros", price: "920–1 020 €/pers." },
@@ -1109,7 +1109,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Propinas para guía y personal del alojamiento",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "2 190 €/pers." },
+        { travelers: "2 viajeros", price: "1 680 €/pers." },
         { travelers: "3–4 viajeros", price: "1 980–2 100 €/pers." },
         { travelers: "5–7 viajeros", price: "1 780–1 920 €/pers." },
         { travelers: "8–14 viajeros", price: "1 620–1 780 €/pers." },
@@ -1215,7 +1215,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Propinas (costumbre local)",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "380 €/pers." },
+        { travelers: "2 viajeros", price: "78 €/pers." },
         { travelers: "3–4 viajeros", price: "330–350 €/pers." },
         { travelers: "5–7 viajeros", price: "290–320 €/pers." },
         { travelers: "8–14 viajeros", price: "260–290 €/pers." },
@@ -1317,7 +1317,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Propinas para la familia anfitriona (opcional)",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "420 €/pers." },
+        { travelers: "2 viajeros", price: "95 €/pers." },
         { travelers: "3–4 viajeros", price: "370–390 €/pers." },
         { travelers: "5–7 viajeros", price: "330–360 €/pers." },
         { travelers: "8–14 viajeros", price: "300–330 €/pers." },
@@ -1432,7 +1432,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Trinkgelder für Guide und Personal (lokaler Brauch)",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "1 290 €/Pers." },
+        { travelers: "2 Reisende", price: "1 050 €/Pers." },
         { travelers: "3–4 Reisende", price: "1 150–1 220 €/Pers." },
         { travelers: "5–7 Reisende", price: "1 020–1 100 €/Pers." },
         { travelers: "8–14 Reisende", price: "920–1 020 €/Pers." },
@@ -1559,7 +1559,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Trinkgelder für Guide und Hotelpersonal",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "2 190 €/Pers." },
+        { travelers: "2 Reisende", price: "1 680 €/Pers." },
         { travelers: "3–4 Reisende", price: "1 980–2 100 €/Pers." },
         { travelers: "5–7 Reisende", price: "1 780–1 920 €/Pers." },
         { travelers: "8–14 Reisende", price: "1 620–1 780 €/Pers." },
@@ -1665,7 +1665,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Trinkgelder (lokaler Brauch)",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "380 €/Pers." },
+        { travelers: "2 Reisende", price: "78 €/Pers." },
         { travelers: "3–4 Reisende", price: "330–350 €/Pers." },
         { travelers: "5–7 Reisende", price: "290–320 €/Pers." },
         { travelers: "8–14 Reisende", price: "260–290 €/Pers." },
@@ -1767,7 +1767,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Trinkgelder für Gastfamilie (optional)",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "420 €/Pers." },
+        { travelers: "2 Reisende", price: "95 €/Pers." },
         { travelers: "3–4 Reisende", price: "370–390 €/Pers." },
         { travelers: "5–7 Reisende", price: "330–360 €/Pers." },
         { travelers: "8–14 Reisende", price: "300–330 €/Pers." },

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Star, ArrowRight } from "lucide-react";
-import { excursionsCatalog } from "@/lib/catalog";
+import { excursionsCatalog, excursionCardTextClasses } from "@/lib/catalog";
 import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
 import { SectionArabic } from "@/components/ArabicCalligraphy";
 
@@ -36,6 +36,7 @@ export function ExcursionsSection() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {excursionsCatalog.map((excursion, i) => {
             const content = t.items[excursion.id];
+            const text = excursionCardTextClasses;
             return (
               <motion.article
                 key={excursion.id}
@@ -79,21 +80,21 @@ export function ExcursionsSection() {
                   </span>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-display text-lg font-bold text-midnight">
+                  <h3 className={`font-display text-lg font-bold ${text.title}`}>
                     {content.title}
                   </h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-midnight/65">
+                  <p className={`mt-2 line-clamp-2 text-sm ${text.description}`}>
                     {content.description}
                   </p>
                   <div className="mt-4 flex items-center justify-between border-t border-sand-200 pt-4">
                     <div className="flex items-center gap-1 text-sm">
                       <Star className="h-3.5 w-3.5 fill-gold text-gold" />
                       <span className="font-semibold">{excursion.rating}</span>
-                      <span className="text-midnight/40">
+                      <span className={text.muted}>
                         ({excursion.reviews})
                       </span>
                     </div>
-                    <p className="font-display text-lg font-bold text-terracotta">
+                    <p className={`font-display text-lg font-bold ${text.price}`}>
                       {dict.common.from}{" "}
                       {formatPrice(excursion.price, locale)}
                     </p>

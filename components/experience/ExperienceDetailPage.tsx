@@ -34,6 +34,11 @@ type Props = {
   detail: ExperienceDetailContent;
   cardTitle: string;
   badge: string;
+  badgeClass?: string;
+  textClasses?: {
+    title: string;
+    price: string;
+  };
   listAnchor: "#excursions" | "#circuits" | "#destinations";
   listLabel: string;
 };
@@ -43,6 +48,8 @@ export function ExperienceDetailPage({
   detail,
   cardTitle,
   badge,
+  badgeClass = "bg-oasis",
+  textClasses,
   listAnchor,
   listLabel,
 }: Props) {
@@ -104,7 +111,7 @@ export function ExperienceDetailPage({
           </nav>
 
           <div className="flex flex-wrap gap-2">
-            <span className="bg-terracotta px-3 py-1 text-xs font-semibold text-white">
+            <span className={`${badgeClass} px-3 py-1 text-xs font-semibold text-white`}>
               {badge}
             </span>
             <span className="border border-gold/40 bg-burgundy/80 px-3 py-1 text-xs font-medium text-gold-light backdrop-blur-sm">
@@ -112,7 +119,7 @@ export function ExperienceDetailPage({
             </span>
           </div>
 
-          <h1 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+          <h1 className={`mt-4 font-display text-3xl font-bold sm:text-4xl lg:text-5xl ${textClasses?.title ?? "text-white"}`}>
             {cardTitle}
           </h1>
           {detail.subtitle && (
@@ -246,7 +253,7 @@ export function ExperienceDetailPage({
           <aside className="lg:sticky lg:top-20 lg:self-start">
             <div className="border border-gold/30 bg-white p-6 shadow-card">
               <p className="text-xs uppercase tracking-wider text-midnight/50">{t.from}</p>
-              <p className="font-display text-4xl font-bold text-terracotta">
+              <p className={`font-display text-4xl font-bold ${textClasses?.price ?? "text-terracotta"}`}>
                 {formatPrice(item.price, locale)}
                 <span className="text-base font-normal text-midnight/50">{t.perPerson}</span>
               </p>
@@ -274,7 +281,7 @@ export function ExperienceDetailPage({
                 {detail.groupPricing.map((tier) => (
                   <li key={tier.travelers} className="flex justify-between text-sm text-midnight/75">
                     <span>{tier.travelers}</span>
-                    <span className="font-medium text-terracotta">{tier.price}</span>
+                    <span className={`font-medium ${textClasses?.price ?? "text-terracotta"}`}>{tier.price}</span>
                   </li>
                 ))}
               </ul>

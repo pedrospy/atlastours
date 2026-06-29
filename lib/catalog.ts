@@ -16,13 +16,34 @@ export function getWhatsAppUrl(message?: string) {
   return `${base}?text=${encodeURIComponent(message)}`;
 }
 
+export const circuitCardTextClasses = {
+  title: "text-gold-light",
+  description: "text-midnight/90",
+  muted: "text-midnight/75",
+  price: "text-burgundy",
+} as const;
+
+export const excursionCardTextClasses = {
+  title: "text-burgundy",
+  description: "text-midnight/90",
+  muted: "text-midnight/75",
+  price: "text-burgundy",
+} as const;
+
+export const excursionDetailTextClasses = {
+  title: "text-gold-light",
+  description: "text-midnight/90",
+  muted: "text-midnight/75",
+  price: "text-burgundy",
+} as const;
+
 export const circuitsCatalog = [
   {
     id: "circuit-11-jours",
     slug: "marrakech-sahara-atlas-11-days",
     rating: 4.9,
     reviews: 56,
-    price: 1290,
+    price: 1050,
     image: "/images/dest-desert-oasis.png",
     images: [
       "/images/dest-marrakech-jemaa.jpg",
@@ -30,13 +51,14 @@ export const circuitsCatalog = [
       "/images/fleet-suv-kasbah.png",
       "/images/route-mountain-pass.png",
     ],
+    badgeClass: "bg-terracotta",
   },
   {
     id: "grand-tour-17",
     slug: "grand-tour-maroc-17-jours",
     rating: 4.9,
     reviews: 38,
-    price: 2190,
+    price: 1680,
     image: "/images/dest-volubilis-site.png",
   },
   {
@@ -44,7 +66,7 @@ export const circuitsCatalog = [
     slug: "desert-merzouga-3-jours",
     rating: 4.9,
     reviews: 142,
-    price: 380,
+    price: 78,
     image: "/images/dest-sunset-horses.png",
   },
   {
@@ -52,7 +74,7 @@ export const circuitsCatalog = [
     slug: "vallee-megdaz-3-jours",
     rating: 4.9,
     reviews: 31,
-    price: 420,
+    price: 95,
     image: "/images/dest-megdaz-village.jpg",
   },
 ] as const;
@@ -63,7 +85,7 @@ export const excursionsCatalog = [
     slug: "cascades-ouzoud-day-trip",
     rating: 4.9,
     reviews: 112,
-    price: 80,
+    price: 14,
     image: "/images/dest-ouzoud-falls.png",
   },
   {
@@ -71,7 +93,7 @@ export const excursionsCatalog = [
     slug: "essaouira-medina-day-trip",
     rating: 4.8,
     reviews: 103,
-    price: 80,
+    price: 14,
     image: "/images/dest-essaouira-port.png",
   },
   {
@@ -79,7 +101,7 @@ export const excursionsCatalog = [
     slug: "ait-benhaddou-ouarzazate-unesco-day-trip",
     rating: 4.9,
     reviews: 87,
-    price: 90,
+    price: 19,
     image: "/images/fleet-suv-kasbah.png",
   },
   {
@@ -87,7 +109,7 @@ export const excursionsCatalog = [
     slug: "ourika-valley-day-trip",
     rating: 4.8,
     reviews: 134,
-    price: 72,
+    price: 11,
     image: "/images/dest-ourika-valley.jpg",
     images: [
       "/images/dest-ourika-valley.jpg",
@@ -108,22 +130,22 @@ export const fleetCatalog = [
 export const transfersCatalog = [
   {
     id: "airport",
-    price: 25,
+    price: 18,
     image: "/images/transfer-marrakech-airport.jpg",
   },
   {
     id: "city",
-    price: 20,
+    price: 15,
     image: "/images/dest-marrakech-souk.jpg",
   },
   {
     id: "intercity",
-    price: 80,
+    price: 25,
     image: "/images/route-mountain-pass.png",
   },
   {
     id: "group",
-    price: 120,
+    price: 32,
     image: "/images/fleet-van-desert.png",
   },
 ] as const;
@@ -145,14 +167,14 @@ export const galleryCatalog = [
 ] as const;
 
 export const activitiesCatalog = [
-  { id: "camel", price: 35, icon: "camel" },
-  { id: "tent", price: 180, icon: "tent" },
-  { id: "balloon", price: 195, icon: "balloon" },
-  { id: "chef", price: 55, icon: "chef" },
-  { id: "sunset", price: 65, icon: "sunset" },
-  { id: "spa", price: 30, icon: "spa" },
-  { id: "hiking", price: 45, icon: "hiking" },
-  { id: "quad", price: 60, icon: "quad" },
+  { id: "camel", price: 21, icon: "camel" },
+  { id: "tent", price: 120, icon: "tent" },
+  { id: "balloon", price: 65, icon: "balloon" },
+  { id: "chef", price: 45, icon: "chef" },
+  { id: "sunset", price: 18, icon: "sunset" },
+  { id: "spa", price: 57, icon: "spa" },
+  { id: "hiking", price: 11, icon: "hiking" },
+  { id: "quad", price: 21, icon: "quad" },
 ] as const;
 
 export const destinationsCatalog = [
@@ -162,7 +184,7 @@ export const destinationsCatalog = [
     count: 20,
     rating: 4.9,
     reviews: 186,
-    price: 25,
+    price: 18,
     image: "/images/dest-marrakech-jemaa.jpg",
     images: [
       "/images/dest-marrakech-jemaa.jpg",
@@ -177,7 +199,7 @@ export const destinationsCatalog = [
     count: 6,
     rating: 4.9,
     reviews: 142,
-    price: 380,
+    price: 78,
     image: "/images/dest-merzouga-dunes.jpg",
     images: [
       "/images/dest-merzouga-dunes.jpg",
@@ -192,7 +214,7 @@ export const destinationsCatalog = [
     count: 5,
     rating: 4.8,
     reviews: 67,
-    price: 120,
+    price: 75,
     image: "/images/dest-chefchaouen.jpg",
     images: [
       "/images/dest-chefchaouen.jpg",
@@ -207,7 +229,7 @@ export const destinationsCatalog = [
     count: 5,
     rating: 4.9,
     reviews: 98,
-    price: 95,
+    price: 30,
     image: "/images/dest-fes-tannery.png",
     images: [
       "/images/dest-fes-tannery.png",
@@ -221,7 +243,7 @@ export const destinationsCatalog = [
     count: 5,
     rating: 4.8,
     reviews: 103,
-    price: 80,
+    price: 14,
     image: "/images/dest-essaouira-medina.jpg",
     images: [
       "/images/dest-essaouira-medina.jpg",
@@ -236,7 +258,7 @@ export const destinationsCatalog = [
     count: 3,
     rating: 4.9,
     reviews: 31,
-    price: 420,
+    price: 95,
     image: "/images/dest-megdaz-valley.jpg",
     images: [
       "/images/dest-megdaz-valley.jpg",
@@ -251,7 +273,7 @@ export const destinationsCatalog = [
     count: 2,
     rating: 4.7,
     reviews: 45,
-    price: 90,
+    price: 28,
     image: "/images/dest-agadir-beach.jpg",
   },
   {
@@ -260,7 +282,7 @@ export const destinationsCatalog = [
     count: 8,
     rating: 4.9,
     reviews: 74,
-    price: 85,
+    price: 55,
     image: "/images/dest-volubilis-mosaic.png",
     images: [
       "/images/dest-volubilis-mosaic.png",

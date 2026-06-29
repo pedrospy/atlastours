@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Star, ArrowRight, Calendar } from "lucide-react";
-import { circuitsCatalog } from "@/lib/catalog";
+import { circuitsCatalog, circuitCardTextClasses } from "@/lib/catalog";
 import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
 import { SectionArabic } from "@/components/ArabicCalligraphy";
 
@@ -36,6 +36,7 @@ export function CircuitsSection() {
         <div className="grid gap-8 md:grid-cols-2">
           {circuitsCatalog.map((circuit, i) => {
             const content = t.items[circuit.id];
+            const text = circuitCardTextClasses;
             return (
               <motion.article
                 key={circuit.id}
@@ -76,7 +77,9 @@ export function CircuitsSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-burgundy-dark/90 via-burgundy/30 to-transparent" />
                   <div className="absolute left-0 top-0 h-1 w-full bg-gold-gradient" />
                   <div className="absolute left-4 top-5 flex gap-2">
-                    <span className="bg-terracotta px-3 py-1 text-xs font-semibold text-white">
+                    <span
+                      className={`${"badgeClass" in circuit && circuit.badgeClass ? circuit.badgeClass : "bg-oasis"} px-3 py-1 text-xs font-semibold text-white`}
+                    >
                       {content.badge}
                     </span>
                     <span className="flex items-center gap-1 border border-gold/40 bg-burgundy/60 px-3 py-1 text-xs font-medium text-gold-light backdrop-blur-sm">
@@ -85,30 +88,30 @@ export function CircuitsSection() {
                     </span>
                   </div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="font-display text-2xl font-bold text-white">
+                    <h3 className={`font-display text-2xl font-bold ${text.title}`}>
                       {content.title}
                     </h3>
                   </div>
                 </div>
                 <div className="border-t border-gold/20 p-6">
-                  <p className="leading-relaxed text-midnight/70">
+                  <p className={`leading-relaxed ${text.description}`}>
                     {content.description}
                   </p>
                   <div className="mt-5 flex items-center justify-between border-t border-sand-200 pt-5">
                     <div className="flex items-center gap-2">
                       <Star className="h-4 w-4 fill-gold text-gold" />
                       <span className="font-semibold">{circuit.rating}</span>
-                      <span className="text-sm text-midnight/50">
+                      <span className={`text-sm ${text.muted}`}>
                         ({circuit.reviews})
                       </span>
                     </div>
                     <div className="text-right">
-                      <span className="text-xs text-midnight/50">
+                      <span className={`text-xs ${text.muted}`}>
                         {dict.common.from}
                       </span>
-                      <p className="font-display text-2xl font-bold text-terracotta">
+                      <p className={`font-display text-2xl font-bold ${text.price}`}>
                         {formatPrice(circuit.price, locale)}
-                        <span className="text-sm font-normal text-midnight/50">
+                        <span className={`text-sm font-normal ${text.muted}`}>
                           {dict.common.perPerson}
                         </span>
                       </p>
