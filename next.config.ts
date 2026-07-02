@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
         destination: "/:locale/circuits/marrakech-sahara-atlas-3-days",
         permanent: true,
       },
+      {
+        source: "/:locale/circuits/grand-tour-maroc-17-jours",
+        destination: "/:locale/circuits/marrakech-chefchaouen-3-days",
+        permanent: true,
+      },
+      {
+        source: "/:locale/circuits/grand-tour-maroc-4-jours",
+        destination: "/:locale/circuits/marrakech-chefchaouen-3-days",
+        permanent: true,
+      },
     ];
   },
   images: {

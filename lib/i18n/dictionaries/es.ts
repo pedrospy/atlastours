@@ -126,7 +126,7 @@ export const es: Dictionary = {
     eyebrow: "Circuitos de varios días",
     title: "Nuestros circuitos a medida",
     description:
-      "Desde una escapada de 3 días hasta un gran tour de 17 días. A medida, grupos reducidos, guía bereber de habla francesa.",
+      "Desde una escapada de 3 días al desierto hasta el circuito Marrakech–Chefchaouen. A medida, grupos reducidos, guía bereber de habla francesa.",
     viewAll: "Todos nuestros circuitos",
     items: {
       "circuit-sahara-atlas-3j": {
@@ -136,12 +136,12 @@ export const es: Dictionary = {
         description:
           "Lo esencial en 3 días: Alto Atlas, Aït Benhaddou, dunas de Merzouga, noche en campamento de lujo y regreso a Marrakech.",
       },
-      "grand-tour-17": {
-        title: "Gran Tour Marruecos 17 días",
-        badge: "Tour completo",
-        duration: "17 días",
+      "grand-tour-3j": {
+        title: "Marrakech — Chefchaouen 3 días",
+        badge: "Ciudades imperiales",
+        duration: "3 días",
         description:
-          "Tour completo de Marruecos: Casablanca, Rabat, Fez, Meknes, desierto, Atlas, Essaouira. Para explorar todas las facetas del país.",
+          "Circuito de 3 días de Marrakech a Chefchaouen: Casablanca, Rabat, Fez la ciudad más tradicional y las callejuelas azules de Chefchaouen.",
       },
       "merzouga-3j": {
         title: "Desierto Merzouga Erg Chebbi",

@@ -35,17 +35,16 @@ export const circuits = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Desert_Merzouga_Morocco_Meditation.jpg/1280px-Desert_Merzouga_Morocco_Meditation.jpg",
   },
   {
-    id: "grand-tour-17",
-    title: "Grand Tour Maroc 17 jours",
-    badge: "Tour complet",
-    duration: "17 jours",
+    id: "grand-tour-3j",
+    title: "Marrakech — Chefchaouen 3 jours",
+    badge: "Villes impériales",
+    duration: "3 jours",
     description:
-      "Tour complet du Maroc : Casablanca, Rabat, Fès, Meknès, désert, Atlas, Essaouira. Pour explorer toutes les facettes du pays.",
+      "Circuit 3 jours de Marrakech à Chefchaouen : Casablanca, Rabat, Fès la ville traditionnelle et les ruelles bleues de Chefchaouen.",
     rating: 4.9,
     reviews: 38,
-    price: 2190,
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Chefchaouen_%2836081254503%29.jpg/1280px-Chefchaouen_%2836081254503%29.jpg",
+    price: 290,
+    image: "/images/circuit-chefchaouen-alt.jpg",
   },
   {
     id: "merzouga-3j",

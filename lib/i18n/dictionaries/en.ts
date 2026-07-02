@@ -126,7 +126,7 @@ export const en: Dictionary = {
     eyebrow: "Multi-day tours",
     title: "Our tailor-made tours",
     description:
-      "From a 3-day short break to a 17-day grand tour. Custom trips, small groups, Berber French-speaking guide.",
+      "From a 3-day desert break to a Marrakech–Chefchaouen imperial cities tour. Custom trips, small groups, Berber French-speaking guide.",
     viewAll: "All our tours",
     items: {
       "circuit-sahara-atlas-3j": {
@@ -136,12 +136,12 @@ export const en: Dictionary = {
         description:
           "The essentials in 3 days: High Atlas, Aït Benhaddou, Merzouga dunes, luxury desert camp night and return to Marrakech.",
       },
-      "grand-tour-17": {
-        title: "Grand Morocco Tour — 17 Days",
-        badge: "Full tour",
-        duration: "17 days",
+      "grand-tour-3j": {
+        title: "Marrakech — Chefchaouen 3 Days",
+        badge: "Imperial cities",
+        duration: "3 days",
         description:
-          "Complete Morocco: Casablanca, Rabat, Fes, Meknes, desert, Atlas, Essaouira. Explore every side of the country.",
+          "Join a 3-day tour from Marrakech to Chefchaouen. Discover Fez, Rabat, Casablanca and the narrow streets of the blue city.",
       },
       "merzouga-3j": {
         title: "Merzouga Erg Chebbi Desert",

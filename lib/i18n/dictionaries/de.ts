@@ -126,7 +126,7 @@ export const de: Dictionary = {
     eyebrow: "Mehrtägige Rundreisen",
     title: "Unsere maßgeschneiderten Touren",
     description:
-      "Von einem 3-tägigen Kurztrip bis zur 17-tägigen Grand Tour. Individuelle Reisen, kleine Gruppen, französischsprachiger Berber-Guide.",
+      "Von einem 3-tägigen Wüstentrip bis zur Marrakesch–Chefchaouen-Städtetour. Individuelle Reisen, kleine Gruppen, französischsprachiger Berber-Guide.",
     viewAll: "Alle Rundreisen",
     items: {
       "circuit-sahara-atlas-3j": {
@@ -136,12 +136,12 @@ export const de: Dictionary = {
         description:
           "Das Wesentliche in 3 Tagen: Hoher Atlas, Aït Benhaddou, Merzouga-Dünen, Luxus-Camp-Nacht und Rückkehr nach Marrakesch.",
       },
-      "grand-tour-17": {
-        title: "Grand Marokko Tour — 17 Tage",
-        badge: "Kompletttour",
-        duration: "17 Tage",
+      "grand-tour-3j": {
+        title: "Marrakesch — Chefchaouen 3 Tage",
+        badge: "Kaiserstädte",
+        duration: "3 Tage",
         description:
-          "Marokko in vollem Umfang: Casablanca, Rabat, Fès, Meknès, Wüste, Atlas, Essaouira. Entdecken Sie alle Facetten des Landes.",
+          "3-Tage-Tour von Marrakesch nach Chefchaouen: Casablanca, Rabat, Fès die traditionellste Stadt und die engen Gassen der blauen Stadt.",
       },
       "merzouga-3j": {
         title: "Merzouga Erg Chebbi Wüste",

@@ -85,7 +85,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Est-ce beaucoup de route pour 3 jours ?",
           answer:
-            "Oui, comptez 8–9 h de route le J1 et J3. Nous faisons des pauses régulières à Aït Benhaddou et dans les gorges. Pour un rythme plus lent, optez le Grand Tour 17 jours.",
+            "Oui, comptez 8–9 h de route le J1 et J3. Nous faisons des pauses régulières à Aït Benhaddou et dans les gorges. Pour un circuit plus complet avec Fès et Chefchaouen, optez le circuit Marrakech–Chefchaouen 3 jours.",
         },
         {
           question: "Quel niveau de confort pour la nuit au désert ?",
@@ -109,125 +109,110 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         },
       ],
     },
-    "grand-tour-17": {
+    "grand-tour-3j": {
       metaTitle:
-        "Grand Tour Maroc 17 jours — Casablanca à Essaouira | Red Nomad",
+        "Circuit 3 jours Marrakech — Chefchaouen | Red Nomad",
       metaDescription:
-        "Tour complet du Maroc en 17 jours : Casablanca, Rabat, Fès, Meknès, Sahara, Atlas et Essaouira. Circuit privé sur mesure avec guide francophone.",
-      subtitle: "Le Maroc dans toute sa diversité",
+        "Circuit 3 jours de Marrakech à Chefchaouen : Casablanca, Rabat, Fès la ville la plus traditionnelle du Maroc et les ruelles bleues de Chefchaouen. Guide francophone.",
+      subtitle: "De Marrakech à la ville bleue",
       difficulty: "Modéré",
-      duration: "17 jours",
+      duration: "3 jours",
       groupSize: "1–17 personnes",
       departure: "Marrakech",
       languages: "Français, English",
       about:
-        "Le Grand Tour de 17 jours est l'immersion la plus complète au Maroc : villes impériales du Nord, médinas millénaires, dunes du Sahara, kasbahs de l'Atlas et brise atlantique d'Essaouira. Un voyage panoramique à travers l'histoire, les paysages et les traditions berbères, avec un rythme équilibré entre culture, nature et moments de détente.",
+        "Rejoignez un circuit de 3 jours de Marrakech à Chefchaouen. Découvrez Fès, la ville la plus traditionnelle du Maroc, et les ruelles étroites de la ville bleue Chefchaouen. Escales dans les villes de Rabat et Casablanca le long de la côte atlantique, entre médinas impériales, architecture moderne et paysages du Rif.",
       highlights: [
-        "Casablanca & Rabat — art déco et capitale administrative",
-        "Fès & Meknès — médinas UNESCO et savoir-faire artisanal",
-        "Sahara de Merzouga — nuit en bivouac aux dunes de l'Erg Chebbi",
-        "Atlas & kasbahs — Aït Benhaddou et vallées berbères",
-        "Essaouira — médina atlantique, port et remparts",
+        "Casablanca — mosquée Hassan II et corniche atlantique",
+        "Rabat — Kasbah des Oudayas et capitale administrative",
+        "Fès el-Bali — la ville la plus traditionnelle du Maroc",
+        "Tanneries, medersas et souks aux ruelles étroites",
+        "Chefchaouen — la perle bleue du Rif et ses ruelles photogéniques",
       ],
       itinerary: [
         {
-          dayLabel: "J1–3",
-          title: "Casablanca, Rabat & route vers Fès",
+          dayLabel: "J1",
+          title: "Marrakech — Casablanca — Rabat",
           description:
-            "Découverte de la côte atlantique et des premières villes impériales.",
+            "Route vers la côte atlantique et les grandes villes du Nord.",
           steps: [
-            "J1 — Accueil à Marrakech ou Casablanca, visite de la Mosquée Hassan II (option)",
-            "J2 — Rabat : Kasbah des Oudayas, Tour Hassan et médina",
-            "J3 — Route vers Fès via Volubilis (ruines romaines) et Meknès",
+            "08h00 — Départ de Marrakech",
+            "Casablanca : mosquée Hassan II (visite extérieure ou intérieure en option), corniche",
+            "Rabat : Kasbah des Oudayas, Tour Hassan et médina",
+            "Nuit en riad ou hôtel à Rabat",
           ],
         },
         {
-          dayLabel: "J4–6",
-          title: "Fès & Meknès — villes impériales",
+          dayLabel: "J2",
+          title: "Rabat — Fès — la ville la plus traditionnelle",
           description:
-            "Plongée dans les médinas les plus anciennes du Maghreb.",
+            "Immersion dans la médina la plus authentique du Maghreb.",
           steps: [
-            "J4 — Visite guidée de Fès el-Bali : tanneries, medersas et souks",
-            "J5 — Fès Jdid et artisanat local, après-midi libre",
-            "J6 — Meknès : Bab Mansour, greniers royaux et ville impériale",
+            "Route matinale vers Fès",
+            "Visite de Fès el-Bali : tanneries Chouara, médersas et souks",
+            "Découverte des ruelles étroites et de l'artisanat ancestral",
+            "Nuit en riad dans la médina de Fès",
           ],
         },
         {
-          dayLabel: "J7–10",
-          title: "Atlas, gorges & Merzouga",
+          dayLabel: "J3",
+          title: "Fès — Chefchaouen — la ville bleue",
           description:
-            "Traversée du Middle Atlas et descente vers le Sahara.",
+            "Traversée du Rif jusqu'à la perle bleue de Chefchaouen.",
           steps: [
-            "J7 — Route vers Ifrane et Midelt, paysages de cèdres et montagne",
-            "J8 — Gorges du Ziz, palmeraies et arrivée à Merzouga",
-            "J9 — Dromadaire au coucher du soleil, nuit en bivouac aux dunes",
-            "J10 — Lever de soleil, route vers les gorges du Todra ou Dadès",
-          ],
-        },
-        {
-          dayLabel: "J11–14",
-          title: "Sud marocain & retour vers Marrakech",
-          description:
-            "Kasbahs, vallée du Drâa et remontée vers le Haut Atlas.",
-          steps: [
-            "J11 — Aït Benhaddou et studios de Ouarzazate",
-            "J12 — Vallée du Drâa et kasbahs de pisé",
-            "J13 — Col du Tizi n'Tichka, retour vers Marrakech",
-            "J14 — Journée libre à Marrakech ou repos",
-          ],
-        },
-        {
-          dayLabel: "J15–17",
-          title: "Essaouira & fin du voyage",
-          description:
-            "Escapade atlantique avant le retour final.",
-          steps: [
-            "J15 — Route vers Essaouira via arganiers, découverte de la médina",
-            "J16 — Essaouira libre : port, remparts, plage et artisanat",
-            "J17 — Retour à Marrakech, fin du Grand Tour",
+            "08h00 — Départ de Fès vers le nord",
+            "Route panoramique à travers les montagnes du Rif",
+            "Chefchaouen : médina bleue, ruelles étroites, place Outa el-Hammam",
+            "Ras El Ma et fin du circuit à Chefchaouen",
           ],
         },
       ],
       included: [
-        "Transport privé climatisé pendant 17 jours",
+        "Transport privé climatisé pendant 3 jours",
         "Guide-chauffeur francophone expérimenté",
-        "1 nuit en bivouac de luxe au désert avec pension complète",
-        "Petit-déjeuners quotidiens et balade à dos de dromadaire",
+        "Petit-déjeuners quotidiens",
+        "Prise en charge à votre riad ou hôtel à Marrakech",
       ],
       notIncluded: [
-        "Hébergements (riads, kasbahs, lodges)",
-        "Déjeuners et dîners (sauf bivouac désert)",
+        "Hébergements (riads à Rabat, Fès et Chefchaouen)",
+        "Déjeuners et dîners",
         "Entrées monuments et sites historiques",
         "Boissons, activités optionnelles et dépenses personnelles",
+        "Retour vers Marrakech (transfert sur demande)",
         "Pourboires guide et personnel d'hébergement",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "1 680 €/pers." },
-        { travelers: "3–4 voyageurs", price: "1 980–2 100 €/pers." },
-        { travelers: "5–7 voyageurs", price: "1 780–1 920 €/pers." },
-        { travelers: "8–14 voyageurs", price: "1 620–1 780 €/pers." },
-        { travelers: "15–17 voyageurs", price: "1 550 €/pers." },
+        { travelers: "2 voyageurs", price: "290 €/pers." },
+        { travelers: "3–4 voyageurs", price: "290 €/pers." },
+        { travelers: "5–7 voyageurs", price: "290 €/pers." },
+        { travelers: "8–14 voyageurs", price: "290 €/pers." },
+        { travelers: "15–17 voyageurs", price: "290 €/pers." },
       ],
       faqs: [
         {
-          question: "Peut-on commencer à Casablanca plutôt qu'à Marrakech ?",
+          question: "Le circuit se termine-t-il à Chefchaouen ?",
           answer:
-            "Oui, le Grand Tour est flexible. Nous adaptons le point de départ et les transferts aéroport selon vos vols.",
+            "Oui, le programme se conclut à Chefchaouen le J3. Nous pouvons organiser un transfert retour vers Marrakech, Fès ou Tanger sur demande.",
         },
         {
-          question: "17 jours, est-ce trop long ?",
+          question: "Peut-on commencer à Casablanca ?",
           answer:
-            "Le rythme inclut des journées libres et des étapes courtes. Nous pouvons raccourcir ou allonger certaines portions selon vos envies.",
+            "Oui, nous adaptons le point de départ et les transferts aéroport selon vos vols et votre hébergement.",
+        },
+        {
+          question: "Faut-il beaucoup marcher à Fès et Chefchaouen ?",
+          answer:
+            "Les médinas se visitent à pied (2–4 h par ville), souvent dans des ruelles étroites. Le reste du trajet se fait en véhicule privé.",
         },
         {
           question: "Quels types d'hébergement sont prévus ?",
           answer:
-            "Riads de charme en ville, kasbahs dans le Sud et lodge confortable en montagne. L'hébergement est facturé à part, selon votre budget.",
+            "Riads de charme à Rabat, Fès et Chefchaouen. L'hébergement est facturé à part, selon votre budget.",
         },
         {
-          question: "Faut-il beaucoup marcher ?",
+          question: "Quelle est la meilleure saison ?",
           answer:
-            "Les visites de médina se font à pied (2–4 h). Le reste du temps est en véhicule. Aucune randonnée exigeante n'est obligatoire.",
+            "Le printemps et l'automne sont idéaux. Chefchaouen est agréable en été grâce à l'altitude du Rif.",
         },
         {
           question: "Comment se paie le circuit ?",
@@ -318,7 +303,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Est-ce beaucoup de route pour 3 jours ?",
           answer:
-            "Oui, comptez 9–10 h de route le J1 et J3. Nous faisons des pauses régulières. Pour un rythme plus doux, optez le Grand Tour 17 jours.",
+            "Oui, comptez 9–10 h de route le J1 et J3. Nous faisons des pauses régulières. Pour un circuit plus complet avec Fès et Chefchaouen, optez le circuit Marrakech–Chefchaouen 3 jours.",
         },
         {
           question: "Le camp de luxe est-il confortable ?",
@@ -528,7 +513,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Is there a lot of driving for 3 days?",
           answer:
-            "Yes, expect 8–9 hours of driving on D1 and D3. We take regular breaks at Aït Benhaddou and the gorges. For a slower pace, choose the 17-day Grand Tour.",
+            "Yes, expect 8–9 hours of driving on D1 and D3. We take regular breaks at Aït Benhaddou and the gorges. For a more complete tour with Fes and Chefchaouen, choose the 3-day Marrakech–Chefchaouen tour.",
         },
         {
           question: "What comfort level for the desert night?",
@@ -552,125 +537,110 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         },
       ],
     },
-    "grand-tour-17": {
+    "grand-tour-3j": {
       metaTitle:
-        "17-Day Grand Tour of Morocco — Casablanca to Essaouira | Red Nomad",
+        "3-Day Marrakech — Chefchaouen Tour | Red Nomad",
       metaDescription:
-        "Complete 17-day Morocco tour: Casablanca, Rabat, Fes, Meknes, Sahara, Atlas and Essaouira. Private tailor-made circuit with French-speaking guide.",
-      subtitle: "Morocco in all its diversity",
+        "Join a 3-day tour from Marrakech to Chefchaouen. Discover Fez, the most traditional city in Morocco, Rabat, Casablanca and the narrow streets of the blue city.",
+      subtitle: "From Marrakech to the blue city",
       difficulty: "Moderate",
-      duration: "17 days",
+      duration: "3 days",
       groupSize: "1–17 people",
       departure: "Marrakech",
       languages: "French, English",
       about:
-        "The 17-day Grand Tour is the most complete immersion in Morocco: imperial cities of the North, ancient medinas, Sahara dunes, Atlas kasbahs and the Atlantic breeze of Essaouira. A panoramic journey through history, landscapes and Berber traditions, with a balanced pace between culture, nature and relaxation.",
+        "Join a 3-day tour from Marrakech to Chefchaouen. Discover Fez, the most traditional city in Morocco, and the narrow streets of the blue city Chefchaouen. Stop by the cities of Rabat and Casablanca along the Atlantic coast — a journey through imperial medinas, modern architecture and the Rif mountains.",
       highlights: [
-        "Casablanca & Rabat — art deco and administrative capital",
-        "Fes & Meknes — UNESCO medinas and artisan crafts",
-        "Merzouga Sahara — bivouac night on Erg Chebbi dunes",
-        "Atlas & kasbahs — Aït Benhaddou and Berber valleys",
-        "Essaouira — Atlantic medina, port and ramparts",
+        "Casablanca — Hassan II Mosque and Atlantic corniche",
+        "Rabat — Kasbah of the Oudayas and administrative capital",
+        "Fes el-Bali — the most traditional city in Morocco",
+        "Tanneries, medersas and narrow souk streets",
+        "Chefchaouen — the blue pearl of the Rif and its photogenic alleys",
       ],
       itinerary: [
         {
-          dayLabel: "D1–3",
-          title: "Casablanca, Rabat & road to Fes",
+          dayLabel: "D1",
+          title: "Marrakech — Casablanca — Rabat",
           description:
-            "Discovery of the Atlantic coast and the first imperial cities.",
+            "Drive to the Atlantic coast and Morocco's northern capitals.",
           steps: [
-            "D1 — Welcome in Marrakech or Casablanca, Hassan II Mosque visit (optional)",
-            "D2 — Rabat: Kasbah of the Oudayas, Hassan Tower and medina",
-            "D3 — Road to Fes via Volubilis (Roman ruins) and Meknes",
+            "8:00 AM — Departure from Marrakech",
+            "Casablanca: Hassan II Mosque (exterior or optional interior visit), corniche",
+            "Rabat: Kasbah of the Oudayas, Hassan Tower and medina",
+            "Night in a riad or hotel in Rabat",
           ],
         },
         {
-          dayLabel: "D4–6",
-          title: "Fes & Meknes — imperial cities",
+          dayLabel: "D2",
+          title: "Rabat — Fes — the most traditional city",
           description:
-            "Deep dive into the oldest medinas of the Maghreb.",
+            "Deep immersion in the Maghreb's most authentic medina.",
           steps: [
-            "D4 — Guided tour of Fes el-Bali: tanneries, medersas and souks",
-            "D5 — Fes Jdid and local crafts, free afternoon",
-            "D6 — Meknes: Bab Mansour, royal granaries and imperial city",
+            "Morning drive to Fes",
+            "Visit Fes el-Bali: Chouara tanneries, medersas and souks",
+            "Explore narrow streets and centuries-old crafts",
+            "Night in a riad in Fes medina",
           ],
         },
         {
-          dayLabel: "D7–10",
-          title: "Atlas, gorges & Merzouga",
+          dayLabel: "D3",
+          title: "Fes — Chefchaouen — the blue city",
           description:
-            "Crossing the Middle Atlas and descent to the Sahara.",
+            "Cross the Rif mountains to the blue pearl of Chefchaouen.",
           steps: [
-            "D7 — Road to Ifrane and Midelt, cedar forests and mountain scenery",
-            "D8 — Ziz Gorges, palm groves and arrival in Merzouga",
-            "D9 — Camel ride at sunset, bivouac night on the dunes",
-            "D10 — Sunrise, road to Todra or Dadès gorges",
-          ],
-        },
-        {
-          dayLabel: "D11–14",
-          title: "Southern Morocco & return to Marrakech",
-          description:
-            "Kasbahs, Draa Valley and climb back to the High Atlas.",
-          steps: [
-            "D11 — Aït Benhaddou and Ouarzazate film studios",
-            "D12 — Draa Valley and earthen kasbahs",
-            "D13 — Tizi n'Tichka pass, return to Marrakech",
-            "D14 — Free day in Marrakech or rest",
-          ],
-        },
-        {
-          dayLabel: "D15–17",
-          title: "Essaouira & end of journey",
-          description:
-            "Atlantic escape before the final return.",
-          steps: [
-            "D15 — Road to Essaouira via argan trees, medina discovery",
-            "D16 — Free day in Essaouira: port, ramparts, beach and crafts",
-            "D17 — Return to Marrakech, end of Grand Tour",
+            "8:00 AM — Departure from Fes heading north",
+            "Scenic drive through the Rif mountains",
+            "Chefchaouen: blue medina, narrow streets, Outa el-Hammam square",
+            "Ras El Ma waterfall and end of tour in Chefchaouen",
           ],
         },
       ],
       included: [
-        "Private air-conditioned transport for 17 days",
+        "Private air-conditioned transport for 3 days",
         "Experienced French-speaking driver-guide",
-        "1 night in luxury desert bivouac with full board",
-        "Daily breakfasts and camel ride",
+        "Daily breakfasts",
+        "Pickup at your riad or hotel in Marrakech",
       ],
       notIncluded: [
-        "Accommodation (riads, kasbahs, lodges)",
-        "Lunches and dinners (except desert bivouac)",
+        "Accommodation (riads in Rabat, Fes and Chefchaouen)",
+        "Lunches and dinners",
         "Monument and historical site entrances",
         "Drinks, optional activities and personal expenses",
+        "Return transfer to Marrakech (available on request)",
         "Tips for guide and hotel staff",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€1,680/person" },
-        { travelers: "3–4 travelers", price: "€1,980–2,100/person" },
-        { travelers: "5–7 travelers", price: "€1,780–1,920/person" },
-        { travelers: "8–14 travelers", price: "€1,620–1,780/person" },
-        { travelers: "15–17 travelers", price: "€1,550/person" },
+        { travelers: "2 travelers", price: "€290/person" },
+        { travelers: "3–4 travelers", price: "€290/person" },
+        { travelers: "5–7 travelers", price: "€290/person" },
+        { travelers: "8–14 travelers", price: "€290/person" },
+        { travelers: "15–17 travelers", price: "€290/person" },
       ],
       faqs: [
         {
-          question: "Can we start in Casablanca instead of Marrakech?",
+          question: "Does the tour end in Chefchaouen?",
           answer:
-            "Yes, the Grand Tour is flexible. We adapt the starting point and airport transfers according to your flights.",
+            "Yes, the program ends in Chefchaouen on D3. We can arrange a return transfer to Marrakech, Fes or Tangier on request.",
         },
         {
-          question: "Is 17 days too long?",
+          question: "Can we start in Casablanca?",
           answer:
-            "The pace includes free days and short stages. We can shorten or extend certain sections to your preference.",
+            "Yes, we adapt the starting point and airport transfers according to your flights and hotel.",
+        },
+        {
+          question: "Is there a lot of walking in Fes and Chefchaouen?",
+          answer:
+            "Medinas are explored on foot (2–4 h per city), often through narrow alleys. The rest is by private vehicle.",
         },
         {
           question: "What type of accommodation is available?",
           answer:
-            "Charming riads in cities, kasbahs in the South and comfortable lodge in the mountains. Accommodation is quoted separately according to your budget.",
+            "Charming riads in Rabat, Fes and Chefchaouen. Accommodation is quoted separately according to your budget.",
         },
         {
-          question: "Is there a lot of walking?",
+          question: "What is the best season?",
           answer:
-            "Medina visits are on foot (2–4 h). The rest is by vehicle. No demanding hikes are required.",
+            "Spring and autumn are ideal. Chefchaouen stays pleasant in summer thanks to the Rif altitude.",
         },
         {
           question: "How is payment handled?",
@@ -761,7 +731,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Is there a lot of driving for 3 days?",
           answer:
-            "Yes, expect 9–10 hours of driving on D1 and D3. We take regular breaks. For a gentler pace, choose the 17-day Grand Tour.",
+            "Yes, expect 9–10 hours of driving on D1 and D3. We take regular breaks. For a more complete tour with Fes and Chefchaouen, choose the 3-day Marrakech–Chefchaouen tour.",
         },
         {
           question: "Is the luxury camp comfortable?",
@@ -968,7 +938,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "¿Hay mucha carretera para 3 días?",
           answer:
-            "Sí, cuente 8–9 h de conducción el D1 y D3. Hacemos pausas en Aït Benhaddou y las gargantas. Para un ritmo más suave, elija el Gran Tour de 17 días.",
+            "Sí, cuente 8–9 h de conducción el D1 y D3. Hacemos pausas en Aït Benhaddou y las gargantas. Para un circuito más completo con Fez y Chefchaouen, elija el circuito Marrakech–Chefchaouen de 3 días.",
         },
         {
           question: "¿Qué nivel de confort en el desierto?",
@@ -992,125 +962,110 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         },
       ],
     },
-    "grand-tour-17": {
+    "grand-tour-3j": {
       metaTitle:
-        "Gran Tour Marruecos 17 días — Casablanca a Essaouira | Red Nomad",
+        "Circuito 3 días Marrakech — Chefchaouen | Red Nomad",
       metaDescription:
-        "Tour completo de 17 días por Marruecos: Casablanca, Rabat, Fez, Meknes, Sahara, Atlas y Essaouira. Circuito privado a medida con guía francófono.",
-      subtitle: "Marruecos en toda su diversidad",
+        "Circuito de 3 días de Marrakech a Chefchaouen: Casablanca, Rabat, Fez la ciudad más tradicional y las callejuelas azules de Chefchaouen. Guía francófono.",
+      subtitle: "De Marrakech a la ciudad azul",
       difficulty: "Moderado",
-      duration: "17 días",
+      duration: "3 días",
       groupSize: "1–17 personas",
       departure: "Marrakech",
       languages: "Francés, English",
       about:
-        "El Gran Tour de 17 días es la inmersión más completa en Marruecos: ciudades imperiales del Norte, medinas milenarias, dunas del Sahara, kasbahs del Atlas y brisa atlántica de Essaouira. Un viaje panorámico por la historia, los paisajes y las tradiciones bereberes, con un ritmo equilibrado entre cultura, naturaleza y descanso.",
+        "Únase a un circuito de 3 días de Marrakech a Chefchaouen. Descubra Fez, la ciudad más tradicional de Marruecos, y las callejuelas estrechas de la ciudad azul Chefchaouen. Paradas en las ciudades de Rabat y Casablanca a lo largo de la costa atlántica.",
       highlights: [
-        "Casablanca y Rabat — art déco y capital administrativa",
-        "Fez y Meknes — medinas UNESCO y artesanía",
-        "Sahara de Merzouga — noche en bivouac en las dunas de Erg Chebbi",
-        "Atlas y kasbahs — Aït Benhaddou y valles bereberes",
-        "Essaouira — medina atlántica, puerto y murallas",
+        "Casablanca — mezquita Hassan II y corniche atlántica",
+        "Rabat — Kasbah de los Oudayas y capital administrativa",
+        "Fez el-Bali — la ciudad más tradicional de Marruecos",
+        "Curtidores, medersas y zocos en callejuelas estrechas",
+        "Chefchaouen — la perla azul del Rif y sus callejuelas fotogénicas",
       ],
       itinerary: [
         {
-          dayLabel: "D1–3",
-          title: "Casablanca, Rabat y ruta a Fez",
+          dayLabel: "D1",
+          title: "Marrakech — Casablanca — Rabat",
           description:
-            "Descubrimiento de la costa atlántica y las primeras ciudades imperiales.",
+            "Ruta hacia la costa atlántica y las grandes ciudades del Norte.",
           steps: [
-            "D1 — Bienvenida en Marrakech o Casablanca, visita a la Mezquita Hassan II (opcional)",
-            "D2 — Rabat: Kasbah de los Oudayas, Torre Hassan y medina",
-            "D3 — Ruta a Fez vía Volubilis (ruinas romanas) y Meknes",
+            "08h00 — Salida de Marrakech",
+            "Casablanca: mezquita Hassan II (exterior o visita interior opcional), corniche",
+            "Rabat: Kasbah de los Oudayas, Torre Hassan y medina",
+            "Noche en riad u hotel en Rabat",
           ],
         },
         {
-          dayLabel: "D4–6",
-          title: "Fez y Meknes — ciudades imperiales",
+          dayLabel: "D2",
+          title: "Rabat — Fez — la ciudad más tradicional",
           description:
-            "Inmersión en las medinas más antiguas del Magreb.",
+            "Inmersión en la medina más auténtica del Magreb.",
           steps: [
-            "D4 — Visita guiada de Fez el-Bali: curtidores, medersas y zocos",
-            "D5 — Fez Jdid y artesanía local, tarde libre",
-            "D6 — Meknes: Bab Mansour, graneros reales y ciudad imperial",
+            "Ruta matutina hacia Fez",
+            "Visita de Fez el-Bali: curtidores Chouara, medersas y zocos",
+            "Descubrimiento de callejuelas estrechas y artesanía ancestral",
+            "Noche en riad en la medina de Fez",
           ],
         },
         {
-          dayLabel: "D7–10",
-          title: "Atlas, gargantas y Merzouga",
+          dayLabel: "D3",
+          title: "Fez — Chefchaouen — la ciudad azul",
           description:
-            "Travesía del Medio Atlas y descenso hacia el Sahara.",
+            "Travesía del Rif hasta la perla azul de Chefchaouen.",
           steps: [
-            "D7 — Ruta a Ifrane y Midelt, paisajes de cedros y montaña",
-            "D8 — Gargantas del Ziz, palmerales y llegada a Merzouga",
-            "D9 — Dromedario al atardecer, noche en bivouac en las dunas",
-            "D10 — Amanecer, ruta hacia las gargantas del Todra o Dadès",
-          ],
-        },
-        {
-          dayLabel: "D11–14",
-          title: "Sur marroquí y regreso a Marrakech",
-          description:
-            "Kasbahs, valle del Drâa y ascenso al Alto Atlas.",
-          steps: [
-            "D11 — Aït Benhaddou y estudios de cine de Ouarzazate",
-            "D12 — Valle del Drâa y kasbahs de adobe",
-            "D13 — Paso Tizi n'Tichka, regreso a Marrakech",
-            "D14 — Día libre en Marrakech o descanso",
-          ],
-        },
-        {
-          dayLabel: "D15–17",
-          title: "Essaouira y fin del viaje",
-          description:
-            "Escapada atlántica antes del regreso final.",
-          steps: [
-            "D15 — Ruta a Essaouira vía arganeros, descubrimiento de la medina",
-            "D16 — Essaouira libre: puerto, murallas, playa y artesanía",
-            "D17 — Regreso a Marrakech, fin del Gran Tour",
+            "08h00 — Salida de Fez hacia el norte",
+            "Ruta panorámica por las montañas del Rif",
+            "Chefchaouen: medina azul, callejuelas estrechas, plaza Outa el-Hammam",
+            "Ras El Ma y fin del circuito en Chefchaouen",
           ],
         },
       ],
       included: [
-        "Transporte privado climatizado durante 17 días",
+        "Transporte privado climatizado durante 3 días",
         "Guía-conductor francófono experimentado",
-        "1 noche en bivouac de lujo en el desierto con pensión completa",
-        "Desayunos diarios y paseo en dromedario",
+        "Desayunos diarios",
+        "Recogida en su riad u hotel en Marrakech",
       ],
       notIncluded: [
-        "Alojamientos (riads, kasbahs, lodges)",
-        "Almuerzos y cenas (excepto bivouac en el desierto)",
+        "Alojamientos (riads en Rabat, Fez y Chefchaouen)",
+        "Almuerzos y cenas",
         "Entradas a monumentos y sitios históricos",
         "Bebidas, actividades opcionales y gastos personales",
+        "Regreso a Marrakech (traslado bajo solicitud)",
         "Propinas para guía y personal del alojamiento",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "1 680 €/pers." },
-        { travelers: "3–4 viajeros", price: "1 980–2 100 €/pers." },
-        { travelers: "5–7 viajeros", price: "1 780–1 920 €/pers." },
-        { travelers: "8–14 viajeros", price: "1 620–1 780 €/pers." },
-        { travelers: "15–17 viajeros", price: "1 550 €/pers." },
+        { travelers: "2 viajeros", price: "290 €/pers." },
+        { travelers: "3–4 viajeros", price: "290 €/pers." },
+        { travelers: "5–7 viajeros", price: "290 €/pers." },
+        { travelers: "8–14 viajeros", price: "290 €/pers." },
+        { travelers: "15–17 viajeros", price: "290 €/pers." },
       ],
       faqs: [
         {
-          question: "¿Podemos empezar en Casablanca en lugar de Marrakech?",
+          question: "¿El circuito termina en Chefchaouen?",
           answer:
-            "Sí, el Gran Tour es flexible. Adaptamos el punto de partida y traslados al aeropuerto según sus vuelos.",
+            "Sí, el programa concluye en Chefchaouen el D3. Podemos organizar traslado de regreso a Marrakech, Fez o Tánger bajo solicitud.",
         },
         {
-          question: "¿17 días es demasiado?",
+          question: "¿Podemos empezar en Casablanca?",
           answer:
-            "El ritmo incluye días libres y etapas cortas. Podemos acortar o alargar ciertas secciones según sus preferencias.",
+            "Sí, adaptamos el punto de partida y traslados al aeropuerto según sus vuelos y alojamiento.",
+        },
+        {
+          question: "¿Hay que caminar mucho en Fez y Chefchaouen?",
+          answer:
+            "Las medinas se visitan a pie (2–4 h por ciudad), a menudo por callejuelas estrechas. El resto es en vehículo privado.",
         },
         {
           question: "¿Qué tipo de alojamiento está previsto?",
           answer:
-            "Riads con encanto en ciudad, kasbahs en el Sur y lodge confortable en montaña. El alojamiento se cotiza aparte según su presupuesto.",
+            "Riads con encanto en Rabat, Fez y Chefchaouen. El alojamiento se cotiza aparte según su presupuesto.",
         },
         {
-          question: "¿Hay que caminar mucho?",
+          question: "¿Cuál es la mejor temporada?",
           answer:
-            "Las visitas de medina son a pie (2–4 h). El resto es en vehículo. No hay senderismo exigente obligatorio.",
+            "Primavera y otoño son ideales. Chefchaouen es agradable en verano gracias a la altitud del Rif.",
         },
         {
           question: "¿Cómo se paga el circuito?",
@@ -1201,7 +1156,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "¿Hay mucha carretera para 3 días?",
           answer:
-            "Sí, cuente 9–10 h de conducción el D1 y D3. Hacemos pausas regulares. Para un ritmo más suave, elija el Gran Tour de 17 días.",
+            "Sí, cuente 9–10 h de conducción el D1 y D3. Hacemos pausas regulares. Para un circuito más completo con Fez y Chefchaouen, elija el circuito Marrakech–Chefchaouen de 3 días.",
         },
         {
           question: "¿El campamento de lujo es cómodo?",
@@ -1408,7 +1363,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Viel Fahrzeit für 3 Tage?",
           answer:
-            "Ja, 8–9 Stunden am T1 und T3. Pausen in Aït Benhaddou und den Schluchten. Für langsameres Tempo: 17-Tage Grand Tour.",
+            "Ja, 8–9 Stunden am T1 und T3. Pausen in Aït Benhaddou und den Schluchten. Für eine vollständigere Tour mit Fès und Chefchaouen: 3-Tage-Tour Marrakesch–Chefchaouen.",
         },
         {
           question: "Komfort in der Wüste?",
@@ -1432,125 +1387,110 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         },
       ],
     },
-    "grand-tour-17": {
+    "grand-tour-3j": {
       metaTitle:
-        "17-Tage Grand Tour Marokko — Casablanca bis Essaouira | Red Nomad",
+        "3-Tage-Tour Marrakesch — Chefchaouen | Red Nomad",
       metaDescription:
-        "Komplette 17-Tage-Marokko-Tour: Casablanca, Rabat, Fes, Meknes, Sahara, Atlas und Essaouira. Private maßgeschneiderte Rundreise mit französischsprachigem Guide.",
-      subtitle: "Marokko in all seiner Vielfalt",
+        "3-Tage-Rundreise von Marrakesch nach Chefchaouen: Casablanca, Rabat, Fès die traditionellste Stadt Marokkos und die engen Gassen der blauen Stadt.",
+      subtitle: "Von Marrakesch zur blauen Stadt",
       difficulty: "Mittel",
-      duration: "17 Tage",
+      duration: "3 Tage",
       groupSize: "1–17 Personen",
       departure: "Marrakesch",
       languages: "Französisch, English",
       about:
-        "Die 17-tägige Grand Tour ist die vollständigste Marokko-Immersion: Kaiserstädte des Nordens, jahrtausendealte Medinas, Sahara-Dünen, Atlas-Kasbahs und die atlantische Brise von Essaouira. Eine panoramische Reise durch Geschichte, Landschaften und Berber-Traditionen mit ausgewogenem Rhythmus zwischen Kultur, Natur und Entspannung.",
+        "Schließen Sie sich einer 3-tägigen Tour von Marrakesch nach Chefchaouen an. Entdecken Sie Fès, die traditionellste Stadt Marokkos, und die engen Gassen der blauen Stadt Chefchaouen. Stopps in Rabat und Casablanca entlang der Atlantikküste.",
       highlights: [
-        "Casablanca & Rabat — Art déco und Verwaltungshauptstadt",
-        "Fes & Meknes — UNESCO-Medinas und Handwerk",
-        "Sahara Merzouga — Biwak-Nacht an den Erg-Chebbi-Dünen",
-        "Atlas & Kasbahs — Aït Benhaddou und Berber-Täler",
-        "Essaouira — atlantische Medina, Hafen und Festungsmauern",
+        "Casablanca — Hassan-II.-Moschee und Atlantik-Corniche",
+        "Rabat — Kasbah der Oudayas und Verwaltungshauptstadt",
+        "Fes el-Bali — die traditionellste Stadt Marokkos",
+        "Gerbereien, Medersas und enge Souk-Gassen",
+        "Chefchaouen — das blaue Juwel des Rif und seine fotogenen Gassen",
       ],
       itinerary: [
         {
-          dayLabel: "T1–3",
-          title: "Casablanca, Rabat & Fahrt nach Fes",
+          dayLabel: "T1",
+          title: "Marrakesch — Casablanca — Rabat",
           description:
-            "Entdeckung der Atlantikküste und der ersten Kaiserstädte.",
+            "Fahrt zur Atlantikküste und den großen Städten des Nordens.",
           steps: [
-            "T1 — Empfang in Marrakesch oder Casablanca, Hassan-II.-Moschee (optional)",
-            "T2 — Rabat: Kasbah der Oudayas, Hassan-Turm und Medina",
-            "T3 — Fahrt nach Fes via Volubilis (römische Ruinen) und Meknes",
+            "08:00 — Abfahrt in Marrakesch",
+            "Casablanca: Hassan-II.-Moschee (Außenbesichtigung oder optionale Innenbesichtigung), Corniche",
+            "Rabat: Kasbah der Oudayas, Hassan-Turm und Medina",
+            "Nacht in einem Riad oder Hotel in Rabat",
           ],
         },
         {
-          dayLabel: "T4–6",
-          title: "Fes & Meknes — Kaiserstädte",
+          dayLabel: "T2",
+          title: "Rabat — Fès — die traditionellste Stadt",
           description:
-            "Eintauchen in die ältesten Medinas des Maghreb.",
+            "Eintauchen in die authentischste Medina des Maghreb.",
           steps: [
-            "T4 — Geführte Tour durch Fes el-Bali: Gerbereien, Medersas und Souks",
-            "T5 — Fes Jdid und lokales Handwerk, freier Nachmittag",
-            "T6 — Meknes: Bab Mansour, königliche Kornspeicher und Kaiserstadt",
+            "Morgendliche Fahrt nach Fès",
+            "Besuch von Fes el-Bali: Chouara-Gerbereien, Medersas und Souks",
+            "Enge Gassen und jahrhundertealtes Handwerk entdecken",
+            "Nacht in einem Riad in der Medina von Fès",
           ],
         },
         {
-          dayLabel: "T7–10",
-          title: "Atlas, Schluchten & Merzouga",
+          dayLabel: "T3",
+          title: "Fès — Chefchaouen — die blaue Stadt",
           description:
-            "Durchquerung des Mittleren Atlas und Abstieg zur Sahara.",
+            "Durchquerung des Rif bis zum blauen Juwel Chefchaouen.",
           steps: [
-            "T7 — Fahrt nach Ifrane und Midelt, Zedernwälder und Berglandschaft",
-            "T8 — Ziz-Schluchten, Palmenhaine und Ankunft in Merzouga",
-            "T9 — Kamelritt bei Sonnenuntergang, Biwak-Nacht auf den Dünen",
-            "T10 — Sonnenaufgang, Fahrt zu Todra- oder Dadès-Schluchten",
-          ],
-        },
-        {
-          dayLabel: "T11–14",
-          title: "Südmarokko & Rückkehr nach Marrakesch",
-          description:
-            "Kasbahs, Draa-Tal und Aufstieg zum Hohen Atlas.",
-          steps: [
-            "T11 — Aït Benhaddou und Filmstudios von Ouarzazate",
-            "T12 — Draa-Tal und Lehm-Kasbahs",
-            "T13 — Tizi n'Tichka-Pass, Rückkehr nach Marrakesch",
-            "T14 — Freier Tag in Marrakesch oder Ruhe",
-          ],
-        },
-        {
-          dayLabel: "T15–17",
-          title: "Essaouira & Reiseende",
-          description:
-            "Atlantik-Ausflug vor der finalen Rückkehr.",
-          steps: [
-            "T15 — Fahrt nach Essaouira via Arganbäume, Medina-Entdeckung",
-            "T16 — Freier Tag in Essaouira: Hafen, Festungsmauern, Strand und Handwerk",
-            "T17 — Rückkehr nach Marrakesch, Ende der Grand Tour",
+            "08:00 — Abfahrt von Fès Richtung Norden",
+            "Panoramafahrt durch die Rif-Berge",
+            "Chefchaouen: blaue Medina, enge Gassen, Platz Outa el-Hammam",
+            "Ras El Ma und Ende der Tour in Chefchaouen",
           ],
         },
       ],
       included: [
-        "Privater klimatisierter Transport für 17 Tage",
+        "Privater klimatisierter Transport für 3 Tage",
         "Erfahrener französischsprachiger Fahrer-Guide",
-        "1 Nacht im Luxus-Wüsten-Biwak mit Vollpension",
-        "Tägliche Frühstücke und Kamelritt",
+        "Tägliche Frühstücke",
+        "Abholung an Ihrem Riad oder Hotel in Marrakesch",
       ],
       notIncluded: [
-        "Unterkünfte (Riads, Kasbahs, Lodges)",
-        "Mittag- und Abendessen (außer Wüsten-Biwak)",
+        "Unterkünfte (Riads in Rabat, Fès und Chefchaouen)",
+        "Mittag- und Abendessen",
         "Eintritte zu Monumenten und historischen Stätten",
         "Getränke, optionale Aktivitäten und persönliche Ausgaben",
+        "Rückfahrt nach Marrakesch (Transfer auf Anfrage)",
         "Trinkgelder für Guide und Hotelpersonal",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "1 680 €/Pers." },
-        { travelers: "3–4 Reisende", price: "1 980–2 100 €/Pers." },
-        { travelers: "5–7 Reisende", price: "1 780–1 920 €/Pers." },
-        { travelers: "8–14 Reisende", price: "1 620–1 780 €/Pers." },
-        { travelers: "15–17 Reisende", price: "1 550 €/Pers." },
+        { travelers: "2 Reisende", price: "290 €/Pers." },
+        { travelers: "3–4 Reisende", price: "290 €/Pers." },
+        { travelers: "5–7 Reisende", price: "290 €/Pers." },
+        { travelers: "8–14 Reisende", price: "290 €/Pers." },
+        { travelers: "15–17 Reisende", price: "290 €/Pers." },
       ],
       faqs: [
         {
-          question: "Können wir in Casablanca statt Marrakesch starten?",
+          question: "Endet die Tour in Chefchaouen?",
           answer:
-            "Ja, die Grand Tour ist flexibel. Wir passen Startpunkt und Flughafentransfers an Ihre Flüge an.",
+            "Ja, das Programm endet am T3 in Chefchaouen. Wir können auf Anfrage einen Rücktransfer nach Marrakesch, Fès oder Tanger organisieren.",
         },
         {
-          question: "Sind 17 Tage zu lang?",
+          question: "Können wir in Casablanca starten?",
           answer:
-            "Das Tempo umfasst freie Tage und kurze Etappen. Wir können Abschnitte nach Wunsch kürzen oder verlängern.",
+            "Ja, wir passen Startpunkt und Flughafentransfers an Ihre Flüge und Ihr Hotel an.",
+        },
+        {
+          question: "Muss man in Fès und Chefchaouen viel laufen?",
+          answer:
+            "Medinas werden zu Fuß erkundet (2–4 Std. pro Stadt), oft durch enge Gassen. Der Rest erfolgt im Privatfahrzeug.",
         },
         {
           question: "Welche Unterkunftsart ist vorgesehen?",
           answer:
-            "Charmante Riads in Städten, Kasbahs im Süden und komfortable Lodge in den Bergen. Die Unterkunft wird separat nach Budget kalkuliert.",
+            "Charmante Riads in Rabat, Fès und Chefchaouen. Die Unterkunft wird separat nach Budget kalkuliert.",
         },
         {
-          question: "Muss man viel zu Fuß gehen?",
+          question: "Welche ist die beste Reisezeit?",
           answer:
-            "Medina-Besuche zu Fuß (2–4 Std.). Der Rest im Fahrzeug. Keine anspruchsvollen Wanderungen erforderlich.",
+            "Frühling und Herbst sind ideal. Chefchaouen ist im Sommer dank der Rif-Höhe angenehm.",
         },
         {
           question: "Wie erfolgt die Zahlung?",
@@ -1641,7 +1581,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Ist das viel Fahrt für 3 Tage?",
           answer:
-            "Ja, rechnen Sie 9–10 Std. Fahrt an T1 und T3. Regelmäßige Pausen. Für sanfteres Tempo wählen Sie die 17-Tage Grand Tour.",
+            "Ja, rechnen Sie 9–10 Std. Fahrt an T1 und T3. Regelmäßige Pausen. Für eine vollständigere Tour mit Fès und Chefchaouen wählen Sie die 3-Tage-Tour Marrakesch–Chefchaouen.",
         },
         {
           question: "Ist das Luxus-Camp komfortabel?",

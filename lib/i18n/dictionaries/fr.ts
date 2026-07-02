@@ -126,7 +126,7 @@ export const fr: Dictionary = {
     eyebrow: "Circuits multi-jours",
     title: "Nos circuits sur mesure",
     description:
-      "Du court séjour 3 jours au grand tour 17 jours. Sur mesure, petits groupes, guide francophone berbère.",
+      "Du court séjour 3 jours au désert jusqu'au circuit Marrakech–Chefchaouen. Sur mesure, petits groupes, guide francophone berbère.",
     viewAll: "Tous nos circuits",
     items: {
       "circuit-sahara-atlas-3j": {
@@ -136,12 +136,12 @@ export const fr: Dictionary = {
         description:
           "L'essentiel en 3 jours : Haut Atlas, Aït Benhaddou, dunes de Merzouga, nuit en bivouac de luxe et retour à Marrakech.",
       },
-      "grand-tour-17": {
-        title: "Grand Tour Maroc 17 jours",
-        badge: "Tour complet",
-        duration: "17 jours",
+      "grand-tour-3j": {
+        title: "Marrakech — Chefchaouen 3 jours",
+        badge: "Villes impériales",
+        duration: "3 jours",
         description:
-          "Tour complet du Maroc : Casablanca, Rabat, Fès, Meknès, désert, Atlas, Essaouira. Pour explorer toutes les facettes du pays.",
+          "De Marrakech à Chefchaouen : Casablanca, Rabat, Fès la ville la plus traditionnelle et les ruelles bleues de Chefchaouen.",
       },
       "merzouga-3j": {
         title: "Désert Merzouga Erg Chebbi",

@@ -63,7 +63,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         {
           question: "Peut-on combiner Marrakech avec le désert ou l'Atlas ?",
           answer:
-            "Absolument. Marrakech est notre base principale pour des circuits de 2 à 17 jours vers Merzouga, Essaouira, vallée de l'Ourika ou le Nord.",
+            "Absolument. Marrakech est notre base principale pour des circuits de 2 à 4 jours vers Merzouga, Essaouira, vallée de l'Ourika ou le Nord.",
         },
         {
           question: "Les visites de la médina sont-elles privées ?",
@@ -1271,7 +1271,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         {
           question: "¿Se puede combinar Marrakech con desierto o Atlas?",
           answer:
-            "Por supuesto. Marrakech es nuestra base principal para circuitos de 2 a 17 días hacia Merzouga, Essaouira, valle de Ourika o el Norte.",
+            "Por supuesto. Marrakech es nuestra base principal para circuitos de 2 a 4 días hacia Merzouga, Essaouira, valle de Ourika o el Norte.",
         },
         {
           question: "¿Las visitas a la medina son privadas?",
