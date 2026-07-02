@@ -52,7 +52,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       groupPricing: [
         { travelers: "Transfert aéroport (1–4 pers.)", price: "à partir de 25 €" },
         { travelers: "Visite médina guidée (½ journée)", price: "à partir de 45 €/pers." },
-        { travelers: "Excursion Essaouira (1 jour)", price: "à partir de 80 €/pers." },
+        { travelers: "Excursion Essaouira (1 jour)", price: "à partir de 29 €/pers." },
       ],
       faqs: [
         {
@@ -351,7 +351,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Hébergement si excursion journée uniquement",
       ],
       groupPricing: [
-        { travelers: "Excursion 1 jour (depuis Marrakech)", price: "à partir de 80 €/pers." },
+        { travelers: "Excursion 1 jour (depuis Marrakech)", price: "à partir de 29 €/pers." },
         { travelers: "Transfert Marrakech ↔ Essaouira (seul)", price: "à partir de 95 €" },
         { travelers: "Visite guidée médina Essaouira", price: "à partir de 40 €/pers." },
       ],
@@ -656,7 +656,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       groupPricing: [
         { travelers: "Airport transfer (1–4 people)", price: "from €25" },
         { travelers: "Guided medina visit (half day)", price: "from €45/person" },
-        { travelers: "Essaouira day trip (1 day)", price: "from €80/person" },
+        { travelers: "Essaouira day trip (1 day)", price: "from €29/person" },
       ],
       faqs: [
         {
@@ -955,7 +955,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Accommodation if day trip only",
       ],
       groupPricing: [
-        { travelers: "Day trip (from Marrakech)", price: "from €80/person" },
+        { travelers: "Day trip (from Marrakech)", price: "from €29/person" },
         { travelers: "Marrakech ↔ Essaouira transfer only", price: "from €95" },
         { travelers: "Guided Essaouira medina visit", price: "from €40/person" },
       ],
@@ -1260,7 +1260,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       groupPricing: [
         { travelers: "Traslado aeropuerto (1–4 pers.)", price: "desde 25 €" },
         { travelers: "Visita medina guiada (medio día)", price: "desde 45 €/pers." },
-        { travelers: "Excursión Essaouira (1 día)", price: "desde 80 €/pers." },
+        { travelers: "Excursión Essaouira (1 día)", price: "desde 29 €/pers." },
       ],
       faqs: [
         {
@@ -1507,7 +1507,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Alojamiento si solo excursión de un día",
       ],
       groupPricing: [
-        { travelers: "Excursión 1 día (desde Marrakech)", price: "desde 80 €/pers." },
+        { travelers: "Excursión 1 día (desde Marrakech)", price: "desde 29 €/pers." },
         { travelers: "Traslado Marrakech ↔ Essaouira", price: "desde 95 €" },
         { travelers: "Visita guiada medina Essaouira", price: "desde 40 €/pers." },
       ],
@@ -1744,7 +1744,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       groupPricing: [
         { travelers: "Flughafentransfer (1–4 Pers.)", price: "ab 25 €" },
         { travelers: "Geführte Medina (halber Tag)", price: "ab 45 €/Pers." },
-        { travelers: "Essaouira Tagesausflug", price: "ab 80 €/Pers." },
+        { travelers: "Essaouira Tagesausflug", price: "ab 29 €/Pers." },
       ],
       faqs: [
         { question: "Bieten Sie Flughafentransfer Marrakesch an?", answer: "Ja, persönliche Begrüßung am Menara-Flughafen 24/7, klimatisiertes Fahrzeug und zweisprachiger Chauffeur bis zu Ihrem Riad oder Hotel." },
@@ -1975,7 +1975,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Unterkunft bei reiner Tagesausflug",
       ],
       groupPricing: [
-        { travelers: "Tagesausflug (ab Marrakesch)", price: "ab 80 €/Pers." },
+        { travelers: "Tagesausflug (ab Marrakesch)", price: "ab 29 €/Pers." },
         { travelers: "Marrakesch ↔ Essaouira Transfer", price: "ab 95 €" },
         { travelers: "Geführte Essaouira-Medina", price: "ab 40 €/Pers." },
       ],

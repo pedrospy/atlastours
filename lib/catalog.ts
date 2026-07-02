@@ -72,14 +72,6 @@ export const circuitsCatalog = [
     ],
   },
   {
-    id: "merzouga-3j",
-    slug: "desert-merzouga-3-jours",
-    rating: 4.9,
-    reviews: 142,
-    price: 78,
-    image: "/images/dest-sunset-horses.png",
-  },
-  {
     id: "megdaz-3j",
     slug: "vallee-megdaz-3-jours",
     rating: 4.9,
@@ -104,7 +96,7 @@ export const excursionsCatalog = [
     slug: "essaouira-medina-day-trip",
     rating: 4.8,
     reviews: 103,
-    price: 14,
+    price: 29,
     image: "/images/dest-essaouira-port.png",
   },
   {

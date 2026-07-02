@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         destination: "/:locale/circuits/marrakech-chefchaouen-3-days",
         permanent: true,
       },
+      {
+        source: "/:locale/circuits/desert-merzouga-3-jours",
+        destination: "/:locale/circuits/marrakech-sahara-atlas-3-days",
+        permanent: true,
+      },
     ];
   },
   images: {

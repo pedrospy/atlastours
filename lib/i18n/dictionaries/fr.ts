@@ -143,13 +143,6 @@ export const fr: Dictionary = {
         description:
           "De Marrakech à Chefchaouen : Casablanca, Rabat, Fès la ville la plus traditionnelle et les ruelles bleues de Chefchaouen.",
       },
-      "merzouga-3j": {
-        title: "Désert Merzouga Erg Chebbi",
-        badge: "Court séjour",
-        duration: "3 jours",
-        description:
-          "Trois jours pour vivre le Sahara : route via Ouarzazate, dromadaire, nuit en camp de luxe sur les dunes, lever de soleil inoubliable.",
-      },
       "megdaz-3j": {
         title: "Vallée de Megdaz",
         badge: "Authentique",

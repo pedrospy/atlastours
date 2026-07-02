@@ -143,13 +143,6 @@ export const en: Dictionary = {
         description:
           "Join a 3-day tour from Marrakech to Chefchaouen. Discover Fez, Rabat, Casablanca and the narrow streets of the blue city.",
       },
-      "merzouga-3j": {
-        title: "Merzouga Erg Chebbi Desert",
-        badge: "Short stay",
-        duration: "3 days",
-        description:
-          "Three days in the Sahara: route via Ouarzazate, camel ride, night in a luxury desert camp, unforgettable sunrise.",
-      },
       "megdaz-3j": {
         title: "Megdaz Valley",
         badge: "Authentic",

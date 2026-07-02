@@ -143,13 +143,6 @@ export const es: Dictionary = {
         description:
           "Circuito de 3 días de Marrakech a Chefchaouen: Casablanca, Rabat, Fez la ciudad más tradicional y las callejuelas azules de Chefchaouen.",
       },
-      "merzouga-3j": {
-        title: "Desierto Merzouga Erg Chebbi",
-        badge: "Estancia corta",
-        duration: "3 días",
-        description:
-          "Tres días para vivir el Sahara: ruta por Ouarzazate, dromedario, noche en campamento de lujo en las dunas, amanecer inolvidable.",
-      },
       "megdaz-3j": {
         title: "Valle de Megdaz",
         badge: "Auténtico",

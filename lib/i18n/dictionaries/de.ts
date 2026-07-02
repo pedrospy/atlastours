@@ -143,13 +143,6 @@ export const de: Dictionary = {
         description:
           "3-Tage-Tour von Marrakesch nach Chefchaouen: Casablanca, Rabat, Fès die traditionellste Stadt und die engen Gassen der blauen Stadt.",
       },
-      "merzouga-3j": {
-        title: "Merzouga Erg Chebbi Wüste",
-        badge: "Kurzaufenthalt",
-        duration: "3 Tage",
-        description:
-          "Drei Tage in der Sahara: Route über Ouarzazate, Kamelritt, Nacht in einem Luxus-Wüstencamp, unvergesslicher Sonnenaufgang.",
-      },
       "megdaz-3j": {
         title: "Megdaz-Tal",
         badge: "Authentisch",

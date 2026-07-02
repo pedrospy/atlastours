@@ -47,19 +47,6 @@ export const circuits = [
     image: "/images/dest-chefchaouen.jpg",
   },
   {
-    id: "merzouga-3j",
-    title: "Désert Merzouga Erg Chebbi",
-    badge: "Court séjour",
-    duration: "3 jours",
-    description:
-      "Trois jours pour vivre le Sahara : route via Ouarzazate, dromadaire, nuit en camp de luxe sur les dunes, lever de soleil inoubliable.",
-    rating: 4.9,
-    reviews: 142,
-    price: 380,
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Desert_Merzouga_Morocco_Meditation.jpg/1280px-Desert_Merzouga_Morocco_Meditation.jpg",
-  },
-  {
     id: "megdaz-3j",
     title: "Vallée de Megdaz",
     badge: "Authentique",
@@ -95,7 +82,7 @@ export const excursions = [
       "Médina UNESCO, port de pêche, fruits de mer, ambiance bohème au bord de l'Atlantique.",
     rating: 4.8,
     reviews: 103,
-    price: 80,
+    price: 29,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Blue_Fishing_Boat_and_Medina_Walls%2C_Essaouira%2C_Morocco.jpg/1280px-Blue_Fishing_Boat_and_Medina_Walls%2C_Essaouira%2C_Morocco.jpg",
   },
