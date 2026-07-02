@@ -129,12 +129,12 @@ export const es: Dictionary = {
       "Desde una escapada de 3 días hasta un gran tour de 17 días. A medida, grupos reducidos, guía bereber de habla francesa.",
     viewAll: "Todos nuestros circuitos",
     items: {
-      "circuit-11-jours": {
-        title: "Circuito 11 días Marrakech, Sahara y Atlas",
+      "circuit-sahara-atlas-3j": {
+        title: "Circuito 3 días Marrakech, Sahara y Atlas",
         badge: "Más vendido",
-        duration: "11 días",
+        duration: "3 días",
         description:
-          "El gran clásico: medina de Marrakech, desierto de Merzouga (2 noches en campamento), Aït Benhaddou, Atlas, valle del Drâa, regreso por Imlil.",
+          "Lo esencial en 3 días: Alto Atlas, Aït Benhaddou, dunas de Merzouga, noche en campamento de lujo y regreso a Marrakech.",
       },
       "grand-tour-17": {
         title: "Gran Tour Marruecos 17 días",

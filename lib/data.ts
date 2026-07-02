@@ -22,15 +22,15 @@ export const navLinks = [
 
 export const circuits = [
   {
-    id: "circuit-11-jours",
-    title: "Circuit 11 jours Marrakech, Sahara & Atlas",
+    id: "circuit-sahara-atlas-3j",
+    title: "Circuit 3 jours Marrakech, Sahara & Atlas",
     badge: "Best-seller",
-    duration: "11 jours",
+    duration: "3 jours",
     description:
-      "Le grand classique : médina de Marrakech, désert de Merzouga (2 nuits bivouac), Aït Benhaddou, Atlas, vallée du Drâa, retour côté Imlil.",
+      "L'essentiel en 3 jours : Haut Atlas, Aït Benhaddou, dunes de Merzouga, nuit en bivouac de luxe et retour à Marrakech.",
     rating: 4.9,
     reviews: 56,
-    price: 1290,
+    price: 95,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Desert_Merzouga_Morocco_Meditation.jpg/1280px-Desert_Merzouga_Morocco_Meditation.jpg",
   },

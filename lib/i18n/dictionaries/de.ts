@@ -129,12 +129,12 @@ export const de: Dictionary = {
       "Von einem 3-tägigen Kurztrip bis zur 17-tägigen Grand Tour. Individuelle Reisen, kleine Gruppen, französischsprachiger Berber-Guide.",
     viewAll: "Alle Rundreisen",
     items: {
-      "circuit-11-jours": {
-        title: "11-Tage-Tour Marrakesch, Sahara & Atlas",
+      "circuit-sahara-atlas-3j": {
+        title: "3-Tage-Tour Marrakesch, Sahara & Atlas",
         badge: "Bestseller",
-        duration: "11 Tage",
+        duration: "3 Tage",
         description:
-          "Die klassische Route: Medina von Marrakesch, Merzouga-Wüste (2 Nächte im Camp), Aït Benhaddou, Atlas, Drâa-Tal, Rückkehr über Imlil.",
+          "Das Wesentliche in 3 Tagen: Hoher Atlas, Aït Benhaddou, Merzouga-Dünen, Luxus-Camp-Nacht und Rückkehr nach Marrakesch.",
       },
       "grand-tour-17": {
         title: "Grand Marokko Tour — 17 Tage",

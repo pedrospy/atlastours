@@ -129,12 +129,12 @@ export const fr: Dictionary = {
       "Du court séjour 3 jours au grand tour 17 jours. Sur mesure, petits groupes, guide francophone berbère.",
     viewAll: "Tous nos circuits",
     items: {
-      "circuit-11-jours": {
-        title: "Circuit 11 jours Marrakech, Sahara & Atlas",
+      "circuit-sahara-atlas-3j": {
+        title: "Circuit 3 jours Marrakech, Sahara & Atlas",
         badge: "Best-seller",
-        duration: "11 jours",
+        duration: "3 jours",
         description:
-          "Le grand classique : médina de Marrakech, désert de Merzouga (2 nuits bivouac), Aït Benhaddou, Atlas, vallée du Drâa, retour côté Imlil.",
+          "L'essentiel en 3 jours : Haut Atlas, Aït Benhaddou, dunes de Merzouga, nuit en bivouac de luxe et retour à Marrakech.",
       },
       "grand-tour-17": {
         title: "Grand Tour Maroc 17 jours",

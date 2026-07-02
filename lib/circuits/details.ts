@@ -3,111 +3,104 @@ import type { CircuitId } from "./types";
 
 export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
   fr: {
-    "circuit-11-jours": {
+    "circuit-sahara-atlas-3j": {
       metaTitle:
-        "Circuit 11 jours Marrakech, Sahara & Atlas | Red Nomad",
+        "Circuit 3 jours Marrakech, Sahara & Atlas | Red Nomad",
       metaDescription:
-        "Circuit privé 11 jours depuis Marrakech : médina, Merzouga (2 nuits bivouac), Aït Benhaddou, Atlas, vallée du Drâa et retour par Imlil. Guide francophone, petits groupes.",
-      subtitle: "Le grand classique du Maroc",
+        "Circuit privé 3 jours depuis Marrakech : Haut Atlas, Aït Benhaddou, Merzouga, bivouac de luxe aux dunes et retour. Guide francophone, petits groupes.",
+      subtitle: "Marrakech, désert et Atlas en 3 jours",
       difficulty: "Modéré",
-      duration: "11 jours",
+      duration: "3 jours",
       groupSize: "1–17 personnes",
       departure: "Marrakech",
       languages: "Français, English",
       about:
-        "Ce circuit emblématique de 11 jours relie les incontournables du Sud marocain : médina animée de Marrakech, dunes dorées de Merzouga, kasbahs UNESCO et villages berbères de l'Atlas. Deux nuits en bivouac au cœur du Sahara, traversée du col du Tizi n'Tichka et retour par la vallée du Drâa et Imlil pour une immersion complète entre désert, montagne et culture locale.",
+        "Trois jours pour vivre l'essentiel du Sud marocain : traversée du Haut Atlas et du col du Tizi n'Tichka, kasbah UNESCO d'Aït Benhaddou, route des gorges jusqu'à Merzouga, nuit magique en bivouac de luxe sur les dunes de l'Erg Chebbi et retour à Marrakech. Un condensé parfait entre montagne, désert et patrimoine berbère.",
       highlights: [
-        "Médina de Marrakech — souks, palais et place Jemaa el-Fna",
-        "Désert de Merzouga — 2 nuits en bivouac sous les étoiles",
-        "Kasbah d'Aït Benhaddou — site UNESCO et décor de cinéma",
         "Traversée du Haut Atlas — col du Tizi n'Tichka (2260 m)",
-        "Vallée du Drâa et retour par Imlil — villages et terrasses",
+        "Kasbah d'Aït Benhaddou — site UNESCO et décor de cinéma",
+        "Gorges du Todra et palmeraies du Sud",
+        "Balade à dos de dromadaire au coucher du soleil",
+        "Nuit en bivouac de luxe sur les dunes de Merzouga",
       ],
       itinerary: [
         {
-          dayLabel: "J1–3",
-          title: "Marrakech & route vers le Sud",
+          dayLabel: "J1",
+          title: "Marrakech — Atlas — Aït Benhaddou — Gorges",
           description:
-            "Immersion dans la médina, puis route vers le Haut Atlas et les premières kasbahs du Sud.",
+            "Route panoramique vers le Sud à travers le Haut Atlas et les kasbahs.",
           steps: [
-            "J1 — Accueil à Marrakech, visite guidée de la médina, souks et monuments emblématiques",
-            "J2 — Route vers le col du Tizi n'Tichka (2260 m), arrêts panoramiques et villages berbères",
-            "J3 — Aït Benhaddou et Ouarzazate, nuit dans la vallée du Dadès ou des gorges du Todra",
+            "07h00 — Départ de Marrakech, traversée du col du Tizi n'Tichka",
+            "Visite d'Aït Benhaddou, kasbah classée UNESCO",
+            "Ouarzazate et route des gorges du Todra",
+            "Nuit en kasbah ou hôtel dans la région de Merzouga",
           ],
         },
         {
-          dayLabel: "J4–6",
-          title: "Gorges, oasis et Merzouga",
+          dayLabel: "J2",
+          title: "Merzouga — Dromadaire — Bivouac de luxe",
           description:
-            "Descente vers le Sahara à travers gorges, palmeraies et villages de l'Anti-Atlas.",
+            "Journée consacrée au Sahara et à la nuit sous les étoiles.",
           steps: [
-            "J4 — Gorges du Todra et palmeraies de Tinjdad, route vers Merzouga",
-            "J5 — Balade à dos de dromadaire au coucher du soleil, nuit en bivouac de luxe aux dunes",
-            "J6 — Lever de soleil sur l'Erg Chebbi, retour en 4x4 et nuit près des dunes",
+            "Matinée libre ou visite du village de Khamlia",
+            "16h30 — Balade à dos de dromadaire vers les dunes de l'Erg Chebbi",
+            "Coucher de soleil sur les dunes dorées",
+            "Nuit en bivouac de luxe : dîner berbère et musique au coin du feu",
           ],
         },
         {
-          dayLabel: "J7–9",
-          title: "Vallée du Drâa & retour vers l'Atlas",
+          dayLabel: "J3",
+          title: "Lever de soleil — Atlas — Retour Marrakech",
           description:
-            "Traversée de la longue vallée du Drâa et remontée vers les sommets de l'Atlas.",
+            "Réveil sur les dunes et route de retour via l'Atlas.",
           steps: [
-            "J7 — Route via la vallée du Drâa, kasbahs et palmeraies jusqu'à Ouarzazate",
-            "J8 — Retour par le col du Tizi n'Tichka, découverte de villages de montagne",
-            "J9 — Journée libre ou visite complémentaire à Marrakech ou dans l'Atlas",
-          ],
-        },
-        {
-          dayLabel: "J10–11",
-          title: "Imlil & fin du circuit",
-          description:
-            "Détente dans la vallée d'Imlil avant le retour à Marrakech.",
-          steps: [
-            "J10 — Excursion à Imlil, marche légère entre terrasses et villages berbères du Toubkal",
-            "J11 — Retour à Marrakech, fin du circuit et transfert à votre hébergement",
+            "06h00 — Lever de soleil sur les dunes (option)",
+            "Petit-déjeuner au camp, retour en 4x4",
+            "Route de retour via Rissani, gorges et villages de l'Atlas",
+            "~20h00 — Arrivée à Marrakech",
           ],
         },
       ],
       included: [
-        "Transport privé 4x4 ou minibus climatisé pendant 11 jours",
-        "Guide-chauffeur francophone berbère expérimenté",
-        "2 nuits en bivouac de luxe au désert avec pension complète",
-        "Balade à dos de dromadaire et petit-déjeuner quotidien",
+        "Transport privé 4x4 ou minibus climatisé (3 jours)",
+        "Chauffeur-guide francophone berbère",
+        "1 nuit en bivouac de luxe avec dîner et petit-déjeuner",
+        "Balade à dos de dromadaire (≈1h30 aller-retour)",
       ],
       notIncluded: [
-        "Hébergements (riads, kasbahs, lodges)",
-        "Déjeuners et dîners (sauf bivouac désert)",
+        "Hébergement hors bivouac (kasbah ou hôtel J1)",
+        "Déjeuners et dîner du J1",
         "Boissons et dépenses personnelles",
-        "Entrées monuments et sites (~200–300 MAD au total)",
+        "Entrées monuments (~70 MAD Aït Benhaddou)",
         "Pourboires guide et personnel (usage local)",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "1 050 €/pers." },
-        { travelers: "3–4 voyageurs", price: "1 150–1 220 €/pers." },
-        { travelers: "5–7 voyageurs", price: "1 020–1 100 €/pers." },
-        { travelers: "8–14 voyageurs", price: "920–1 020 €/pers." },
-        { travelers: "15–17 voyageurs", price: "880 €/pers." },
+        { travelers: "2 voyageurs", price: "95 €/pers." },
+        { travelers: "3–4 voyageurs", price: "85–90 €/pers." },
+        { travelers: "5–7 voyageurs", price: "75–85 €/pers." },
+        { travelers: "8–14 voyageurs", price: "68–78 €/pers." },
+        { travelers: "15–17 voyageurs", price: "65 €/pers." },
       ],
       faqs: [
         {
-          question: "Quel niveau de confort pour les nuits au désert ?",
+          question: "Est-ce beaucoup de route pour 3 jours ?",
+          answer:
+            "Oui, comptez 8–9 h de route le J1 et J3. Nous faisons des pauses régulières à Aït Benhaddou et dans les gorges. Pour un rythme plus lent, optez le Grand Tour 17 jours.",
+        },
+        {
+          question: "Quel niveau de confort pour la nuit au désert ?",
           answer:
             "Bivouac de luxe avec tentes privées, literie confortable, douches et repas traditionnels. Une expérience authentique sans renoncer au confort.",
         },
         {
           question: "Le circuit convient-il aux familles ?",
           answer:
-            "Oui, les étapes sont adaptables et les véhicules spacieux. Prévoyez quelques heures de route certains jours — nous planifions des pauses régulières.",
-        },
-        {
-          question: "Peut-on personnaliser l'itinéraire ?",
-          answer:
-            "Absolument. Ce circuit est sur mesure : durée des étapes, type d'hébergement et activités peuvent être ajustés à votre rythme.",
+            "Oui, les véhicules sont spacieux et les étapes adaptables. La balade à dromadaire est accessible dès 5–6 ans avec assistance.",
         },
         {
           question: "Quelle est la meilleure saison ?",
           answer:
-            "Mars à mai et septembre à novembre offrent des températures idéales. L'été est possible avec des départs matinaux ; l'hiver reste agréable au désert.",
+            "Mars à mai et septembre à novembre sont idéaux. L'été est possible avec des départs matinaux ; l'hiver reste agréable au désert.",
         },
         {
           question: "Comment réserver ?",
@@ -325,7 +318,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Est-ce beaucoup de route pour 3 jours ?",
           answer:
-            "Oui, comptez 9–10 h de route le J1 et J3. Nous faisons des pauses régulières. Pour un rythme plus doux, optez le circuit 11 jours.",
+            "Oui, comptez 9–10 h de route le J1 et J3. Nous faisons des pauses régulières. Pour un rythme plus doux, optez le Grand Tour 17 jours.",
         },
         {
           question: "Le camp de luxe est-il confortable ?",
@@ -453,111 +446,104 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
   },
   en: {
-    "circuit-11-jours": {
+    "circuit-sahara-atlas-3j": {
       metaTitle:
-        "11-Day Marrakech, Sahara & Atlas Circuit | Red Nomad",
+        "3-Day Marrakech, Sahara & Atlas Circuit | Red Nomad",
       metaDescription:
-        "Private 11-day circuit from Marrakech: medina, Merzouga (2 nights bivouac), Aït Benhaddou, Atlas, Draa Valley and return via Imlil. French-speaking guide, small groups.",
-      subtitle: "Morocco's classic grand tour",
+        "Private 3-day circuit from Marrakech: High Atlas, Aït Benhaddou, Merzouga, luxury desert camp and return. French-speaking guide, small groups.",
+      subtitle: "Marrakech, desert and Atlas in 3 days",
       difficulty: "Moderate",
-      duration: "11 days",
+      duration: "3 days",
       groupSize: "1–17 people",
       departure: "Marrakech",
       languages: "French, English",
       about:
-        "This iconic 11-day circuit connects the highlights of southern Morocco: the lively medina of Marrakech, the golden dunes of Merzouga, UNESCO kasbahs and Berber villages in the Atlas. Two nights in a desert bivouac, crossing the Tizi n'Tichka pass and returning through the Draa Valley and Imlil for a complete immersion between desert, mountains and local culture.",
+        "Three days to experience the essentials of southern Morocco: crossing the High Atlas and Tizi n'Tichka pass, UNESCO kasbah of Aït Benhaddou, gorges road to Merzouga, magical night in a luxury camp on Erg Chebbi dunes and return to Marrakech. A perfect condensed journey between mountains, desert and Berber heritage.",
       highlights: [
-        "Marrakech medina — souks, palaces and Jemaa el-Fna square",
-        "Merzouga desert — 2 nights bivouac under the stars",
-        "Aït Benhaddou kasbah — UNESCO site and film location",
         "High Atlas crossing — Tizi n'Tichka pass (2260 m)",
-        "Draa Valley and return via Imlil — villages and terraces",
+        "Aït Benhaddou kasbah — UNESCO site and film location",
+        "Todra Gorges and southern palm groves",
+        "Camel ride at sunset",
+        "Luxury bivouac night on Merzouga dunes",
       ],
       itinerary: [
         {
-          dayLabel: "D1–3",
-          title: "Marrakech & route to the South",
+          dayLabel: "D1",
+          title: "Marrakech — Atlas — Aït Benhaddou — Gorges",
           description:
-            "Immersion in the medina, then the road to the High Atlas and the first kasbahs of the South.",
+            "Scenic road south through the High Atlas and kasbahs.",
           steps: [
-            "D1 — Welcome in Marrakech, guided medina tour, souks and landmarks",
-            "D2 — Road to Tizi n'Tichka pass (2260 m), panoramic stops and Berber villages",
-            "D3 — Aït Benhaddou and Ouarzazate, night in the Dadès or Todra gorges",
+            "07:00 — Departure from Marrakech, Tizi n'Tichka pass crossing",
+            "Visit Aït Benhaddou, UNESCO-listed kasbah",
+            "Ouarzazate and Todra Gorges road",
+            "Night in kasbah or hotel near Merzouga",
           ],
         },
         {
-          dayLabel: "D4–6",
-          title: "Gorges, oases & Merzouga",
+          dayLabel: "D2",
+          title: "Merzouga — Camel ride — Luxury camp",
           description:
-            "Descent to the Sahara through gorges, palm groves and Anti-Atlas villages.",
+            "A day dedicated to the Sahara and a night under the stars.",
           steps: [
-            "D4 — Todra Gorges and Tinjdad palm groves, road to Merzouga",
-            "D5 — Camel ride at sunset, luxury bivouac night on the dunes",
-            "D6 — Sunrise on Erg Chebbi, 4x4 return and night near the dunes",
+            "Free morning or visit to Khamlia village",
+            "16:30 — Camel ride to Erg Chebbi dunes",
+            "Sunset over the golden dunes",
+            "Luxury camp night: Berber dinner and music by the fire",
           ],
         },
         {
-          dayLabel: "D7–9",
-          title: "Draa Valley & return to the Atlas",
+          dayLabel: "D3",
+          title: "Sunrise — Atlas — Return to Marrakech",
           description:
-            "Crossing the long Draa Valley and climbing back toward the Atlas peaks.",
+            "Wake up on the dunes and return via the Atlas.",
           steps: [
-            "D7 — Route via Draa Valley, kasbahs and palm groves to Ouarzazate",
-            "D8 — Return via Tizi n'Tichka pass, mountain village visits",
-            "D9 — Free day or optional visit in Marrakech or the Atlas",
-          ],
-        },
-        {
-          dayLabel: "D10–11",
-          title: "Imlil & end of circuit",
-          description:
-            "Relaxation in the Imlil valley before returning to Marrakech.",
-          steps: [
-            "D10 — Excursion to Imlil, easy walk among terraces and Toubkal villages",
-            "D11 — Return to Marrakech, end of circuit and transfer to your accommodation",
+            "06:00 — Sunrise on the dunes (optional)",
+            "Breakfast at camp, 4x4 return",
+            "Return via Rissani, gorges and Atlas villages",
+            "~20:00 — Arrival in Marrakech",
           ],
         },
       ],
       included: [
-        "Private 4x4 or air-conditioned minibus for 11 days",
-        "Experienced French-speaking Berber driver-guide",
-        "2 nights in luxury desert bivouac with full board",
-        "Camel ride and daily breakfast",
+        "Private 4x4 or air-conditioned minibus (3 days)",
+        "French-speaking Berber driver-guide",
+        "1 night in luxury desert camp with dinner and breakfast",
+        "Camel ride (~1h30 round trip)",
       ],
       notIncluded: [
-        "Accommodation (riads, kasbahs, lodges)",
-        "Lunches and dinners (except desert bivouac)",
+        "Accommodation outside camp (kasbah or hotel D1)",
+        "Lunches and D1 dinner",
         "Drinks and personal expenses",
-        "Monument and site entrances (~200–300 MAD total)",
+        "Monument entrances (~70 MAD Aït Benhaddou)",
         "Tips for guide and staff (local custom)",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€1,050/person" },
-        { travelers: "3–4 travelers", price: "€1,150–1,220/person" },
-        { travelers: "5–7 travelers", price: "€1,020–1,100/person" },
-        { travelers: "8–14 travelers", price: "€920–1,020/person" },
-        { travelers: "15–17 travelers", price: "€880/person" },
+        { travelers: "2 travelers", price: "€95/person" },
+        { travelers: "3–4 travelers", price: "€85–90/person" },
+        { travelers: "5–7 travelers", price: "€75–85/person" },
+        { travelers: "8–14 travelers", price: "€68–78/person" },
+        { travelers: "15–17 travelers", price: "€65/person" },
       ],
       faqs: [
         {
-          question: "What comfort level for desert nights?",
+          question: "Is there a lot of driving for 3 days?",
           answer:
-            "Luxury bivouac with private tents, comfortable bedding, showers and traditional meals. An authentic experience without sacrificing comfort.",
+            "Yes, expect 8–9 hours of driving on D1 and D3. We take regular breaks at Aït Benhaddou and the gorges. For a slower pace, choose the 17-day Grand Tour.",
+        },
+        {
+          question: "What comfort level for the desert night?",
+          answer:
+            "Luxury bivouac with private tents, comfortable bedding, showers and traditional meals. Authentic without sacrificing comfort.",
         },
         {
           question: "Is this circuit suitable for families?",
           answer:
-            "Yes, stages are adaptable and vehicles are spacious. Expect a few hours of driving some days — we plan regular breaks.",
-        },
-        {
-          question: "Can the itinerary be customized?",
-          answer:
-            "Absolutely. This is a tailor-made circuit: stage length, accommodation type and activities can be adjusted to your pace.",
+            "Yes, vehicles are spacious and stages are adaptable. The camel ride is accessible from age 5–6 with assistance.",
         },
         {
           question: "What is the best season?",
           answer:
-            "March to May and September to November offer ideal temperatures. Summer is possible with early departures; winter remains pleasant in the desert.",
+            "March to May and September to November are ideal. Summer is possible with early departures; winter remains pleasant in the desert.",
         },
         {
           question: "How do I book?",
@@ -775,7 +761,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Is there a lot of driving for 3 days?",
           answer:
-            "Yes, expect 9–10 hours of driving on D1 and D3. We take regular breaks. For a gentler pace, choose the 11-day circuit.",
+            "Yes, expect 9–10 hours of driving on D1 and D3. We take regular breaks. For a gentler pace, choose the 17-day Grand Tour.",
         },
         {
           question: "Is the luxury camp comfortable?",
@@ -903,116 +889,106 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
   },
   es: {
-    "circuit-11-jours": {
+    "circuit-sahara-atlas-3j": {
       metaTitle:
-        "Circuito 11 días Marrakech, Sahara y Atlas | Red Nomad",
+        "Circuito 3 días Marrakech, Sahara y Atlas | Red Nomad",
       metaDescription:
-        "Circuito privado de 11 días desde Marrakech: medina, Merzouga (2 noches en bivouac), Aït Benhaddou, Atlas, valle del Drâa y regreso por Imlil. Guía francófono, grupos pequeños.",
-      subtitle: "El gran clásico de Marruecos",
+        "Circuito privado de 3 días desde Marrakech: Alto Atlas, Aït Benhaddou, Merzouga, bivouac de lujo y regreso. Guía francófono, grupos pequeños.",
+      subtitle: "Marrakech, desierto y Atlas en 3 días",
       difficulty: "Moderado",
-      duration: "11 días",
+      duration: "3 días",
       groupSize: "1–17 personas",
       departure: "Marrakech",
       languages: "Francés, English",
       about:
-        "Este emblemático circuito de 11 días conecta lo esencial del sur marroquí: la animada medina de Marrakech, las dunas doradas de Merzouga, kasbahs UNESCO y pueblos bereberes del Atlas. Dos noches en bivouac en el corazón del Sahara, cruce del paso Tizi n'Tichka y regreso por el valle del Drâa e Imlil para una inmersión completa entre desierto, montaña y cultura local.",
+        "Tres días para vivir lo esencial del sur marroquí: cruce del Alto Atlas y paso Tizi n'Tichka, kasbah UNESCO de Aït Benhaddou, ruta de gargantas hasta Merzouga, noche mágica en bivouac de lujo en las dunas del Erg Chebbi y regreso a Marrakech.",
       highlights: [
-        "Medina de Marrakech — zocos, palacios y plaza Jemaa el-Fna",
-        "Desierto de Merzouga — 2 noches en bivouac bajo las estrellas",
-        "Kasbah de Aït Benhaddou — patrimonio UNESCO y escenario de cine",
         "Travesía del Alto Atlas — paso Tizi n'Tichka (2260 m)",
-        "Valle del Drâa y regreso por Imlil — pueblos y terrazas",
+        "Kasbah de Aït Benhaddou — patrimonio UNESCO",
+        "Gargantas del Todra y palmerales del Sur",
+        "Paseo en dromedario al atardecer",
+        "Noche en bivouac de lujo en Merzouga",
       ],
       itinerary: [
         {
-          dayLabel: "D1–3",
-          title: "Marrakech y ruta hacia el Sur",
-          description:
-            "Inmersión en la medina, luego ruta hacia el Alto Atlas y las primeras kasbahs del Sur.",
+          dayLabel: "D1",
+          title: "Marrakech — Atlas — Aït Benhaddou — Gargantas",
+          description: "Ruta panorámica hacia el Sur por el Alto Atlas.",
           steps: [
-            "D1 — Bienvenida en Marrakech, visita guiada de la medina, zocos y monumentos",
-            "D2 — Ruta al paso Tizi n'Tichka (2260 m), paradas panorámicas y pueblos bereberes",
-            "D3 — Aït Benhaddou y Ouarzazate, noche en el valle del Dadès o gargantas del Todra",
+            "07:00 — Salida de Marrakech, cruce del paso Tizi n'Tichka",
+            "Visita de Aït Benhaddou, kasbah UNESCO",
+            "Ouarzazate y ruta de las gargantas del Todra",
+            "Noche en kasbah u hotel cerca de Merzouga",
           ],
         },
         {
-          dayLabel: "D4–6",
-          title: "Gargantas, oasis y Merzouga",
-          description:
-            "Descenso hacia el Sahara a través de gargantas, palmerales y pueblos del Anti-Atlas.",
+          dayLabel: "D2",
+          title: "Merzouga — Dromedario — Bivouac de lujo",
+          description: "Día dedicado al Sahara y la noche bajo las estrellas.",
           steps: [
-            "D4 — Gargantas del Todra y palmerales de Tinjdad, ruta a Merzouga",
-            "D5 — Paseo en dromedario al atardecer, noche en bivouac de lujo en las dunas",
-            "D6 — Amanecer en Erg Chebbi, regreso en 4x4 y noche cerca de las dunas",
+            "Mañana libre o visita al pueblo de Khamlia",
+            "16:30 — Paseo en dromedario hacia las dunas del Erg Chebbi",
+            "Atardecer sobre las dunas doradas",
+            "Noche en bivouac de lujo: cena bereber y música junto al fuego",
           ],
         },
         {
-          dayLabel: "D7–9",
-          title: "Valle del Drâa y regreso al Atlas",
-          description:
-            "Travesía del largo valle del Drâa y ascenso hacia las cumbres del Atlas.",
+          dayLabel: "D3",
+          title: "Amanecer — Atlas — Regreso a Marrakech",
+          description: "Despertar en las dunas y regreso por el Atlas.",
           steps: [
-            "D7 — Ruta por el valle del Drâa, kasbahs y palmerales hasta Ouarzazate",
-            "D8 — Regreso por el paso Tizi n'Tichka, visita de pueblos de montaña",
-            "D9 — Día libre o visita complementaria en Marrakech o el Atlas",
-          ],
-        },
-        {
-          dayLabel: "D10–11",
-          title: "Imlil y fin del circuito",
-          description:
-            "Descanso en el valle de Imlil antes del regreso a Marrakech.",
-          steps: [
-            "D10 — Excursión a Imlil, caminata ligera entre terrazas y pueblos del Toubkal",
-            "D11 — Regreso a Marrakech, fin del circuito y traslado a su alojamiento",
+            "06:00 — Amanecer en las dunas (opcional)",
+            "Desayuno en el campamento, regreso en 4x4",
+            "Ruta de regreso por Rissani, gargantas y Atlas",
+            "~20:00 — Llegada a Marrakech",
           ],
         },
       ],
       included: [
-        "Transporte privado 4x4 o minibús climatizado durante 11 días",
-        "Guía-conductor bereber francófono experimentado",
-        "2 noches en bivouac de lujo en el desierto con pensión completa",
-        "Paseo en dromedario y desayuno diario",
+        "Transporte privado 4x4 o minibús climatizado (3 días)",
+        "Conductor-guía bereber francófono",
+        "1 noche en bivouac de lujo con cena y desayuno",
+        "Paseo en dromedario (~1h30 ida y vuelta)",
       ],
       notIncluded: [
-        "Alojamientos (riads, kasbahs, lodges)",
-        "Almuerzos y cenas (excepto bivouac en el desierto)",
+        "Alojamiento fuera del bivouac (kasbah u hotel D1)",
+        "Almuerzos y cena del D1",
         "Bebidas y gastos personales",
-        "Entradas a monumentos y sitios (~200–300 MAD en total)",
-        "Propinas para guía y personal (costumbre local)",
+        "Entradas (~70 MAD Aït Benhaddou)",
+        "Propinas (costumbre local)",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "1 050 €/pers." },
-        { travelers: "3–4 viajeros", price: "1 150–1 220 €/pers." },
-        { travelers: "5–7 viajeros", price: "1 020–1 100 €/pers." },
-        { travelers: "8–14 viajeros", price: "920–1 020 €/pers." },
-        { travelers: "15–17 viajeros", price: "880 €/pers." },
+        { travelers: "2 viajeros", price: "95 €/pers." },
+        { travelers: "3–4 viajeros", price: "85–90 €/pers." },
+        { travelers: "5–7 viajeros", price: "75–85 €/pers." },
+        { travelers: "8–14 viajeros", price: "68–78 €/pers." },
+        { travelers: "15–17 viajeros", price: "65 €/pers." },
       ],
       faqs: [
         {
-          question: "¿Qué nivel de confort para las noches en el desierto?",
+          question: "¿Hay mucha carretera para 3 días?",
           answer:
-            "Bivouac de lujo con tiendas privadas, ropa de cama confortable, duchas y comidas tradicionales. Una experiencia auténtica sin renunciar al confort.",
+            "Sí, cuente 8–9 h de conducción el D1 y D3. Hacemos pausas en Aït Benhaddou y las gargantas. Para un ritmo más suave, elija el Gran Tour de 17 días.",
         },
         {
-          question: "¿El circuito es apto para familias?",
+          question: "¿Qué nivel de confort en el desierto?",
           answer:
-            "Sí, las etapas son adaptables y los vehículos espaciosos. Algunos días hay varias horas de carretera — planificamos pausas regulares.",
+            "Bivouac de lujo con tiendas privadas, ropa de cama cómoda, duchas y comidas tradicionales.",
         },
         {
-          question: "¿Se puede personalizar el itinerario?",
+          question: "¿Es apto para familias?",
           answer:
-            "Por supuesto. Este circuito es a medida: duración de etapas, tipo de alojamiento y actividades se ajustan a su ritmo.",
+            "Sí, vehículos espaciosos y etapas adaptables. El paseo en dromedario es accesible desde 5–6 años.",
         },
         {
           question: "¿Cuál es la mejor temporada?",
           answer:
-            "Marzo a mayo y septiembre a noviembre ofrecen temperaturas ideales. El verano es posible con salidas matinales; el invierno sigue siendo agradable en el desierto.",
+            "Marzo a mayo y septiembre a noviembre son ideales. Verano posible con salidas matinales.",
         },
         {
           question: "¿Cómo reservar?",
           answer:
-            "Contáctenos por WhatsApp o email con sus fechas y número de viajeros. Anticipo del 30 % en la confirmación, saldo a la llegada.",
+            "Contáctenos por WhatsApp o email. Anticipo del 30 %, saldo a la llegada.",
         },
       ],
     },
@@ -1225,7 +1201,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "¿Hay mucha carretera para 3 días?",
           answer:
-            "Sí, cuente 9–10 h de conducción el D1 y D3. Hacemos pausas regulares. Para un ritmo más suave, elija el circuito de 11 días.",
+            "Sí, cuente 9–10 h de conducción el D1 y D3. Hacemos pausas regulares. Para un ritmo más suave, elija el Gran Tour de 17 días.",
         },
         {
           question: "¿El campamento de lujo es cómodo?",
@@ -1353,116 +1329,106 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
   },
   de: {
-    "circuit-11-jours": {
+    "circuit-sahara-atlas-3j": {
       metaTitle:
-        "11-Tage-Rundreise Marrakesch, Sahara & Atlas | Red Nomad",
+        "3-Tage-Tour Marrakesch, Sahara & Atlas | Red Nomad",
       metaDescription:
-        "Private 11-Tage-Rundreise ab Marrakesch: Medina, Merzouga (2 Nächte Biwak), Aït Benhaddou, Atlas, Draa-Tal und Rückkehr via Imlil. Französischsprachiger Guide, kleine Gruppen.",
-      subtitle: "Der große Marokko-Klassiker",
+        "Private 3-Tage-Rundreise ab Marrakesch: Hoher Atlas, Aït Benhaddou, Merzouga, Luxus-Camp und Rückkehr. Französischsprachiger Guide, kleine Gruppen.",
+      subtitle: "Marrakesch, Wüste und Atlas in 3 Tagen",
       difficulty: "Mittel",
-      duration: "11 Tage",
+      duration: "3 Tage",
       groupSize: "1–17 Personen",
       departure: "Marrakesch",
       languages: "Französisch, English",
       about:
-        "Diese ikonische 11-Tage-Rundreise verbindet die Highlights des marokkanischen Südens: die lebendige Medina von Marrakesch, die goldenen Dünen von Merzouga, UNESCO-Kasbahs und Berberdörfer im Atlas. Zwei Nächte im Wüsten-Biwak, Überquerung des Tizi n'Tichka-Passes und Rückkehr durch das Draa-Tal und Imlil für eine vollständige Immersion zwischen Wüste, Bergen und lokaler Kultur.",
+        "Drei Tage für das Wesentliche im marokkanischen Süden: Hochatlas und Tizi n'Tichka-Pass, UNESCO-Kasbah Aït Benhaddou, Schluchtenroute nach Merzouga, magische Nacht im Luxus-Camp an den Erg-Chebbi-Dünen und Rückkehr nach Marrakesch.",
       highlights: [
-        "Medina von Marrakesch — Souks, Paläste und Platz Jemaa el-Fna",
-        "Wüste Merzouga — 2 Nächte Biwak unter den Sternen",
-        "Kasbah Aït Benhaddou — UNESCO-Stätte und Filmkulisse",
         "Hochatlas-Überquerung — Tizi n'Tichka-Pass (2260 m)",
-        "Draa-Tal und Rückkehr via Imlil — Dörfer und Terrassen",
+        "Kasbah Aït Benhaddou — UNESCO-Stätte",
+        "Todra-Schluchten und Palmenhaine",
+        "Kamelritt bei Sonnenuntergang",
+        "Luxus-Biwak-Nacht in Merzouga",
       ],
       itinerary: [
         {
-          dayLabel: "T1–3",
-          title: "Marrakesch & Route in den Süden",
-          description:
-            "Eintauchen in die Medina, dann die Fahrt zum Hohen Atlas und den ersten Kasbahs des Südens.",
+          dayLabel: "T1",
+          title: "Marrakesch — Atlas — Aït Benhaddou — Schluchten",
+          description: "Panoramische Fahrt in den Süden über den Hohen Atlas.",
           steps: [
-            "T1 — Empfang in Marrakesch, geführte Medina-Tour, Souks und Sehenswürdigkeiten",
-            "T2 — Fahrt zum Tizi n'Tichka-Pass (2260 m), Panorama-Stopps und Berberdörfer",
-            "T3 — Aït Benhaddou und Ouarzazate, Nacht im Dadès- oder Todra-Tal",
+            "07:00 — Abfahrt Marrakesch, Tizi n'Tichka-Pass",
+            "Besuch Aït Benhaddou, UNESCO-Kasbah",
+            "Ouarzazate und Todra-Schluchten",
+            "Nacht in Kasbah oder Hotel nahe Merzouga",
           ],
         },
         {
-          dayLabel: "T4–6",
-          title: "Schluchten, Oasen & Merzouga",
-          description:
-            "Abstieg zur Sahara durch Schluchten, Palmenhaine und Anti-Atlas-Dörfer.",
+          dayLabel: "T2",
+          title: "Merzouga — Kamelritt — Luxus-Camp",
+          description: "Tag der Wüste und Nacht unter den Sternen.",
           steps: [
-            "T4 — Todra-Schluchten und Tinjdad-Palmenhaine, Fahrt nach Merzouga",
-            "T5 — Kamelritt bei Sonnenuntergang, Luxus-Biwak-Nacht auf den Dünen",
-            "T6 — Sonnenaufgang am Erg Chebbi, 4x4-Rückfahrt und Nacht nahe den Dünen",
+            "Freier Vormittag oder Besuch Khamlia",
+            "16:30 — Kamelritt zu den Erg-Chebbi-Dünen",
+            "Sonnenuntergang auf den Dünen",
+            "Luxus-Camp: Berber-Dinner und Musik am Feuer",
           ],
         },
         {
-          dayLabel: "T7–9",
-          title: "Draa-Tal & Rückkehr zum Atlas",
-          description:
-            "Durchquerung des langen Draa-Tals und Aufstieg zu den Atlas-Gipfeln.",
+          dayLabel: "T3",
+          title: "Sonnenaufgang — Atlas — Rückkehr Marrakesch",
+          description: "Aufwachen auf den Dünen und Rückfahrt über den Atlas.",
           steps: [
-            "T7 — Route durch das Draa-Tal, Kasbahs und Palmenhaine bis Ouarzazate",
-            "T8 — Rückkehr über den Tizi n'Tichka-Pass, Besuch von Bergdörfern",
-            "T9 — Freier Tag oder ergänzender Besuch in Marrakesch oder im Atlas",
-          ],
-        },
-        {
-          dayLabel: "T10–11",
-          title: "Imlil & Ende der Rundreise",
-          description:
-            "Entspannung im Imlil-Tal vor der Rückkehr nach Marrakesch.",
-          steps: [
-            "T10 — Ausflug nach Imlil, leichte Wanderung zwischen Terrassen und Toubkal-Dörfern",
-            "T11 — Rückkehr nach Marrakesch, Ende der Rundreise und Transfer zur Unterkunft",
+            "06:00 — Sonnenaufgang auf den Dünen (optional)",
+            "Frühstück im Camp, 4x4-Rückfahrt",
+            "Rückroute via Rissani, Schluchten und Atlas",
+            "~20:00 — Ankunft Marrakesch",
           ],
         },
       ],
       included: [
-        "Privater 4x4 oder klimatisierter Minibus für 11 Tage",
-        "Erfahrener französischsprachiger Berber Fahrer-Guide",
-        "2 Nächte im Luxus-Wüsten-Biwak mit Vollpension",
-        "Kamelritt und tägliches Frühstück",
+        "Privater 4x4 oder klimatisierter Minibus (3 Tage)",
+        "Französischsprachiger Berber Fahrer-Guide",
+        "1 Nacht im Luxus-Wüsten-Camp mit Abendessen und Frühstück",
+        "Kamelritt (~1h30 hin und zurück)",
       ],
       notIncluded: [
-        "Unterkünfte (Riads, Kasbahs, Lodges)",
-        "Mittag- und Abendessen (außer Wüsten-Biwak)",
+        "Unterkunft außerhalb des Camps (Kasbah/Hotel T1)",
+        "Mittagessen und Abendessen T1",
         "Getränke und persönliche Ausgaben",
-        "Eintritte zu Monumenten und Stätten (~200–300 MAD gesamt)",
-        "Trinkgelder für Guide und Personal (lokaler Brauch)",
+        "Eintritte (~70 MAD Aït Benhaddou)",
+        "Trinkgelder (lokaler Brauch)",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "1 050 €/Pers." },
-        { travelers: "3–4 Reisende", price: "1 150–1 220 €/Pers." },
-        { travelers: "5–7 Reisende", price: "1 020–1 100 €/Pers." },
-        { travelers: "8–14 Reisende", price: "920–1 020 €/Pers." },
-        { travelers: "15–17 Reisende", price: "880 €/Pers." },
+        { travelers: "2 Reisende", price: "95 €/Pers." },
+        { travelers: "3–4 Reisende", price: "85–90 €/Pers." },
+        { travelers: "5–7 Reisende", price: "75–85 €/Pers." },
+        { travelers: "8–14 Reisende", price: "68–78 €/Pers." },
+        { travelers: "15–17 Reisende", price: "65 €/Pers." },
       ],
       faqs: [
         {
-          question: "Welcher Komfort für Wüstennächte?",
+          question: "Viel Fahrzeit für 3 Tage?",
           answer:
-            "Luxus-Biwak mit privaten Zelten, bequemer Bettwäsche, Duschen und traditionellen Mahlzeiten. Authentisches Erlebnis ohne Komfortverzicht.",
+            "Ja, 8–9 Stunden am T1 und T3. Pausen in Aït Benhaddou und den Schluchten. Für langsameres Tempo: 17-Tage Grand Tour.",
         },
         {
-          question: "Ist die Rundreise für Familien geeignet?",
+          question: "Komfort in der Wüste?",
           answer:
-            "Ja, Etappen sind anpassbar und Fahrzeuge geräumig. An manchen Tagen mehrere Stunden Fahrt — wir planen regelmäßige Pausen.",
+            "Luxus-Biwak mit privaten Zelten, bequemer Bettwäsche, Duschen und traditionellen Mahlzeiten.",
         },
         {
-          question: "Kann die Route angepasst werden?",
+          question: "Für Familien geeignet?",
           answer:
-            "Absolut. Dies ist eine maßgeschneiderte Rundreise: Etappenlänge, Unterkunftstyp und Aktivitäten werden an Ihr Tempo angepasst.",
+            "Ja, geräumige Fahrzeuge und anpassbare Etappen. Kamelritt ab 5–6 Jahren möglich.",
         },
         {
-          question: "Was ist die beste Reisezeit?",
+          question: "Beste Reisezeit?",
           answer:
-            "März bis Mai und September bis November bieten ideale Temperaturen. Sommer mit frühen Abfahrten möglich; Winter in der Wüste angenehm.",
+            "März bis Mai und September bis November ideal. Sommer mit frühen Abfahrten möglich.",
         },
         {
-          question: "Wie buche ich?",
+          question: "Wie buchen?",
           answer:
-            "Kontaktieren Sie uns per WhatsApp oder E-Mail mit Datum und Reisendenzahl. 30 % Anzahlung bei Bestätigung, Rest bei Ankunft.",
+            "Kontakt per WhatsApp oder E-Mail. 30 % Anzahlung, Rest bei Ankunft.",
         },
       ],
     },
@@ -1675,7 +1641,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         {
           question: "Ist das viel Fahrt für 3 Tage?",
           answer:
-            "Ja, rechnen Sie 9–10 Std. Fahrt an T1 und T3. Regelmäßige Pausen. Für sanfteres Tempo wählen Sie die 11-Tage-Rundreise.",
+            "Ja, rechnen Sie 9–10 Std. Fahrt an T1 und T3. Regelmäßige Pausen. Für sanfteres Tempo wählen Sie die 17-Tage Grand Tour.",
         },
         {
           question: "Ist das Luxus-Camp komfortabel?",

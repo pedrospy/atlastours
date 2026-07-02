@@ -43,16 +43,16 @@ export const excursionDetailTextClasses = {
 
 export const circuitsCatalog = [
   {
-    id: "circuit-11-jours",
-    slug: "marrakech-sahara-atlas-11-days",
+    id: "circuit-sahara-atlas-3j",
+    slug: "marrakech-sahara-atlas-3-days",
     rating: 4.9,
     reviews: 56,
-    price: 1050,
+    price: 95,
     image: "/images/dest-desert-oasis.png",
     images: [
       "/images/dest-marrakech-jemaa.jpg",
-      "/images/dest-desert-oasis.png",
       "/images/fleet-suv-kasbah.png",
+      "/images/dest-merzouga-dunes.jpg",
       "/images/route-mountain-pass.png",
     ],
     badgeClass: "bg-terracotta",

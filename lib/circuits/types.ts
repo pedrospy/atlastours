@@ -1,5 +1,5 @@
 export type CircuitId =
-  | "circuit-11-jours"
+  | "circuit-sahara-atlas-3j"
   | "grand-tour-17"
   | "merzouga-3j"
   | "megdaz-3j";

@@ -129,12 +129,12 @@ export const en: Dictionary = {
       "From a 3-day short break to a 17-day grand tour. Custom trips, small groups, Berber French-speaking guide.",
     viewAll: "All our tours",
     items: {
-      "circuit-11-jours": {
-        title: "11-Day Marrakech, Sahara & Atlas Tour",
+      "circuit-sahara-atlas-3j": {
+        title: "3-Day Marrakech, Sahara & Atlas Tour",
         badge: "Best seller",
-        duration: "11 days",
+        duration: "3 days",
         description:
-          "The classic route: Marrakech medina, Merzouga desert (2 nights in camp), Aït Benhaddou, Atlas, Drâa Valley, return via Imlil.",
+          "The essentials in 3 days: High Atlas, Aït Benhaddou, Merzouga dunes, luxury desert camp night and return to Marrakech.",
       },
       "grand-tour-17": {
         title: "Grand Morocco Tour — 17 Days",
