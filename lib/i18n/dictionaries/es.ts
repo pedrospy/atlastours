@@ -143,6 +143,20 @@ export const es: Dictionary = {
         description:
           "Circuito de 3 días de Marrakech a Chefchaouen: Casablanca, Rabat, Fez la ciudad más tradicional y las callejuelas azules de Chefchaouen.",
       },
+      "imperial-cities-8j": {
+        title: "Ciudades Imperiales Marruecos 8 días — Fez, Meknes, Marrakech",
+        badge: "Best-seller",
+        duration: "8 días",
+        description:
+          "Casablanca, Rabat, Volubilis, Meknes, Fez UNESCO y Chefchaouen la azul — el gran circuito de las ciudades imperiales de Marruecos.",
+      },
+      "southern-coast-8j": {
+        title: "Taroudante y Essaouira — 8 días sur marroquí y costa atlántica",
+        badge: "Insólito",
+        duration: "8 días",
+        description:
+          "Souss, Anti-Atlas y costa atlántica: Taroudante, Tafraoute, Taghazout y Essaouira — lejos de las rutas turísticas.",
+      },
       "megdaz-3j": {
         title: "Valle de Megdaz",
         badge: "Auténtico",

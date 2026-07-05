@@ -579,7 +579,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       groupPricing: [
         { travelers: "Volubilis & Meknès (1j, 2 pers.)", price: "à partir de 85 €/pers." },
         { travelers: "Volubilis seul (½ journée)", price: "à partir de 55 €/pers." },
-        { travelers: "Circuit Fès + Volubilis + Chefchaouen (3j)", price: "à partir de 300 €/pers." },
+        { travelers: "Circuit Fès + Volubilis + Chefchaouen (3j)", price: "à partir de 450 €/pers." },
       ],
       faqs: [
         {
@@ -1183,7 +1183,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       groupPricing: [
         { travelers: "Volubilis & Meknes (1 day, 2 people)", price: "from €85/person" },
         { travelers: "Volubilis only (half day)", price: "from €55/person" },
-        { travelers: "Fes + Volubilis + Chefchaouen (3 days)", price: "from €300/person" },
+        { travelers: "Fes + Volubilis + Chefchaouen (3 days)", price: "from €450/person" },
       ],
       faqs: [
         {
@@ -1684,7 +1684,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       groupPricing: [
         { travelers: "Volubilis y Meknes (1d, 2 pers.)", price: "desde 85 €/pers." },
         { travelers: "Volubilis solo (medio día)", price: "desde 55 €/pers." },
-        { travelers: "Circuito Fez + Volubilis + Chefchaouen (3d)", price: "desde 300 €/pers." },
+        { travelers: "Circuito Fez + Volubilis + Chefchaouen (3d)", price: "desde 450 €/pers." },
       ],
       faqs: [
         { question: "¿Cuánto tiempo para Volubilis?", answer: "Calcule 1h30–2h en sitio con guía; mínimo medio día, día completo con Meknes recomendado." },
@@ -2152,7 +2152,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       groupPricing: [
         { travelers: "Volubilis & Meknès (1T, 2 Pers.)", price: "ab 85 €/Pers." },
         { travelers: "Nur Volubilis (halber Tag)", price: "ab 55 €/Pers." },
-        { travelers: "Fès + Volubilis + Chefchaouen (3T)", price: "ab 300 €/Pers." },
+        { travelers: "Fès + Volubilis + Chefchaouen (3T)", price: "ab 450 €/Pers." },
       ],
       faqs: [
         { question: "Wie viel Zeit für Volubilis?", answer: "1,5–2 h vor Ort mit Guide einplanen; mindestens halber Tag, ganzer Tag mit Meknès empfohlen." },

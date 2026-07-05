@@ -143,6 +143,20 @@ export const en: Dictionary = {
         description:
           "Join a 3-day tour from Marrakech to Chefchaouen. Discover Fez, Rabat, Casablanca and the narrow streets of the blue city.",
       },
+      "imperial-cities-8j": {
+        title: "Imperial Cities Morocco 8 Days — Fez, Meknes, Marrakech",
+        badge: "Best-seller",
+        duration: "8 days",
+        description:
+          "Casablanca, Rabat, Volubilis, Meknes, UNESCO Fez and blue Chefchaouen — the grand tour of Morocco's imperial cities.",
+      },
+      "southern-coast-8j": {
+        title: "Taroudante & Essaouira — 8-Day Southern Morocco & Atlantic Coast",
+        badge: "Off the beaten path",
+        duration: "8 days",
+        description:
+          "Souss, Anti-Atlas and Atlantic coast: Taroudante, Tafraoute, Taghazout and Essaouira — away from the crowds.",
+      },
       "megdaz-3j": {
         title: "Megdaz Valley",
         badge: "Authentic",

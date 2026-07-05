@@ -43,8 +43,32 @@ export const circuits = [
       "Circuit 3 jours de Marrakech à Chefchaouen : Casablanca, Rabat, Fès la ville traditionnelle et les ruelles bleues de Chefchaouen.",
     rating: 4.9,
     reviews: 38,
-    price: 300,
+    price: 450,
     image: "/images/dest-chefchaouen.jpg",
+  },
+  {
+    id: "imperial-cities-8j",
+    title: "Villes Impériales Maroc 8 jours — Fès, Meknès, Marrakech",
+    badge: "Best-seller",
+    duration: "8 jours",
+    description:
+      "Casablanca, Rabat, Volubilis, Meknès, Fès UNESCO et Chefchaouen la bleue — le grand circuit des villes impériales du Maroc.",
+    rating: 4.8,
+    reviews: 71,
+    price: 1174,
+    image: "/images/circuit-casablanca-mosque.jpg",
+  },
+  {
+    id: "southern-coast-8j",
+    title: "Taroudante & Essaouira — 8 jours sud marocain & côte atlantique",
+    badge: "Insolite",
+    duration: "8 jours",
+    description:
+      "Souss, Anti-Atlas et côte atlantique : Taroudante, Tafraoute, Taghazout et Essaouira — loin des sentiers battus.",
+    rating: 4.8,
+    reviews: 41,
+    price: 1130,
+    image: "/images/dest-essaouira-coast.jpg",
   },
   {
     id: "megdaz-3j",
@@ -56,8 +80,7 @@ export const circuits = [
     rating: 4.9,
     reviews: 31,
     price: 420,
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Djebel_Ayachi%2C_Eastern_High_Atlas%2C_Morocco.jpg/1280px-Djebel_Ayachi%2C_Eastern_High_Atlas%2C_Morocco.jpg",
+    image: "/images/dest-megdaz-valley.jpg",
   },
 ];
 

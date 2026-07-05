@@ -143,6 +143,20 @@ export const fr: Dictionary = {
         description:
           "De Marrakech à Chefchaouen : Casablanca, Rabat, Fès la ville la plus traditionnelle et les ruelles bleues de Chefchaouen.",
       },
+      "imperial-cities-8j": {
+        title: "Villes Impériales Maroc 8 jours — Fès, Meknès, Marrakech",
+        badge: "Best-seller",
+        duration: "8 jours",
+        description:
+          "Casablanca, Rabat, Volubilis, Meknès, Fès UNESCO et Chefchaouen la bleue — le grand circuit des villes impériales du Maroc.",
+      },
+      "southern-coast-8j": {
+        title: "Taroudante & Essaouira — 8 jours sud marocain & côte atlantique",
+        badge: "Insolite",
+        duration: "8 jours",
+        description:
+          "Souss, Anti-Atlas et côte atlantique : Taroudante, Tafraoute, Taghazout et Essaouira — loin des sentiers battus.",
+      },
       "megdaz-3j": {
         title: "Vallée de Megdaz",
         badge: "Authentique",

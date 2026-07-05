@@ -36,6 +36,8 @@ export function DestinationsSection() {
           {destinationsCatalog.map((dest, i) => {
             const name = t.names[dest.id];
             const badge = t.items[dest.id].badge;
+            const collageImages = "images" in dest ? dest.images : undefined;
+            const imageCount: number = collageImages?.length ?? 0;
             return (
               <motion.div
                 key={dest.id}
@@ -46,21 +48,19 @@ export function DestinationsSection() {
                 className="group relative aspect-[3/4] cursor-pointer overflow-hidden border border-gold/20"
               >
                 <Link href={`/${locale}/destinations/${dest.slug}`}>
-                  {"images" in dest && dest.images ? (
+                  {collageImages ? (
                     <div
                       className={`absolute inset-0 grid h-full w-full ${
-                        dest.images.length >= 4
+                        imageCount >= 4 || imageCount === 3
                           ? "grid-cols-2 grid-rows-2"
-                          : dest.images.length === 3
-                            ? "grid-cols-2 grid-rows-2"
-                            : "grid-cols-2"
+                          : "grid-cols-2"
                       }`}
                     >
-                      {dest.images.map((src, idx) => (
+                      {collageImages.map((src, idx) => (
                         <div
                           key={`${dest.id}-${idx}`}
                           className={`relative overflow-hidden ${
-                            dest.images!.length === 3 && idx === 2
+                            imageCount === 3 && idx === 2
                               ? "col-span-2"
                               : ""
                           }`}

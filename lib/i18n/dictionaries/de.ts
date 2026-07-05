@@ -143,6 +143,20 @@ export const de: Dictionary = {
         description:
           "3-Tage-Tour von Marrakesch nach Chefchaouen: Casablanca, Rabat, Fès die traditionellste Stadt und die engen Gassen der blauen Stadt.",
       },
+      "imperial-cities-8j": {
+        title: "Kaiserstädte Marokko 8 Tage — Fès, Meknès, Marrakesch",
+        badge: "Best-seller",
+        duration: "8 Tage",
+        description:
+          "Casablanca, Rabat, Volubilis, Meknès, UNESCO-Fès und blaues Chefchaouen — die große Rundreise durch Marokkos Kaiserstädte.",
+      },
+      "southern-coast-8j": {
+        title: "Taroudante & Essaouira — 8 Tage Süden Marokkos & Atlantikküste",
+        badge: "Abseits der Pfade",
+        duration: "8 Tage",
+        description:
+          "Souss, Anti-Atlas und Atlantikküste: Taroudante, Tafraoute, Taghazout und Essaouira — abseits der ausgetretenen Pfade.",
+      },
       "megdaz-3j": {
         title: "Megdaz-Tal",
         badge: "Authentisch",

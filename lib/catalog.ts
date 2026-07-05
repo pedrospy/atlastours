@@ -62,7 +62,7 @@ export const circuitsCatalog = [
     slug: "marrakech-chefchaouen-3-days",
     rating: 4.9,
     reviews: 38,
-    price: 300,
+    price: 450,
     image: "/images/dest-chefchaouen.jpg",
     images: [
       "/images/circuit-marrakech-koutoubia.jpg",
@@ -72,12 +72,47 @@ export const circuitsCatalog = [
     ],
   },
   {
+    id: "imperial-cities-8j",
+    slug: "imperial-cities-8-day-fes-marrakech",
+    rating: 4.8,
+    reviews: 71,
+    price: 1174,
+    image: "/images/circuit-casablanca-mosque.jpg",
+    images: [
+      "/images/circuit-casablanca-mosque.jpg",
+      "/images/dest-fes-fountain.jpg",
+      "/images/dest-chefchaouen.jpg",
+      "/images/dest-volubilis-mosaic.png",
+    ],
+    badgeClass: "bg-terracotta",
+  },
+  {
+    id: "southern-coast-8j",
+    slug: "taroudante-essaouira-8-day-southern-tour",
+    rating: 4.8,
+    reviews: 41,
+    price: 1130,
+    image: "/images/dest-essaouira-coast.jpg",
+    images: [
+      "/images/dest-ourika-argan.jpg",
+      "/images/dest-agadir-beach.jpg",
+      "/images/dest-essaouira-coast.jpg",
+      "/images/dest-ait-benhaddou-oasis.jpg",
+    ],
+  },
+  {
     id: "megdaz-3j",
     slug: "vallee-megdaz-3-jours",
     rating: 4.9,
     reviews: 31,
-    price: 95,
-    image: "/images/dest-megdaz-village.jpg",
+    price: 420,
+    image: "/images/dest-megdaz-valley.jpg",
+    images: [
+      "/images/dest-megdaz-valley.jpg",
+      "/images/dest-megdaz-village.jpg",
+      "/images/dest-megdaz-green-valley.jpg",
+      "/images/dest-megdaz-tbourida.jpg",
+    ],
   },
 ] as const;
 
@@ -275,8 +310,8 @@ export const destinationsCatalog = [
     images: [
       "/images/dest-megdaz-valley.jpg",
       "/images/dest-megdaz-village.jpg",
-      "/images/dest-megdaz-atlas.jpg",
-      "/images/route-mountain-pass.png",
+      "/images/dest-megdaz-green-valley.jpg",
+      "/images/dest-megdaz-tbourida.jpg",
     ],
   },
   {

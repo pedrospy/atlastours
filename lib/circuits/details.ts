@@ -182,11 +182,11 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Pourboires guide et personnel d'hébergement",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "300 €/pers." },
-        { travelers: "3–4 voyageurs", price: "300 €/pers." },
-        { travelers: "5–7 voyageurs", price: "300 €/pers." },
-        { travelers: "8–14 voyageurs", price: "300 €/pers." },
-        { travelers: "15–17 voyageurs", price: "300 €/pers." },
+        { travelers: "2 voyageurs", price: "550 €/pers." },
+        { travelers: "3–4 voyageurs", price: "450 €/pers." },
+        { travelers: "5–8 voyageurs", price: "320 €/pers." },
+        { travelers: "9–10 voyageurs", price: "290 €/pers." },
+        { travelers: "11–17 voyageurs", price: "290 €/pers." },
       ],
       faqs: [
         {
@@ -218,6 +218,341 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
           question: "Comment se paie le circuit ?",
           answer:
             "Acompte de 30 % à la réservation, solde avant ou à l'arrivée. Paiement par virement ou espèces. Devis détaillé sur demande.",
+        },
+      ],
+    },
+    "imperial-cities-8j": {
+      metaTitle:
+        "Villes Impériales Maroc 8 jours — Fès, Meknès, Marrakech | Red Nomad",
+      metaDescription:
+        "Circuit 8 jours à travers les villes impériales du Maroc : Casablanca, Rabat, Volubilis, Meknès, Fès UNESCO et Chefchaouen la bleue. Guide francophone, petits groupes.",
+      subtitle: "Du littoral atlantique à la ville bleue",
+      difficulty: "Modéré",
+      duration: "8 jours",
+      groupSize: "1–17 personnes",
+      departure: "Casablanca",
+      languages: "Français, English",
+      about:
+        "Un circuit de 8 jours à travers les plus belles villes du Maroc : la modernité de Casablanca, l'élégance royale de Rabat, les souks millénaires de Fès et la ville bleue de Chefchaouen dans le Rif. Entre sites UNESCO, ruines romaines de Volubilis et médersas de Fès, découvrez le Maroc historique en petit groupe avec guide local.",
+      highlights: [
+        "Mosquée Hassan II de Casablanca",
+        "Médina de Rabat (UNESCO)",
+        "Médina de Fès (UNESCO)",
+        "Chefchaouen la bleue",
+        "Volubilis — ruines romaines UNESCO",
+      ],
+      itinerary: [
+        {
+          dayLabel: "J1",
+          title: "Arrivée à Casablanca",
+          description: "Accueil à l'aéroport et première immersion dans la métropole atlantique.",
+          steps: [
+            "Accueil à l'aéroport Mohammed V",
+            "Visite de la Mosquée Hassan II (extérieur ou intérieur avec guide en option)",
+            "Installation à l'hôtel — soirée libre sur la corniche",
+          ],
+        },
+        {
+          dayLabel: "J2",
+          title: "Casablanca → Rabat",
+          description: "Découverte de la capitale administrative du Royaume.",
+          steps: [
+            "Route vers Rabat",
+            "Kasbah des Oudayas, Tour Hassan et Mausolée Mohammed V",
+            "Balade dans la médina de Rabat",
+            "Nuit à Rabat",
+          ],
+        },
+        {
+          dayLabel: "J3",
+          title: "Rabat → Volubilis → Meknès → Fès",
+          description: "Antiquité romaine et cité impériale avant d'atteindre Fès.",
+          steps: [
+            "Visite des ruines romaines de Volubilis (UNESCO)",
+            "Meknès et la porte Bab Mansour",
+            "Route vers Fès — arrivée en soirée",
+            "Nuit en riad à Fès",
+          ],
+        },
+        {
+          dayLabel: "J4",
+          title: "Fès — Journée complète",
+          description: "Immersion dans la médina la plus ancienne du monde arabe.",
+          steps: [
+            "Visite guidée de Fès el-Bali : Université al-Qarawiyyin",
+            "Médersa Bou Inania et tanneries Chouara",
+            "Souks, artisanat et fondouks historiques",
+            "Nuit en riad à Fès",
+          ],
+        },
+        {
+          dayLabel: "J5",
+          title: "Fès → Chefchaouen",
+          description: "Traversée du Rif jusqu'à la perle bleue.",
+          steps: [
+            "Route matinale vers les montagnes du Rif",
+            "Arrivée à Chefchaouen en début d'après-midi",
+            "Découverte libre des ruelles bleues et de la place Outa el-Hammam",
+            "Nuit en riad à Chefchaouen",
+          ],
+        },
+        {
+          dayLabel: "J6",
+          title: "Chefchaouen — Journée libre",
+          description: "Temps libre pour explorer la médina à votre rythme.",
+          steps: [
+            "Matinée libre dans la médina bleue",
+            "Randonnée optionnelle vers la cascade Ras el-Ma",
+            "Après-midi shopping artisanat et cafés en terrasse",
+            "Nuit en riad à Chefchaouen",
+          ],
+        },
+        {
+          dayLabel: "J7",
+          title: "Chefchaouen → Casablanca",
+          description: "Retour vers la côte atlantique.",
+          steps: [
+            "Départ matinal vers Casablanca",
+            "Arrêts possibles à Asilah ou Larache",
+            "Arrivée à Casablanca en fin d'après-midi",
+            "Nuit à Casablanca",
+          ],
+        },
+        {
+          dayLabel: "J8",
+          title: "Casablanca — Départ",
+          description: "Fin de circuit et transfert aéroport.",
+          steps: [
+            "Petit-déjeuner à l'hôtel",
+            "Transfert aéroport selon horaires de vol",
+            "Fin du circuit",
+          ],
+        },
+      ],
+      included: [
+        "Transport climatisé pendant 8 jours",
+        "7 nuits en hôtel ou riad (selon programme)",
+        "Petits-déjeuners quotidiens",
+        "Visites guidées des médinas de Fès et Rabat",
+        "Guide-chauffeur francophone expérimenté",
+      ],
+      notIncluded: [
+        "Vols internationaux",
+        "Déjeuners et dîners",
+        "Entrées musées et monuments (~5–10 €/site)",
+        "Pourboires guide et personnel d'hébergement",
+        "Assurance voyage",
+      ],
+      groupPricing: [
+        { travelers: "2 voyageurs", price: "1 714 €/pers." },
+        { travelers: "3–4 voyageurs", price: "1 174 €/pers." },
+        { travelers: "5–8 voyageurs", price: "914 €/pers." },
+        { travelers: "9–10 voyageurs", price: "871 €/pers." },
+        { travelers: "11–17 voyageurs", price: "785 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "Peut-on annuler ce circuit sans frais ?",
+          answer:
+            "Oui, annulation gratuite jusqu'à 48 heures avant le départ. Au-delà, des frais peuvent s'appliquer selon les prestations engagées.",
+        },
+        {
+          question: "Qu'est-ce qui est inclus dans le prix ?",
+          answer:
+            "Le transport privé climatisé, 7 nuits d'hébergement, les petits-déjeuners, les visites guidées des médinas prévues au programme et un guide francophone. Repas du midi et du soir, vols et entrées sont en sus.",
+        },
+        {
+          question: "Combien de personnes maximum dans le groupe ?",
+          answer:
+            "De 1 à 17 personnes. Privatisation possible pour votre famille ou vos amis — demandez un devis personnalisé.",
+        },
+        {
+          question: "Que dois-je apporter ?",
+          answer:
+            "Vêtements adaptés à la saison, chaussures confortables pour marcher dans les médinas, casquette, crème solaire et une veste légère pour les soirées à Chefchaouen.",
+        },
+        {
+          question: "Quelle est la meilleure saison ?",
+          answer:
+            "Mars à mai et septembre à novembre offrent les températures les plus douces. Le circuit est opérable toute l'année.",
+        },
+        {
+          question: "Comment se paie le circuit ?",
+          answer:
+            "Acompte de 30 % à la réservation, solde avant le départ. Paiement par virement bancaire ou espèces. Devis détaillé sur demande.",
+        },
+      ],
+    },
+    "southern-coast-8j": {
+      metaTitle:
+        "Taroudante & Essaouira — 8 jours sud marocain & côte atlantique | Red Nomad",
+      metaDescription:
+        "Circuit 8 jours au sud du Maroc : Taroudante, Tafraoute, Taghazout et Essaouira. Anti-Atlas, forêt d'arganiers UNESCO et côte atlantique. Départ Marrakech.",
+      subtitle: "Souss, Anti-Atlas & Atlantique",
+      difficulty: "Modéré",
+      duration: "8 jours",
+      groupSize: "1–17 personnes",
+      departure: "Marrakech",
+      languages: "Français, English",
+      about:
+        "Un circuit unique de 8 jours qui explore le Souss et l'Anti-Atlas, loin des sentiers battus. Taroudante la rose, les roches peintes de Tafraoute, le village surf de Taghazout et la cité des alizés d'Essaouira. Entre montagnes roses, falaises atlantiques et médina UNESCO, découvrez une facette authentique et préservée du Maroc.",
+      highlights: [
+        "Taroudante — la petite Marrakech",
+        "Gorges de Aït Baha",
+        "Tafraoute et roches peintes de Jean Vérame",
+        "Taghazout — village surf sur l'Atlantique",
+        "Essaouira — cité des alizés UNESCO",
+        "Forêt d'arganiers (UNESCO)",
+      ],
+      itinerary: [
+        {
+          dayLabel: "J1",
+          title: "Marrakech → Taroudante",
+          description: "Traversée de l'Atlas vers la perle du Souss.",
+          steps: [
+            "08h00 — Départ de Marrakech",
+            "Route via le col du Tizi n'Test (2 092 m) ou itinéraire alternatif selon saison",
+            "Arrêt dans les gorges de Aït Baha",
+            "Arrivée à Taroudante, la « Petite Marrakech » — soirée libre",
+            "Dîner et nuit en riad à Taroudante",
+          ],
+        },
+        {
+          dayLabel: "J2",
+          title: "Taroudante → Tafraoute",
+          description: "Immersion dans l'Anti-Atlas et ses paysages roses.",
+          steps: [
+            "Petit-déjeuner au riad",
+            "Route à travers l'Anti-Atlas",
+            "Arrivée à Tafraoute, village niché entre rochers roses",
+            "Temps libre pour explorer le village",
+            "Nuit à Tafraoute",
+          ],
+        },
+        {
+          dayLabel: "J3",
+          title: "Tafraoute — Journée libre",
+          description: "Découverte à votre rythme de l'Anti-Atlas.",
+          steps: [
+            "Visite des roches peintes de Jean Vérame",
+            "Promenade dans la vallée des Ammeln et villages berbères",
+            "Déjeuner libre au village",
+            "Après-midi libre — randonnée ou repos",
+            "Nuit à Tafraoute",
+          ],
+        },
+        {
+          dayLabel: "J4",
+          title: "Tafraoute → Tiznit → Mirleft",
+          description: "De la montagne à la côte atlantique sauvage.",
+          steps: [
+            "Route vers Tiznit, ville des bijoutiers en argent",
+            "Visite de la médina et des souks d'argent",
+            "Route côtière vers Mirleft, falaises spectaculaires",
+            "Coucher de soleil sur l'Atlantique",
+            "Nuit à Mirleft",
+          ],
+        },
+        {
+          dayLabel: "J5",
+          title: "Mirleft → Massa → Taghazout",
+          description: "Réserve naturelle et capitale du surf marocain.",
+          steps: [
+            "Route côtière via la réserve de Souss-Massa (observation d'oiseaux)",
+            "Traversée de la forêt d'arganiers UNESCO",
+            "Arrivée à Taghazout, village de surfeurs",
+            "Installation au camp ou riad",
+            "Nuit à Taghazout",
+          ],
+        },
+        {
+          dayLabel: "J6",
+          title: "Taghazout — Plages & surf",
+          description: "Journée libre face à l'océan Atlantique.",
+          steps: [
+            "Matinée libre — plage et détente",
+            "Cours de surf possible (Hash Point, Anchor Point)",
+            "Marché local et cafés en terrasse",
+            "Coucher de soleil sur l'Atlantique",
+            "Nuit à Taghazout",
+          ],
+        },
+        {
+          dayLabel: "J7",
+          title: "Taghazout → Essaouira",
+          description: "Route côtière vers la cité des alizés.",
+          steps: [
+            "Route vers Essaouira via la côte atlantique",
+            "Visite du port de pêche et des remparts UNESCO",
+            "Galeries d'art et médina",
+            "Guide local pour la découverte d'Essaouira",
+            "Nuit en riad à Essaouira",
+          ],
+        },
+        {
+          dayLabel: "J8",
+          title: "Essaouira → Marrakech — Départ",
+          description: "Dernière matinée et retour à Marrakech.",
+          steps: [
+            "Matinée libre à Essaouira",
+            "Route de retour vers Marrakech (~2h30)",
+            "Arrivée à Marrakech en fin d'après-midi",
+            "Fin du circuit",
+          ],
+        },
+      ],
+      included: [
+        "Transport climatisé pendant 8 jours",
+        "7 nuits en riads et hôtels (selon programme)",
+        "Petits-déjeuners quotidiens",
+        "Guides locaux à Tafraoute et Essaouira",
+        "Guide-chauffeur francophone expérimenté",
+      ],
+      notIncluded: [
+        "Vols internationaux",
+        "Déjeuners et dîners",
+        "Cours de surf, kitesurf et activités nautiques",
+        "Entrées sites et musées",
+        "Pourboires guide et personnel d'hébergement",
+        "Assurance voyage",
+      ],
+      groupPricing: [
+        { travelers: "2 voyageurs", price: "1 692 €/pers." },
+        { travelers: "3–4 voyageurs", price: "1 130 €/pers." },
+        { travelers: "5–8 voyageurs", price: "900 €/pers." },
+        { travelers: "9–10 voyageurs", price: "850 €/pers." },
+        { travelers: "11–17 voyageurs", price: "742 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "Peut-on annuler ce circuit sans frais ?",
+          answer:
+            "Oui, annulation gratuite jusqu'à 48 heures avant le départ. Au-delà, des frais peuvent s'appliquer selon les prestations engagées.",
+        },
+        {
+          question: "Qu'est-ce qui est inclus dans le prix ?",
+          answer:
+            "Le transport privé climatisé, 7 nuits d'hébergement, les petits-déjeuners, les guides locaux à Tafraoute et Essaouira et un guide-chauffeur francophone. Repas, vols, surf et entrées sont en sus.",
+        },
+        {
+          question: "Faut-il savoir surfer à Taghazout ?",
+          answer:
+            "Non, le surf est optionnel. Des cours pour débutants sont disponibles sur place (non inclus). La plage reste accessible à tous.",
+        },
+        {
+          question: "Le col du Tizi n'Test est-il toujours emprunté ?",
+          answer:
+            "Selon la saison et la météo, nous emprunons le Tizi n'Test ou un itinéraire alternatif plus bas. Votre guide adapte la route pour votre sécurité et votre confort.",
+        },
+        {
+          question: "Quelle est la meilleure saison ?",
+          answer:
+            "Mars à mai et septembre à novembre sont idéaux. L'été convient à la côte (brise marine). L'hiver reste doux au sud et sur la côte atlantique.",
+        },
+        {
+          question: "Comment se paie le circuit ?",
+          answer:
+            "Acompte de 30 % à la réservation, solde avant le départ. Paiement par virement bancaire ou espèces. Devis détaillé sur demande.",
         },
       ],
     },
@@ -294,11 +629,11 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Pourboires pour la famille d'accueil (optionnel)",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "95 €/pers." },
-        { travelers: "3–4 voyageurs", price: "370–390 €/pers." },
-        { travelers: "5–7 voyageurs", price: "330–360 €/pers." },
-        { travelers: "8–14 voyageurs", price: "300–330 €/pers." },
-        { travelers: "15–17 voyageurs", price: "280 €/pers." },
+        { travelers: "2 voyageurs", price: "515 €/pers." },
+        { travelers: "3–4 voyageurs", price: "420 €/pers." },
+        { travelers: "5–8 voyageurs", price: "300 €/pers." },
+        { travelers: "9–10 voyageurs", price: "270 €/pers." },
+        { travelers: "11–17 voyageurs", price: "270 €/pers." },
       ],
       faqs: [
         {
@@ -509,11 +844,11 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Tips for guide and hotel staff",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€300/person" },
-        { travelers: "3–4 travelers", price: "€300/person" },
-        { travelers: "5–7 travelers", price: "€300/person" },
-        { travelers: "8–14 travelers", price: "€300/person" },
-        { travelers: "15–17 travelers", price: "€300/person" },
+        { travelers: "2 travelers", price: "€550/person" },
+        { travelers: "3–4 travelers", price: "€450/person" },
+        { travelers: "5–8 travelers", price: "€320/person" },
+        { travelers: "9–10 travelers", price: "€290/person" },
+        { travelers: "11–17 travelers", price: "€290/person" },
       ],
       faqs: [
         {
@@ -545,6 +880,341 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
           question: "How is payment handled?",
           answer:
             "30% deposit on booking, balance before or on arrival. Bank transfer or cash. Detailed quote on request.",
+        },
+      ],
+    },
+    "imperial-cities-8j": {
+      metaTitle:
+        "Imperial Cities Morocco 8 Days — Fez, Meknes, Marrakech | Red Nomad",
+      metaDescription:
+        "8-day tour through Morocco's imperial cities: Casablanca, Rabat, Volubilis, Meknes, UNESCO Fez and blue Chefchaouen. French-speaking guide, small groups.",
+      subtitle: "From the Atlantic coast to the blue city",
+      difficulty: "Moderate",
+      duration: "8 days",
+      groupSize: "1–17 people",
+      departure: "Casablanca",
+      languages: "French, English",
+      about:
+        "An 8-day journey through Morocco's finest cities: modern Casablanca, royal Rabat, the ancient souks of Fez and blue Chefchaouen in the Rif mountains. UNESCO sites, Roman ruins at Volubilis and Fez medersas — discover historic Morocco in a small group with a local guide.",
+      highlights: [
+        "Hassan II Mosque in Casablanca",
+        "Rabat medina (UNESCO)",
+        "Fez medina (UNESCO)",
+        "Blue Chefchaouen",
+        "Volubilis — UNESCO Roman ruins",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Arrival in Casablanca",
+          description: "Airport welcome and first taste of the Atlantic metropolis.",
+          steps: [
+            "Meet at Mohammed V Airport",
+            "Hassan II Mosque visit (exterior or optional interior with guide)",
+            "Hotel check-in — free evening on the corniche",
+          ],
+        },
+        {
+          dayLabel: "D2",
+          title: "Casablanca → Rabat",
+          description: "Discover the Kingdom's administrative capital.",
+          steps: [
+            "Drive to Rabat",
+            "Kasbah of the Oudayas, Hassan Tower and Mohammed V Mausoleum",
+            "Walk through Rabat medina",
+            "Night in Rabat",
+          ],
+        },
+        {
+          dayLabel: "D3",
+          title: "Rabat → Volubilis → Meknes → Fez",
+          description: "Roman antiquity and imperial city before reaching Fez.",
+          steps: [
+            "Visit Volubilis Roman ruins (UNESCO)",
+            "Meknes and Bab Mansour gate",
+            "Drive to Fez — evening arrival",
+            "Night in a riad in Fez",
+          ],
+        },
+        {
+          dayLabel: "D4",
+          title: "Fez — Full day",
+          description: "Deep dive into the world's oldest Arab medina.",
+          steps: [
+            "Guided tour of Fes el-Bali: al-Qarawiyyin University",
+            "Bou Inania Medersa and Chouara tanneries",
+            "Souks, crafts and historic fondouks",
+            "Night in a riad in Fez",
+          ],
+        },
+        {
+          dayLabel: "D5",
+          title: "Fez → Chefchaouen",
+          description: "Cross the Rif to the blue pearl.",
+          steps: [
+            "Morning drive through the Rif mountains",
+            "Arrive in Chefchaouen early afternoon",
+            "Free exploration of blue alleys and Outa el-Hammam square",
+            "Night in a riad in Chefchaouen",
+          ],
+        },
+        {
+          dayLabel: "D6",
+          title: "Chefchaouen — Free day",
+          description: "Free time to explore the medina at your own pace.",
+          steps: [
+            "Free morning in the blue medina",
+            "Optional hike to Ras el-Ma waterfall",
+            "Afternoon artisan shopping and terrace cafés",
+            "Night in a riad in Chefchaouen",
+          ],
+        },
+        {
+          dayLabel: "D7",
+          title: "Chefchaouen → Casablanca",
+          description: "Return to the Atlantic coast.",
+          steps: [
+            "Morning departure to Casablanca",
+            "Possible stops in Asilah or Larache",
+            "Arrive in Casablanca late afternoon",
+            "Night in Casablanca",
+          ],
+        },
+        {
+          dayLabel: "D8",
+          title: "Casablanca — Departure",
+          description: "End of tour and airport transfer.",
+          steps: [
+            "Breakfast at the hotel",
+            "Airport transfer according to flight schedule",
+            "End of tour",
+          ],
+        },
+      ],
+      included: [
+        "Air-conditioned transport for 8 days",
+        "7 nights in hotel or riad (as per itinerary)",
+        "Daily breakfasts",
+        "Guided medina tours in Fez and Rabat",
+        "Experienced French-speaking driver-guide",
+      ],
+      notIncluded: [
+        "International flights",
+        "Lunches and dinners",
+        "Museum and monument entries (~€5–10/site)",
+        "Tips for guide and hotel staff",
+        "Travel insurance",
+      ],
+      groupPricing: [
+        { travelers: "2 travelers", price: "€1,714/person" },
+        { travelers: "3–4 travelers", price: "€1,174/person" },
+        { travelers: "5–8 travelers", price: "€914/person" },
+        { travelers: "9–10 travelers", price: "€871/person" },
+        { travelers: "11–17 travelers", price: "€785/person" },
+      ],
+      faqs: [
+        {
+          question: "Can I cancel this tour for free?",
+          answer:
+            "Yes, free cancellation up to 48 hours before departure. After that, fees may apply depending on services booked.",
+        },
+        {
+          question: "What is included in the price?",
+          answer:
+            "Private air-conditioned transport, 7 nights accommodation, breakfasts, guided medina tours as per the itinerary and a French-speaking guide. Lunches, dinners, flights and entry fees are extra.",
+        },
+        {
+          question: "What is the maximum group size?",
+          answer:
+            "1 to 17 people. Private tours for your family or friends are available — request a custom quote.",
+        },
+        {
+          question: "What should I bring?",
+          answer:
+            "Season-appropriate clothing, comfortable walking shoes for the medinas, hat, sunscreen and a light jacket for evenings in Chefchaouen.",
+        },
+        {
+          question: "What is the best season?",
+          answer:
+            "March to May and September to November offer the mildest temperatures. The tour runs year-round.",
+        },
+        {
+          question: "How is payment handled?",
+          answer:
+            "30% deposit on booking, balance before departure. Bank transfer or cash. Detailed quote on request.",
+        },
+      ],
+    },
+    "southern-coast-8j": {
+      metaTitle:
+        "Taroudante & Essaouira — 8-Day Southern Morocco & Atlantic Coast | Red Nomad",
+      metaDescription:
+        "8-day tour in southern Morocco: Taroudante, Tafraoute, Taghazout and Essaouira. Anti-Atlas, UNESCO argan forest and Atlantic coast. Departure from Marrakech.",
+      subtitle: "Souss, Anti-Atlas & Atlantic",
+      difficulty: "Moderate",
+      duration: "8 days",
+      groupSize: "1–17 people",
+      departure: "Marrakech",
+      languages: "French, English",
+      about:
+        "A unique 8-day tour exploring the Souss and Anti-Atlas, off the beaten track. Rose-hued Taroudante, Jean Vérame's painted rocks in Tafraoute, surf village Taghazout and wind-swept UNESCO Essaouira. Between pink mountains, wild Atlantic cliffs and a bohemian medina, discover an authentic, lesser-known Morocco.",
+      highlights: [
+        "Taroudante — little Marrakech",
+        "Aït Baha gorges",
+        "Tafraoute and Jean Vérame painted rocks",
+        "Taghazout — Atlantic surf village",
+        "Essaouira — UNESCO wind city",
+        "Argan forest (UNESCO)",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Marrakech → Taroudante",
+          description: "Cross the Atlas to the pearl of the Souss.",
+          steps: [
+            "8:00 AM — Departure from Marrakech",
+            "Drive via Tizi n'Test pass (2,092 m) or alternative route depending on season",
+            "Stop in Aït Baha gorges",
+            "Arrive in Taroudante, the 'Little Marrakech' — free evening",
+            "Dinner and night in a riad in Taroudante",
+          ],
+        },
+        {
+          dayLabel: "D2",
+          title: "Taroudante → Tafraoute",
+          description: "Deep into the Anti-Atlas and its pink landscapes.",
+          steps: [
+            "Breakfast at the riad",
+            "Drive through the Anti-Atlas",
+            "Arrive in Tafraoute, village nestled among pink rocks",
+            "Free time to explore the village",
+            "Night in Tafraoute",
+          ],
+        },
+        {
+          dayLabel: "D3",
+          title: "Tafraoute — Free day",
+          description: "Discover the Anti-Atlas at your own pace.",
+          steps: [
+            "Visit Jean Vérame painted rocks",
+            "Walk in the Ammeln Valley and surrounding Berber villages",
+            "Free lunch in the village",
+            "Free afternoon — hike or rest",
+            "Night in Tafraoute",
+          ],
+        },
+        {
+          dayLabel: "D4",
+          title: "Tafraoute → Tiznit → Mirleft",
+          description: "From the mountains to the wild Atlantic coast.",
+          steps: [
+            "Drive to Tiznit, city of silver jewellers",
+            "Visit the medina and silver souks",
+            "Coastal road to Mirleft, spectacular cliffs",
+            "Sunset over the Atlantic",
+            "Night in Mirleft",
+          ],
+        },
+        {
+          dayLabel: "D5",
+          title: "Mirleft → Massa → Taghazout",
+          description: "Nature reserve and Morocco's surf capital.",
+          steps: [
+            "Coastal drive via Souss-Massa reserve (birdwatching)",
+            "Through the UNESCO argan forest",
+            "Arrive in Taghazout, surfers' village",
+            "Check-in at camp or riad",
+            "Night in Taghazout",
+          ],
+        },
+        {
+          dayLabel: "D6",
+          title: "Taghazout — Beaches & surf",
+          description: "Free day facing the Atlantic Ocean.",
+          steps: [
+            "Free morning — beach and relaxation",
+            "Optional surf lessons (Hash Point, Anchor Point)",
+            "Local market and terrace cafés",
+            "Sunset over the Atlantic",
+            "Night in Taghazout",
+          ],
+        },
+        {
+          dayLabel: "D7",
+          title: "Taghazout → Essaouira",
+          description: "Coastal road to the city of trade winds.",
+          steps: [
+            "Drive to Essaouira along the Atlantic coast",
+            "Visit fishing port and UNESCO ramparts",
+            "Art galleries and medina",
+            "Local guide for Essaouira discovery",
+            "Night in a riad in Essaouira",
+          ],
+        },
+        {
+          dayLabel: "D8",
+          title: "Essaouira → Marrakech — Departure",
+          description: "Last morning and return to Marrakech.",
+          steps: [
+            "Free morning in Essaouira",
+            "Return drive to Marrakech (~2.5 h)",
+            "Arrive in Marrakech late afternoon",
+            "End of tour",
+          ],
+        },
+      ],
+      included: [
+        "Air-conditioned transport for 8 days",
+        "7 nights in riads and hotels (as per itinerary)",
+        "Daily breakfasts",
+        "Local guides in Tafraoute and Essaouira",
+        "Experienced French-speaking driver-guide",
+      ],
+      notIncluded: [
+        "International flights",
+        "Lunches and dinners",
+        "Surf, kitesurf and water sports",
+        "Site and museum entries",
+        "Tips for guide and hotel staff",
+        "Travel insurance",
+      ],
+      groupPricing: [
+        { travelers: "2 travelers", price: "€1,692/person" },
+        { travelers: "3–4 travelers", price: "€1,130/person" },
+        { travelers: "5–8 travelers", price: "€900/person" },
+        { travelers: "9–10 travelers", price: "€850/person" },
+        { travelers: "11–17 travelers", price: "€742/person" },
+      ],
+      faqs: [
+        {
+          question: "Can I cancel this tour for free?",
+          answer:
+            "Yes, free cancellation up to 48 hours before departure. After that, fees may apply depending on services booked.",
+        },
+        {
+          question: "What is included in the price?",
+          answer:
+            "Private air-conditioned transport, 7 nights accommodation, breakfasts, local guides in Tafraoute and Essaouira and a French-speaking driver-guide. Meals, flights, surf and entries are extra.",
+        },
+        {
+          question: "Do I need to know how to surf in Taghazout?",
+          answer:
+            "No, surfing is optional. Beginner lessons are available on site (not included). The beach is open to everyone.",
+        },
+        {
+          question: "Is Tizi n'Test pass always used?",
+          answer:
+            "Depending on season and weather, we take Tizi n'Test or a lower alternative route. Your guide adapts the road for your safety and comfort.",
+        },
+        {
+          question: "What is the best season?",
+          answer:
+            "March to May and September to November are ideal. Summer suits the coast (sea breeze). Winter stays mild in the south and on the Atlantic coast.",
+        },
+        {
+          question: "How is payment handled?",
+          answer:
+            "30% deposit on booking, balance before departure. Bank transfer or cash. Detailed quote on request.",
         },
       ],
     },
@@ -621,11 +1291,11 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Tips for host family (optional)",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€95/person" },
-        { travelers: "3–4 travelers", price: "€370–390/person" },
-        { travelers: "5–7 travelers", price: "€330–360/person" },
-        { travelers: "8–14 travelers", price: "€300–330/person" },
-        { travelers: "15–17 travelers", price: "€280/person" },
+        { travelers: "2 travelers", price: "€515/person" },
+        { travelers: "3–4 travelers", price: "€420/person" },
+        { travelers: "5–8 travelers", price: "€300/person" },
+        { travelers: "9–10 travelers", price: "€270/person" },
+        { travelers: "11–17 travelers", price: "€270/person" },
       ],
       faqs: [
         {
@@ -833,11 +1503,11 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Propinas para guía y personal del alojamiento",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "300 €/pers." },
-        { travelers: "3–4 viajeros", price: "300 €/pers." },
-        { travelers: "5–7 viajeros", price: "300 €/pers." },
-        { travelers: "8–14 viajeros", price: "300 €/pers." },
-        { travelers: "15–17 viajeros", price: "300 €/pers." },
+        { travelers: "2 viajeros", price: "550 €/pers." },
+        { travelers: "3–4 viajeros", price: "450 €/pers." },
+        { travelers: "5–8 viajeros", price: "320 €/pers." },
+        { travelers: "9–10 viajeros", price: "290 €/pers." },
+        { travelers: "11–17 viajeros", price: "290 €/pers." },
       ],
       faqs: [
         {
@@ -869,6 +1539,341 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
           question: "¿Cómo se paga el circuito?",
           answer:
             "Anticipo del 30 % en la reserva, saldo antes o a la llegada. Transferencia bancaria o efectivo. Presupuesto detallado bajo solicitud.",
+        },
+      ],
+    },
+    "imperial-cities-8j": {
+      metaTitle:
+        "Ciudades Imperiales Marruecos 8 días — Fez, Meknes, Marrakech | Red Nomad",
+      metaDescription:
+        "Circuito de 8 días por las ciudades imperiales de Marruecos: Casablanca, Rabat, Volubilis, Meknes, Fez UNESCO y Chefchaouen la azul. Guía francófono, grupos reducidos.",
+      subtitle: "De la costa atlántica a la ciudad azul",
+      difficulty: "Moderado",
+      duration: "8 días",
+      groupSize: "1–17 personas",
+      departure: "Casablanca",
+      languages: "Francés, inglés",
+      about:
+        "Un circuito de 8 días por las ciudades más bellas de Marruecos: la modernidad de Casablanca, la elegancia real de Rabat, los zocos milenarios de Fez y la ciudad azul de Chefchaouen en el Rif. Entre sitios UNESCO, ruinas romanas de Volubilis y medersas de Fez, descubra el Marruecos histórico en grupo reducido con guía local.",
+      highlights: [
+        "Mezquita Hassan II de Casablanca",
+        "Medina de Rabat (UNESCO)",
+        "Medina de Fez (UNESCO)",
+        "Chefchaouen la azul",
+        "Volubilis — ruinas romanas UNESCO",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Llegada a Casablanca",
+          description: "Recepción en el aeropuerto y primera inmersión en la metrópolis atlántica.",
+          steps: [
+            "Recepción en el aeropuerto Mohammed V",
+            "Visita de la Mezquita Hassan II (exterior o interior con guía opcional)",
+            "Instalación en el hotel — tarde libre en la cornisa",
+          ],
+        },
+        {
+          dayLabel: "D2",
+          title: "Casablanca → Rabat",
+          description: "Descubrimiento de la capital administrativa del Reino.",
+          steps: [
+            "Ruta hacia Rabat",
+            "Kasbah de los Oudayas, Torre Hassan y Mausoleo de Mohammed V",
+            "Paseo por la medina de Rabat",
+            "Noche en Rabat",
+          ],
+        },
+        {
+          dayLabel: "D3",
+          title: "Rabat → Volubilis → Meknes → Fez",
+          description: "Antigüedad romana y ciudad imperial antes de llegar a Fez.",
+          steps: [
+            "Visita de las ruinas romanas de Volubilis (UNESCO)",
+            "Meknes y la puerta Bab Mansour",
+            "Ruta hacia Fez — llegada por la tarde",
+            "Noche en riad en Fez",
+          ],
+        },
+        {
+          dayLabel: "D4",
+          title: "Fez — Día completo",
+          description: "Inmersión en la medina más antigua del mundo árabe.",
+          steps: [
+            "Visita guiada de Fez el-Bali: Universidad al-Qarawiyyin",
+            "Medersa Bou Inania y curtidurías Chouara",
+            "Zocos, artesanía y fondouks históricos",
+            "Noche en riad en Fez",
+          ],
+        },
+        {
+          dayLabel: "D5",
+          title: "Fez → Chefchaouen",
+          description: "Travesía del Rif hasta la perla azul.",
+          steps: [
+            "Ruta matutina por las montañas del Rif",
+            "Llegada a Chefchaouen a primera hora de la tarde",
+            "Descubrimiento libre de las callejuelas azules y la plaza Outa el-Hammam",
+            "Noche en riad en Chefchaouen",
+          ],
+        },
+        {
+          dayLabel: "D6",
+          title: "Chefchaouen — Día libre",
+          description: "Tiempo libre para explorar la medina a su ritmo.",
+          steps: [
+            "Mañana libre en la medina azul",
+            "Senderismo opcional hacia la cascada Ras el-Ma",
+            "Tarde de compras artesanales y cafés en terraza",
+            "Noche en riad en Chefchaouen",
+          ],
+        },
+        {
+          dayLabel: "D7",
+          title: "Chefchaouen → Casablanca",
+          description: "Regreso a la costa atlántica.",
+          steps: [
+            "Salida matutina hacia Casablanca",
+            "Paradas posibles en Asilah o Larache",
+            "Llegada a Casablanca al final de la tarde",
+            "Noche en Casablanca",
+          ],
+        },
+        {
+          dayLabel: "D8",
+          title: "Casablanca — Salida",
+          description: "Fin del circuito y traslado al aeropuerto.",
+          steps: [
+            "Desayuno en el hotel",
+            "Traslado al aeropuerto según horarios de vuelo",
+            "Fin del circuito",
+          ],
+        },
+      ],
+      included: [
+        "Transporte climatizado durante 8 días",
+        "7 noches en hotel o riad (según programa)",
+        "Desayunos diarios",
+        "Visitas guiadas de las medinas de Fez y Rabat",
+        "Guía-conductor francófono experimentado",
+      ],
+      notIncluded: [
+        "Vuelos internacionales",
+        "Almuerzos y cenas",
+        "Entradas a museos y monumentos (~5–10 €/sitio)",
+        "Propinas para guía y personal del alojamiento",
+        "Seguro de viaje",
+      ],
+      groupPricing: [
+        { travelers: "2 viajeros", price: "1 714 €/pers." },
+        { travelers: "3–4 viajeros", price: "1 174 €/pers." },
+        { travelers: "5–8 viajeros", price: "914 €/pers." },
+        { travelers: "9–10 viajeros", price: "871 €/pers." },
+        { travelers: "11–17 viajeros", price: "785 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "¿Se puede cancelar este circuito sin coste?",
+          answer:
+            "Sí, cancelación gratuita hasta 48 horas antes de la salida. Después, pueden aplicarse tasas según los servicios contratados.",
+        },
+        {
+          question: "¿Qué incluye el precio?",
+          answer:
+            "Transporte privado climatizado, 7 noches de alojamiento, desayunos, visitas guiadas de medinas previstas en el programa y guía francófono. Comidas, vuelos y entradas no están incluidos.",
+        },
+        {
+          question: "¿Cuántas personas como máximo en el grupo?",
+          answer:
+            "De 1 a 17 personas. Privatización posible para su familia o amigos — solicite un presupuesto personalizado.",
+        },
+        {
+          question: "¿Qué debo llevar?",
+          answer:
+            "Ropa adaptada a la temporada, calzado cómodo para caminar por las medinas, gorra, protector solar y chaqueta ligera para las noches en Chefchaouen.",
+        },
+        {
+          question: "¿Cuál es la mejor temporada?",
+          answer:
+            "Marzo a mayo y septiembre a noviembre ofrecen las temperaturas más suaves. El circuito opera todo el año.",
+        },
+        {
+          question: "¿Cómo se paga el circuito?",
+          answer:
+            "Anticipo del 30 % en la reserva, saldo antes de la salida. Transferencia bancaria o efectivo. Presupuesto detallado bajo solicitud.",
+        },
+      ],
+    },
+    "southern-coast-8j": {
+      metaTitle:
+        "Taroudante y Essaouira — 8 días sur marroquí y costa atlántica | Red Nomad",
+      metaDescription:
+        "Circuito de 8 días en el sur de Marruecos: Taroudante, Tafraoute, Taghazout y Essaouira. Anti-Atlas, bosque de argán UNESCO y costa atlántica. Salida desde Marrakech.",
+      subtitle: "Souss, Anti-Atlas y Atlántico",
+      difficulty: "Moderado",
+      duration: "8 días",
+      groupSize: "1–17 personas",
+      departure: "Marrakech",
+      languages: "Francés, inglés",
+      about:
+        "Un circuito único de 8 días que explora el Souss y el Anti-Atlas, lejos de las rutas turísticas. Taroudante la rosa, las rocas pintadas de Tafraoute, el pueblo surf de Taghazout y la ciudad de los alisios de Essaouira. Entre montañas rosas, acantilados atlánticos y medina UNESCO, descubra una faceta auténtica del Marruecos.",
+      highlights: [
+        "Taroudante — la pequeña Marrakech",
+        "Gargantas de Aït Baha",
+        "Tafraoute y rocas pintadas de Jean Vérame",
+        "Taghazout — pueblo surf en el Atlántico",
+        "Essaouira — ciudad de los alisios UNESCO",
+        "Bosque de argán (UNESCO)",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Marrakech → Taroudante",
+          description: "Travesía del Atlas hacia la perla del Souss.",
+          steps: [
+            "08h00 — Salida desde Marrakech",
+            "Ruta por el puerto de Tizi n'Test (2 092 m) o itinerario alternativo según temporada",
+            "Parada en las gargantas de Aït Baha",
+            "Llegada a Taroudante, la «pequeña Marrakech» — tarde libre",
+            "Cena y noche en riad en Taroudante",
+          ],
+        },
+        {
+          dayLabel: "D2",
+          title: "Taroudante → Tafraoute",
+          description: "Inmersión en el Anti-Atlas y sus paisajes rosados.",
+          steps: [
+            "Desayuno en el riad",
+            "Ruta a través del Anti-Atlas",
+            "Llegada a Tafraoute, pueblo entre rocas rosas",
+            "Tiempo libre para explorar el pueblo",
+            "Noche en Tafraoute",
+          ],
+        },
+        {
+          dayLabel: "D3",
+          title: "Tafraoute — Día libre",
+          description: "Descubrimiento del Anti-Atlas a su ritmo.",
+          steps: [
+            "Visita de las rocas pintadas de Jean Vérame",
+            "Paseo por el valle de Ammeln y pueblos bereberes",
+            "Almuerzo libre en el pueblo",
+            "Tarde libre — senderismo o descanso",
+            "Noche en Tafraoute",
+          ],
+        },
+        {
+          dayLabel: "D4",
+          title: "Tafraoute → Tiznit → Mirleft",
+          description: "De la montaña a la costa atlántica salvaje.",
+          steps: [
+            "Ruta hacia Tiznit, ciudad de joyeros de plata",
+            "Visita de la medina y zocos de plata",
+            "Carretera costera hacia Mirleft, acantilados espectaculares",
+            "Puesta de sol sobre el Atlántico",
+            "Noche en Mirleft",
+          ],
+        },
+        {
+          dayLabel: "D5",
+          title: "Mirleft → Massa → Taghazout",
+          description: "Reserva natural y capital del surf marroquí.",
+          steps: [
+            "Ruta costera por la reserva de Souss-Massa (observación de aves)",
+            "Atravesando el bosque de argán UNESCO",
+            "Llegada a Taghazout, pueblo de surfistas",
+            "Instalación en camp o riad",
+            "Noche en Taghazout",
+          ],
+        },
+        {
+          dayLabel: "D6",
+          title: "Taghazout — Playas y surf",
+          description: "Día libre frente al océano Atlántico.",
+          steps: [
+            "Mañana libre — playa y relax",
+            "Clases de surf posibles (Hash Point, Anchor Point)",
+            "Mercado local y cafés en terraza",
+            "Puesta de sol sobre el Atlántico",
+            "Noche en Taghazout",
+          ],
+        },
+        {
+          dayLabel: "D7",
+          title: "Taghazout → Essaouira",
+          description: "Ruta costera hacia la ciudad de los alisios.",
+          steps: [
+            "Ruta hacia Essaouira por la costa atlántica",
+            "Visita del puerto de pesca y murallas UNESCO",
+            "Galerías de arte y medina",
+            "Guía local para descubrir Essaouira",
+            "Noche en riad en Essaouira",
+          ],
+        },
+        {
+          dayLabel: "D8",
+          title: "Essaouira → Marrakech — Salida",
+          description: "Última mañana y regreso a Marrakech.",
+          steps: [
+            "Mañana libre en Essaouira",
+            "Ruta de regreso a Marrakech (~2h30)",
+            "Llegada a Marrakech al final de la tarde",
+            "Fin del circuito",
+          ],
+        },
+      ],
+      included: [
+        "Transporte climatizado durante 8 días",
+        "7 noches en riads y hoteles (según programa)",
+        "Desayunos diarios",
+        "Guías locales en Tafraoute y Essaouira",
+        "Guía-conductor francófono experimentado",
+      ],
+      notIncluded: [
+        "Vuelos internacionales",
+        "Almuerzos y cenas",
+        "Clases de surf, kitesurf y actividades náuticas",
+        "Entradas a sitios y museos",
+        "Propinas para guía y personal del alojamiento",
+        "Seguro de viaje",
+      ],
+      groupPricing: [
+        { travelers: "2 viajeros", price: "1 692 €/pers." },
+        { travelers: "3–4 viajeros", price: "1 130 €/pers." },
+        { travelers: "5–8 viajeros", price: "900 €/pers." },
+        { travelers: "9–10 viajeros", price: "850 €/pers." },
+        { travelers: "11–17 viajeros", price: "742 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "¿Se puede cancelar este circuito sin coste?",
+          answer:
+            "Sí, cancelación gratuita hasta 48 horas antes de la salida. Después, pueden aplicarse tasas según los servicios contratados.",
+        },
+        {
+          question: "¿Qué incluye el precio?",
+          answer:
+            "Transporte privado climatizado, 7 noches de alojamiento, desayunos, guías locales en Tafraoute y Essaouira y guía-conductor francófono. Comidas, vuelos, surf y entradas no están incluidos.",
+        },
+        {
+          question: "¿Hay que saber surf en Taghazout?",
+          answer:
+            "No, el surf es opcional. Hay clases para principiantes en el lugar (no incluidas). La playa es accesible para todos.",
+        },
+        {
+          question: "¿Siempre se usa el puerto de Tizi n'Test?",
+          answer:
+            "Según la temporada y el tiempo, tomamos Tizi n'Test o una ruta alternativa más baja. Su guía adapta el itinerario por seguridad y comodidad.",
+        },
+        {
+          question: "¿Cuál es la mejor temporada?",
+          answer:
+            "Marzo a mayo y septiembre a noviembre son ideales. El verano conviene a la costa (brisa marina). El invierno es suave en el sur y la costa atlántica.",
+        },
+        {
+          question: "¿Cómo se paga el circuito?",
+          answer:
+            "Anticipo del 30 % en la reserva, saldo antes de la salida. Transferencia bancaria o efectivo. Presupuesto detallado bajo solicitud.",
         },
       ],
     },
@@ -945,11 +1950,11 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Propinas para la familia anfitriona (opcional)",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "95 €/pers." },
-        { travelers: "3–4 viajeros", price: "370–390 €/pers." },
-        { travelers: "5–7 viajeros", price: "330–360 €/pers." },
-        { travelers: "8–14 viajeros", price: "300–330 €/pers." },
-        { travelers: "15–17 viajeros", price: "280 €/pers." },
+        { travelers: "2 viajeros", price: "515 €/pers." },
+        { travelers: "3–4 viajeros", price: "420 €/pers." },
+        { travelers: "5–8 viajeros", price: "300 €/pers." },
+        { travelers: "9–10 viajeros", price: "270 €/pers." },
+        { travelers: "11–17 viajeros", price: "270 €/pers." },
       ],
       faqs: [
         {
@@ -1157,11 +2162,11 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Trinkgelder für Guide und Hotelpersonal",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "300 €/Pers." },
-        { travelers: "3–4 Reisende", price: "300 €/Pers." },
-        { travelers: "5–7 Reisende", price: "300 €/Pers." },
-        { travelers: "8–14 Reisende", price: "300 €/Pers." },
-        { travelers: "15–17 Reisende", price: "300 €/Pers." },
+        { travelers: "2 Reisende", price: "550 €/Pers." },
+        { travelers: "3–4 Reisende", price: "450 €/Pers." },
+        { travelers: "5–8 Reisende", price: "320 €/Pers." },
+        { travelers: "9–10 Reisende", price: "290 €/Pers." },
+        { travelers: "11–17 Reisende", price: "290 €/Pers." },
       ],
       faqs: [
         {
@@ -1193,6 +2198,341 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
           question: "Wie erfolgt die Zahlung?",
           answer:
             "30 % Anzahlung bei Buchung, Rest vor oder bei Ankunft. Überweisung oder bar. Detailliertes Angebot auf Anfrage.",
+        },
+      ],
+    },
+    "imperial-cities-8j": {
+      metaTitle:
+        "Kaiserstädte Marokko 8 Tage — Fès, Meknès, Marrakesch | Red Nomad",
+      metaDescription:
+        "8-Tage-Rundreise durch Marokkos Kaiserstädte: Casablanca, Rabat, Volubilis, Meknès, UNESCO-Fès und blaues Chefchaouen. Französischsprachiger Guide, kleine Gruppen.",
+      subtitle: "Von der Atlantikküste zur blauen Stadt",
+      difficulty: "Mittel",
+      duration: "8 Tage",
+      groupSize: "1–17 Personen",
+      departure: "Casablanca",
+      languages: "Französisch, Englisch",
+      about:
+        "Eine 8-tägige Reise durch Marokkos schönste Städte: das moderne Casablanca, das königliche Rabat, die jahrhundertealten Souks von Fès und das blaue Chefchaouen im Rif-Gebirge. UNESCO-Stätten, römische Ruinen in Volubilis und Medersas in Fès — entdecken Sie das historische Marokko in einer kleinen Gruppe mit lokalem Guide.",
+      highlights: [
+        "Hassan-II.-Moschee in Casablanca",
+        "Medina von Rabat (UNESCO)",
+        "Medina von Fès (UNESCO)",
+        "Blaues Chefchaouen",
+        "Volubilis — UNESCO-Römische Ruinen",
+      ],
+      itinerary: [
+        {
+          dayLabel: "T1",
+          title: "Ankunft in Casablanca",
+          description: "Flughafenempfang und erster Eindruck der Atlantikmetropole.",
+          steps: [
+            "Empfang am Flughafen Mohammed V",
+            "Besuch der Hassan-II.-Moschee (Außenansicht oder optional mit Guide innen)",
+            "Hotel-Check-in — freier Abend an der Corniche",
+          ],
+        },
+        {
+          dayLabel: "T2",
+          title: "Casablanca → Rabat",
+          description: "Entdeckung der administrativen Hauptstadt des Königreichs.",
+          steps: [
+            "Fahrt nach Rabat",
+            "Kasbah der Oudayas, Hassan-Turm und Mohammed-V.-Mausoleum",
+            "Spaziergang durch die Medina von Rabat",
+            "Übernachtung in Rabat",
+          ],
+        },
+        {
+          dayLabel: "T3",
+          title: "Rabat → Volubilis → Meknès → Fès",
+          description: "Römische Antike und Kaiserstadt vor der Ankunft in Fès.",
+          steps: [
+            "Besuch der römischen Ruinen von Volubilis (UNESCO)",
+            "Meknès und das Bab-Mansour-Tor",
+            "Fahrt nach Fès — Ankunft am Abend",
+            "Übernachtung in einem Riad in Fès",
+          ],
+        },
+        {
+          dayLabel: "T4",
+          title: "Fès — Ganztägig",
+          description: "Eintauchen in die älteste arabische Medina der Welt.",
+          steps: [
+            "Geführte Tour durch Fès el-Bali: Universität al-Qarawiyyin",
+            "Medersa Bou Inania und Gerbereien Chouara",
+            "Souks, Handwerk und historische Fondouks",
+            "Übernachtung in einem Riad in Fès",
+          ],
+        },
+        {
+          dayLabel: "T5",
+          title: "Fès → Chefchaouen",
+          description: "Überquerung des Rif bis zur blauen Perle.",
+          steps: [
+            "Morgendliche Fahrt durch das Rif-Gebirge",
+            "Ankunft in Chefchaouen am frühen Nachmittag",
+            "Freie Erkundung der blauen Gassen und des Platzes Outa el-Hammam",
+            "Übernachtung in einem Riad in Chefchaouen",
+          ],
+        },
+        {
+          dayLabel: "T6",
+          title: "Chefchaouen — Freier Tag",
+          description: "Freie Zeit, die Medina in Ihrem eigenen Tempo zu erkunden.",
+          steps: [
+            "Freier Vormittag in der blauen Medina",
+            "Optionale Wanderung zum Wasserfall Ras el-Ma",
+            "Nachmittags Kunsthandwerk-Shopping und Terrassen-Cafés",
+            "Übernachtung in einem Riad in Chefchaouen",
+          ],
+        },
+        {
+          dayLabel: "T7",
+          title: "Chefchaouen → Casablanca",
+          description: "Rückkehr zur Atlantikküste.",
+          steps: [
+            "Morgendliche Abfahrt nach Casablanca",
+            "Mögliche Stopps in Asilah oder Larache",
+            "Ankunft in Casablanca am späten Nachmittag",
+            "Übernachtung in Casablanca",
+          ],
+        },
+        {
+          dayLabel: "T8",
+          title: "Casablanca — Abreise",
+          description: "Ende der Rundreise und Flughafentransfer.",
+          steps: [
+            "Frühstück im Hotel",
+            "Flughafentransfer je nach Flugplan",
+            "Ende der Rundreise",
+          ],
+        },
+      ],
+      included: [
+        "Klimatisierter Transport während 8 Tagen",
+        "7 Übernachtungen in Hotel oder Riad (laut Programm)",
+        "Tägliche Frühstücke",
+        "Geführte Medina-Besichtigungen in Fès und Rabat",
+        "Erfahrener französischsprachiger Fahrer-Guide",
+      ],
+      notIncluded: [
+        "Internationale Flüge",
+        "Mittag- und Abendessen",
+        "Museums- und Denkmaleintritte (~5–10 €/Stätte)",
+        "Trinkgelder für Guide und Hotelpersonal",
+        "Reiseversicherung",
+      ],
+      groupPricing: [
+        { travelers: "2 Reisende", price: "1 714 €/Pers." },
+        { travelers: "3–4 Reisende", price: "1 174 €/Pers." },
+        { travelers: "5–8 Reisende", price: "914 €/Pers." },
+        { travelers: "9–10 Reisende", price: "871 €/Pers." },
+        { travelers: "11–17 Reisende", price: "785 €/Pers." },
+      ],
+      faqs: [
+        {
+          question: "Kann ich diese Rundreise kostenlos stornieren?",
+          answer:
+            "Ja, kostenlose Stornierung bis 48 Stunden vor Abfahrt. Danach können je nach gebuchten Leistungen Gebühren anfallen.",
+        },
+        {
+          question: "Was ist im Preis enthalten?",
+          answer:
+            "Privater klimatisierter Transport, 7 Übernachtungen, Frühstücke, geführte Medina-Besichtigungen laut Programm und französischsprachiger Guide. Mittag- und Abendessen, Flüge und Eintritte sind nicht enthalten.",
+        },
+        {
+          question: "Wie viele Personen maximal in der Gruppe?",
+          answer:
+            "1 bis 17 Personen. Privatisierung für Familie oder Freunde möglich — individuelles Angebot auf Anfrage.",
+        },
+        {
+          question: "Was soll ich mitbringen?",
+          answer:
+            "Saisongerechte Kleidung, bequeme Schuhe für die Medinas, Mütze, Sonnencreme und leichte Jacke für die Abende in Chefchaouen.",
+        },
+        {
+          question: "Was ist die beste Reisezeit?",
+          answer:
+            "März bis Mai und September bis November bieten die angenehmsten Temperaturen. Die Rundreise ist ganzjährig möglich.",
+        },
+        {
+          question: "Wie erfolgt die Zahlung?",
+          answer:
+            "30 % Anzahlung bei Buchung, Rest vor Abfahrt. Banküberweisung oder bar. Detailliertes Angebot auf Anfrage.",
+        },
+      ],
+    },
+    "southern-coast-8j": {
+      metaTitle:
+        "Taroudante & Essaouira — 8 Tage Süden Marokkos & Atlantikküste | Red Nomad",
+      metaDescription:
+        "8-Tage-Rundreise im Süden Marokkos: Taroudante, Tafraoute, Taghazout und Essaouira. Anti-Atlas, UNESCO-Arganwald und Atlantikküste. Abfahrt ab Marrakesch.",
+      subtitle: "Souss, Anti-Atlas & Atlantik",
+      difficulty: "Mittel",
+      duration: "8 Tage",
+      groupSize: "1–17 Personen",
+      departure: "Marrakesch",
+      languages: "Französisch, Englisch",
+      about:
+        "Eine einzigartige 8-tägige Rundreise durch Souss und Anti-Atlas, abseits der ausgetroffenen Pfade. Das rosenfarbene Taroudante, die bemalten Felsen von Tafraoute, das Surfdorf Taghazout und das UNESCO-Städtchen Essaouira. Zwischen rosa Bergen, wilden Atlantikklippen und bohemischer Medina — entdecken Sie ein authentisches Marokko.",
+      highlights: [
+        "Taroudante — das kleine Marrakesch",
+        "Schluchten von Aït Baha",
+        "Tafraoute und bemalte Felsen von Jean Vérame",
+        "Taghazout — Surfdorf am Atlantik",
+        "Essaouira — UNESCO-Stadt der Passatwinde",
+        "Arganwald (UNESCO)",
+      ],
+      itinerary: [
+        {
+          dayLabel: "T1",
+          title: "Marrakesch → Taroudante",
+          description: "Atlas-Überquerung zur Perle des Souss.",
+          steps: [
+            "08:00 Uhr — Abfahrt ab Marrakesch",
+            "Fahrt über den Tizi-n'Test-Pass (2.092 m) oder Alternativroute je nach Saison",
+            "Stopp in den Schluchten von Aït Baha",
+            "Ankunft in Taroudante, dem «kleinen Marrakesch» — freier Abend",
+            "Abendessen und Nacht in einem Riad in Taroudante",
+          ],
+        },
+        {
+          dayLabel: "T2",
+          title: "Taroudante → Tafraoute",
+          description: "Eintauchen in den Anti-Atlas und seine rosa Landschaften.",
+          steps: [
+            "Frühstück im Riad",
+            "Fahrt durch den Anti-Atlas",
+            "Ankunft in Tafraoute, Dorf zwischen rosa Felsen",
+            "Freie Zeit zur Erkundung des Dorfes",
+            "Übernachtung in Tafraoute",
+          ],
+        },
+        {
+          dayLabel: "T3",
+          title: "Tafraoute — Freier Tag",
+          description: "Anti-Atlas in Ihrem eigenen Tempo entdecken.",
+          steps: [
+            "Besuch der bemalten Felsen von Jean Vérame",
+            "Spaziergang im Ammeln-Tal und umliegenden Berberdörfern",
+            "Freies Mittagessen im Dorf",
+            "Freier Nachmittag — Wanderung oder Ruhe",
+            "Übernachtung in Tafraoute",
+          ],
+        },
+        {
+          dayLabel: "T4",
+          title: "Tafraoute → Tiznit → Mirleft",
+          description: "Vom Gebirge zur wilden Atlantikküste.",
+          steps: [
+            "Fahrt nach Tiznit, Stadt der Silberschmiede",
+            "Besuch der Medina und Silbersouks",
+            "Küstenstraße nach Mirleft, spektakuläre Klippen",
+            "Sonnenuntergang über dem Atlantik",
+            "Übernachtung in Mirleft",
+          ],
+        },
+        {
+          dayLabel: "T5",
+          title: "Mirleft → Massa → Taghazout",
+          description: "Naturschutzgebiet und Surfhauptstadt Marokkos.",
+          steps: [
+            "Küstenfahrt durch das Souss-Massa-Reservat (Vogelbeobachtung)",
+            "Durch den UNESCO-Arganwald",
+            "Ankunft in Taghazout, Surferdorf",
+            "Check-in im Camp oder Riad",
+            "Übernachtung in Taghazout",
+          ],
+        },
+        {
+          dayLabel: "T6",
+          title: "Taghazout — Strände & Surf",
+          description: "Freier Tag am Atlantischen Ozean.",
+          steps: [
+            "Freier Vormittag — Strand und Entspannung",
+            "Optionale Surfkurse (Hash Point, Anchor Point)",
+            "Lokaler Markt und Terrassen-Cafés",
+            "Sonnenuntergang über dem Atlantik",
+            "Übernachtung in Taghazout",
+          ],
+        },
+        {
+          dayLabel: "T7",
+          title: "Taghazout → Essaouira",
+          description: "Küstenstraße zur Stadt der Passatwinde.",
+          steps: [
+            "Fahrt nach Essaouira entlang der Atlantikküste",
+            "Besuch des Fischhafens und UNESCO-Stadtmauern",
+            "Kunstgalerien und Medina",
+            "Lokaler Guide für Essaouira",
+            "Übernachtung in einem Riad in Essaouira",
+          ],
+        },
+        {
+          dayLabel: "T8",
+          title: "Essaouira → Marrakesch — Abreise",
+          description: "Letzter Vormittag und Rückkehr nach Marrakesch.",
+          steps: [
+            "Freier Vormittag in Essaouira",
+            "Rückfahrt nach Marrakesch (~2,5 Std.)",
+            "Ankunft in Marrakesch am späten Nachmittag",
+            "Ende der Rundreise",
+          ],
+        },
+      ],
+      included: [
+        "Klimatisierter Transport während 8 Tagen",
+        "7 Übernachtungen in Riads und Hotels (laut Programm)",
+        "Tägliche Frühstücke",
+        "Lokale Guides in Tafraoute und Essaouira",
+        "Erfahrener französischsprachiger Fahrer-Guide",
+      ],
+      notIncluded: [
+        "Internationale Flüge",
+        "Mittag- und Abendessen",
+        "Surf-, Kitesurf- und Wassersportaktivitäten",
+        "Eintritte zu Stätten und Museen",
+        "Trinkgelder für Guide und Hotelpersonal",
+        "Reiseversicherung",
+      ],
+      groupPricing: [
+        { travelers: "2 Reisende", price: "1 692 €/Pers." },
+        { travelers: "3–4 Reisende", price: "1 130 €/Pers." },
+        { travelers: "5–8 Reisende", price: "900 €/Pers." },
+        { travelers: "9–10 Reisende", price: "850 €/Pers." },
+        { travelers: "11–17 Reisende", price: "742 €/Pers." },
+      ],
+      faqs: [
+        {
+          question: "Kann ich diese Rundreise kostenlos stornieren?",
+          answer:
+            "Ja, kostenlose Stornierung bis 48 Stunden vor Abfahrt. Danach können je nach gebuchten Leistungen Gebühren anfallen.",
+        },
+        {
+          question: "Was ist im Preis enthalten?",
+          answer:
+            "Privater klimatisierter Transport, 7 Übernachtungen, Frühstücke, lokale Guides in Tafraoute und Essaouira und französischsprachiger Fahrer-Guide. Mahlzeiten, Flüge, Surf und Eintritte sind nicht enthalten.",
+        },
+        {
+          question: "Muss ich in Taghazout surfen können?",
+          answer:
+            "Nein, Surfen ist optional. Anfängerkurse sind vor Ort verfügbar (nicht inklusive). Der Strand ist für alle zugänglich.",
+        },
+        {
+          question: "Wird der Tizi-n'Test-Pass immer befahren?",
+          answer:
+            "Je nach Saison und Wetter nehmen wir Tizi n'Test oder eine tiefere Alternativroute. Ihr Guide passt die Strecke für Sicherheit und Komfort an.",
+        },
+        {
+          question: "Was ist die beste Reisezeit?",
+          answer:
+            "März bis Mai und September bis November sind ideal. Der Sommer eignet sich für die Küste (Meeresbrise). Der Winter bleibt im Süden und an der Atlantikküste mild.",
+        },
+        {
+          question: "Wie erfolgt die Zahlung?",
+          answer:
+            "30 % Anzahlung bei Buchung, Rest vor Abfahrt. Banküberweisung oder bar. Detailliertes Angebot auf Anfrage.",
         },
       ],
     },
@@ -1269,11 +2609,11 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         "Trinkgelder für Gastfamilie (optional)",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "95 €/Pers." },
-        { travelers: "3–4 Reisende", price: "370–390 €/Pers." },
-        { travelers: "5–7 Reisende", price: "330–360 €/Pers." },
-        { travelers: "8–14 Reisende", price: "300–330 €/Pers." },
-        { travelers: "15–17 Reisende", price: "280 €/Pers." },
+        { travelers: "2 Reisende", price: "515 €/Pers." },
+        { travelers: "3–4 Reisende", price: "420 €/Pers." },
+        { travelers: "5–8 Reisende", price: "300 €/Pers." },
+        { travelers: "9–10 Reisende", price: "270 €/Pers." },
+        { travelers: "11–17 Reisende", price: "270 €/Pers." },
       ],
       faqs: [
         {
