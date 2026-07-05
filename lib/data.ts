@@ -82,7 +82,7 @@ export const excursions = [
       "Médina UNESCO, port de pêche, fruits de mer, ambiance bohème au bord de l'Atlantique.",
     rating: 4.8,
     reviews: 103,
-    price: 29,
+    price: 290,
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Blue_Fishing_Boat_and_Medina_Walls%2C_Essaouira%2C_Morocco.jpg/1280px-Blue_Fishing_Boat_and_Medina_Walls%2C_Essaouira%2C_Morocco.jpg",
   },
