@@ -37,6 +37,7 @@ export const fr: Dictionary = {
     login: "Connexion",
     from: "Dès",
     perPerson: "/pers.",
+    perTrip: "/voyage",
     menu: "Menu",
     discover: "Découvrir",
     whatsapp: "Red Nomad",
@@ -136,6 +137,13 @@ export const fr: Dictionary = {
         description:
           "L'essentiel en 3 jours : Haut Atlas, Aït Benhaddou, dunes de Merzouga, nuit en bivouac de luxe et retour à Marrakech.",
       },
+      "sahara-dades-4j": {
+        title: "Sahara, Gorges du Dadès & Merzouga — 4 jours",
+        badge: "Désert & gorges",
+        duration: "4 jours",
+        description:
+          "Aït Benhaddou, Gorges du Dadès et du Todra, Erg Chebbi à Merzouga, vallée du Drâa et oasis de Fint — le grand sud en 4 jours.",
+      },
       "grand-tour-3j": {
         title: "Marrakech — Chefchaouen 3 jours",
         badge: "Villes impériales",
@@ -170,32 +178,142 @@ export const fr: Dictionary = {
     eyebrow: "Excursions à la journée",
     title: "Excursions phares depuis Marrakech",
     description:
-      "Une journée, un guide local, votre véhicule privé. Retour le soir à votre riad.",
+      "Les itinéraires que nos voyageurs choisissent encore et encore — une journée, un guide local, votre véhicule privé.",
     viewAll: "Toutes les excursions",
-    items: {
-      ouzoud: {
-        title: "Cascades d'Ouzoud",
-        badge: "Best-seller",
+    viewDetails: "Voir les détails",
+    resultsCount: "{count} résultats",
+    departure: "Marrakech",
+    filters: {
+      title: "Filtres",
+      category: "Catégorie",
+      destination: "Destination",
+      difficulty: "Difficulté",
+      duration: "Durée",
+      budget: "Budget max.",
+      all: "Toutes",
+      reset: "Réinitialiser",
+    },
+    categories: {
+      nature: "Nature",
+      culture: "Culture",
+      coast: "Côte",
+      adventure: "Aventure",
+    },
+    difficulties: {
+      easy: "Facile",
+      moderate: "Modéré",
+    },
+    destinations: {
+      marrakech: "Marrakech",
+    },
+    footerIntro:
+      "Toutes nos excursions à la journée au départ de Marrakech : trekking dans l'Atlas, Aït Benhaddou, Cascades d'Ouzoud, Vallée de l'Ourika, Essaouira. Opérées par notre équipe locale berbère, avec transferts privés climatisés, guide francophone, eau minérale offerte et déjeuner traditionnel inclus selon le programme.",
+    whyTitle: "Pourquoi partir en excursion avec nous ?",
+    why: [
+      {
+        title: "Petits groupes",
         description:
-          "Les plus grandes cascades du Maroc (110m), singes magots en liberté, déjeuner face aux chutes.",
+          "Maximum 17 voyageurs, le plus souvent 2 à 8. Pas de bus géant — plus de temps avec votre guide et plus d'arrêts spontanés.",
+      },
+      {
+        title: "Itinéraires hors sentiers battus",
+        description:
+          "Nous évitons les arrêts touristiques piégés. Nos guides privilégient les vraies rencontres : artisans locaux, familles berbères, cuisines de village.",
+      },
+      {
+        title: "Tout compris, sans surprise",
+        description:
+          "Transfert privé, guide francophone, entrées des sites mentionnés, eau minérale, déjeuner traditionnel selon programme. Aucun frais caché.",
+      },
+      {
+        title: "Confirmation rapide",
+        description:
+          "Réservation confirmée en moins de 2 h. Annulation gratuite jusqu'à 48 h avant le départ. Paiement sécurisé ou virement bancaire.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Combien coûte une excursion à la journée au Maroc ?",
+        answer:
+          "Comptez 70 à 130 €/personne pour les excursions classiques (Ourika, 3 Vallées) en petit groupe. 130 à 200 €/personne pour les destinations plus éloignées (Aït Benhaddou, Ouzoud, Essaouira). Tous nos tarifs incluent transferts, guide et eau — déjeuner inclus selon le programme.",
+      },
+      {
+        question: "Quels horaires pour une excursion à la journée ?",
+        answer:
+          "Départ entre 7 h et 9 h depuis votre hôtel ou riad, retour entre 17 h et 20 h selon la destination. Pour Aït Benhaddou, Ouzoud ou Essaouira, prévoyez une journée complète (10–12 h).",
+      },
+      {
+        question: "Que dois-je apporter ?",
+        answer:
+          "Tenue confortable, chaussures fermées, casquette, crème solaire, lunettes et appareil photo. L'eau minérale est fournie. Pour Imlil ou l'Atlas, une polaire est utile même en été.",
+      },
+      {
+        question: "Les excursions sont-elles adaptées aux enfants ?",
+        answer:
+          "Oui, la plupart sont familiales. Nous adaptons les rythmes, fournissons sièges enfants gratuits et proposons des pauses fréquentes. Contactez-nous pour les très jeunes enfants.",
+      },
+      {
+        question: "Puis-je privatiser une excursion ?",
+        answer:
+          "Oui, sans surcoût important. Vous gardez le contrôle des horaires, arrêts et pauses. Pour 4 personnes, le tarif privé est souvent moins de 15 % plus cher que le tarif partagé.",
+      },
+    ],
+    items: {
+      ourika: {
+        title: "Vallée de l'Ourika — Excursion privée 1 jour",
+        badge: "Populaire",
+        duration: "1 j",
+        description:
+          "Villages berbères, cascades spectaculaires et vie authentique à seulement 1 h de Marrakech.",
+      },
+      imlil: {
+        title: "Imlil & Mont Toubkal — Randonnée Haut Atlas",
+        badge: "Coup de cœur",
+        duration: "1 j",
+        description:
+          "Explorez Imlil (1740 m), porte du Toubkal, ses douars berbères et ses panoramas alpins à couper le souffle.",
+      },
+      "trois-vallees": {
+        title: "Les 3 Vallées du Haut Atlas — Journée 4×4",
+        badge: "Nouvelle excursion",
+        duration: "1 j",
+        description:
+          "Ourika, Setti Fatma et Oukaimeden (2650 m) : le meilleur du Haut Atlas en une seule journée.",
+      },
+      ouzoud: {
+        title: "Cascades d'Ouzoud — Excursion 1 jour",
+        badge: "Best-seller",
+        duration: "1 j",
+        description:
+          "Les plus grandes cascades du Maroc (110 m), singes magots sauvages et oliveraies centenaires.",
       },
       essaouira: {
-        title: "Essaouira — Médina UNESCO",
+        title: "Essaouira — Médina UNESCO & côte atlantique",
         badge: "Populaire",
+        duration: "1 j",
         description:
-          "Médina UNESCO, port de pêche, fruits de mer, ambiance bohème au bord de l'Atlantique.",
+          "Médina classée UNESCO, port de pêche animé, artisanat de thuya et lumière atlantique unique.",
       },
       "ait-benhaddou": {
-        title: "Aït Benhaddou & Ouarzazate",
+        title: "Aït Benhaddou UNESCO & Ouarzazate",
         badge: "Incontournable",
+        duration: "1 j",
         description:
-          "Kasbah UNESCO d'Aït Benhaddou, studios Atlas, vues sur l'Atlas.",
+          "Col du Tizi n'Tichka (2260 m), Kasbah UNESCO d'Aït Benhaddou et Ouarzazate, Hollywood de l'Afrique.",
       },
-      ourika: {
-        title: "Vallée de l'Ourika",
-        badge: "Nature",
+      casablanca: {
+        title: "Casablanca — Mosquée Hassan II, journée privée",
+        badge: "Nouveau",
+        duration: "1 j",
         description:
-          "Excursion privée : cascades Setti Fatma, coopérative d'argan, déjeuner traditionnel au bord de la rivière.",
+          "Mosquée Hassan II (3e plus grande du monde), Art Déco des années 1930 et Corniche atlantique.",
+      },
+      "agadir-taghazout": {
+        title: "Agadir & Taghazout — Surf, plage atlantique",
+        badge: "Nouvelle excursion",
+        duration: "1 j",
+        description:
+          "Découvrez Agadir et le charme de Taghazout, village de surf sur la côte atlantique.",
       },
     },
   },
@@ -221,6 +339,9 @@ export const fr: Dictionary = {
     reviews: "avis",
     from: "À partir de",
     perPerson: "/ personne",
+    perTrip: "/ voyage",
+    tripPricing: "Tarif du voyage",
+    flatPriceNote: "Prix forfaitaire pour votre véhicule privé",
     totalFor2: "pour 2 (total)",
     discover: "À découvrir",
     readyTitle: "Prêt à vivre l'aventure ?",

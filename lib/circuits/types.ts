@@ -1,5 +1,6 @@
 export type CircuitId =
   | "circuit-sahara-atlas-3j"
+  | "sahara-dades-4j"
   | "grand-tour-3j"
   | "imperial-cities-8j"
   | "southern-coast-8j"

@@ -29,6 +29,7 @@ export type Dictionary = {
     login: string;
     from: string;
     perPerson: string;
+    perTrip: string;
     menu: string;
     discover: string;
     whatsapp: string;
@@ -83,7 +84,30 @@ export type Dictionary = {
     title: string;
     description: string;
     viewAll: string;
-    items: Record<string, { title: string; badge: string; description: string }>;
+    viewDetails: string;
+    resultsCount: string;
+    departure: string;
+    filters: {
+      title: string;
+      category: string;
+      destination: string;
+      difficulty: string;
+      duration: string;
+      budget: string;
+      all: string;
+      reset: string;
+    };
+    categories: Record<string, string>;
+    difficulties: Record<string, string>;
+    destinations: Record<string, string>;
+    footerIntro: string;
+    whyTitle: string;
+    why: { title: string; description: string }[];
+    faqs: { question: string; answer: string }[];
+    items: Record<
+      string,
+      { title: string; badge: string; duration: string; description: string }
+    >;
   };
   excursionDetail: {
     breadcrumbHome: string;
@@ -107,6 +131,9 @@ export type Dictionary = {
     reviews: string;
     from: string;
     perPerson: string;
+    perTrip: string;
+    tripPricing: string;
+    flatPriceNote: string;
     totalFor2: string;
     discover: string;
     readyTitle: string;

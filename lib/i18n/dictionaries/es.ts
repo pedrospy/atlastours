@@ -37,6 +37,7 @@ export const es: Dictionary = {
     login: "Iniciar sesión",
     from: "Desde",
     perPerson: "/pers.",
+    perTrip: "/viaje",
     menu: "Menú",
     discover: "Descubrir",
     whatsapp: "Red Nomad",
@@ -136,6 +137,13 @@ export const es: Dictionary = {
         description:
           "Lo esencial en 3 días: Alto Atlas, Aït Benhaddou, dunas de Merzouga, noche en campamento de lujo y regreso a Marrakech.",
       },
+      "sahara-dades-4j": {
+        title: "Sahara, Gargantas del Dadès y Merzouga — 4 días",
+        badge: "Desierto y gargantas",
+        duration: "4 días",
+        description:
+          "Aït Benhaddou, gargantas del Dadès y del Todra, Erg Chebbi en Merzouga, valle del Drâa y oasis de Fint — el gran sur en 4 días.",
+      },
       "grand-tour-3j": {
         title: "Marrakech — Chefchaouen 3 días",
         badge: "Ciudades imperiales",
@@ -170,32 +178,138 @@ export const es: Dictionary = {
     eyebrow: "Excursiones de un día",
     title: "Excursiones destacadas desde Marrakech",
     description:
-      "Un día, un guía local, su vehículo privado. De vuelta a su riad por la noche.",
+      "Los itinerarios que nuestros viajeros eligen una y otra vez — un día, un guía local, su vehículo privado.",
     viewAll: "Todas las excursiones",
-    items: {
-      ouzoud: {
-        title: "Cascadas de Ouzoud",
-        badge: "Más vendido",
+    viewDetails: "Ver detalles",
+    resultsCount: "{count} resultados",
+    departure: "Marrakech",
+    filters: {
+      title: "Filtros",
+      category: "Categoría",
+      destination: "Destino",
+      difficulty: "Dificultad",
+      duration: "Duración",
+      budget: "Presupuesto máx.",
+      all: "Todas",
+      reset: "Restablecer",
+    },
+    categories: {
+      nature: "Naturaleza",
+      culture: "Cultura",
+      coast: "Costa",
+      adventure: "Aventura",
+    },
+    difficulties: {
+      easy: "Fácil",
+      moderate: "Moderado",
+    },
+    destinations: { marrakech: "Marrakech" },
+    footerIntro:
+      "Todas nuestras excursiones de un día desde Marrakech: trekking en el Atlas, Aït Benhaddou, Cascadas de Ouzoud, Valle de Ourika, Essaouira. Operadas por nuestro equipo bereber local con traslados privados climatizados, guía francófono, agua mineral y almuerzo tradicional según programa.",
+    whyTitle: "¿Por qué reservar una excursión con nosotros?",
+    why: [
+      {
+        title: "Grupos pequeños",
         description:
-          "Las cascadas más altas de Marruecos (110 m), monos de Berbería en libertad, almuerzo frente a las cataratas.",
+          "Máximo 17 viajeros, normalmente de 2 a 8. Sin autobuses gigantes — más tiempo con su guía.",
+      },
+      {
+        title: "Rutas fuera de lo común",
+        description:
+          "Evitamos trampas turísticas. Nuestros guías favorecen encuentros auténticos con artesanos y familias bereberes.",
+      },
+      {
+        title: "Todo incluido, sin sorpresas",
+        description:
+          "Traslado privado, guía francófono, entradas indicadas, agua mineral, almuerzo según programa.",
+      },
+      {
+        title: "Confirmación rápida",
+        description:
+          "Reserva confirmada en menos de 2 h. Cancelación gratuita hasta 48 h antes del salida.",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Cuánto cuesta una excursión de un día en Marruecos?",
+        answer:
+          "Cuente 70–130 €/persona para excursiones clásicas (Ourika, 3 Valles). 130–200 €/persona para destinos más lejanos (Aït Benhaddou, Ouzoud, Essaouira).",
+      },
+      {
+        question: "¿Qué horarios tienen las excursiones?",
+        answer:
+          "Salida entre 7 y 9 h desde su hotel, regreso entre 17 y 20 h según destino.",
+      },
+      {
+        question: "¿Qué debo llevar?",
+        answer:
+          "Ropa cómoda, calzado cerrado, gorra, protector solar y cámara. Agua mineral incluida.",
+      },
+      {
+        question: "¿Son aptas para niños?",
+        answer: "Sí, la mayoría son familiares. Adaptamos el ritmo y ofrecemos sillas infantiles gratuitas.",
+      },
+      {
+        question: "¿Puedo privatizar una excursión?",
+        answer: "Sí, sin recargo importante. Control total de horarios y paradas.",
+      },
+    ],
+    items: {
+      ourika: {
+        title: "Valle de Ourika — Excursión privada 1 día",
+        badge: "Popular",
+        duration: "1 d",
+        description:
+          "Pueblos bereberes, cascadas espectaculares y vida auténtica a solo 1 h de Marrakech.",
+      },
+      imlil: {
+        title: "Imlil y Monte Toubkal — Senderismo Atlas",
+        badge: "Favorito",
+        duration: "1 d",
+        description:
+          "Explore Imlil (1740 m), puerta del Toubkal, douars bereberes y panoramas alpinos.",
+      },
+      "trois-vallees": {
+        title: "3 Valles del Alto Atlas — Día 4×4",
+        badge: "Nueva",
+        duration: "1 d",
+        description:
+          "Ourika, Setti Fatma y Oukaimeden (2650 m): lo mejor del Atlas en un día.",
+      },
+      ouzoud: {
+        title: "Cascadas de Ouzoud — Excursión 1 día",
+        badge: "Más vendido",
+        duration: "1 d",
+        description:
+          "Las cascadas más altas de Marruecos (110 m), monos de Berbería y olivares centenarios.",
       },
       essaouira: {
-        title: "Essaouira — Medina UNESCO",
+        title: "Essaouira — Medina UNESCO y costa atlántica",
         badge: "Popular",
+        duration: "1 d",
         description:
-          "Medina UNESCO, puerto pesquero, mariscos, ambiente bohemio a orillas del Atlántico.",
+          "Medina UNESCO, puerto pesquero, artesanía de thuya y luz atlántica única.",
       },
       "ait-benhaddou": {
-        title: "Aït Benhaddou y Ouarzazate",
+        title: "Aït Benhaddou UNESCO y Ouarzazate",
         badge: "Imprescindible",
+        duration: "1 d",
         description:
-          "Kasbah UNESCO de Aït Benhaddou, estudios Atlas, vistas sobre el Atlas.",
+          "Paso Tizi n'Tichka (2260 m), Kasbah UNESCO y Ouarzazate, Hollywood de África.",
       },
-      ourika: {
-        title: "Valle de Ourika",
-        badge: "Naturaleza",
+      casablanca: {
+        title: "Casablanca — Mezquita Hassan II, día privado",
+        badge: "Nuevo",
+        duration: "1 d",
         description:
-          "Excursión privada: cascadas Setti Fatma, cooperativa de argán, almuerzo tradicional junto al río.",
+          "Mezquita Hassan II (3ª del mundo), Art Déco y Corniche atlántica.",
+      },
+      "agadir-taghazout": {
+        title: "Agadir y Taghazout — Surf y playa atlántica",
+        badge: "Nueva",
+        duration: "1 d",
+        description:
+          "Descubra Agadir y el encanto de Taghazout, famoso pueblo de surf.",
       },
     },
   },
@@ -221,6 +335,9 @@ export const es: Dictionary = {
     reviews: "opiniones",
     from: "Desde",
     perPerson: "/ persona",
+    perTrip: "/ viaje",
+    tripPricing: "Tarifa del viaje",
+    flatPriceNote: "Precio fijo para su vehículo privado",
     totalFor2: "para 2 (total)",
     discover: "Descubrir",
     readyTitle: "¿Listo para la aventura?",

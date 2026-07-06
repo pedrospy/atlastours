@@ -109,6 +109,132 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         },
       ],
     },
+    "sahara-dades-4j": {
+      metaTitle:
+        "Sahara, Gorges du Dadès & Merzouga — 4 jours | Red Nomad",
+      metaDescription:
+        "Circuit 4 jours depuis Marrakech : Aït Benhaddou UNESCO, Gorges du Dadès et du Todra, Erg Chebbi à Merzouga, vallée du Drâa et oasis de Fint. Guide francophone.",
+      subtitle: "Désert, gorges et kasbahs du Sud",
+      difficulty: "Modéré",
+      duration: "4 jours",
+      groupSize: "1–17 personnes",
+      departure: "Marrakech",
+      languages: "Français, English",
+      about:
+        "Itinéraire en 4 jours : montée vers les Gorges du Dadès en passant par la kasbah d'Aït Benhaddou (UNESCO) ; découverte des Gorges du Todra à Tinghir puis le désert de Merzouga ; retour vers le nord par la vallée du Drâa et Agdez jusqu'à l'oasis de Fint et Ouarzazate ; dernière étape : retour à Marrakech par le Haut Atlas.",
+      highlights: [
+        "Aït Benhaddou (UNESCO)",
+        "Gorges du Dadès & Todra (Tinghir)",
+        "Erg Chebbi — Merzouga",
+        "Vallée du Drâa & Agdez",
+        "Oasis de Fint",
+      ],
+      itinerary: [
+        {
+          dayLabel: "J1",
+          title: "Marrakech → Gorges du Dadès (via Aït Benhaddou)",
+          description:
+            "Ascension de l'Atlas et immersion dans les kasbahs du Sud.",
+          steps: [
+            "07h00 — Départ de Marrakech, col du Tizi n'Tichka",
+            "Visite de la kasbah d'Aït Benhaddou, site classé UNESCO",
+            "Vallée des Roses et Gorges du Dadès",
+            "Promenade dans les gorges — dîner et nuit en kasbah au pied du Dadès",
+          ],
+        },
+        {
+          dayLabel: "J2",
+          title: "Gorges du Dadès → Tinghir (Todra) → Merzouga",
+          description:
+            "Des falaises de 300 m aux dunes dorées de l'Erg Chebbi.",
+          steps: [
+            "Route matinale vers Tinghir et les Gorges du Todra",
+            "Traversée du paysage désertique vers Merzouga",
+            "Balade à dos de chameau au coucher du soleil",
+            "Dîner berbère et nuit en camp de charme sous les étoiles",
+          ],
+        },
+        {
+          dayLabel: "J3",
+          title: "Merzouga → Agdez → Ouarzazate — Oasis de Fint",
+          description:
+            "Retour vers le nord par la palmeraie du Drâa et l'oasis secrète de Fint.",
+          steps: [
+            "Option lever de soleil sur les dunes",
+            "Route par la vallée du Drâa et Agdez",
+            "Arrivée à Ouarzazate — découverte de l'oasis de Fint",
+            "Dîner et nuit à Ouarzazate ou en kasbah à l'oasis de Fint",
+          ],
+        },
+        {
+          dayLabel: "J4",
+          title: "Ouarzazate / Fint → Marrakech",
+          description:
+            "Dernière étape à travers le Haut Atlas jusqu'à Marrakech.",
+          steps: [
+            "Petit-déjeuner à l'hébergement",
+            "Traversée du Haut Atlas par le col du Tichka",
+            "Arrêt photo possible à Aït Benhaddou selon l'horaire",
+            "Arrivée à Marrakech en fin d'après-midi",
+          ],
+        },
+      ],
+      included: [
+        "Transport au choix : 4×4, van de luxe ou minibus (selon groupe)",
+        "3 nuits (riad + camp + riad/kasbah)",
+        "Petits-déjeuners quotidiens",
+        "Dîner au camp berbère",
+        "Balade en dromadaire",
+        "Guide-chauffeur professionnel francophone",
+      ],
+      notIncluded: [
+        "Vols internationaux",
+        "Déjeuners",
+        "Dîners (sauf au camp du désert)",
+        "Entrées musées et monuments",
+        "Pourboires guide et personnel",
+        "Assurance voyage",
+      ],
+      groupPricing: [
+        { travelers: "2 voyageurs", price: "750 €/pers." },
+        { travelers: "3–4 voyageurs", price: "750 €/pers." },
+        { travelers: "5–8 voyageurs", price: "570 €/pers." },
+        { travelers: "9–10 voyageurs", price: "531 €/pers." },
+        { travelers: "11–17 voyageurs", price: "469 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "Peut-on annuler ce circuit sans frais ?",
+          answer:
+            "Oui, annulation gratuite jusqu'à 48 heures avant le départ. Au-delà, des frais peuvent s'appliquer selon les prestations engagées.",
+        },
+        {
+          question: "Qu'est-ce qui est inclus dans le prix ?",
+          answer:
+            "Le transport privé climatisé, 3 nuits d'hébergement, les petits-déjeuners, le dîner au camp, la balade en dromadaire et un guide francophone. Déjeuners, dîners hors camp et entrées sont en sus.",
+        },
+        {
+          question: "Quel type de véhicule est utilisé ?",
+          answer:
+            "4×4, van de luxe ou minibus selon la taille de votre groupe. Tous climatisés et entretenus pour le confort sur les longues routes du Sud.",
+        },
+        {
+          question: "Le lever de soleil sur les dunes est-il inclus ?",
+          answer:
+            "Oui, option gratuite le J3 matin avant le départ de Merzouga. Réveil tôt recommandé pour profiter des couleurs sur l'Erg Chebbi.",
+        },
+        {
+          question: "Quelle est la meilleure saison ?",
+          answer:
+            "Mars à mai et septembre à novembre offrent les températures les plus douces. Le circuit est opérable toute l'année.",
+        },
+        {
+          question: "Comment se paie le circuit ?",
+          answer:
+            "Acompte de 30 % à la réservation, solde avant le départ. Paiement par virement bancaire ou espèces. Devis détaillé sur demande.",
+        },
+      ],
+    },
     "grand-tour-3j": {
       metaTitle:
         "Circuit 3 jours Marrakech — Chefchaouen | Red Nomad",
@@ -771,6 +897,132 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         },
       ],
     },
+    "sahara-dades-4j": {
+      metaTitle:
+        "Sahara, Dades Gorges & Merzouga — 4 Days | Red Nomad",
+      metaDescription:
+        "4-day tour from Marrakech: UNESCO Aït Benhaddou, Dades and Todra gorges, Erg Chebbi at Merzouga, Drâa Valley and Fint oasis. French-speaking guide.",
+      subtitle: "Desert, gorges and southern kasbahs",
+      difficulty: "Moderate",
+      duration: "4 days",
+      groupSize: "1–17 people",
+      departure: "Marrakech",
+      languages: "French, English",
+      about:
+        "A 4-day itinerary: climb to the Dades Gorges via UNESCO Aït Benhaddou; discover Todra Gorges at Tinghir then the Merzouga desert; return north through the Drâa Valley and Agdez to Fint oasis and Ouarzazate; final leg back to Marrakech through the High Atlas.",
+      highlights: [
+        "Aït Benhaddou (UNESCO)",
+        "Dades & Todra Gorges (Tinghir)",
+        "Erg Chebbi — Merzouga",
+        "Drâa Valley & Agdez",
+        "Fint Oasis",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Marrakech → Dades Gorges (via Aït Benhaddou)",
+          description:
+            "Atlas crossing and immersion in southern kasbahs.",
+          steps: [
+            "7:00 AM — Departure from Marrakech, Tizi n'Tichka pass",
+            "Visit UNESCO Aït Benhaddou kasbah",
+            "Valley of Roses and Dades Gorges",
+            "Walk in the gorges — dinner and night in kasbah at the foot of Dades",
+          ],
+        },
+        {
+          dayLabel: "D2",
+          title: "Dades Gorges → Tinghir (Todra) → Merzouga",
+          description:
+            "From 300 m cliffs to the golden dunes of Erg Chebbi.",
+          steps: [
+            "Morning drive to Tinghir and Todra Gorges",
+            "Cross desert landscape to Merzouga",
+            "Camel ride at sunset",
+            "Berber dinner and night in luxury desert camp under the stars",
+          ],
+        },
+        {
+          dayLabel: "D3",
+          title: "Merzouga → Agdez → Ouarzazate — Fint Oasis",
+          description:
+            "Return north via Drâa palm grove and secret Fint oasis.",
+          steps: [
+            "Optional sunrise on the dunes",
+            "Drive through Drâa Valley and Agdez",
+            "Arrive in Ouarzazate — discover Fint oasis",
+            "Dinner and night in Ouarzazate or kasbah at Fint oasis",
+          ],
+        },
+        {
+          dayLabel: "D4",
+          title: "Ouarzazate / Fint → Marrakech",
+          description:
+            "Final leg through the High Atlas back to Marrakech.",
+          steps: [
+            "Breakfast at accommodation",
+            "Cross High Atlas via Tichka pass",
+            "Possible photo stop at Aït Benhaddou depending on schedule",
+            "Arrive in Marrakech late afternoon",
+          ],
+        },
+      ],
+      included: [
+        "Transport of choice: 4×4, luxury van or minibus (depending on group)",
+        "3 nights (riad + camp + riad/kasbah)",
+        "Daily breakfasts",
+        "Dinner at Berber camp",
+        "Camel ride",
+        "Professional French-speaking driver-guide",
+      ],
+      notIncluded: [
+        "International flights",
+        "Lunches",
+        "Dinners (except at desert camp)",
+        "Museum and monument entries",
+        "Tips for guide and staff",
+        "Travel insurance",
+      ],
+      groupPricing: [
+        { travelers: "2 travelers", price: "€750/person" },
+        { travelers: "3–4 travelers", price: "€750/person" },
+        { travelers: "5–8 travelers", price: "€570/person" },
+        { travelers: "9–10 travelers", price: "€531/person" },
+        { travelers: "11–17 travelers", price: "€469/person" },
+      ],
+      faqs: [
+        {
+          question: "Can I cancel this tour for free?",
+          answer:
+            "Yes, free cancellation up to 48 hours before departure. After that, fees may apply depending on services booked.",
+        },
+        {
+          question: "What is included in the price?",
+          answer:
+            "Private air-conditioned transport, 3 nights accommodation, breakfasts, dinner at camp, camel ride and French-speaking guide. Lunches, dinners outside camp and entries are extra.",
+        },
+        {
+          question: "What type of vehicle is used?",
+          answer:
+            "4×4, luxury van or minibus depending on group size. All air-conditioned and maintained for comfort on long southern routes.",
+        },
+        {
+          question: "Is sunrise on the dunes included?",
+          answer:
+            "Yes, free optional activity on D3 morning before leaving Merzouga. Early wake-up recommended to enjoy Erg Chebbi colors.",
+        },
+        {
+          question: "What is the best season?",
+          answer:
+            "March to May and September to November offer the mildest temperatures. The tour runs year-round.",
+        },
+        {
+          question: "How is payment handled?",
+          answer:
+            "30% deposit on booking, balance before departure. Bank transfer or cash. Detailed quote on request.",
+        },
+      ],
+    },
     "grand-tour-3j": {
       metaTitle:
         "3-Day Marrakech — Chefchaouen Tour | Red Nomad",
@@ -1430,6 +1682,132 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
         },
       ],
     },
+    "sahara-dades-4j": {
+      metaTitle:
+        "Sahara, Gargantas del Dadès y Merzouga — 4 días | Red Nomad",
+      metaDescription:
+        "Circuito de 4 días desde Marrakech: Aït Benhaddou UNESCO, gargantas del Dadès y Todra, Erg Chebbi en Merzouga, valle del Drâa y oasis de Fint.",
+      subtitle: "Desierto, gargantas y kasbahs del Sur",
+      difficulty: "Moderado",
+      duration: "4 días",
+      groupSize: "1–17 personas",
+      departure: "Marrakech",
+      languages: "Francés, inglés",
+      about:
+        "Itinerario de 4 días: subida a las Gargantas del Dadès pasando por la kasbah de Aït Benhaddou (UNESCO); descubrimiento de las Gargantas del Todra en Tinghir y el desierto de Merzouga; regreso al norte por el valle del Drâa y Agdez hasta el oasis de Fint y Ouarzazate; última etapa: regreso a Marrakech por el Alto Atlas.",
+      highlights: [
+        "Aït Benhaddou (UNESCO)",
+        "Gargantas del Dadès y Todra (Tinghir)",
+        "Erg Chebbi — Merzouga",
+        "Valle del Drâa y Agdez",
+        "Oasis de Fint",
+      ],
+      itinerary: [
+        {
+          dayLabel: "D1",
+          title: "Marrakech → Gargantas del Dadès (vía Aït Benhaddou)",
+          description:
+            "Ascenso del Atlas e inmersión en las kasbahs del Sur.",
+          steps: [
+            "07:00 — Salida de Marrakech, paso del Tizi n'Tichka",
+            "Visita de la kasbah de Aït Benhaddou, patrimonio UNESCO",
+            "Valle de las Rosas y Gargantas del Dadès",
+            "Paseo por las gargantas — cena y noche en kasbah al pie del Dadès",
+          ],
+        },
+        {
+          dayLabel: "D2",
+          title: "Gargantas del Dadès → Tinghir (Todra) → Merzouga",
+          description:
+            "De acantilados de 300 m a las dunas doradas del Erg Chebbi.",
+          steps: [
+            "Ruta matinal hacia Tinghir y las Gargantas del Todra",
+            "Travesía del paisaje desértico hacia Merzouga",
+            "Paseo en camello al atardecer",
+            "Cena bereber y noche en campamento de lujo bajo las estrellas",
+          ],
+        },
+        {
+          dayLabel: "D3",
+          title: "Merzouga → Agdez → Ouarzazate — Oasis de Fint",
+          description:
+            "Regreso al norte por la palmera del Drâa y el oasis secreto de Fint.",
+          steps: [
+            "Opción amanecer en las dunas",
+            "Ruta por el valle del Drâa y Agdez",
+            "Llegada a Ouarzazate — descubrimiento del oasis de Fint",
+            "Cena y noche en Ouarzazate o kasbah en el oasis de Fint",
+          ],
+        },
+        {
+          dayLabel: "D4",
+          title: "Ouarzazate / Fint → Marrakech",
+          description:
+            "Última etapa a través del Alto Atlas de regreso a Marrakech.",
+          steps: [
+            "Desayuno en el alojamiento",
+            "Travesía del Alto Atlas por el paso del Tichka",
+            "Posible parada fotográfica en Aït Benhaddou según horario",
+            "Llegada a Marrakech a última hora de la tarde",
+          ],
+        },
+      ],
+      included: [
+        "Transporte a elegir: 4×4, furgoneta de lujo o minibús (según grupo)",
+        "3 noches (riad + campamento + riad/kasbah)",
+        "Desayunos diarios",
+        "Cena en campamento bereber",
+        "Paseo en camello",
+        "Guía-conductor profesional de habla francesa",
+      ],
+      notIncluded: [
+        "Vuelos internacionales",
+        "Almuerzos",
+        "Cenas (excepto en el campamento del desierto)",
+        "Entradas a museos y monumentos",
+        "Propinas para guía y personal",
+        "Seguro de viaje",
+      ],
+      groupPricing: [
+        { travelers: "2 viajeros", price: "750 €/pers." },
+        { travelers: "3–4 viajeros", price: "750 €/pers." },
+        { travelers: "5–8 viajeros", price: "570 €/pers." },
+        { travelers: "9–10 viajeros", price: "531 €/pers." },
+        { travelers: "11–17 viajeros", price: "469 €/pers." },
+      ],
+      faqs: [
+        {
+          question: "¿Se puede cancelar sin coste?",
+          answer:
+            "Sí, cancelación gratuita hasta 48 horas antes de la salida. Después, pueden aplicarse tasas según los servicios reservados.",
+        },
+        {
+          question: "¿Qué incluye el precio?",
+          answer:
+            "Transporte privado climatizado, 3 noches de alojamiento, desayunos, cena en el campamento, paseo en camello y guía de habla francesa. Almuerzos, cenas fuera del campamento y entradas no incluidos.",
+        },
+        {
+          question: "¿Qué tipo de vehículo se utiliza?",
+          answer:
+            "4×4, furgoneta de lujo o minibús según el tamaño del grupo. Todos climatizados y mantenidos para el confort en las largas rutas del Sur.",
+        },
+        {
+          question: "¿Está incluido el amanecer en las dunas?",
+          answer:
+            "Sí, actividad opcional gratuita la mañana del D3 antes de salir de Merzouga. Se recomienda madrugar para disfrutar de los colores del Erg Chebbi.",
+        },
+        {
+          question: "¿Cuál es la mejor temporada?",
+          answer:
+            "Marzo a mayo y septiembre a noviembre ofrecen las temperaturas más suaves. El circuito opera todo el año.",
+        },
+        {
+          question: "¿Cómo se realiza el pago?",
+          answer:
+            "Anticipo del 30 % en la reserva, saldo antes de la salida. Transferencia bancaria o efectivo. Presupuesto detallado bajo petición.",
+        },
+      ],
+    },
     "grand-tour-3j": {
       metaTitle:
         "Circuito 3 días Marrakech — Chefchaouen | Red Nomad",
@@ -2086,6 +2464,132 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
           question: "Wie buchen?",
           answer:
             "Kontakt per WhatsApp oder E-Mail. 30 % Anzahlung, Rest bei Ankunft.",
+        },
+      ],
+    },
+    "sahara-dades-4j": {
+      metaTitle:
+        "Sahara, Dadès-Schluchten & Merzouga — 4 Tage | Red Nomad",
+      metaDescription:
+        "4-Tage-Tour ab Marrakesch: UNESCO Aït Benhaddou, Dadès- und Todra-Schluchten, Erg Chebbi in Merzouga, Drâa-Tal und Fint-Oase.",
+      subtitle: "Wüste, Schluchten und Kasbahs des Südens",
+      difficulty: "Mittel",
+      duration: "4 Tage",
+      groupSize: "1–17 Personen",
+      departure: "Marrakesch",
+      languages: "Französisch, Englisch",
+      about:
+        "4-Tage-Route: Aufstieg zu den Dadès-Schluchten über die UNESCO-Kasbah Aït Benhaddou; Entdeckung der Todra-Schluchten bei Tinghir und der Merzouga-Wüste; Rückfahrt nach Norden durch das Drâa-Tal und Agdez bis zur Fint-Oase und Ouarzazate; letzte Etappe: Rückkehr nach Marrakesch über den Hohen Atlas.",
+      highlights: [
+        "Aït Benhaddou (UNESCO)",
+        "Dadès- & Todra-Schluchten (Tinghir)",
+        "Erg Chebbi — Merzouga",
+        "Drâa-Tal & Agdez",
+        "Fint-Oase",
+      ],
+      itinerary: [
+        {
+          dayLabel: "T1",
+          title: "Marrakesch → Dadès-Schluchten (via Aït Benhaddou)",
+          description:
+            "Atlas-Überquerung und Eintauchen in die Kasbahs des Südens.",
+          steps: [
+            "07:00 — Abfahrt Marrakesch, Pass Tizi n'Tichka",
+            "Besuch der UNESCO-Kasbah Aït Benhaddou",
+            "Tal der Rosen und Dadès-Schluchten",
+            "Spaziergang in den Schluchten — Abendessen und Nacht in Kasbah am Fuß des Dadès",
+          ],
+        },
+        {
+          dayLabel: "T2",
+          title: "Dadès-Schluchten → Tinghir (Todra) → Merzouga",
+          description:
+            "Von 300 m hohen Klippen zu den goldenen Dünen des Erg Chebbi.",
+          steps: [
+            "Morgendliche Fahrt nach Tinghir und Todra-Schluchten",
+            "Durchquerung der Wüstenlandschaft nach Merzouga",
+            "Kamelritt bei Sonnenuntergang",
+            "Berberisches Abendessen und Nacht im Luxus-Wüstencamp unter den Sternen",
+          ],
+        },
+        {
+          dayLabel: "T3",
+          title: "Merzouga → Agdez → Ouarzazate — Fint-Oase",
+          description:
+            "Rückfahrt nach Norden durch die Drâa-Palmenhaine und die geheime Fint-Oase.",
+          steps: [
+            "Optional Sonnenaufgang auf den Dünen",
+            "Fahrt durch das Drâa-Tal und Agdez",
+            "Ankunft in Ouarzazate — Entdeckung der Fint-Oase",
+            "Abendessen und Nacht in Ouarzazate oder Kasbah an der Fint-Oase",
+          ],
+        },
+        {
+          dayLabel: "T4",
+          title: "Ouarzazate / Fint → Marrakesch",
+          description:
+            "Letzte Etappe durch den Hohen Atlas zurück nach Marrakesch.",
+          steps: [
+            "Frühstück in der Unterkunft",
+            "Überquerung des Hohen Atlas über den Tichka-Pass",
+            "Möglicher Fotostopp in Aït Benhaddou je nach Zeitplan",
+            "Ankunft in Marrakesch am späten Nachmittag",
+          ],
+        },
+      ],
+      included: [
+        "Transport nach Wahl: 4×4, Luxus-Van oder Minibus (je nach Gruppe)",
+        "3 Nächte (Riad + Camp + Riad/Kasbah)",
+        "Tägliche Frühstücke",
+        "Abendessen im Berber-Camp",
+        "Kamelritt",
+        "Professioneller französischsprachiger Fahrer-Guide",
+      ],
+      notIncluded: [
+        "Internationale Flüge",
+        "Mittagessen",
+        "Abendessen (außer im Wüstencamp)",
+        "Museums- und Denkmaleintritte",
+        "Trinkgelder für Guide und Personal",
+        "Reiseversicherung",
+      ],
+      groupPricing: [
+        { travelers: "2 Reisende", price: "750 €/Pers." },
+        { travelers: "3–4 Reisende", price: "750 €/Pers." },
+        { travelers: "5–8 Reisende", price: "570 €/Pers." },
+        { travelers: "9–10 Reisende", price: "531 €/Pers." },
+        { travelers: "11–17 Reisende", price: "469 €/Pers." },
+      ],
+      faqs: [
+        {
+          question: "Kann ich kostenlos stornieren?",
+          answer:
+            "Ja, kostenlose Stornierung bis 48 Stunden vor Abfahrt. Danach können je nach gebuchten Leistungen Gebühren anfallen.",
+        },
+        {
+          question: "Was ist im Preis enthalten?",
+          answer:
+            "Privater klimatisierter Transport, 3 Übernachtungen, Frühstücke, Abendessen im Camp, Kamelritt und französischsprachiger Guide. Mittagessen, Abendessen außerhalb des Camps und Eintritte nicht inbegriffen.",
+        },
+        {
+          question: "Welches Fahrzeug wird eingesetzt?",
+          answer:
+            "4×4, Luxus-Van oder Minibus je nach Gruppengröße. Alle klimatisiert und gewartet für Komfort auf langen Südrouten.",
+        },
+        {
+          question: "Ist der Sonnenaufgang auf den Dünen inbegriffen?",
+          answer:
+            "Ja, kostenlose optionale Aktivität am T3-Morgen vor der Abfahrt aus Merzouga. Frühes Aufstehen empfohlen, um die Farben des Erg Chebbi zu genießen.",
+        },
+        {
+          question: "Welche Jahreszeit ist am besten?",
+          answer:
+            "März bis Mai und September bis November bieten die mildesten Temperaturen. Die Tour ist ganzjährig möglich.",
+        },
+        {
+          question: "Wie erfolgt die Zahlung?",
+          answer:
+            "30 % Anzahlung bei Buchung, Rest vor Abfahrt. Banküberweisung oder bar. Detailliertes Angebot auf Anfrage.",
         },
       ],
     },

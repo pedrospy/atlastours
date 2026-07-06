@@ -8,7 +8,15 @@ export type {
   ExperienceDetailsByLocale,
 } from "@/lib/experiences/types";
 
-export type ExcursionId = "ouzoud" | "essaouira" | "ait-benhaddou" | "ourika";
+export type ExcursionId =
+  | "ourika"
+  | "imlil"
+  | "trois-vallees"
+  | "ouzoud"
+  | "essaouira"
+  | "ait-benhaddou"
+  | "casablanca"
+  | "agadir-taghazout";
 
 export type ExcursionDetailContent = ExperienceDetailContent;
 

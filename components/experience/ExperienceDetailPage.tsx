@@ -19,6 +19,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { getWhatsAppUrl, siteConfig } from "@/lib/catalog";
 import type { ExperienceDetailContent } from "@/lib/experiences/types";
+import { getTwoTravelerTotal } from "@/lib/experiences/pricing";
 import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
 
 type CatalogItem = {
@@ -59,6 +60,8 @@ export function ExperienceDetailPage({
   const t = dict.excursionDetail;
   const why = dict.whyUs;
   const whatsappMessage = `${dict.common.whatsappMessage} — ${cardTitle}`;
+  const twoTravelerTotal =
+    !item.flatPrice ? getTwoTravelerTotal(detail) ?? item.price * 2 : null;
 
   return (
     <main className="overflow-x-hidden">
@@ -256,13 +259,15 @@ export function ExperienceDetailPage({
               <p className="text-xs uppercase tracking-wider text-midnight/50">{t.from}</p>
               <p className={`font-display text-4xl font-bold ${textClasses?.price ?? "text-midnight"}`}>
                 {formatPrice(item.price, locale)}
-                {!item.flatPrice ? (
+                {item.flatPrice ? (
+                  <span className="text-base font-normal text-midnight/50">{t.perTrip}</span>
+                ) : (
                   <span className="text-base font-normal text-midnight/50">{t.perPerson}</span>
-                ) : null}
+                )}
               </p>
-              {!item.flatPrice ? (
+              {!item.flatPrice && twoTravelerTotal != null ? (
                 <p className="mt-1 text-sm text-midnight/50">
-                  {formatPrice(item.price * 2, locale)} {t.totalFor2}
+                  {formatPrice(twoTravelerTotal, locale)} {t.totalFor2}
                 </p>
               ) : null}
 
@@ -281,15 +286,29 @@ export function ExperienceDetailPage({
                 </div>
               </div>
 
-              <h4 className="mt-6 text-sm font-semibold text-midnight">{t.groupPricing}</h4>
-              <ul className="mt-3 space-y-2">
-                {detail.groupPricing.map((tier) => (
-                  <li key={tier.travelers} className="flex justify-between text-sm text-midnight/75">
-                    <span>{tier.travelers}</span>
-                    <span className={`font-medium ${textClasses?.price ?? "text-midnight"}`}>{tier.price}</span>
-                  </li>
-                ))}
-              </ul>
+              <h4 className="mt-6 text-sm font-semibold text-midnight">
+                {item.flatPrice ? t.tripPricing : t.groupPricing}
+              </h4>
+              {item.flatPrice ? (
+                <div className="mt-3 space-y-2">
+                  <div className="flex justify-between text-sm text-midnight/75">
+                    <span>{detail.groupSize}</span>
+                    <span className={`font-medium ${textClasses?.price ?? "text-midnight"}`}>
+                      {formatPrice(item.price, locale)}
+                    </span>
+                  </div>
+                  <p className="text-xs text-midnight/55">{t.flatPriceNote}</p>
+                </div>
+              ) : (
+                <ul className="mt-3 space-y-2">
+                  {detail.groupPricing.map((tier) => (
+                    <li key={tier.travelers} className="flex justify-between text-sm text-midnight/75">
+                      <span>{tier.travelers}</span>
+                      <span className={`font-medium ${textClasses?.price ?? "text-midnight"}`}>{tier.price}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
               <div className="mt-6 space-y-3">
                 <a href={getWhatsAppUrl(whatsappMessage)} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">

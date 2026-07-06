@@ -1,4 +1,10 @@
 import type { ExcursionDetailsByLocale } from "./types";
+import {
+  extraExcursionDetailsDe,
+  extraExcursionDetailsEn,
+  extraExcursionDetailsEs,
+  extraExcursionDetailsFr,
+} from "./extra-details";
 
 export const excursionDetails: ExcursionDetailsByLocale = {
   fr: {
@@ -297,11 +303,11 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Pourboires (usage local)",
       ],
       groupPricing: [
-        { travelers: "2 voyageurs", price: "11 €/pers." },
-        { travelers: "3–4 voyageurs", price: "36–48 €/pers." },
-        { travelers: "5–7 voyageurs", price: "22–30 €/pers." },
-        { travelers: "8–14 voyageurs", price: "13–22 €/pers." },
-        { travelers: "15–17 voyageurs", price: "14 €/pers." },
+        { travelers: "2 voyageurs", price: "97 €/pers." },
+        { travelers: "3–4 voyageurs", price: "72 €/pers." },
+        { travelers: "5–7 voyageurs", price: "56 €/pers." },
+        { travelers: "8–14 voyageurs", price: "47 €/pers." },
+        { travelers: "15–17 voyageurs", price: "42 €/pers." },
       ],
       faqs: [
         {
@@ -325,6 +331,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         },
       ],
     },
+    ...extraExcursionDetailsFr,
   },
   en: {
     "ait-benhaddou": {
@@ -611,11 +618,11 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Tips (local custom)",
       ],
       groupPricing: [
-        { travelers: "2 travelers", price: "€11/person" },
-        { travelers: "3–4 travelers", price: "€36–48/person" },
-        { travelers: "5–7 travelers", price: "€22–30/person" },
-        { travelers: "8–14 travelers", price: "€13–22/person" },
-        { travelers: "15–17 travelers", price: "€14/person" },
+        { travelers: "2 travelers", price: "€97/person" },
+        { travelers: "3–4 travelers", price: "€72/person" },
+        { travelers: "5–7 travelers", price: "€56/person" },
+        { travelers: "8–14 travelers", price: "€47/person" },
+        { travelers: "15–17 travelers", price: "€42/person" },
       ],
       faqs: [
         {
@@ -639,6 +646,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         },
       ],
     },
+    ...extraExcursionDetailsEn,
   },
   es: {
     "ait-benhaddou": {
@@ -924,11 +932,11 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Propinas (costumbre local)",
       ],
       groupPricing: [
-        { travelers: "2 viajeros", price: "11 €/pers." },
-        { travelers: "3–4 viajeros", price: "36–48 €/pers." },
-        { travelers: "5–7 viajeros", price: "22–30 €/pers." },
-        { travelers: "8–14 viajeros", price: "13–22 €/pers." },
-        { travelers: "15–17 viajeros", price: "14 €/pers." },
+        { travelers: "2 viajeros", price: "97 €/pers." },
+        { travelers: "3–4 viajeros", price: "72 €/pers." },
+        { travelers: "5–7 viajeros", price: "56 €/pers." },
+        { travelers: "8–14 viajeros", price: "47 €/pers." },
+        { travelers: "15–17 viajeros", price: "42 €/pers." },
       ],
       faqs: [
         {
@@ -952,6 +960,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         },
       ],
     },
+    ...extraExcursionDetailsEs,
   },
   de: {
     "ait-benhaddou": {
@@ -1237,11 +1246,11 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         "Trinkgelder (lokaler Brauch)",
       ],
       groupPricing: [
-        { travelers: "2 Reisende", price: "11 €/Pers." },
-        { travelers: "3–4 Reisende", price: "36–48 €/Pers." },
-        { travelers: "5–7 Reisende", price: "22–30 €/Pers." },
-        { travelers: "8–14 Reisende", price: "13–22 €/Pers." },
-        { travelers: "15–17 Reisende", price: "14 €/Pers." },
+        { travelers: "2 Reisende", price: "97 €/Pers." },
+        { travelers: "3–4 Reisende", price: "72 €/Pers." },
+        { travelers: "5–7 Reisende", price: "56 €/Pers." },
+        { travelers: "8–14 Reisende", price: "47 €/Pers." },
+        { travelers: "15–17 Reisende", price: "42 €/Pers." },
       ],
       faqs: [
         {
@@ -1265,5 +1274,6 @@ export const excursionDetails: ExcursionDetailsByLocale = {
         },
       ],
     },
+    ...extraExcursionDetailsDe,
   },
 };

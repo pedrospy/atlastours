@@ -35,6 +35,18 @@ export const circuits = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Desert_Merzouga_Morocco_Meditation.jpg/1280px-Desert_Merzouga_Morocco_Meditation.jpg",
   },
   {
+    id: "sahara-dades-4j",
+    title: "Sahara, Gorges du Dadès & Merzouga — 4 jours",
+    badge: "Best-seller",
+    duration: "4 jours",
+    description:
+      "Aït Benhaddou UNESCO, Gorges du Dadès et du Todra, Erg Chebbi à Merzouga, vallée du Drâa et oasis de Fint — le grand classique du Sud en 4 jours.",
+    rating: 4.8,
+    reviews: 62,
+    price: 750,
+    image: "/images/dest-merzouga-dunes.jpg",
+  },
+  {
     id: "grand-tour-3j",
     title: "Marrakech — Chefchaouen 3 jours",
     badge: "Villes impériales",
@@ -86,33 +98,70 @@ export const circuits = [
 
 export const excursions = [
   {
+    id: "ourika",
+    title: "Vallée de l'Ourika — Excursion privée 1 jour",
+    badge: "Populaire",
+    duration: "1 jour",
+    description:
+      "Villages berbères, cascades spectaculaires et vie authentique à seulement 1 h de Marrakech.",
+    rating: 4.8,
+    reviews: 94,
+    price: 72,
+    image: "/images/dest-ourika-valley.jpg",
+  },
+  {
+    id: "imlil",
+    title: "Imlil & Mont Toubkal — Randonnée Haut Atlas",
+    badge: "Coup de cœur",
+    duration: "1 jour",
+    description:
+      "Explorez Imlil (1740 m), porte du Toubkal, ses douars berbères et ses panoramas alpins.",
+    rating: 4.9,
+    reviews: 78,
+    price: 84,
+    image: "/images/dest-megdaz-atlas.jpg",
+  },
+  {
+    id: "trois-vallees",
+    title: "Les 3 Vallées du Haut Atlas — Journée 4×4",
+    badge: "Nouvelle excursion",
+    duration: "1 jour",
+    description:
+      "Ourika, Setti Fatma et Oukaimeden (2650 m) : le meilleur du Haut Atlas en une journée.",
+    rating: 4.8,
+    reviews: 56,
+    price: 102,
+    image: "/images/dest-ourika-waterfall.jpg",
+  },
+  {
     id: "ouzoud",
     title: "Cascades d'Ouzoud",
     badge: "Best-seller",
+    duration: "1 jour",
     description:
       "Les plus grandes cascades du Maroc (110m), singes magots en liberté, déjeuner face aux chutes.",
     rating: 4.9,
     reviews: 112,
     price: 150,
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ouzoud_Falls%2C_Morocco%2C_20250126_1355_7465.jpg/1280px-Ouzoud_Falls%2C_Morocco%2C_20250126_1355_7465.jpg",
+    image: "/images/dest-ouzoud-falls.png",
   },
   {
     id: "essaouira",
     title: "Essaouira — Médina UNESCO",
     badge: "Populaire",
+    duration: "1 jour",
     description:
       "Médina UNESCO, port de pêche, fruits de mer, ambiance bohème au bord de l'Atlantique.",
     rating: 4.8,
     reviews: 103,
     price: 290,
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Blue_Fishing_Boat_and_Medina_Walls%2C_Essaouira%2C_Morocco.jpg/1280px-Blue_Fishing_Boat_and_Medina_Walls%2C_Essaouira%2C_Morocco.jpg",
+    image: "/images/dest-essaouira-coast.jpg",
   },
   {
     id: "ait-benhaddou",
     title: "Aït Benhaddou & Ouarzazate",
     badge: "Incontournable",
+    duration: "1 jour",
     description:
       "Kasbah UNESCO d'Aït Benhaddou, studios Atlas, vues sur l'Atlas.",
     rating: 4.9,
@@ -121,16 +170,28 @@ export const excursions = [
     image: "/images/dest-ait-benhaddou.jpg",
   },
   {
-    id: "ourika",
-    title: "Vallée de l'Ourika",
-    badge: "Nature",
+    id: "casablanca",
+    title: "Casablanca — Mosquée Hassan II",
+    badge: "Nouveau",
+    duration: "1 jour",
     description:
-      "Villages berbères, cascade Setti Fatma, marché authentique au cœur du Haut Atlas.",
+      "Mosquée Hassan II, Art Déco et Corniche atlantique depuis Marrakech.",
+    rating: 4.7,
+    reviews: 45,
+    price: 156,
+    image: "/images/circuit-casablanca-mosque.jpg",
+  },
+  {
+    id: "agadir-taghazout",
+    title: "Agadir & Taghazout — Surf & plage",
+    badge: "Nouvelle excursion",
+    duration: "1 jour",
+    description:
+      "Agadir et Taghazout, village de surf sur la côte atlantique.",
     rating: 4.8,
-    reviews: 134,
-    price: 72,
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ourika_Valley%2C_Morocco_%285218373547%29.jpg/1280px-Ourika_Valley%2C_Morocco_%285218373547%29.jpg",
+    reviews: 18,
+    price: 125,
+    image: "/images/dest-agadir-beach.jpg",
   },
 ];
 

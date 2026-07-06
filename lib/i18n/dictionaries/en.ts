@@ -37,6 +37,7 @@ export const en: Dictionary = {
     login: "Sign in",
     from: "From",
     perPerson: "/person",
+    perTrip: "/trip",
     menu: "Menu",
     discover: "Discover",
     whatsapp: "Red Nomad",
@@ -136,6 +137,13 @@ export const en: Dictionary = {
         description:
           "The essentials in 3 days: High Atlas, Aït Benhaddou, Merzouga dunes, luxury desert camp night and return to Marrakech.",
       },
+      "sahara-dades-4j": {
+        title: "Sahara, Dades Gorges & Merzouga — 4 Days",
+        badge: "Desert & gorges",
+        duration: "4 days",
+        description:
+          "Aït Benhaddou, Dades and Todra gorges, Erg Chebbi at Merzouga, Drâa Valley and Fint oasis — the great south in 4 days.",
+      },
       "grand-tour-3j": {
         title: "Marrakech — Chefchaouen 3 Days",
         badge: "Imperial cities",
@@ -170,32 +178,142 @@ export const en: Dictionary = {
     eyebrow: "Day trips",
     title: "Top day trips from Marrakech",
     description:
-      "One day, a local guide, your private vehicle. Back at your riad in the evening.",
+      "The routes our travelers choose again and again — one day, a local guide, your private vehicle.",
     viewAll: "All day trips",
-    items: {
-      ouzoud: {
-        title: "Ouzoud Waterfalls",
-        badge: "Best seller",
+    viewDetails: "View details",
+    resultsCount: "{count} results",
+    departure: "Marrakech",
+    filters: {
+      title: "Filters",
+      category: "Category",
+      destination: "Destination",
+      difficulty: "Difficulty",
+      duration: "Duration",
+      budget: "Max budget",
+      all: "All",
+      reset: "Reset",
+    },
+    categories: {
+      nature: "Nature",
+      culture: "Culture",
+      coast: "Coast",
+      adventure: "Adventure",
+    },
+    difficulties: {
+      easy: "Easy",
+      moderate: "Moderate",
+    },
+    destinations: {
+      marrakech: "Marrakech",
+    },
+    footerIntro:
+      "All our day trips from Marrakech: Atlas trekking, Aït Benhaddou, Ouzoud waterfalls, Ourika Valley, Essaouira. Operated by our local Berber team with private air-conditioned transfers, French-speaking guide, complimentary water and traditional lunch included per programme.",
+    whyTitle: "Why book a day trip with us?",
+    why: [
+      {
+        title: "Small groups",
         description:
-          "Morocco's tallest waterfalls (110m), wild Barbary macaques, lunch facing the falls.",
+          "Maximum 17 travelers, usually 2 to 8. No giant buses — more time with your guide and more spontaneous stops.",
+      },
+      {
+        title: "Off-the-beaten-path routes",
+        description:
+          "We avoid tourist traps. Our guides favor real encounters: local artisans, Berber families, village cooking.",
+      },
+      {
+        title: "All-inclusive, no surprises",
+        description:
+          "Private transfer, French-speaking guide, site entries as stated, mineral water, traditional lunch per programme. No hidden fees.",
+      },
+      {
+        title: "Fast confirmation",
+        description:
+          "Booking confirmed within 2 hours. Free cancellation up to 48 hours before departure. Secure card payment or bank transfer.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does a day trip cost in Morocco?",
+        answer:
+          "Expect €70–130/person for classic trips (Ourika, 3 Valleys) in a small group. €130–200/person for farther destinations (Aït Benhaddou, Ouzoud, Essaouira). Rates include transfers, guide and water — lunch included per programme.",
+      },
+      {
+        question: "What are the typical schedules?",
+        answer:
+          "Departure between 7–9 AM from your hotel or riad, return between 5–8 PM depending on destination. For Aït Benhaddou, Ouzoud or Essaouira, plan a full day (10–12 hours).",
+      },
+      {
+        question: "What should I bring?",
+        answer:
+          "Comfortable clothes, closed shoes, hat, sunscreen, sunglasses and camera. Mineral water is provided. For Imlil or the Atlas, a fleece is useful even in summer.",
+      },
+      {
+        question: "Are trips suitable for children?",
+        answer:
+          "Yes, most are family-friendly. We adapt pace, provide free child seats and frequent breaks. Contact us for very young children.",
+      },
+      {
+        question: "Can I privatize an excursion?",
+        answer:
+          "Yes, without a large surcharge. You control schedules, stops and breaks. For 4 people, private rates are often less than 15% above shared rates.",
+      },
+    ],
+    items: {
+      ourika: {
+        title: "Ourika Valley — Private 1-day trip",
+        badge: "Popular",
+        duration: "1 d",
+        description:
+          "Berber villages, spectacular waterfalls and authentic life just 1 hour from Marrakech.",
+      },
+      imlil: {
+        title: "Imlil & Mount Toubkal — High Atlas hike",
+        badge: "Favorite",
+        duration: "1 d",
+        description:
+          "Explore Imlil (1740 m), gateway to Toubkal, Berber hamlets and breathtaking alpine views.",
+      },
+      "trois-vallees": {
+        title: "3 High Atlas Valleys — 4×4 day trip",
+        badge: "New",
+        duration: "1 d",
+        description:
+          "Ourika, Setti Fatma and Oukaimeden (2650 m): the best of the High Atlas in one day.",
+      },
+      ouzoud: {
+        title: "Ouzoud Waterfalls — Day trip",
+        badge: "Best seller",
+        duration: "1 d",
+        description:
+          "Morocco's tallest waterfalls (110 m), wild Barbary macaques and ancient olive groves.",
       },
       essaouira: {
-        title: "Essaouira — UNESCO Medina",
+        title: "Essaouira — UNESCO medina & Atlantic coast",
         badge: "Popular",
+        duration: "1 d",
         description:
-          "UNESCO medina, fishing port, seafood, bohemian vibes on the Atlantic coast.",
+          "UNESCO medina, lively fishing port, thuya crafts and unique Atlantic light.",
       },
       "ait-benhaddou": {
-        title: "Aït Benhaddou & Ouarzazate",
+        title: "Aït Benhaddou UNESCO & Ouarzazate",
         badge: "Must-see",
+        duration: "1 d",
         description:
-          "UNESCO kasbah of Aït Benhaddou, Atlas Studios, views over the Atlas Mountains.",
+          "Tizi n'Tichka pass (2260 m), UNESCO Aït Benhaddou kasbah and Ouarzazate, Africa's Hollywood.",
       },
-      ourika: {
-        title: "Ourika Valley",
-        badge: "Nature",
+      casablanca: {
+        title: "Casablanca — Hassan II Mosque private day",
+        badge: "New",
+        duration: "1 d",
         description:
-          "Private trip: Setti Fatma waterfalls, argan cooperative, traditional riverside lunch.",
+          "Hassan II Mosque (3rd largest in the world), 1930s Art Deco and Atlantic corniche.",
+      },
+      "agadir-taghazout": {
+        title: "Agadir & Taghazout — Surf & Atlantic beach",
+        badge: "New",
+        duration: "1 d",
+        description:
+          "Discover Agadir and charming Taghazout, the famous surf village on the Atlantic coast.",
       },
     },
   },
@@ -221,6 +339,9 @@ export const en: Dictionary = {
     reviews: "reviews",
     from: "From",
     perPerson: "/ person",
+    perTrip: "/ trip",
+    tripPricing: "Trip rate",
+    flatPriceNote: "Flat rate for your private vehicle",
     totalFor2: "for 2 (total)",
     discover: "Discover",
     readyTitle: "Ready for the adventure?",
