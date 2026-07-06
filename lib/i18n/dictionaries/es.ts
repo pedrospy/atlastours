@@ -25,7 +25,7 @@ export const es: Dictionary = {
   },
   nav: {
     destinations: { label: "Destinos", href: "#destinations" },
-    excursions: { label: "Excursiones", href: "#excursions" },
+    excursions: { label: "Excursiones", href: "/excursions" },
     circuits: { label: "Circuitos", href: "#circuits" },
     activities: { label: "Actividades", href: "#activites" },
     transfers: { label: "Traslados", href: "#transferts" },

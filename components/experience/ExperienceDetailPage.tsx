@@ -41,7 +41,7 @@ type Props = {
     title: string;
     price: string;
   };
-  listAnchor: "#excursions" | "#circuits" | "#destinations";
+  listAnchor: "#excursions" | "/excursions" | "#circuits" | "#destinations";
   listLabel: string;
 };
 

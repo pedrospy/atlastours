@@ -31,7 +31,11 @@ const defaultFilters: Filters = {
   maxBudget: BUDGET_MAX,
 };
 
-export function ExcursionsSection() {
+type Props = {
+  variant?: "embed" | "page";
+};
+
+export function ExcursionsSection({ variant = "embed" }: Props) {
   const dict = useDictionary();
   const { locale } = useLocale();
   const t = dict.excursions;
@@ -122,7 +126,10 @@ export function ExcursionsSection() {
   );
 
   return (
-    <section id="excursions" className="section-padding bg-white">
+    <section
+      id="excursions"
+      className={`section-padding bg-white ${variant === "page" ? "pt-24" : ""}`}
+    >
       <div className="container-wide">
         <div className="section-block">
           <div className="section-intro">
@@ -132,13 +139,15 @@ export function ExcursionsSection() {
             <div className="ornament-divider !mx-0 !max-w-[180px]" />
             <p className="max-w-2xl text-midnight/85">{t.description}</p>
           </div>
-          <Link
-            href="#contact"
-            className="group hidden shrink-0 items-center gap-2 font-semibold text-burgundy hover:text-terracotta sm:inline-flex"
-          >
-            {t.viewAll}
-            <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-          </Link>
+          {variant === "embed" ? (
+            <Link
+              href={`/${locale}/excursions`}
+              className="group hidden shrink-0 items-center gap-2 font-semibold text-burgundy hover:text-terracotta sm:inline-flex"
+            >
+              {t.viewAll}
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </Link>
+          ) : null}
         </div>
 
         <div className="flex flex-col gap-8 lg:flex-row lg:gap-10">

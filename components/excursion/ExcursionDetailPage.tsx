@@ -28,8 +28,8 @@ export function ExcursionDetailPage({ excursion, detail, cardTitle, badge }: Pro
       cardTitle={cardTitle}
       badge={badge}
       textClasses={excursionDetailTextClasses}
-      listAnchor="#excursions"
-      listLabel={dict.excursionDetail.breadcrumbAll}
+      listAnchor="/excursions"
+      listLabel={dict.excursions.viewAll}
     />
   );
 }

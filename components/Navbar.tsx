@@ -15,13 +15,20 @@ export function Navbar() {
   const dict = useDictionary();
   const { locale } = useLocale();
 
-  const navLinks = navLinkIds.map((id) => ({
-    ...dict.nav[id],
-    href: dict.nav[id].href.startsWith("#")
-      ? `/${locale}${dict.nav[id].href}`
-      : dict.nav[id].href,
-    id,
-  }));
+  const navLinks = navLinkIds.map((id) => {
+    const href = dict.nav[id].href;
+    const localizedHref = href.startsWith("#")
+      ? `/${locale}${href}`
+      : href.startsWith("/")
+        ? `/${locale}${href}`
+        : href;
+
+    return {
+      ...dict.nav[id],
+      href: localizedHref,
+      id,
+    };
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
