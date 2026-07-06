@@ -204,7 +204,12 @@ export const en: Dictionary = {
       moderate: "Moderate",
     },
     destinations: {
-      marrakech: "Marrakech",
+      atlas: "Atlas & Ourika",
+      ouzoud: "Ouzoud",
+      essaouira: "Essaouira",
+      ouarzazate: "Ouarzazate & Aït Benhaddou",
+      casablanca: "Casablanca",
+      agadir: "Agadir & Taghazout",
     },
     footerIntro:
       "All our day trips from Marrakech: Atlas trekking, Aït Benhaddou, Ouzoud waterfalls, Ourika Valley, Essaouira. Operated by our local Berber team with private air-conditioned transfers, French-speaking guide, complimentary water and traditional lunch included per programme.",

@@ -203,7 +203,14 @@ export const es: Dictionary = {
       easy: "Fácil",
       moderate: "Moderado",
     },
-    destinations: { marrakech: "Marrakech" },
+    destinations: {
+      atlas: "Atlas y Ourika",
+      ouzoud: "Ouzoud",
+      essaouira: "Essaouira",
+      ouarzazate: "Ouarzazate y Aït Benhaddou",
+      casablanca: "Casablanca",
+      agadir: "Agadir y Taghazout",
+    },
     footerIntro:
       "Todas nuestras excursiones de un día desde Marrakech: trekking en el Atlas, Aït Benhaddou, Cascadas de Ouzoud, Valle de Ourika, Essaouira. Operadas por nuestro equipo bereber local con traslados privados climatizados, guía francófono, agua mineral y almuerzo tradicional según programa.",
     whyTitle: "¿Por qué reservar una excursión con nosotros?",

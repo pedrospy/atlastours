@@ -19,6 +19,7 @@ import { TourCardImage } from "@/components/shared/TourCardImage";
 
 type Filters = {
   category: string;
+  destination: string;
   difficulty: string;
   maxBudget: number;
 };
@@ -27,6 +28,7 @@ const BUDGET_MAX = 350;
 
 const defaultFilters: Filters = {
   category: "all",
+  destination: "all",
   difficulty: "all",
   maxBudget: BUDGET_MAX,
 };
@@ -46,6 +48,12 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
   const filtered = useMemo(() => {
     return excursionsCatalog.filter((excursion) => {
       if (filters.category !== "all" && excursion.category !== filters.category) {
+        return false;
+      }
+      if (
+        filters.destination !== "all" &&
+        excursion.destination !== filters.destination
+      ) {
         return false;
       }
       if (filters.difficulty !== "all" && excursion.difficulty !== filters.difficulty) {
@@ -83,10 +91,12 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
 
       <FilterSelect
         label={t.filters.destination}
-        value="marrakech"
-        onChange={() => {}}
-        options={[{ value: "marrakech", label: t.destinations.marrakech }]}
-        disabled
+        value={filters.destination}
+        onChange={(v) => setFilters((f) => ({ ...f, destination: v }))}
+        options={[
+          { value: "all", label: t.filters.all },
+          ...Object.entries(t.destinations).map(([value, label]) => ({ value, label })),
+        ]}
       />
 
       <FilterSelect
@@ -219,7 +229,7 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
                             </span>
                             <span className="inline-flex items-center gap-1">
                               <MapPin className="h-3.5 w-3.5 shrink-0" />
-                              {t.departure}
+                              {t.destinations[excursion.destination]}
                             </span>
                           </div>
 

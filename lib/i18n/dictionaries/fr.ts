@@ -204,7 +204,12 @@ export const fr: Dictionary = {
       moderate: "Modéré",
     },
     destinations: {
-      marrakech: "Marrakech",
+      atlas: "Atlas & Ourika",
+      ouzoud: "Ouzoud",
+      essaouira: "Essaouira",
+      ouarzazate: "Ouarzazate & Aït Benhaddou",
+      casablanca: "Casablanca",
+      agadir: "Agadir & Taghazout",
     },
     footerIntro:
       "Toutes nos excursions à la journée au départ de Marrakech : trekking dans l'Atlas, Aït Benhaddou, Cascades d'Ouzoud, Vallée de l'Ourika, Essaouira. Opérées par notre équipe locale berbère, avec transferts privés climatisés, guide francophone, eau minérale offerte et déjeuner traditionnel inclus selon le programme.",

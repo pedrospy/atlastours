@@ -203,7 +203,14 @@ export const de: Dictionary = {
       easy: "Leicht",
       moderate: "Mittel",
     },
-    destinations: { marrakech: "Marrakesch" },
+    destinations: {
+      atlas: "Atlas & Ourika",
+      ouzoud: "Ouzoud",
+      essaouira: "Essaouira",
+      ouarzazate: "Ouarzazate & Aït Benhaddou",
+      casablanca: "Casablanca",
+      agadir: "Agadir & Taghazout",
+    },
     footerIntro:
       "Alle unsere Tagesausflüge ab Marrakesch: Atlas-Trekking, Aït Benhaddou, Ouzoud-Wasserfälle, Ourika-Tal, Essaouira. Von unserem lokalen Berber-Team mit privatem klimatisiertem Transfer, französischsprachigem Guide, Wasser und traditionellem Mittagessen je nach Programm.",
     whyTitle: "Warum einen Tagesausflug bei uns buchen?",

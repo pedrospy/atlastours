@@ -150,6 +150,7 @@ export const excursionsCatalog = [
     category: "nature",
     difficulty: "moderate",
     departure: "marrakech",
+    destination: "atlas",
   },
   {
     id: "imlil",
@@ -169,6 +170,7 @@ export const excursionsCatalog = [
     category: "adventure",
     difficulty: "moderate",
     departure: "marrakech",
+    destination: "atlas",
   },
   {
     id: "trois-vallees",
@@ -187,6 +189,7 @@ export const excursionsCatalog = [
     category: "nature",
     difficulty: "easy",
     departure: "marrakech",
+    destination: "atlas",
   },
   {
     id: "ouzoud",
@@ -201,6 +204,7 @@ export const excursionsCatalog = [
     category: "nature",
     difficulty: "easy",
     departure: "marrakech",
+    destination: "ouzoud",
   },
   {
     id: "essaouira",
@@ -214,6 +218,7 @@ export const excursionsCatalog = [
     category: "coast",
     difficulty: "easy",
     departure: "marrakech",
+    destination: "essaouira",
   },
   {
     id: "ait-benhaddou",
@@ -233,6 +238,7 @@ export const excursionsCatalog = [
     category: "culture",
     difficulty: "easy",
     departure: "marrakech",
+    destination: "ouarzazate",
   },
   {
     id: "casablanca",
@@ -251,6 +257,7 @@ export const excursionsCatalog = [
     category: "culture",
     difficulty: "easy",
     departure: "marrakech",
+    destination: "casablanca",
   },
   {
     id: "agadir-taghazout",
@@ -269,6 +276,7 @@ export const excursionsCatalog = [
     category: "coast",
     difficulty: "easy",
     departure: "marrakech",
+    destination: "agadir",
   },
 ] as const;
 
