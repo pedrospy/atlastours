@@ -9,13 +9,20 @@ import { SectionArabic } from "@/components/ArabicCalligraphy";
 import { TourCardFooter } from "@/components/shared/TourCardFooter";
 import { TourCardImage } from "@/components/shared/TourCardImage";
 
-export function CircuitsSection() {
+type Props = {
+  variant?: "embed" | "page";
+};
+
+export function CircuitsSection({ variant = "embed" }: Props) {
   const dict = useDictionary();
   const { locale } = useLocale();
   const t = dict.circuits;
 
   return (
-    <section id="circuits" className="section-padding section-surface-dark pattern-section">
+    <section
+      id="circuits"
+      className={`section-padding section-surface-dark pattern-section ${variant === "page" ? "pt-24" : ""}`}
+    >
       <div className="container-wide">
         <div className="section-block">
           <div className="section-intro">
@@ -25,13 +32,15 @@ export function CircuitsSection() {
             <div className="ornament-divider !mx-0 !max-w-[180px]" />
             <p className="max-w-xl text-midnight/85">{t.description}</p>
           </div>
-          <Link
-            href="#contact"
-            className="group inline-flex items-center gap-2 font-semibold text-burgundy hover:text-terracotta"
-          >
-            {t.viewAll}
-            <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-          </Link>
+          {variant === "embed" ? (
+            <Link
+              href={`/${locale}/circuits`}
+              className="group inline-flex items-center gap-2 font-semibold text-burgundy hover:text-terracotta"
+            >
+              {t.viewAll}
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </Link>
+          ) : null}
         </div>
 
         <div className="grid min-w-0 gap-5 md:grid-cols-2 md:gap-6">

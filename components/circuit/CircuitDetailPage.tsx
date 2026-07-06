@@ -30,7 +30,7 @@ export function CircuitDetailPage({ circuit, detail, cardTitle, badge }: Props) 
       badge={badge}
       badgeClass={circuit.badgeClass}
       textClasses={circuitDetailTextClasses}
-      listAnchor="#circuits"
+      listAnchor="/circuits"
       listLabel={dict.circuits.viewAll}
     />
   );
