@@ -129,6 +129,40 @@ export const en: Dictionary = {
     description:
       "From a 3-day desert break to a Marrakech–Chefchaouen imperial cities tour. Custom trips, small groups, Berber French-speaking guide.",
     viewAll: "All our tours",
+    resultsCount: "{count} results",
+    filters: {
+      title: "Filters",
+      category: "Category",
+      destination: "Destination",
+      departure: "Departure",
+      difficulty: "Difficulty",
+      duration: "Max duration",
+      budget: "Max budget",
+      all: "All",
+      reset: "Reset",
+      days: "days",
+    },
+    categories: {
+      desert: "Desert",
+      culture: "Culture & cities",
+      coast: "Coast",
+      adventure: "Adventure & Atlas",
+    },
+    difficulties: {
+      easy: "Easy",
+      moderate: "Moderate",
+    },
+    destinations: {
+      merzouga: "Merzouga & Sahara",
+      chefchaouen: "Chefchaouen & North",
+      imperial: "Imperial cities",
+      essaouira: "Essaouira & southern coast",
+      atlas: "Atlas & Megdaz",
+    },
+    departures: {
+      marrakech: "Marrakech",
+      casablanca: "Casablanca",
+    },
     items: {
       "circuit-sahara-atlas-3j": {
         title: "3-Day Marrakech, Sahara & Atlas Tour",

@@ -129,6 +129,40 @@ export const fr: Dictionary = {
     description:
       "Du court séjour 3 jours au désert jusqu'au circuit Marrakech–Chefchaouen. Sur mesure, petits groupes, guide francophone berbère.",
     viewAll: "Tous nos circuits",
+    resultsCount: "{count} résultats",
+    filters: {
+      title: "Filtres",
+      category: "Catégorie",
+      destination: "Destination",
+      departure: "Départ",
+      difficulty: "Difficulté",
+      duration: "Durée max.",
+      budget: "Budget max.",
+      all: "Toutes",
+      reset: "Réinitialiser",
+      days: "jours",
+    },
+    categories: {
+      desert: "Désert",
+      culture: "Culture & villes",
+      coast: "Côte",
+      adventure: "Aventure & Atlas",
+    },
+    difficulties: {
+      easy: "Facile",
+      moderate: "Modéré",
+    },
+    destinations: {
+      merzouga: "Merzouga & Sahara",
+      chefchaouen: "Chefchaouen & Nord",
+      imperial: "Villes impériales",
+      essaouira: "Essaouira & côte sud",
+      atlas: "Atlas & Megdaz",
+    },
+    departures: {
+      marrakech: "Marrakech",
+      casablanca: "Casablanca",
+    },
     items: {
       "circuit-sahara-atlas-3j": {
         title: "Circuit 3 jours Marrakech, Sahara & Atlas",

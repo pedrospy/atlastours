@@ -129,6 +129,40 @@ export const de: Dictionary = {
     description:
       "Von einem 3-tägigen Wüstentrip bis zur Marrakesch–Chefchaouen-Städtetour. Individuelle Reisen, kleine Gruppen, französischsprachiger Berber-Guide.",
     viewAll: "Alle Rundreisen",
+    resultsCount: "{count} Ergebnisse",
+    filters: {
+      title: "Filter",
+      category: "Kategorie",
+      destination: "Ziel",
+      departure: "Abfahrt",
+      difficulty: "Schwierigkeit",
+      duration: "Max. Dauer",
+      budget: "Max. Budget",
+      all: "Alle",
+      reset: "Zurücksetzen",
+      days: "Tage",
+    },
+    categories: {
+      desert: "Wüste",
+      culture: "Kultur & Städte",
+      coast: "Küste",
+      adventure: "Abenteuer & Atlas",
+    },
+    difficulties: {
+      easy: "Leicht",
+      moderate: "Mittel",
+    },
+    destinations: {
+      merzouga: "Merzouga & Sahara",
+      chefchaouen: "Chefchaouen & Norden",
+      imperial: "Kaiserstädte",
+      essaouira: "Essaouira & Südküste",
+      atlas: "Atlas & Megdaz",
+    },
+    departures: {
+      marrakech: "Marrakesch",
+      casablanca: "Casablanca",
+    },
     items: {
       "circuit-sahara-atlas-3j": {
         title: "3-Tage-Tour Marrakesch, Sahara & Atlas",

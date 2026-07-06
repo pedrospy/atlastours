@@ -74,6 +74,23 @@ export type Dictionary = {
     title: string;
     description: string;
     viewAll: string;
+    resultsCount: string;
+    filters: {
+      title: string;
+      category: string;
+      destination: string;
+      departure: string;
+      difficulty: string;
+      duration: string;
+      budget: string;
+      all: string;
+      reset: string;
+      days: string;
+    };
+    categories: Record<string, string>;
+    difficulties: Record<string, string>;
+    destinations: Record<string, string>;
+    departures: Record<string, string>;
     items: Record<
       string,
       { title: string; badge: string; duration: string; description: string }

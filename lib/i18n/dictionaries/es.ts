@@ -129,6 +129,40 @@ export const es: Dictionary = {
     description:
       "Desde una escapada de 3 días al desierto hasta el circuito Marrakech–Chefchaouen. A medida, grupos reducidos, guía bereber de habla francesa.",
     viewAll: "Todos nuestros circuitos",
+    resultsCount: "{count} resultados",
+    filters: {
+      title: "Filtros",
+      category: "Categoría",
+      destination: "Destino",
+      departure: "Salida",
+      difficulty: "Dificultad",
+      duration: "Duración máx.",
+      budget: "Presupuesto máx.",
+      all: "Todas",
+      reset: "Restablecer",
+      days: "días",
+    },
+    categories: {
+      desert: "Desierto",
+      culture: "Cultura y ciudades",
+      coast: "Costa",
+      adventure: "Aventura y Atlas",
+    },
+    difficulties: {
+      easy: "Fácil",
+      moderate: "Moderado",
+    },
+    destinations: {
+      merzouga: "Merzouga y Sahara",
+      chefchaouen: "Chefchaouen y Norte",
+      imperial: "Ciudades imperiales",
+      essaouira: "Essaouira y costa sur",
+      atlas: "Atlas y Megdaz",
+    },
+    departures: {
+      marrakech: "Marrakech",
+      casablanca: "Casablanca",
+    },
     items: {
       "circuit-sahara-atlas-3j": {
         title: "Circuito 3 días Marrakech, Sahara y Atlas",
