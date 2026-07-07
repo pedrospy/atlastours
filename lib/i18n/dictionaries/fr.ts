@@ -28,7 +28,7 @@ export const fr: Dictionary = {
     excursions: { label: "Excursions", href: "/excursions" },
     circuits: { label: "Circuits", href: "/circuits" },
     activities: { label: "Activités", href: "#activites" },
-    transfers: { label: "Transferts", href: "#contact" },
+    transfers: { label: "Transferts", href: "#transferts" },
     discover: { label: "Découvrir", href: "#pourquoi" },
   },
   common: {

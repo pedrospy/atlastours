@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
+import { TransfersSection } from "@/components/TransfersSection";
 import { CircuitsSection } from "@/components/CircuitsSection";
 import { ExcursionsSection } from "@/components/ExcursionsSection";
 import { ActivitiesSection } from "@/components/ActivitiesSection";
@@ -22,6 +23,7 @@ export default function Home() {
       <WhyUsSection />
       <TestimonialsSection />
       <DestinationsSection />
+      <TransfersSection />
       <NewsletterSection />
       <Footer />
     </main>
