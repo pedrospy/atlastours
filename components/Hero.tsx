@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
       <Image
-        src="/images/dest-marrakech-jemaa.jpg"
+        src="/images/dest-merzouga-dunes.jpg"
         alt={t.imageAlt}
         fill
         priority
@@ -71,7 +71,7 @@ export function Hero() {
               </span>
               <span className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-gold-light" />
-                {siteConfig.travelers}+ {t.travelers}
+                +{siteConfig.travelers} {t.travelers}
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-gold-light" />
@@ -84,8 +84,8 @@ export function Hero() {
                 {dict.common.contactUs}
                 <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
               </Link>
-              <Link href="#circuits" className="btn-outline-light">
-                {t.ctaCircuits}
+              <Link href="#contact" className="btn-outline-light">
+                {t.ctaCustomize}
               </Link>
               <a
                 href={getWhatsAppUrl(dict.common.whatsappMessage)}
@@ -94,7 +94,7 @@ export function Hero() {
                 className="inline-flex items-center gap-2 rounded-sm bg-[#25D366] px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-[#20bd5a]"
               >
                 <MessageCircle className="h-5 w-5" />
-                {dict.common.whatsapp}
+                WhatsApp
               </a>
             </div>
           </motion.div>

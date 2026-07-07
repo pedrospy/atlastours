@@ -356,15 +356,17 @@ export const galleryCatalog = [
   { id: "sunset", image: "/images/dest-sunset-lake.png" },
 ] as const;
 
+export const HOME_PREVIEW_LIMIT = 4;
+
 export const activitiesCatalog = [
-  { id: "camel", price: 21, icon: "camel" },
-  { id: "tent", price: 120, icon: "tent" },
-  { id: "balloon", price: 65, icon: "balloon" },
-  { id: "chef", price: 45, icon: "chef" },
-  { id: "sunset", price: 18, icon: "sunset" },
-  { id: "spa", price: 57, icon: "spa" },
-  { id: "hiking", price: 11, icon: "hiking" },
-  { id: "quad", price: 21, icon: "quad" },
+  { id: "camel", price: 35, icon: "camel", image: "/images/dest-merzouga-dunes.jpg" },
+  { id: "tent", price: 180, icon: "tent", image: "/images/dest-merzouga-camp.jpg" },
+  { id: "balloon", price: 120, icon: "balloon", image: "/images/dest-marrakech-jemaa.jpg" },
+  { id: "chef", price: 55, icon: "chef", image: "/images/dest-marrakech-souk.jpg" },
+  { id: "sunset", price: 65, icon: "sunset", image: "/images/dest-sunset-lake.png" },
+  { id: "spa", price: 70, icon: "spa", image: "/images/dest-morocco-plasterwork.jpg" },
+  { id: "hiking", price: 30, icon: "hiking", image: "/images/dest-megdaz-valley.jpg" },
+  { id: "quad", price: 60, icon: "quad", image: "/images/dest-desert-mesa.png" },
 ] as const;
 
 export const destinationsCatalog = [

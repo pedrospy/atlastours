@@ -10,7 +10,7 @@ import {
   MapPin,
   Star,
 } from "lucide-react";
-import { excursionsCatalog } from "@/lib/catalog";
+import { excursionsCatalog, HOME_PREVIEW_LIMIT } from "@/lib/catalog";
 import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
 import { SectionArabic } from "@/components/ArabicCalligraphy";
 import { FilterRange, FilterSelect } from "@/components/shared/FilterSelect";
@@ -52,7 +52,7 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
 
   const displayed =
     variant === "embed"
-      ? excursionsCatalog
+      ? excursionsCatalog.slice(0, HOME_PREVIEW_LIMIT)
       : excursionsCatalog.filter((excursion) => {
           if (filters.category !== "all" && excursion.category !== filters.category) {
             return false;
@@ -141,15 +141,6 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
             <div className="ornament-divider !mx-0 !max-w-[180px]" />
             <p className="max-w-2xl text-midnight/85">{t.description}</p>
           </div>
-          {variant === "embed" ? (
-            <Link
-              href={`/${locale}/excursions#excursion-filters`}
-              className="group inline-flex items-center gap-2 font-semibold text-burgundy hover:text-terracotta"
-            >
-              {t.viewAll}
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-            </Link>
-          ) : null}
         </div>
 
         <div className={variant === "page" ? "flex flex-col gap-8 md:flex-row md:gap-10" : ""}>
@@ -166,7 +157,13 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
               <p className="mb-5 text-sm font-medium text-midnight/70">{resultsLabel}</p>
             ) : null}
 
-            <div className="grid min-w-0 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            <div
+              className={`grid min-w-0 gap-5 ${
+                variant === "embed"
+                  ? "sm:grid-cols-2 lg:grid-cols-4"
+                  : "sm:grid-cols-2 xl:grid-cols-3"
+              }`}
+            >
               <AnimatePresence mode="popLayout">
                 {displayed.map((excursion, i) => {
                   const content = t.items[excursion.id];
@@ -263,6 +260,18 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
             ) : null}
           </div>
         </div>
+
+        {variant === "embed" ? (
+          <div className="mt-10 text-center">
+            <Link
+              href={`/${locale}/excursions#excursion-filters`}
+              className="group inline-flex items-center gap-2 border border-burgundy/20 bg-white px-8 py-3 font-semibold text-burgundy shadow-sm transition hover:border-burgundy hover:bg-burgundy hover:text-white"
+            >
+              {t.viewAll}
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </Link>
+          </div>
+        ) : null}
 
         {variant === "page" ? (
           <>

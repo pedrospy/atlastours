@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
-import { circuitsCatalog } from "@/lib/catalog";
+import { circuitsCatalog, HOME_PREVIEW_LIMIT } from "@/lib/catalog";
 import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
 import { SectionArabic } from "@/components/ArabicCalligraphy";
 import { FilterRange, FilterSelect } from "@/components/shared/FilterSelect";
@@ -52,7 +52,7 @@ export function CircuitsSection({ variant = "embed" }: Props) {
 
   const displayed =
     variant === "embed"
-      ? circuitsCatalog
+      ? circuitsCatalog.slice(0, HOME_PREVIEW_LIMIT)
       : circuitsCatalog.filter((circuit) => {
           if (filters.category !== "all" && circuit.category !== filters.category) {
             return false;
@@ -154,7 +154,7 @@ export function CircuitsSection({ variant = "embed" }: Props) {
   return (
     <section
       id="circuits"
-      className={`section-padding section-surface-dark pattern-section ${variant === "page" ? "pt-24" : ""}`}
+      className={`section-padding ${variant === "page" ? "section-surface-dark pattern-section pt-24" : "bg-sand-50"}`}
     >
       <div className="container-wide">
         <div className="section-block">
@@ -165,15 +165,6 @@ export function CircuitsSection({ variant = "embed" }: Props) {
             <div className="ornament-divider !mx-0 !max-w-[180px]" />
             <p className="max-w-xl text-midnight/85">{t.description}</p>
           </div>
-          {variant === "embed" ? (
-            <Link
-              href={`/${locale}/circuits#circuit-filters`}
-              className="group inline-flex items-center gap-2 font-semibold text-burgundy hover:text-terracotta"
-            >
-              {t.viewAll}
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-            </Link>
-          ) : null}
         </div>
 
         <div className={variant === "page" ? "flex flex-col gap-8 md:flex-row md:gap-10" : ""}>
@@ -190,7 +181,13 @@ export function CircuitsSection({ variant = "embed" }: Props) {
               <p className="mb-5 text-sm font-medium text-midnight/70">{resultsLabel}</p>
             ) : null}
 
-            <div className="grid min-w-0 gap-5 md:grid-cols-2 md:gap-6">
+            <div
+              className={`grid min-w-0 gap-5 ${
+                variant === "embed"
+                  ? "sm:grid-cols-2 lg:grid-cols-4"
+                  : "md:grid-cols-2 md:gap-6"
+              }`}
+            >
               <AnimatePresence mode="popLayout">
                 {displayed.map((circuit, i) => {
                   const content = t.items[circuit.id];
@@ -258,6 +255,18 @@ export function CircuitsSection({ variant = "embed" }: Props) {
             ) : null}
           </div>
         </div>
+
+        {variant === "embed" ? (
+          <div className="mt-10 text-center">
+            <Link
+              href={`/${locale}/circuits#circuit-filters`}
+              className="group inline-flex items-center gap-2 border border-burgundy/20 bg-white px-8 py-3 font-semibold text-burgundy shadow-sm transition hover:border-burgundy hover:bg-burgundy hover:text-white"
+            >
+              {t.viewAll}
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );

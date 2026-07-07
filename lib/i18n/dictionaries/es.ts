@@ -28,7 +28,7 @@ export const es: Dictionary = {
     excursions: { label: "Excursiones", href: "/excursions" },
     circuits: { label: "Circuitos", href: "/circuits" },
     activities: { label: "Actividades", href: "#activites" },
-    transfers: { label: "Traslados", href: "#transferts" },
+    transfers: { label: "Traslados", href: "#contact" },
     discover: { label: "Descubrir", href: "#pourquoi" },
   },
   common: {
@@ -48,15 +48,15 @@ export const es: Dictionary = {
   },
   hero: {
     imageAlt: "Dunas del Sahara al atardecer",
-    badge: "Viajes auténticos en Marruecos",
-    title: "Marruecos tradicional,",
-    titleHighlight: "el alma del desierto",
+    badge: "Aventuras premium en Marruecos",
+    title: "Marruecos fuera de",
+    titleHighlight: "los caminos trillados",
     description:
-      "Campamentos bereberes, medinas ancestrales, rutas del Sahara. Viajes a medida guiados por familias locales que perpetúan la hospitalidad marroquí.",
+      "Campamentos exclusivos, treks bereberes, valles olvidados. Aventuras a medida diseñadas por guías locales que conocen el verdadero Marruecos.",
     googleRating: "/5 en Google",
-    travelers: "viajeros satisfechos",
+    travelers: "aventureros",
     responseTime: "Respuesta en",
-    ctaCircuits: "Descubrir nuestros circuitos",
+    ctaCustomize: "Configure su aventura",
     scrollHint: "Descubrir",
   },
   trustBar: {
@@ -386,7 +386,7 @@ export const es: Dictionary = {
   },
   activities: {
     eyebrow: "Lo que vivirá",
-    title: "Actividades tradicionales",
+    title: "Actividades destacadas en Marruecos",
     description:
       "Experiencias auténticas seleccionadas por nuestro equipo bereber",
     viewAll: "Ver todas las actividades",

@@ -47,7 +47,7 @@ export type Dictionary = {
     googleRating: string;
     travelers: string;
     responseTime: string;
-    ctaCircuits: string;
+    ctaCustomize: string;
     scrollHint: string;
   };
   trustBar: {

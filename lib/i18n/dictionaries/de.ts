@@ -28,7 +28,7 @@ export const de: Dictionary = {
     excursions: { label: "Tagesausflüge", href: "/excursions" },
     circuits: { label: "Rundreisen", href: "/circuits" },
     activities: { label: "Aktivitäten", href: "#activites" },
-    transfers: { label: "Transfers", href: "#transferts" },
+    transfers: { label: "Transfers", href: "#contact" },
     discover: { label: "Entdecken", href: "#pourquoi" },
   },
   common: {
@@ -48,15 +48,15 @@ export const de: Dictionary = {
   },
   hero: {
     imageAlt: "Sahara-Dünen bei Sonnenuntergang",
-    badge: "Authentische Reisen in Marokko",
-    title: "Traditionelles Marokko,",
-    titleHighlight: "die Seele der Wüste",
+    badge: "Premium-Abenteuer in Marokko",
+    title: "Marokko abseits",
+    titleHighlight: "der ausgetretenen Pfade",
     description:
-      "Berberische Wüstencamps, uralte Medinas, Sahara-Routen. Maßgeschneiderte Reisen, begleitet von lokalen Familien, die marokkanische Gastfreundschaft leben.",
+      "Exklusive Wüstencamps, Berber-Treks, vergessene Täler. Maßgeschneiderte Abenteuer von lokalen Guides, die das echte Marokko kennen.",
     googleRating: "/5 auf Google",
-    travelers: "zufriedene Reisende",
+    travelers: "Abenteurer",
     responseTime: "Antwort innerhalb von",
-    ctaCircuits: "Unsere Rundreisen entdecken",
+    ctaCustomize: "Abenteuer gestalten",
     scrollHint: "Entdecken",
   },
   trustBar: {
@@ -386,7 +386,7 @@ export const de: Dictionary = {
   },
   activities: {
     eyebrow: "Was Sie erleben",
-    title: "Traditionelle Aktivitäten",
+    title: "Top-Aktivitäten in Marokko",
     description:
       "Authentische Erlebnisse, handverlesen von unserem Berber-Team",
     viewAll: "Alle Aktivitäten ansehen",

@@ -28,7 +28,7 @@ export const fr: Dictionary = {
     excursions: { label: "Excursions", href: "/excursions" },
     circuits: { label: "Circuits", href: "/circuits" },
     activities: { label: "Activités", href: "#activites" },
-    transfers: { label: "Transferts", href: "#transferts" },
+    transfers: { label: "Transferts", href: "#contact" },
     discover: { label: "Découvrir", href: "#pourquoi" },
   },
   common: {
@@ -48,15 +48,15 @@ export const fr: Dictionary = {
   },
   hero: {
     imageAlt: "Dunes du Sahara au coucher du soleil",
-    badge: "Voyages authentiques au Maroc",
-    title: "Le Maroc traditionnel,",
-    titleHighlight: "l'âme du désert",
+    badge: "Aventures premium au Maroc",
+    title: "Le Maroc hors",
+    titleHighlight: "des sentiers battus",
     description:
-      "Bivouacs berbères, médinas ancestrales, routes du Sahara. Des voyages sur mesure guidés par des familles locales qui perpétuent l'hospitalité marocaine.",
+      "Bivouacs confidentiels, treks berbères, vallées oubliées. Vos aventures sur mesure conçues par des guides locaux qui connaissent le vrai Maroc.",
     googleRating: "/5 sur Google",
-    travelers: "voyageurs satisfaits",
+    travelers: "aventuriers",
     responseTime: "Réponse en",
-    ctaCircuits: "Découvrir nos circuits",
+    ctaCustomize: "Configurez votre aventure",
     scrollHint: "Découvrir",
   },
   trustBar: {
@@ -388,7 +388,7 @@ export const fr: Dictionary = {
   },
   activities: {
     eyebrow: "Ce que vous allez vivre",
-    title: "Activités traditionnelles",
+    title: "Activités phares au Maroc",
     description:
       "Des expériences authentiques sélectionnées par notre équipe berbère",
     viewAll: "Voir toutes les activités",

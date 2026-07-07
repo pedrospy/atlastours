@@ -1,87 +1,65 @@
 "use client";
 
-import { motion } from "framer-motion";
-import {
-  Compass,
-  Tent,
-  CloudSun,
-  ChefHat,
-  Sunset,
-  Sparkles,
-  Mountain,
-  Car,
-  ArrowRight,
-} from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { activitiesCatalog } from "@/lib/catalog";
 import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
 import { SectionArabic } from "@/components/ArabicCalligraphy";
-
-const iconMap: Record<string, React.ElementType> = {
-  camel: Compass,
-  tent: Tent,
-  balloon: CloudSun,
-  chef: ChefHat,
-  sunset: Sunset,
-  spa: Sparkles,
-  hiking: Mountain,
-  quad: Car,
-};
 
 export function ActivitiesSection() {
   const dict = useDictionary();
   const { locale } = useLocale();
   const t = dict.activities;
+  const preview = activitiesCatalog;
 
   return (
-    <section
-      id="activites"
-      className="section-padding section-surface-dark bg-burgundy-dark bg-moroccan-pattern text-white"
-    >
+    <section id="activites" className="section-padding bg-sand-50">
       <div className="container-wide">
-        <div className="section-intro section-intro-center mx-auto mb-16 max-w-3xl text-center">
-          <SectionArabic
-            phrase="desertSoul"
-            centered
-            className="text-gold-light/70"
-          />
-          <span className="section-eyebrow text-gold-light">{t.eyebrow}</span>
-          <h2 className="section-title text-white">{t.title}</h2>
+        <div className="section-intro section-intro-center mx-auto mb-12 max-w-3xl text-center">
+          <SectionArabic phrase="desertSoul" centered className="text-burgundy/40" />
+          <span className="section-eyebrow">{t.eyebrow}</span>
+          <h2 className="section-title">{t.title}</h2>
           <div className="ornament-divider" />
-          <p className="text-sand-200/75">{t.description}</p>
+          <p className="text-midnight/75">{t.description}</p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {activitiesCatalog.map((activity, i) => {
-            const Icon = iconMap[activity.icon] || Compass;
-            return (
-              <motion.div
-                key={activity.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                whileHover={{ y: -4 }}
-                className="group cursor-pointer border border-gold/20 bg-burgundy/50 p-6 backdrop-blur-sm transition hover:border-gold/50 hover:bg-burgundy/70"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center border border-gold/30 bg-gold/10 text-gold-light transition group-hover:border-gold group-hover:bg-gold group-hover:text-burgundy-dark">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="font-display text-lg font-semibold leading-snug">
-                  {t.items[activity.id]}
-                </h3>
-                <p className="mt-3 font-display text-2xl font-bold text-gold-light">
+          {preview.map((activity, i) => (
+            <motion.article
+              key={activity.id}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="group relative aspect-[4/5] overflow-hidden border border-sand-200 bg-white shadow-sm"
+            >
+              <Image
+                src={activity.image}
+                alt={t.items[activity.id]}
+                fill
+                unoptimized
+                className="object-cover transition duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/25 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                <p className="text-sm font-semibold text-gold-light">
                   {dict.common.from} {formatPrice(activity.price, locale)}
                 </p>
-              </motion.div>
-            );
-          })}
+                <h3 className="mt-1 font-display text-base font-semibold leading-snug text-white sm:text-lg">
+                  {t.items[activity.id]}
+                </h3>
+              </div>
+            </motion.article>
+          ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center">
           <Link
             href="#contact"
-            className="group inline-flex items-center gap-2 border border-gold/40 px-8 py-3 font-semibold text-gold-light transition hover:border-gold hover:bg-gold/10"
+            className="group inline-flex items-center gap-2 border border-burgundy/20 bg-white px-8 py-3 font-semibold text-burgundy shadow-sm transition hover:border-burgundy hover:bg-burgundy hover:text-white"
           >
             {t.viewAll}
             <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />

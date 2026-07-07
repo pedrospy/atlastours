@@ -28,7 +28,7 @@ export const en: Dictionary = {
     excursions: { label: "Day Trips", href: "/excursions" },
     circuits: { label: "Tours", href: "/circuits" },
     activities: { label: "Activities", href: "#activites" },
-    transfers: { label: "Transfers", href: "#transferts" },
+    transfers: { label: "Transfers", href: "#contact" },
     discover: { label: "Discover", href: "#pourquoi" },
   },
   common: {
@@ -48,15 +48,15 @@ export const en: Dictionary = {
   },
   hero: {
     imageAlt: "Sahara dunes at sunset",
-    badge: "Authentic journeys in Morocco",
-    title: "Traditional Morocco,",
-    titleHighlight: "the soul of the desert",
+    badge: "Premium adventures in Morocco",
+    title: "Morocco off",
+    titleHighlight: "the beaten path",
     description:
-      "Berber desert camps, ancient medinas, Sahara routes. Tailor-made journeys guided by local families who carry on Moroccan hospitality.",
+      "Exclusive desert camps, Berber treks, forgotten valleys. Tailor-made adventures designed by local guides who know the real Morocco.",
     googleRating: "/5 on Google",
-    travelers: "happy travelers",
+    travelers: "adventurers",
     responseTime: "Reply within",
-    ctaCircuits: "Explore our tours",
+    ctaCustomize: "Design your adventure",
     scrollHint: "Discover",
   },
   trustBar: {
@@ -388,7 +388,7 @@ export const en: Dictionary = {
   },
   activities: {
     eyebrow: "What you'll experience",
-    title: "Traditional activities",
+    title: "Top activities in Morocco",
     description:
       "Authentic experiences handpicked by our Berber team",
     viewAll: "See all activities",
