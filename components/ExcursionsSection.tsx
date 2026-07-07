@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -8,9 +8,7 @@ import {
   Calendar,
   ChevronDown,
   MapPin,
-  SlidersHorizontal,
   Star,
-  X,
 } from "lucide-react";
 import { excursionsCatalog } from "@/lib/catalog";
 import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
@@ -44,28 +42,35 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
   const t = dict.excursions;
 
   const [filters, setFilters] = useState<Filters>(defaultFilters);
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const filtered = useMemo(() => {
-    return excursionsCatalog.filter((excursion) => {
-      if (filters.category !== "all" && excursion.category !== filters.category) {
-        return false;
-      }
-      if (
-        filters.destination !== "all" &&
-        excursion.destination !== filters.destination
-      ) {
-        return false;
-      }
-      if (filters.difficulty !== "all" && excursion.difficulty !== filters.difficulty) {
-        return false;
-      }
-      if (excursion.price > filters.maxBudget) return false;
-      return true;
-    });
-  }, [filters]);
+  useEffect(() => {
+    if (variant !== "page" || typeof window === "undefined") return;
+    if (window.location.hash === "#excursion-filters") {
+      document.getElementById("excursion-filters")?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [variant]);
 
-  const resultsLabel = t.resultsCount.replace("{count}", String(filtered.length));
+  const displayed =
+    variant === "embed"
+      ? excursionsCatalog
+      : excursionsCatalog.filter((excursion) => {
+          if (filters.category !== "all" && excursion.category !== filters.category) {
+            return false;
+          }
+          if (
+            filters.destination !== "all" &&
+            excursion.destination !== filters.destination
+          ) {
+            return false;
+          }
+          if (filters.difficulty !== "all" && excursion.difficulty !== filters.difficulty) {
+            return false;
+          }
+          if (excursion.price > filters.maxBudget) return false;
+          return true;
+        });
+
+  const resultsLabel = t.resultsCount.replace("{count}", String(displayed.length));
 
   const filterPanel = (
     <div className="space-y-6">
@@ -138,8 +143,8 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
           </div>
           {variant === "embed" ? (
             <Link
-              href={`/${locale}/excursions`}
-              className="group hidden shrink-0 items-center gap-2 font-semibold text-burgundy hover:text-terracotta sm:inline-flex"
+              href={`/${locale}/excursions#excursion-filters`}
+              className="group inline-flex items-center gap-2 font-semibold text-burgundy hover:text-terracotta"
             >
               {t.viewAll}
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
@@ -147,30 +152,23 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
           ) : null}
         </div>
 
-        <div className="flex flex-col gap-8 lg:flex-row lg:gap-10">
-          {/* Desktop filters */}
-          <aside className="hidden w-64 shrink-0 lg:block">
-            <div className="sticky top-24 border border-sand-200 bg-sand-50/80 p-5 backdrop-blur-sm">
-              {filterPanel}
-            </div>
-          </aside>
+        <div className={variant === "page" ? "flex flex-col gap-8 md:flex-row md:gap-10" : ""}>
+          {variant === "page" ? (
+            <aside id="excursion-filters" className="w-full shrink-0 scroll-mt-28 md:w-64">
+              <div className="border border-sand-200 bg-sand-50/80 p-5 shadow-sm md:sticky md:top-24">
+                {filterPanel}
+              </div>
+            </aside>
+          ) : null}
 
           <div className="min-w-0 flex-1">
-            <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-              <p className="text-sm font-medium text-midnight/70">{resultsLabel}</p>
-              <button
-                type="button"
-                onClick={() => setMobileFiltersOpen(true)}
-                className="inline-flex items-center gap-2 border border-sand-200 bg-white px-3 py-2 text-sm font-medium text-midnight lg:hidden"
-              >
-                <SlidersHorizontal className="h-4 w-4" />
-                {t.filters.title}
-              </button>
-            </div>
+            {variant === "page" ? (
+              <p className="mb-5 text-sm font-medium text-midnight/70">{resultsLabel}</p>
+            ) : null}
 
             <div className="grid min-w-0 gap-5 sm:grid-cols-2 xl:grid-cols-3">
               <AnimatePresence mode="popLayout">
-                {filtered.map((excursion, i) => {
+                {displayed.map((excursion, i) => {
                   const content = t.items[excursion.id];
                   const badgeClass =
                     "badgeClass" in excursion && excursion.badgeClass
@@ -258,7 +256,7 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
               </AnimatePresence>
             </div>
 
-            {filtered.length === 0 ? (
+            {variant === "page" && displayed.length === 0 ? (
               <p className="py-12 text-center text-midnight/60">
                 {t.filters.reset} — {resultsLabel}
               </p>
@@ -266,96 +264,57 @@ export function ExcursionsSection({ variant = "embed" }: Props) {
           </div>
         </div>
 
-        {/* Footer intro */}
-        <p className="mx-auto mt-16 max-w-4xl text-center text-sm leading-relaxed text-midnight/75 sm:text-base">
-          {t.footerIntro}
-        </p>
-
-        {/* Why us */}
-        <div className="mt-16 border-t border-sand-200 pt-16">
-          <h3 className="text-center font-display text-2xl font-semibold text-midnight sm:text-3xl">
-            {t.whyTitle}
-          </h3>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {t.why.map((item) => (
-              <div
-                key={item.title}
-                className="border border-sand-200 bg-sand-50/50 p-5"
-              >
-                <h4 className="font-display text-base font-semibold text-midnight">
-                  {item.title}
-                </h4>
-                <p className="mt-2 text-sm leading-relaxed text-midnight/75">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* FAQ */}
-        <div className="mt-16 border-t border-sand-200 pt-16">
-          <h3 className="text-center font-display text-2xl font-semibold text-midnight">
-            {dict.excursionDetail.faq}
-          </h3>
-          <div className="mx-auto mt-8 max-w-3xl divide-y divide-sand-200 border border-sand-200 bg-white">
-            {t.faqs.map((faq) => (
-              <details key={faq.question} className="group">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left font-medium text-midnight marker:content-none hover:bg-sand-50/80">
-                  {faq.question}
-                  <ChevronDown className="h-4 w-4 shrink-0 text-midnight/50 transition group-open:rotate-180" />
-                </summary>
-                <p className="border-t border-sand-100 px-5 py-4 text-sm leading-relaxed text-midnight/75">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile filters drawer */}
-      <AnimatePresence>
-        {mobileFiltersOpen ? (
+        {variant === "page" ? (
           <>
-            <motion.button
-              type="button"
-              aria-label={dict.common.close}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-midnight/40 lg:hidden"
-              onClick={() => setMobileFiltersOpen(false)}
-            />
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 28, stiffness: 320 }}
-              className="fixed bottom-0 right-0 top-0 z-50 w-full max-w-sm overflow-y-auto bg-white p-6 shadow-2xl lg:hidden"
-            >
-              <div className="mb-6 flex items-center justify-between">
-                <h3 className="font-display text-lg font-semibold">{t.filters.title}</h3>
-                <button
-                  type="button"
-                  onClick={() => setMobileFiltersOpen(false)}
-                  className="rounded-full p-2 text-midnight/60 hover:bg-sand-100"
-                >
-                  <X className="h-5 w-5" />
-                </button>
+            {/* Footer intro */}
+            <p className="mx-auto mt-16 max-w-4xl text-center text-sm leading-relaxed text-midnight/75 sm:text-base">
+              {t.footerIntro}
+            </p>
+
+            {/* Why us */}
+            <div className="mt-16 border-t border-sand-200 pt-16">
+              <h3 className="text-center font-display text-2xl font-semibold text-midnight sm:text-3xl">
+                {t.whyTitle}
+              </h3>
+              <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {t.why.map((item) => (
+                  <div
+                    key={item.title}
+                    className="border border-sand-200 bg-sand-50/50 p-5"
+                  >
+                    <h4 className="font-display text-base font-semibold text-midnight">
+                      {item.title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-midnight/75">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
               </div>
-              {filterPanel}
-              <button
-                type="button"
-                onClick={() => setMobileFiltersOpen(false)}
-                className="btn-primary mt-8 w-full"
-              >
-                {resultsLabel}
-              </button>
-            </motion.div>
+            </div>
+
+            {/* FAQ */}
+            <div className="mt-16 border-t border-sand-200 pt-16">
+              <h3 className="text-center font-display text-2xl font-semibold text-midnight">
+                {dict.excursionDetail.faq}
+              </h3>
+              <div className="mx-auto mt-8 max-w-3xl divide-y divide-sand-200 border border-sand-200 bg-white">
+                {t.faqs.map((faq) => (
+                  <details key={faq.question} className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left font-medium text-midnight marker:content-none hover:bg-sand-50/80">
+                      {faq.question}
+                      <ChevronDown className="h-4 w-4 shrink-0 text-midnight/50 transition group-open:rotate-180" />
+                    </summary>
+                    <p className="border-t border-sand-100 px-5 py-4 text-sm leading-relaxed text-midnight/75">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
           </>
         ) : null}
-      </AnimatePresence>
+      </div>
     </section>
   );
 }
