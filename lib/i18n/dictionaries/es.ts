@@ -239,6 +239,7 @@ export const es: Dictionary = {
     },
     destinations: {
       atlas: "Atlas y Ourika",
+      agafay: "Desierto de Agafay",
       ouzoud: "Ouzoud",
       essaouira: "Essaouira",
       ouarzazate: "Ouarzazate y Aït Benhaddou",
@@ -302,6 +303,13 @@ export const es: Dictionary = {
         duration: "1 d",
         description:
           "Pueblos bereberes, cascadas espectaculares y vida auténtica a solo 1 h de Marrakech.",
+      },
+      agafay: {
+        title: "Desierto de Agafay — Excursión 1 día",
+        badge: "Destacada",
+        duration: "1 d",
+        description:
+          "Desierto de piedra a 45 min de Marrakech: paseo en camello, atardecer y cena bereber frente al Atlas.",
       },
       imlil: {
         title: "Imlil y Monte Toubkal — Senderismo Atlas",

@@ -239,6 +239,7 @@ export const de: Dictionary = {
     },
     destinations: {
       atlas: "Atlas & Ourika",
+      agafay: "Agafay-Wüste",
       ouzoud: "Ouzoud",
       essaouira: "Essaouira",
       ouarzazate: "Ouarzazate & Aït Benhaddou",
@@ -302,6 +303,13 @@ export const de: Dictionary = {
         duration: "1 T",
         description:
           "Berberdörfer, spektakuläre Wasserfälle und authentisches Leben nur 1 Stunde von Marrakesch.",
+      },
+      agafay: {
+        title: "Agafay-Wüste — Tagesausflug",
+        badge: "Highlight",
+        duration: "1 T",
+        description:
+          "Steinwüste 45 Min. von Marrakesch: Kamelritt, Sonnenuntergang und Berber-Dinner mit Atlas-Blick.",
       },
       imlil: {
         title: "Imlil & Mount Toubkal — Atlas-Wanderung",

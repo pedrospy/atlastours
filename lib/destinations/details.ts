@@ -50,9 +50,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Pourboires guides et chauffeurs (facultatif)",
       ],
       groupPricing: [
-        { travelers: "Transfert aéroport (1–4 pers.)", price: "à partir de 25 €" },
-        { travelers: "Visite médina guidée (½ journée)", price: "à partir de 45 €/pers." },
-        { travelers: "Excursion Essaouira (1 jour)", price: "à partir de 29 €/pers." },
+        { travelers: "Transfert aéroport (1–4 pers.)", price: "à partir de 16 €" },
+        { travelers: "Visite médina guidée (½ journée)", price: "à partir de 29 €/pers." },
+        { travelers: "Excursion Essaouira (1 jour)", price: "à partir de 18 €/pers." },
       ],
       faqs: [
         {
@@ -125,9 +125,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Pourboires chameliers et personnel du camp",
       ],
       groupPricing: [
-        { travelers: "Circuit désert 2j/1n (depuis Marrakech)", price: "à partir de 190 €/pers." },
-        { travelers: "Circuit désert 3j/2n (classique)", price: "à partir de 280 €/pers." },
-        { travelers: "Nuit camp luxe Erg Chebbi (seul)", price: "à partir de 120 €/pers." },
+        { travelers: "Circuit désert 2j/1n (depuis Marrakech)", price: "à partir de 120 €/pers." },
+        { travelers: "Circuit désert 3j/2n (classique)", price: "à partir de 175 €/pers." },
+        { travelers: "Nuit camp luxe Erg Chebbi (seul)", price: "à partir de 75 €/pers." },
       ],
       faqs: [
         {
@@ -200,9 +200,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Traversée ferry Espagne–Maroc ( réservation séparée )",
       ],
       groupPricing: [
-        { travelers: "Excursion Chefchaouen (1j depuis Tanger)", price: "à partir de 75 €/pers." },
-        { travelers: "Circuit Nord 4 jours (2 pers.)", price: "à partir de 320 €/pers." },
-        { travelers: "Transfert Tanger aéroport ↔ Chefchaouen", price: "à partir de 90 €" },
+        { travelers: "Excursion Chefchaouen (1j depuis Tanger)", price: "à partir de 48 €/pers." },
+        { travelers: "Circuit Nord 4 jours (2 pers.)", price: "à partir de 199 €/pers." },
+        { travelers: "Transfert Tanger aéroport ↔ Chefchaouen", price: "à partir de 58 €" },
       ],
       faqs: [
         {
@@ -275,9 +275,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Pourboires guides",
       ],
       groupPricing: [
-        { travelers: "Visite médina & tanneries (½ journée)", price: "à partir de 50 €/pers." },
-        { travelers: "Excursion Volubilis & Meknès (1j)", price: "à partir de 85 €/pers." },
-        { travelers: "Transfert aéroport Fès (1–4 pers.)", price: "à partir de 30 €" },
+        { travelers: "Visite médina & tanneries (½ journée)", price: "à partir de 32 €/pers." },
+        { travelers: "Excursion Volubilis & Meknès (1j)", price: "à partir de 55 €/pers." },
+        { travelers: "Transfert aéroport Fès (1–4 pers.)", price: "à partir de 19 €" },
       ],
       faqs: [
         {
@@ -351,9 +351,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Hébergement si excursion journée uniquement",
       ],
       groupPricing: [
-        { travelers: "Excursion 1 jour (depuis Marrakech)", price: "à partir de 29 €/pers." },
-        { travelers: "Transfert Marrakech ↔ Essaouira (seul)", price: "à partir de 95 €" },
-        { travelers: "Visite guidée médina Essaouira", price: "à partir de 40 €/pers." },
+        { travelers: "Excursion 1 jour (depuis Marrakech)", price: "à partir de 18 €/pers." },
+        { travelers: "Transfert Marrakech ↔ Essaouira (seul)", price: "à partir de 62 €" },
+        { travelers: "Visite guidée médina Essaouira", price: "à partir de 26 €/pers." },
       ],
       faqs: [
         {
@@ -426,9 +426,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Pourboires muletiers et villageois",
       ],
       groupPricing: [
-        { travelers: "Trek 2j/1n Megdaz (2 pers.)", price: "à partir de 220 €/pers." },
-        { travelers: "Trek 3j/2n vallée complète", price: "à partir de 320 €/pers." },
-        { travelers: "Excursion 1j Megdaz (sans nuit)", price: "à partir de 95 €/pers." },
+        { travelers: "Trek 2j/1n Megdaz (2 pers.)", price: "à partir de 140 €/pers." },
+        { travelers: "Trek 3j/2n vallée complète", price: "à partir de 199 €/pers." },
+        { travelers: "Excursion 1j Megdaz (sans nuit)", price: "à partir de 62 €/pers." },
       ],
       faqs: [
         {
@@ -501,9 +501,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Entrée parc Souss-Massa (~20 MAD)",
       ],
       groupPricing: [
-        { travelers: "Transfert aéroport Agadir (1–4 pers.)", price: "à partir de 28 €" },
-        { travelers: "Excursion Paradise Valley (1j)", price: "à partir de 55 €/pers." },
-        { travelers: "Marrakech → Agadir (transfert privé)", price: "à partir de 120 €" },
+        { travelers: "Transfert aéroport Agadir (1–4 pers.)", price: "à partir de 18 €" },
+        { travelers: "Excursion Paradise Valley (1j)", price: "à partir de 35 €/pers." },
+        { travelers: "Marrakech → Agadir (transfert privé)", price: "à partir de 75 €" },
       ],
       faqs: [
         {
@@ -577,9 +577,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Pourboires guide archéologique",
       ],
       groupPricing: [
-        { travelers: "Volubilis & Meknès (1j, 2 pers.)", price: "à partir de 85 €/pers." },
-        { travelers: "Volubilis seul (½ journée)", price: "à partir de 55 €/pers." },
-        { travelers: "Circuit Fès + Volubilis + Chefchaouen (3j)", price: "à partir de 450 €/pers." },
+        { travelers: "Volubilis & Meknès (1j, 2 pers.)", price: "à partir de 55 €/pers." },
+        { travelers: "Volubilis seul (½ journée)", price: "à partir de 35 €/pers." },
+        { travelers: "Circuit Fès + Volubilis + Chefchaouen (3j)", price: "à partir de 285 €/pers." },
       ],
       faqs: [
         {
@@ -654,9 +654,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Tips for guides and drivers (optional)",
       ],
       groupPricing: [
-        { travelers: "Airport transfer (1–4 people)", price: "from €25" },
-        { travelers: "Guided medina visit (half day)", price: "from €45/person" },
-        { travelers: "Essaouira day trip (1 day)", price: "from €29/person" },
+        { travelers: "Airport transfer (1–4 people)", price: "from €16" },
+        { travelers: "Guided medina visit (half day)", price: "from €29/person" },
+        { travelers: "Essaouira day trip (1 day)", price: "from €18/person" },
       ],
       faqs: [
         {
@@ -729,9 +729,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Tips for cameleers and camp staff",
       ],
       groupPricing: [
-        { travelers: "Desert tour 2d/1n (from Marrakech)", price: "from €190/person" },
-        { travelers: "Desert tour 3d/2n (classic)", price: "from €280/person" },
-        { travelers: "Erg Chebbi luxury camp night only", price: "from €120/person" },
+        { travelers: "Desert tour 2d/1n (from Marrakech)", price: "from €120/person" },
+        { travelers: "Desert tour 3d/2n (classic)", price: "from €175/person" },
+        { travelers: "Erg Chebbi luxury camp night only", price: "from €75/person" },
       ],
       faqs: [
         {
@@ -804,9 +804,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Spain–Morocco ferry crossing (separate booking)",
       ],
       groupPricing: [
-        { travelers: "Chefchaouen day trip (from Tangier)", price: "from €75/person" },
-        { travelers: "North tour 4 days (2 people)", price: "from €320/person" },
-        { travelers: "Tangier airport ↔ Chefchaouen transfer", price: "from €90" },
+        { travelers: "Chefchaouen day trip (from Tangier)", price: "from €48/person" },
+        { travelers: "North tour 4 days (2 people)", price: "from €199/person" },
+        { travelers: "Tangier airport ↔ Chefchaouen transfer", price: "from €58" },
       ],
       faqs: [
         {
@@ -879,9 +879,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Guide tips",
       ],
       groupPricing: [
-        { travelers: "Medina & tanneries visit (half day)", price: "from €50/person" },
-        { travelers: "Volubilis & Meknes day trip", price: "from €85/person" },
-        { travelers: "Fes airport transfer (1–4 people)", price: "from €30" },
+        { travelers: "Medina & tanneries visit (half day)", price: "from €32/person" },
+        { travelers: "Volubilis & Meknes day trip", price: "from €55/person" },
+        { travelers: "Fes airport transfer (1–4 people)", price: "from €19" },
       ],
       faqs: [
         {
@@ -955,9 +955,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Accommodation if day trip only",
       ],
       groupPricing: [
-        { travelers: "Day trip (from Marrakech)", price: "from €29/person" },
-        { travelers: "Marrakech ↔ Essaouira transfer only", price: "from €95" },
-        { travelers: "Guided Essaouira medina visit", price: "from €40/person" },
+        { travelers: "Day trip (from Marrakech)", price: "from €18/person" },
+        { travelers: "Marrakech ↔ Essaouira transfer only", price: "from €62" },
+        { travelers: "Guided Essaouira medina visit", price: "from €26/person" },
       ],
       faqs: [
         {
@@ -1030,9 +1030,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Tips for muleteers and villagers",
       ],
       groupPricing: [
-        { travelers: "Megdaz trek 2d/1n (2 people)", price: "from €220/person" },
-        { travelers: "Full valley trek 3d/2n", price: "from €320/person" },
-        { travelers: "Megdaz day trip (no overnight)", price: "from €95/person" },
+        { travelers: "Megdaz trek 2d/1n (2 people)", price: "from €140/person" },
+        { travelers: "Full valley trek 3d/2n", price: "from €199/person" },
+        { travelers: "Megdaz day trip (no overnight)", price: "from €62/person" },
       ],
       faqs: [
         {
@@ -1105,9 +1105,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Souss-Massa park entrance (~20 MAD)",
       ],
       groupPricing: [
-        { travelers: "Agadir airport transfer (1–4 people)", price: "from €28" },
-        { travelers: "Paradise Valley day trip", price: "from €55/person" },
-        { travelers: "Marrakech → Agadir private transfer", price: "from €120" },
+        { travelers: "Agadir airport transfer (1–4 people)", price: "from €18" },
+        { travelers: "Paradise Valley day trip", price: "from €35/person" },
+        { travelers: "Marrakech → Agadir private transfer", price: "from €75" },
       ],
       faqs: [
         {
@@ -1181,9 +1181,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Archaeological guide tips",
       ],
       groupPricing: [
-        { travelers: "Volubilis & Meknes (1 day, 2 people)", price: "from €85/person" },
-        { travelers: "Volubilis only (half day)", price: "from €55/person" },
-        { travelers: "Fes + Volubilis + Chefchaouen (3 days)", price: "from €450/person" },
+        { travelers: "Volubilis & Meknes (1 day, 2 people)", price: "from €55/person" },
+        { travelers: "Volubilis only (half day)", price: "from €35/person" },
+        { travelers: "Fes + Volubilis + Chefchaouen (3 days)", price: "from €285/person" },
       ],
       faqs: [
         {
@@ -1258,9 +1258,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Propinas guías y chóferes (opcional)",
       ],
       groupPricing: [
-        { travelers: "Traslado aeropuerto (1–4 pers.)", price: "desde 25 €" },
-        { travelers: "Visita medina guiada (medio día)", price: "desde 45 €/pers." },
-        { travelers: "Excursión Essaouira (1 día)", price: "desde 29 €/pers." },
+        { travelers: "Traslado aeropuerto (1–4 pers.)", price: "desde 16 €" },
+        { travelers: "Visita medina guiada (medio día)", price: "desde 29 €/pers." },
+        { travelers: "Excursión Essaouira (1 día)", price: "desde 18 €/pers." },
       ],
       faqs: [
         {
@@ -1332,9 +1332,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Propinas camelleros y personal del campamento",
       ],
       groupPricing: [
-        { travelers: "Circuito desierto 2d/1n (desde Marrakech)", price: "desde 190 €/pers." },
-        { travelers: "Circuito desierto 3d/2n (clásico)", price: "desde 280 €/pers." },
-        { travelers: "Noche campamento lujo Erg Chebbi", price: "desde 120 €/pers." },
+        { travelers: "Circuito desierto 2d/1n (desde Marrakech)", price: "desde 120 €/pers." },
+        { travelers: "Circuito desierto 3d/2n (clásico)", price: "desde 175 €/pers." },
+        { travelers: "Noche campamento lujo Erg Chebbi", price: "desde 75 €/pers." },
       ],
       faqs: [
         { question: "¿Cuánto se tarda en llegar a Merzouga desde Marrakech?", answer: "Unas 9–10 h directo; recomendamos circuito 3 días con paradas Atlas y gargantas para un ritmo cómodo." },
@@ -1390,9 +1390,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Travesía ferry España–Marruecos (reserva aparte)",
       ],
       groupPricing: [
-        { travelers: "Excursión Chefchaouen (1d desde Tánger)", price: "desde 75 €/pers." },
-        { travelers: "Circuito Norte 4 días (2 pers.)", price: "desde 320 €/pers." },
-        { travelers: "Traslado Tánger aeropuerto ↔ Chefchaouen", price: "desde 90 €" },
+        { travelers: "Excursión Chefchaouen (1d desde Tánger)", price: "desde 48 €/pers." },
+        { travelers: "Circuito Norte 4 días (2 pers.)", price: "desde 199 €/pers." },
+        { travelers: "Traslado Tánger aeropuerto ↔ Chefchaouen", price: "desde 58 €" },
       ],
       faqs: [
         { question: "¿Se puede combinar el Norte con Fez o Rabat?", answer: "Sí, circuitos 5–7 días Tánger–Chefchaouen–Fez–Volubilis muy demandados. Optimizamos la ruta según sentido de viaje." },
@@ -1448,9 +1448,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Propinas guías",
       ],
       groupPricing: [
-        { travelers: "Visita medina y curtidurías (medio día)", price: "desde 50 €/pers." },
-        { travelers: "Excursión Volubilis y Meknes (1d)", price: "desde 85 €/pers." },
-        { travelers: "Traslado aeropuerto Fez (1–4 pers.)", price: "desde 30 €" },
+        { travelers: "Visita medina y curtidurías (medio día)", price: "desde 32 €/pers." },
+        { travelers: "Excursión Volubilis y Meknes (1d)", price: "desde 55 €/pers." },
+        { travelers: "Traslado aeropuerto Fez (1–4 pers.)", price: "desde 19 €" },
       ],
       faqs: [
         { question: "¿Es difícil visitar la medina de Fez solo?", answer: "El laberinto de callejuelas hace indispensable un guía para curtidurías, monumentos y talleres. Proporcionamos guías locales experimentados." },
@@ -1507,9 +1507,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Alojamiento si solo excursión de un día",
       ],
       groupPricing: [
-        { travelers: "Excursión 1 día (desde Marrakech)", price: "desde 29 €/pers." },
-        { travelers: "Traslado Marrakech ↔ Essaouira", price: "desde 95 €" },
-        { travelers: "Visita guiada medina Essaouira", price: "desde 40 €/pers." },
+        { travelers: "Excursión 1 día (desde Marrakech)", price: "desde 18 €/pers." },
+        { travelers: "Traslado Marrakech ↔ Essaouira", price: "desde 62 €" },
+        { travelers: "Visita guiada medina Essaouira", price: "desde 26 €/pers." },
       ],
       faqs: [
         { question: "¿Vale la excursión Essaouira desde Marrakech?", answer: "Sí, cambio total de ambiente en 2h30: aire marino, medina más tranquila y excelente cocina de pescado." },
@@ -1565,9 +1565,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Propinas arrieros y aldeanos",
       ],
       groupPricing: [
-        { travelers: "Trek 2d/1n Megdaz (2 pers.)", price: "desde 220 €/pers." },
-        { travelers: "Trek 3d/2n valle completo", price: "desde 320 €/pers." },
-        { travelers: "Excursión 1d Megdaz (sin noche)", price: "desde 95 €/pers." },
+        { travelers: "Trek 2d/1n Megdaz (2 pers.)", price: "desde 140 €/pers." },
+        { travelers: "Trek 3d/2n valle completo", price: "desde 199 €/pers." },
+        { travelers: "Excursión 1d Megdaz (sin noche)", price: "desde 62 €/pers." },
       ],
       faqs: [
         { question: "¿Se necesita buena forma física para Megdaz?", answer: "Treks moderados 3–5 h/día con desnivel moderado. Programas adaptables para familias activas o senderistas experimentados." },
@@ -1623,9 +1623,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Entrada parque Souss-Massa (~20 MAD)",
       ],
       groupPricing: [
-        { travelers: "Traslado aeropuerto Agadir (1–4 pers.)", price: "desde 28 €" },
-        { travelers: "Excursión Paradise Valley (1d)", price: "desde 55 €/pers." },
-        { travelers: "Marrakech → Agadir (traslado privado)", price: "desde 120 €" },
+        { travelers: "Traslado aeropuerto Agadir (1–4 pers.)", price: "desde 18 €" },
+        { travelers: "Excursión Paradise Valley (1d)", price: "desde 35 €/pers." },
+        { travelers: "Marrakech → Agadir (traslado privado)", price: "desde 75 €" },
       ],
       faqs: [
         { question: "¿Agadir para vacaciones playa en familia?", answer: "Sí, playas amplias, agua moderada e infraestructura turística completa. Ideal octubre–mayo para evitar calor estival." },
@@ -1682,9 +1682,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Propinas guía arqueológico",
       ],
       groupPricing: [
-        { travelers: "Volubilis y Meknes (1d, 2 pers.)", price: "desde 85 €/pers." },
-        { travelers: "Volubilis solo (medio día)", price: "desde 55 €/pers." },
-        { travelers: "Circuito Fez + Volubilis + Chefchaouen (3d)", price: "desde 450 €/pers." },
+        { travelers: "Volubilis y Meknes (1d, 2 pers.)", price: "desde 55 €/pers." },
+        { travelers: "Volubilis solo (medio día)", price: "desde 35 €/pers." },
+        { travelers: "Circuito Fez + Volubilis + Chefchaouen (3d)", price: "desde 285 €/pers." },
       ],
       faqs: [
         { question: "¿Cuánto tiempo para Volubilis?", answer: "Calcule 1h30–2h en sitio con guía; mínimo medio día, día completo con Meknes recomendado." },
@@ -1742,9 +1742,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Trinkgelder für Guides und Chauffeure (optional)",
       ],
       groupPricing: [
-        { travelers: "Flughafentransfer (1–4 Pers.)", price: "ab 25 €" },
-        { travelers: "Geführte Medina (halber Tag)", price: "ab 45 €/Pers." },
-        { travelers: "Essaouira Tagesausflug", price: "ab 29 €/Pers." },
+        { travelers: "Flughafentransfer (1–4 Pers.)", price: "ab 16 €" },
+        { travelers: "Geführte Medina (halber Tag)", price: "ab 29 €/Pers." },
+        { travelers: "Essaouira Tagesausflug", price: "ab 18 €/Pers." },
       ],
       faqs: [
         { question: "Bieten Sie Flughafentransfer Marrakesch an?", answer: "Ja, persönliche Begrüßung am Menara-Flughafen 24/7, klimatisiertes Fahrzeug und zweisprachiger Chauffeur bis zu Ihrem Riad oder Hotel." },
@@ -1800,9 +1800,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Trinkgelder für Kamelführer und Camp-Personal",
       ],
       groupPricing: [
-        { travelers: "Wüstentour 2T/1N (ab Marrakesch)", price: "ab 190 €/Pers." },
-        { travelers: "Wüstentour 3T/2N (klassisch)", price: "ab 280 €/Pers." },
-        { travelers: "Erg Chebbi Luxuscamp-Nacht", price: "ab 120 €/Pers." },
+        { travelers: "Wüstentour 2T/1N (ab Marrakesch)", price: "ab 120 €/Pers." },
+        { travelers: "Wüstentour 3T/2N (klassisch)", price: "ab 175 €/Pers." },
+        { travelers: "Erg Chebbi Luxuscamp-Nacht", price: "ab 75 €/Pers." },
       ],
       faqs: [
         { question: "Wie lange nach Merzouga ab Marrakesch?", answer: "Etwa 9–10 Stunden direkt; wir empfehlen eine 3-Tage-Tour mit Atlas- und Schluchtstopps für angenehmes Tempo." },
@@ -1858,9 +1858,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Fährüberfahrt Spanien–Marokko (separate Buchung)",
       ],
       groupPricing: [
-        { travelers: "Chefchaouen Tagesausflug (ab Tanger)", price: "ab 75 €/Pers." },
-        { travelers: "Nordtour 4 Tage (2 Pers.)", price: "ab 320 €/Pers." },
-        { travelers: "Tanger Flughafen ↔ Chefchaouen Transfer", price: "ab 90 €" },
+        { travelers: "Chefchaouen Tagesausflug (ab Tanger)", price: "ab 48 €/Pers." },
+        { travelers: "Nordtour 4 Tage (2 Pers.)", price: "ab 199 €/Pers." },
+        { travelers: "Tanger Flughafen ↔ Chefchaouen Transfer", price: "ab 58 €" },
       ],
       faqs: [
         { question: "Nord mit Fès oder Rabat kombinieren?", answer: "Ja, beliebte 5–7-Tage-Touren Tanger–Chefchaouen–Fès–Volubilis. Route nach Reiserichtung optimiert." },
@@ -1916,9 +1916,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Guide-Trinkgelder",
       ],
       groupPricing: [
-        { travelers: "Medina & Gerbereien (halber Tag)", price: "ab 50 €/Pers." },
-        { travelers: "Volubilis & Meknès Tagesausflug", price: "ab 85 €/Pers." },
-        { travelers: "Fès Flughafentransfer (1–4 Pers.)", price: "ab 30 €" },
+        { travelers: "Medina & Gerbereien (halber Tag)", price: "ab 32 €/Pers." },
+        { travelers: "Volubilis & Meknès Tagesausflug", price: "ab 55 €/Pers." },
+        { travelers: "Fès Flughafentransfer (1–4 Pers.)", price: "ab 19 €" },
       ],
       faqs: [
         { question: "Ist Fès-Medina allein schwer zu besuchen?", answer: "Das Gassengewirr macht einen Guide für Gerbereien, Monumente und Werkstätten unverzichtbar. Erfahrene lokale Guides inklusive." },
@@ -1975,9 +1975,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Unterkunft bei reiner Tagesausflug",
       ],
       groupPricing: [
-        { travelers: "Tagesausflug (ab Marrakesch)", price: "ab 29 €/Pers." },
-        { travelers: "Marrakesch ↔ Essaouira Transfer", price: "ab 95 €" },
-        { travelers: "Geführte Essaouira-Medina", price: "ab 40 €/Pers." },
+        { travelers: "Tagesausflug (ab Marrakesch)", price: "ab 18 €/Pers." },
+        { travelers: "Marrakesch ↔ Essaouira Transfer", price: "ab 62 €" },
+        { travelers: "Geführte Essaouira-Medina", price: "ab 26 €/Pers." },
       ],
       faqs: [
         { question: "Lohnt sich Essaouira-Tagesausflug ab Marrakesch?", answer: "Ja, kompletter Stimmungswechsel in 2,5 h: Meeresluft, ruhigere Medina und exzellente Fischküche." },
@@ -2033,9 +2033,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Trinkgelder für Maultiertreiber und Dorfbewohner",
       ],
       groupPricing: [
-        { travelers: "Megdaz Trek 2T/1N (2 Pers.)", price: "ab 220 €/Pers." },
-        { travelers: "Volles Tal-Trek 3T/2N", price: "ab 320 €/Pers." },
-        { travelers: "Megdaz Tagesausflug (ohne Nacht)", price: "ab 95 €/Pers." },
+        { travelers: "Megdaz Trek 2T/1N (2 Pers.)", price: "ab 140 €/Pers." },
+        { travelers: "Volles Tal-Trek 3T/2N", price: "ab 199 €/Pers." },
+        { travelers: "Megdaz Tagesausflug (ohne Nacht)", price: "ab 62 €/Pers." },
       ],
       faqs: [
         { question: "Braucht man gute Kondition für Megdaz?", answer: "Mäßige Treks 3–5 h/Tag mit moderatem Höhenunterschied. Programme für aktive Familien oder erfahrene Wanderer anpassbar." },
@@ -2091,9 +2091,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Souss-Massa-Park-Eintritt (~20 MAD)",
       ],
       groupPricing: [
-        { travelers: "Agadir Flughafentransfer (1–4 Pers.)", price: "ab 28 €" },
-        { travelers: "Paradise Valley Tagesausflug", price: "ab 55 €/Pers." },
-        { travelers: "Marrakesch → Agadir Privattransfer", price: "ab 120 €" },
+        { travelers: "Agadir Flughafentransfer (1–4 Pers.)", price: "ab 18 €" },
+        { travelers: "Paradise Valley Tagesausflug", price: "ab 35 €/Pers." },
+        { travelers: "Marrakesch → Agadir Privattransfer", price: "ab 75 €" },
       ],
       faqs: [
         { question: "Agadir für Familien-Strandurlaub?", answer: "Ja, breite Strände, moderates Wasser und vollständige Touristeninfrastruktur. Ideal Oktober–Mai gegen Sommerhitze." },
@@ -2150,9 +2150,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Archäologie-Guide-Trinkgelder",
       ],
       groupPricing: [
-        { travelers: "Volubilis & Meknès (1T, 2 Pers.)", price: "ab 85 €/Pers." },
-        { travelers: "Nur Volubilis (halber Tag)", price: "ab 55 €/Pers." },
-        { travelers: "Fès + Volubilis + Chefchaouen (3T)", price: "ab 450 €/Pers." },
+        { travelers: "Volubilis & Meknès (1T, 2 Pers.)", price: "ab 55 €/Pers." },
+        { travelers: "Nur Volubilis (halber Tag)", price: "ab 35 €/Pers." },
+        { travelers: "Fès + Volubilis + Chefchaouen (3T)", price: "ab 285 €/Pers." },
       ],
       faqs: [
         { question: "Wie viel Zeit für Volubilis?", answer: "1,5–2 h vor Ort mit Guide einplanen; mindestens halber Tag, ganzer Tag mit Meknès empfohlen." },

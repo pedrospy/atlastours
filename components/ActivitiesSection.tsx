@@ -5,12 +5,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { activitiesCatalog } from "@/lib/catalog";
-import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
+import { useDictionary } from "@/lib/i18n/locale-context";
 import { SectionArabic } from "@/components/ArabicCalligraphy";
 
 export function ActivitiesSection() {
   const dict = useDictionary();
-  const { locale } = useLocale();
   const t = dict.activities;
   const preview = activitiesCatalog;
 
@@ -45,10 +44,7 @@ export function ActivitiesSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-midnight/90 via-midnight/25 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <p className="text-sm font-semibold text-gold-light">
-                  {dict.common.from} {formatPrice(activity.price, locale)}
-                </p>
-                <h3 className="mt-1 font-display text-base font-semibold leading-snug text-white sm:text-lg">
+                <h3 className="font-display text-base font-semibold leading-snug text-white sm:text-lg">
                   {t.items[activity.id]}
                 </h3>
               </div>

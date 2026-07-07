@@ -1,7 +1,7 @@
 import type { ExcursionDetailContent } from "./types";
 
 type LocaleBlock = Record<
-  "imlil" | "trois-vallees" | "casablanca" | "agadir-taghazout",
+  "imlil" | "trois-vallees" | "casablanca" | "agadir-taghazout" | "agafay",
   ExcursionDetailContent
 >;
 
@@ -222,6 +222,86 @@ export const extraExcursionDetailsFr: LocaleBlock = {
     notIncluded: ["Déjeuner et boissons", "Activités surf (option)", "Pourboires"],
     groupPricing: sharedGroupPricingFr(125),
     faqs: sharedFaqsFr,
+  },
+  agafay: {
+    metaTitle: "Désert d'Agafay — Excursion 1 jour depuis Marrakech | Red Nomad",
+    metaDescription:
+      "Excursion privée au désert d'Agafay depuis Marrakech : paysages lunaires, balade à dos de chameau, coucher de soleil et déjeuner berbère dans un camp de luxe à 45 min de la ville.",
+    subtitle: "Désert de pierre & coucher de soleil",
+    difficulty: "Facile",
+    duration: "½ journée ou 1 jour",
+    groupSize: "1–17 personnes",
+    departure: "Marrakech",
+    languages: "Français, English",
+    about:
+      "À seulement 45 minutes de Marrakech, le désert d'Agafay offre une immersion saharienne sans les longues heures de route vers Merzouga. Collines de pierre dorée, campements berbères de luxe, randonnée à dos de chameau au coucher du soleil et vue sur l'Atlas enneigé : l'excursion idéale pour une première expérience désert ou une demi-journée d'évasion hors du temps.",
+    highlights: [
+      "Désert d'Agafay — paysages lunaires à 45 min de Marrakech",
+      "Balade à dos de chameau au coucher ou lever du soleil",
+      "Camp de luxe ou bivouac traditionnel avec vue sur l'Atlas",
+      "Déjeuner ou dîner berbère sous tente nomade",
+      "Photos spectaculaires — lumière dorée garantie",
+      "Option quad ou buggy dans les collines (sur demande)",
+    ],
+    itinerary: [
+      {
+        dayLabel: "J1",
+        title: "Marrakech — Agafay — Marrakech",
+        description: "Demi-journée ou journée complète selon la formule choisie.",
+        steps: [
+          "14h00 ou 16h00 — Prise en charge à votre riad à Marrakech",
+          "Route (~45 min) vers le désert d'Agafay, paysages de collines pierreuses",
+          "Accueil thé à la menthe au camp ou point de rendez-vous",
+          "Balade à dos de chameau (1h) — coucher de soleil sur les collines",
+          "Dîner traditionnel marocain sous tente ou en plein air",
+          "Musique berbère autour du feu (formule soirée)",
+          "Retour à Marrakech (~45 min) — arrivée vers 22h–23h",
+        ],
+      },
+    ],
+    included: [
+      "Transport privé aller-retour depuis Marrakech",
+      "Chauffeur-guide francophone",
+      "Balade à dos de chameau (1h environ)",
+      "Thé à la menthe à l'arrivée",
+      "Dîner ou déjeuner berbère selon formule",
+      "Eau minérale à bord du véhicule",
+    ],
+    notIncluded: [
+      "Boissons au camp (hors thé)",
+      "Activités quad / buggy (option payante)",
+      "Nuit en camp de luxe (sur devis)",
+      "Pourboires chameliers et personnel",
+    ],
+    groupPricing: [
+      { travelers: "2 voyageurs", price: "40 €" },
+      { travelers: "3–4 voyageurs", price: "40 €" },
+      { travelers: "5–7 voyageurs", price: "40 €" },
+      { travelers: "8–14 voyageurs", price: "40 €" },
+      { travelers: "15–17 voyageurs", price: "40 €" },
+    ],
+    faqs: [
+      {
+        question: "Agafay, c'est du vrai désert de sable ?",
+        answer:
+          "Agafay est un désert de pierre (reg) aux collines dorées — pas de dunes comme Merzouga, mais une atmosphère saharienne authentique avec vue sur l'Atlas, à 45 min de Marrakech.",
+      },
+      {
+        question: "Peut-on faire l'excursion en demi-journée ?",
+        answer:
+          "Oui : départ après-midi pour le coucher de soleil et dîner, retour le soir. Formule journée complète avec déjeuner possible sur demande.",
+      },
+      {
+        question: "Convient aux enfants et personnes âgées ?",
+        answer:
+          "Oui, balade chameau douce et accessible. Pas de marche difficile. Idéal en famille.",
+      },
+      {
+        question: "Que porter pour Agafay ?",
+        answer:
+          "Chaussures fermées, vêtements couvrants le soir (fraîcheur), lunettes de soleil et chapeau. En hiver, prévoir une veste chaude.",
+      },
+    ],
   },
 };
 
@@ -474,6 +554,85 @@ export const extraExcursionDetailsEn: LocaleBlock = {
       },
     ],
   },
+  agafay: {
+    metaTitle: "Agafay Desert — Day Trip from Marrakech | Red Nomad",
+    metaDescription:
+      "Private Agafay desert trip from Marrakech: lunar landscapes, camel ride, sunset and Berber dinner at a luxury camp just 45 minutes from the city.",
+    subtitle: "Stone desert & sunset",
+    difficulty: "Easy",
+    duration: "Half day or full day",
+    groupSize: "1–17 people",
+    departure: "Marrakech",
+    languages: "French, English",
+    about:
+      "Just 45 minutes from Marrakech, the Agafay Desert delivers a Sahara feel without the long drive to Merzouga. Golden stone hills, luxury Berber camps, a sunset camel trek and views of the snow-capped Atlas — ideal for a first desert experience or a half-day escape.",
+    highlights: [
+      "Agafay Desert — lunar landscapes 45 min from Marrakech",
+      "Sunset or sunrise camel ride",
+      "Luxury camp or traditional bivouac with Atlas views",
+      "Berber lunch or dinner under a nomad tent",
+      "Spectacular golden-hour photography",
+      "Optional quad or buggy in the hills (on request)",
+    ],
+    itinerary: [
+      {
+        dayLabel: "D1",
+        title: "Marrakech — Agafay — Marrakech",
+        description: "Half-day or full-day formula available.",
+        steps: [
+          "2:00 or 4:00 PM — Pick-up at your riad in Marrakech",
+          "Drive (~45 min) to Agafay stone desert",
+          "Welcome mint tea at the camp",
+          "Camel ride (~1 h) at sunset over the hills",
+          "Traditional Moroccan dinner under tent or open sky",
+          "Berber music by the fire (evening formula)",
+          "Return to Marrakech (~45 min) — arrive around 10–11 PM",
+        ],
+      },
+    ],
+    included: [
+      "Private round-trip transport from Marrakech",
+      "French-speaking driver-guide",
+      "Camel ride (~1 hour)",
+      "Welcome mint tea",
+      "Berber lunch or dinner depending on formula",
+      "Mineral water in the vehicle",
+    ],
+    notIncluded: [
+      "Drinks at camp (except tea)",
+      "Quad / buggy activities (optional extra)",
+      "Luxury camp overnight (on request)",
+      "Tips for cameleers and staff",
+    ],
+    groupPricing: [
+      { travelers: "2 travelers", price: "€40" },
+      { travelers: "3–4 travelers", price: "€40" },
+      { travelers: "5–7 travelers", price: "€40" },
+      { travelers: "8–14 travelers", price: "€40" },
+      { travelers: "15–17 travelers", price: "€40" },
+    ],
+    faqs: [
+      {
+        question: "Is Agafay a real sand desert?",
+        answer:
+          "Agafay is a stone desert (reg) with golden hills — not Merzouga-style dunes, but an authentic Saharan atmosphere with Atlas views, 45 minutes from Marrakech.",
+      },
+      {
+        question: "Can we do a half-day trip?",
+        answer:
+          "Yes: afternoon departure for sunset and dinner, return in the evening. Full day with lunch available on request.",
+      },
+      {
+        question: "Is it suitable for children and seniors?",
+        answer: "Yes, gentle camel ride with no difficult walking. Great for families.",
+      },
+      {
+        question: "What should I wear?",
+        answer:
+          "Closed shoes, layers for the evening chill, sunglasses and a hat. Bring a warm jacket in winter.",
+      },
+    ],
+  },
 };
 
 // Spanish & German: concise mirrors of EN structure
@@ -545,6 +704,26 @@ export const extraExcursionDetailsEs: LocaleBlock = {
     ],
     faqs: sharedFaqsFr,
   },
+  agafay: {
+    ...extraExcursionDetailsEn.agafay,
+    metaTitle: "Desierto de Agafay — Excursión 1 día desde Marrakech | Red Nomad",
+    subtitle: "Desierto de piedra y atardecer",
+    difficulty: "Fácil",
+    duration: "Medio día o 1 día",
+    groupSize: "1–17 personas",
+    departure: "Marrakech",
+    languages: "Francés, inglés",
+    about:
+      "A solo 45 minutos de Marrakech, el desierto de Agafay ofrece una experiencia sahariense sin las largas horas hacia Merzouga. Colinas doradas, campamentos de lujo, paseo en camello al atardecer y vistas del Atlas.",
+    groupPricing: [
+      { travelers: "2 viajeros", price: "40 €" },
+      { travelers: "3–4 viajeros", price: "40 €" },
+      { travelers: "5–7 viajeros", price: "40 €" },
+      { travelers: "8–14 viajeros", price: "40 €" },
+      { travelers: "15–17 viajeros", price: "40 €" },
+    ],
+    faqs: sharedFaqsFr,
+  },
 };
 
 export const extraExcursionDetailsDe: LocaleBlock = {
@@ -605,6 +784,26 @@ export const extraExcursionDetailsDe: LocaleBlock = {
       { travelers: "5–7 Reisende", price: "98 €/Pers." },
       { travelers: "8–14 Reisende", price: "81 €/Pers." },
       { travelers: "15–17 Reisende", price: "73 €/Pers." },
+    ],
+    faqs: sharedFaqsFr,
+  },
+  agafay: {
+    ...extraExcursionDetailsEn.agafay,
+    metaTitle: "Agafay-Wüste — Tagesausflug ab Marrakesch | Red Nomad",
+    subtitle: "Steinwüste & Sonnenuntergang",
+    difficulty: "Leicht",
+    duration: "Halbtag oder 1 Tag",
+    groupSize: "1–17 Personen",
+    departure: "Marrakesch",
+    languages: "Französisch, Englisch",
+    about:
+      "Nur 45 Minuten von Marrakesch entfernt bietet die Agafay-Wüste Sahara-Feeling ohne die lange Fahrt nach Merzouga. Goldene Steinberge, Luxuscamps, Kamelritt bei Sonnenuntergang und Atlas-Blick.",
+    groupPricing: [
+      { travelers: "2 Reisende", price: "40 €" },
+      { travelers: "3–4 Reisende", price: "40 €" },
+      { travelers: "5–7 Reisende", price: "40 €" },
+      { travelers: "8–14 Reisende", price: "40 €" },
+      { travelers: "15–17 Reisende", price: "40 €" },
     ],
     faqs: sharedFaqsFr,
   },

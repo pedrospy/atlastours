@@ -183,6 +183,27 @@ export const excursionsCatalog = [
     destination: "atlas",
   },
   {
+    id: "agafay",
+    slug: "agafay-desert-day-trip",
+    rating: 4.9,
+    reviews: 118,
+    price: 40,
+    flatPrice: true,
+    image: "/images/exc-agafay-camel-trek.png",
+    images: [
+      "/images/exc-agafay-camel-trek.png",
+      "/images/exc-agafay-camel-caravan.png",
+      "/images/exc-agafay-luxury-cabana.png",
+      "/images/exc-agafay-desert-camp.png",
+    ],
+    badgeClass: "bg-terracotta",
+    durationDays: 1,
+    category: "adventure",
+    difficulty: "easy",
+    departure: "marrakech",
+    destination: "agafay",
+  },
+  {
     id: "imlil",
     slug: "imlil-toubkal-day-hike",
     rating: 4.9,
@@ -373,10 +394,10 @@ export const destinationsCatalog = [
   {
     id: "marrakech",
     slug: "marrakech-imperial-city",
-    count: 20,
+    count: 21,
     rating: 4.9,
     reviews: 186,
-    price: 18,
+    price: 12,
     image: "/images/dest-marrakech-jemaa.jpg",
     images: [
       "/images/dest-marrakech-jemaa.jpg",
@@ -391,7 +412,7 @@ export const destinationsCatalog = [
     count: 6,
     rating: 4.9,
     reviews: 142,
-    price: 78,
+    price: 45,
     image: "/images/dest-merzouga-camp.jpg",
     images: [
       "/images/dest-merzouga-camp.jpg",
@@ -406,7 +427,7 @@ export const destinationsCatalog = [
     count: 5,
     rating: 4.8,
     reviews: 67,
-    price: 75,
+    price: 48,
     image: "/images/dest-chefchaouen.jpg",
     images: [
       "/images/dest-chefchaouen.jpg",
@@ -421,7 +442,7 @@ export const destinationsCatalog = [
     count: 5,
     rating: 4.9,
     reviews: 98,
-    price: 30,
+    price: 19,
     image: "/images/dest-fes-tannery.png",
     images: [
       "/images/dest-fes-tannery.png",
@@ -436,7 +457,7 @@ export const destinationsCatalog = [
     count: 5,
     rating: 4.8,
     reviews: 103,
-    price: 14,
+    price: 9,
     image: "/images/dest-essaouira-coast.jpg",
     images: [
       "/images/dest-essaouira-coast.jpg",
@@ -451,7 +472,7 @@ export const destinationsCatalog = [
     count: 3,
     rating: 4.9,
     reviews: 31,
-    price: 95,
+    price: 59,
     image: "/images/dest-megdaz-valley.jpg",
     images: [
       "/images/dest-megdaz-valley.jpg",
@@ -466,7 +487,7 @@ export const destinationsCatalog = [
     count: 2,
     rating: 4.7,
     reviews: 45,
-    price: 28,
+    price: 18,
     image: "/images/dest-agadir-beach.jpg",
   },
   {
@@ -475,7 +496,7 @@ export const destinationsCatalog = [
     count: 8,
     rating: 4.9,
     reviews: 74,
-    price: 55,
+    price: 35,
     image: "/images/dest-volubilis-mosaic.png",
     images: [
       "/images/dest-volubilis-mosaic.png",

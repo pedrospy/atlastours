@@ -10,6 +10,7 @@ export type {
 
 export type ExcursionId =
   | "ourika"
+  | "agafay"
   | "imlil"
   | "trois-vallees"
   | "ouzoud"

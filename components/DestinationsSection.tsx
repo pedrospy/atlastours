@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { MapPin, ArrowRight } from "lucide-react";
 import { destinationsCatalog } from "@/lib/catalog";
-import { useDictionary, useLocale } from "@/lib/i18n/locale-context";
+import { formatPrice, useDictionary, useLocale } from "@/lib/i18n/locale-context";
 import { SectionArabic } from "@/components/ArabicCalligraphy";
 
 export function DestinationsSection() {
@@ -99,6 +99,12 @@ export function DestinationsSection() {
                     <p className="mt-1 flex items-center gap-1 text-sm text-gold-light/80">
                       <MapPin className="h-3.5 w-3.5" />
                       {dest.count} {dict.common.excursionsCount}
+                    </p>
+                    <p className="mt-2 text-sm font-semibold text-gold-light">
+                      {dict.common.from} {formatPrice(dest.price, locale)}
+                      <span className="font-normal text-gold-light/80">
+                        {dict.common.perPerson}
+                      </span>
                     </p>
                   </div>
                 </Link>
