@@ -3,7 +3,7 @@ import type { Dictionary } from "../types";
 export const en: Dictionary = {
   locale: "en",
   meta: {
-    title: "Airport transfers & tours | Red Nomad",
+    title: "Airport transfers & tours | Arganis Nomad",
     description:
       "Airport transfers, day trips and private tours in Morocco. Modern vehicles, local drivers, tailor-made journeys from Marrakech to the Sahara.",
     keywords: [
@@ -14,7 +14,7 @@ export const en: Dictionary = {
       "Marrakech",
       "day trips",
     ],
-    ogTitle: "Red Nomad — Airport transfers, day trips and private tours in Morocco",
+    ogTitle: "Arganis Nomad — Airport transfers, day trips and private tours in Morocco",
     ogDescription:
       "Airport transfers, excursions and private tours in Morocco with local drivers.",
   },
@@ -40,9 +40,9 @@ export const en: Dictionary = {
     perTrip: "/trip",
     menu: "Menu",
     discover: "Discover",
-    whatsapp: "Red Nomad",
-    whatsappAria: "Contact Red Nomad via WhatsApp",
-    whatsappMessage: "Hello Red Nomad, ",
+    whatsapp: "Arganis Nomad",
+    whatsappAria: "Contact Arganis Nomad via WhatsApp",
+    whatsappMessage: "Hello Arganis Nomad, ",
     excursionsCount: "trips",
     close: "Close",
   },
@@ -374,7 +374,7 @@ export const en: Dictionary = {
     notIncluded: "Not included",
     groupPricing: "Group rates",
     faq: "Frequently asked questions",
-    whyBook: "Why book with Red Nomad?",
+    whyBook: "Why book with Arganis Nomad?",
     book: "Book now",
     requestQuote: "Request a quote",
     freeCancel: "Free cancellation 48h before",

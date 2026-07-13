@@ -3,9 +3,9 @@ import type { DestinationDetailsByLocale } from "./types";
 export const destinationDetails: DestinationDetailsByLocale = {
   fr: {
     marrakech: {
-      metaTitle: "Marrakech — Circuits & transferts | Red Nomad",
+      metaTitle: "Marrakech — Circuits & transferts | Arganis Nomad",
       metaDescription:
-        "Marrakech : ville impériale, médina UNESCO, place Jemaa el-Fna, riads et transferts aéroport. Excursions, circuits privés et chauffeur sur mesure avec Red Nomad.",
+        "Marrakech : ville impériale, médina UNESCO, place Jemaa el-Fna, riads et transferts aéroport. Excursions, circuits privés et chauffeur sur mesure avec Arganis Nomad.",
       subtitle: "Perle du Sud",
       difficulty: "Tous niveaux",
       duration: "Sur mesure",
@@ -13,7 +13,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech",
       languages: "Français, English",
       about:
-        "Marrakech est le cœur battant du tourisme marocain : médina labyrinthique classée UNESCO, riads de charme, souks colorés et la place Jemaa el-Fna qui s'anime au coucher du soleil. Red Nomad vous accueille dès l'aéroport et organise transferts, visites guidées, excursions à la journée et circuits multi-jours au départ de la ville ocre.",
+        "Marrakech est le cœur battant du tourisme marocain : médina labyrinthique classée UNESCO, riads de charme, souks colorés et la place Jemaa el-Fna qui s'anime au coucher du soleil. Arganis Nomad vous accueille dès l'aéroport et organise transferts, visites guidées, excursions à la journée et circuits multi-jours au départ de la ville ocre.",
       highlights: [
         "Place Jemaa el-Fna — spectacle vivant UNESCO au crépuscule",
         "Médina et souks — artisanat, épices et palais cachés",
@@ -78,9 +78,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     merzouga: {
-      metaTitle: "Merzouga — Circuits & transferts | Red Nomad",
+      metaTitle: "Merzouga — Circuits & transferts | Arganis Nomad",
       metaDescription:
-        "Merzouga et Erg Chebbi : dunes du Sahara, randonnée à dos de chameau, bivouac de luxe et coucher de soleil. Circuits désert privés depuis Marrakech ou Fès avec Red Nomad.",
+        "Merzouga et Erg Chebbi : dunes du Sahara, randonnée à dos de chameau, bivouac de luxe et coucher de soleil. Circuits désert privés depuis Marrakech ou Fès avec Arganis Nomad.",
       subtitle: "Porte du Sahara",
       difficulty: "Modéré (dunes)",
       duration: "2 à 4 jours",
@@ -88,7 +88,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech ou Fès",
       languages: "Français, English",
       about:
-        "Merzouga, au pied des dunes dorées de l'Erg Chebbi, offre l'expérience saharienne la plus emblématique du Maroc. Randonnée à dos de chameau au coucher du soleil, nuit en bivouac berbère ou camp de luxe sous les étoiles, et lever de soleil sur les dunes : Red Nomad organise votre circuit désert avec chauffeur privé et hébergements sélectionnés.",
+        "Merzouga, au pied des dunes dorées de l'Erg Chebbi, offre l'expérience saharienne la plus emblématique du Maroc. Randonnée à dos de chameau au coucher du soleil, nuit en bivouac berbère ou camp de luxe sous les étoiles, et lever de soleil sur les dunes : Arganis Nomad organise votre circuit désert avec chauffeur privé et hébergements sélectionnés.",
       highlights: [
         "Erg Chebbi — dunes de sable jusqu'à 150 m",
         "Randonnée chameau au coucher et lever du soleil",
@@ -116,7 +116,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Chauffeur professionnel bilingue tout au long du circuit",
         "Randonnée chameau et nuit en bivouac (formule standard)",
         "Dîner et petit-déjeuner au camp désert",
-        "Assistance Red Nomad 24 h/24 avant et pendant le voyage",
+        "Assistance Arganis Nomad 24 h/24 avant et pendant le voyage",
       ],
       notIncluded: [
         "Hébergements en ville (Erfoud, Tinghir — sur devis)",
@@ -153,9 +153,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     "nord-maroc": {
-      metaTitle: "Nord du Maroc — Circuits & transferts | Red Nomad",
+      metaTitle: "Nord du Maroc — Circuits & transferts | Arganis Nomad",
       metaDescription:
-        "Tanger, Chefchaouen la perle bleue, Asilah et la côte nord. Circuits privés, transferts et excursions sur la Méditerranée marocaine avec Red Nomad.",
+        "Tanger, Chefchaouen la perle bleue, Asilah et la côte nord. Circuits privés, transferts et excursions sur la Méditerranée marocaine avec Arganis Nomad.",
       subtitle: "Méditerranée & montagnes du Rif",
       difficulty: "Facile",
       duration: "3 à 7 jours",
@@ -163,7 +163,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Tanger, Tétouan ou Fès",
       languages: "Français, English",
       about:
-        "Le Nord du Maroc révèle une facette méditerranéenne du royaume : Tanger entre deux mers, Chefchaouen aux murs bleus du Rif, Asilah et ses murailles atlantiques, cap Spartel et grottes d'Hercule. Red Nomad organise circuits combinés, transferts depuis l'aéroport ou le port de Tanger et excursions sur mesure le long de la côte nord.",
+        "Le Nord du Maroc révèle une facette méditerranéenne du royaume : Tanger entre deux mers, Chefchaouen aux murs bleus du Rif, Asilah et ses murailles atlantiques, cap Spartel et grottes d'Hercule. Arganis Nomad organise circuits combinés, transferts depuis l'aéroport ou le port de Tanger et excursions sur mesure le long de la côte nord.",
       highlights: [
         "Chefchaouen — médina bleue du Rif, photogénique et paisible",
         "Tanger — kasbah, médina et cap Spartel",
@@ -228,9 +228,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     fes: {
-      metaTitle: "Fès — Circuits & transferts | Red Nomad",
+      metaTitle: "Fès — Circuits & transferts | Arganis Nomad",
       metaDescription:
-        "Fès, capitale spirituelle : médina UNESCO, tanneries Chouara, artisanat et médersas. Visites guidées, transferts et circuits privés avec Red Nomad.",
+        "Fès, capitale spirituelle : médina UNESCO, tanneries Chouara, artisanat et médersas. Visites guidées, transferts et circuits privés avec Arganis Nomad.",
       subtitle: "Capitale spirituelle et artisanale",
       difficulty: "Modéré (médina)",
       duration: "1 à 5 jours",
@@ -238,7 +238,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Fès",
       languages: "Français, English",
       about:
-        "Fès el-Bali, plus grande zone piétonne du monde, abrite tanneries centenaires, médersas sculptées et savoir-faire artisanal transmis de génération en génération. Red Nomad propose transferts aéroport Fès-Saïss, visites guidées de la médina, excursions vers Volubilis et Meknès, et circuits vers le Nord ou le désert.",
+        "Fès el-Bali, plus grande zone piétonne du monde, abrite tanneries centenaires, médersas sculptées et savoir-faire artisanal transmis de génération en génération. Arganis Nomad propose transferts aéroport Fès-Saïss, visites guidées de la médina, excursions vers Volubilis et Meknès, et circuits vers le Nord ou le désert.",
       highlights: [
         "Médina Fès el-Bali — UNESCO, 9 000 ruelles",
         "Tanneries Chouara — spectacle ocre et artisanal unique",
@@ -303,9 +303,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     essaouira: {
-      metaTitle: "Essaouira — Circuits & transferts | Red Nomad",
+      metaTitle: "Essaouira — Circuits & transferts | Arganis Nomad",
       metaDescription:
-        "Essaouira : médina atlantique, port aux mouettes, remparts UNESCO et plages venteuses. Excursion d'une journée depuis Marrakech ou séjour sur mesure avec Red Nomad.",
+        "Essaouira : médina atlantique, port aux mouettes, remparts UNESCO et plages venteuses. Excursion d'une journée depuis Marrakech ou séjour sur mesure avec Arganis Nomad.",
       subtitle: "Perle de l'Atlantique",
       difficulty: "Facile",
       duration: "1 jour à 3 jours",
@@ -313,7 +313,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech ou Essaouira",
       languages: "Français, English",
       about:
-        "Essaouira, ancienne Mogador, mêle médina fortifiée, port de pêche animé et horizon atlantique. Remparts UNESCO, ateliers de marqueterie de thuya, plages de sable fin et spots de windsurf : Red Nomad organise l'excursion d'une journée depuis Marrakech ou un séjour détente avec transferts privés.",
+        "Essaouira, ancienne Mogador, mêle médina fortifiée, port de pêche animé et horizon atlantique. Remparts UNESCO, ateliers de marqueterie de thuya, plages de sable fin et spots de windsurf : Arganis Nomad organise l'excursion d'une journée depuis Marrakech ou un séjour détente avec transferts privés.",
       highlights: [
         "Médina fortifiée — UNESCO, remparts et Skala du Port",
         "Port de pêche — barques bleues et grillades de sardines",
@@ -379,9 +379,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     megdaz: {
-      metaTitle: "Megdaz — Circuits & transferts | Red Nomad",
+      metaTitle: "Megdaz — Circuits & transferts | Arganis Nomad",
       metaDescription:
-        "Vallée de Megdaz, Atlas marocain : villages berbères authentiques, treks et hospitalité de montagne. Circuits trek privés depuis Marrakech avec Red Nomad.",
+        "Vallée de Megdaz, Atlas marocain : villages berbères authentiques, treks et hospitalité de montagne. Circuits trek privés depuis Marrakech avec Arganis Nomad.",
       subtitle: "Atlas authentique",
       difficulty: "Modéré à sportif",
       duration: "2 à 5 jours",
@@ -389,7 +389,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech ou Azilal",
       languages: "Français, English",
       about:
-        "La vallée de Megdaz, perle préservée du Haut Atlas central, offre paysages vertigineux, villages en pisé accrochés aux flancs et randonnées entre gorges et sommets. Loin des sentiers bondés, Red Nomad organise treks avec guides berbères locaux, muletiers et nuits chez l'habitant ou en gîte de montagne.",
+        "La vallée de Megdaz, perle préservée du Haut Atlas central, offre paysages vertigineux, villages en pisé accrochés aux flancs et randonnées entre gorges et sommets. Loin des sentiers bondés, Arganis Nomad organise treks avec guides berbères locaux, muletiers et nuits chez l'habitant ou en gîte de montagne.",
       highlights: [
         "Villages berbères authentiques — Megdaz, Tabant, Agoudi",
         "Gorges et terrasses cultivées en montagne",
@@ -454,9 +454,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     agadir: {
-      metaTitle: "Agadir — Circuits & transferts | Red Nomad",
+      metaTitle: "Agadir — Circuits & transferts | Arganis Nomad",
       metaDescription:
-        "Agadir, baie ensoleillée, plages atlantiques et Taghazout surf. Transferts, excursions côte sud et circuits Marrakech–Agadir avec Red Nomad.",
+        "Agadir, baie ensoleillée, plages atlantiques et Taghazout surf. Transferts, excursions côte sud et circuits Marrakech–Agadir avec Arganis Nomad.",
       subtitle: "Côte atlantique ensoleillée",
       difficulty: "Facile",
       duration: "1 à 5 jours",
@@ -464,7 +464,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Agadir ou Marrakech",
       languages: "Français, English",
       about:
-        "Agadir et sa baie bordée de 10 km de plage offrent le Maroc en mode balnéaire : ensoleillement quasi permanent, corniche animée et proximité de Taghazout, capitale du surf marocain. Red Nomad assure transferts aéroport Al Massira, liaisons Marrakech–Agadir et excursions vers Paradise Valley, Souss-Massa ou la kasbah d'Agadir Oufella.",
+        "Agadir et sa baie bordée de 10 km de plage offrent le Maroc en mode balnéaire : ensoleillement quasi permanent, corniche animée et proximité de Taghazout, capitale du surf marocain. Arganis Nomad assure transferts aéroport Al Massira, liaisons Marrakech–Agadir et excursions vers Paradise Valley, Souss-Massa ou la kasbah d'Agadir Oufella.",
       highlights: [
         "Baie d'Agadir — 300 jours de soleil par an",
         "Taghazout — surf, yoga et village bohème",
@@ -529,9 +529,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     oualili: {
-      metaTitle: "Oualili — Circuits & transferts | Red Nomad",
+      metaTitle: "Oualili — Circuits & transferts | Arganis Nomad",
       metaDescription:
-        "Oualili et Volubilis : ruines romaines UNESCO, mosaïques antiques et Meknès impériale. Excursions archéologiques privées depuis Fès avec Red Nomad.",
+        "Oualili et Volubilis : ruines romaines UNESCO, mosaïques antiques et Meknès impériale. Excursions archéologiques privées depuis Fès avec Arganis Nomad.",
       subtitle: "Héritage romain du Maroc",
       difficulty: "Facile",
       duration: "1 jour à 3 jours",
@@ -539,7 +539,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Fès ou Meknès",
       languages: "Français, English",
       about:
-        "Volubilis, site romain le mieux conservé du Maghreb, et les environs d'Oualili (Walili) témoignent de 2 000 ans d'histoire au cœur du Maroc central. Mosaïques, arc de triomphe de Caracalla et vue sur la plaine du Saïss : Red Nomad organise excursions depuis Fès ou Meknès avec guide spécialisé et combinaisons avec les villes impériales.",
+        "Volubilis, site romain le mieux conservé du Maghreb, et les environs d'Oualili (Walili) témoignent de 2 000 ans d'histoire au cœur du Maroc central. Mosaïques, arc de triomphe de Caracalla et vue sur la plaine du Saïss : Arganis Nomad organise excursions depuis Fès ou Meknès avec guide spécialisé et combinaisons avec les villes impériales.",
       highlights: [
         "Volubilis — UNESCO, mosaïques et maisons romaines",
         "Arc de triomphe et capitole antique",
@@ -607,9 +607,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
   },
   en: {
     marrakech: {
-      metaTitle: "Marrakech — Tours & transfers | Red Nomad",
+      metaTitle: "Marrakech — Tours & transfers | Arganis Nomad",
       metaDescription:
-        "Marrakech: imperial city, UNESCO medina, Jemaa el-Fna square, riads and airport transfers. Private excursions, tours and bespoke driver service with Red Nomad.",
+        "Marrakech: imperial city, UNESCO medina, Jemaa el-Fna square, riads and airport transfers. Private excursions, tours and bespoke driver service with Arganis Nomad.",
       subtitle: "Pearl of the South",
       difficulty: "All levels",
       duration: "Tailor-made",
@@ -617,7 +617,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech",
       languages: "French, English",
       about:
-        "Marrakech is the beating heart of Moroccan tourism: a UNESCO labyrinthine medina, charming riads, colourful souks and Jemaa el-Fna square coming alive at sunset. Red Nomad welcomes you from the airport and arranges transfers, guided visits, day trips and multi-day tours from the ochre city.",
+        "Marrakech is the beating heart of Moroccan tourism: a UNESCO labyrinthine medina, charming riads, colourful souks and Jemaa el-Fna square coming alive at sunset. Arganis Nomad welcomes you from the airport and arranges transfers, guided visits, day trips and multi-day tours from the ochre city.",
       highlights: [
         "Jemaa el-Fna — UNESCO living spectacle at dusk",
         "Medina and souks — crafts, spices and hidden palaces",
@@ -682,9 +682,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     merzouga: {
-      metaTitle: "Merzouga — Tours & transfers | Red Nomad",
+      metaTitle: "Merzouga — Tours & transfers | Arganis Nomad",
       metaDescription:
-        "Merzouga and Erg Chebbi: Sahara dunes, camel trek, luxury camp and sunset. Private desert tours from Marrakech or Fes with Red Nomad.",
+        "Merzouga and Erg Chebbi: Sahara dunes, camel trek, luxury camp and sunset. Private desert tours from Marrakech or Fes with Arganis Nomad.",
       subtitle: "Gateway to the Sahara",
       difficulty: "Moderate (dunes)",
       duration: "2 to 4 days",
@@ -692,7 +692,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech or Fes",
       languages: "French, English",
       about:
-        "Merzouga, at the foot of the golden Erg Chebbi dunes, offers Morocco's most iconic Saharan experience. Camel trek at sunset, night in a Berber bivouac or luxury camp under the stars, sunrise over the dunes: Red Nomad organises your desert circuit with private driver and selected accommodation.",
+        "Merzouga, at the foot of the golden Erg Chebbi dunes, offers Morocco's most iconic Saharan experience. Camel trek at sunset, night in a Berber bivouac or luxury camp under the stars, sunrise over the dunes: Arganis Nomad organises your desert circuit with private driver and selected accommodation.",
       highlights: [
         "Erg Chebbi — sand dunes up to 150 m",
         "Camel trek at sunset and sunrise",
@@ -720,7 +720,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Professional bilingual driver throughout the tour",
         "Camel trek and bivouac night (standard package)",
         "Dinner and breakfast at desert camp",
-        "Red Nomad 24/7 assistance before and during the trip",
+        "Arganis Nomad 24/7 assistance before and during the trip",
       ],
       notIncluded: [
         "Town accommodation (Erfoud, Tinghir — quoted separately)",
@@ -757,9 +757,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     "nord-maroc": {
-      metaTitle: "Northern Morocco — Tours & transfers | Red Nomad",
+      metaTitle: "Northern Morocco — Tours & transfers | Arganis Nomad",
       metaDescription:
-        "Tangier, blue Chefchaouen, Asilah and the northern coast. Private tours, transfers and excursions on the Moroccan Mediterranean with Red Nomad.",
+        "Tangier, blue Chefchaouen, Asilah and the northern coast. Private tours, transfers and excursions on the Moroccan Mediterranean with Arganis Nomad.",
       subtitle: "Mediterranean & Rif mountains",
       difficulty: "Easy",
       duration: "3 to 7 days",
@@ -767,7 +767,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Tangier, Tetouan or Fes",
       languages: "French, English",
       about:
-        "Northern Morocco reveals the kingdom's Mediterranean side: Tangier between two seas, blue-walled Chefchaouen in the Rif, Asilah and its Atlantic ramparts, Cape Spartel and Hercules Caves. Red Nomad organises combined tours, transfers from Tangier airport or port and bespoke excursions along the northern coast.",
+        "Northern Morocco reveals the kingdom's Mediterranean side: Tangier between two seas, blue-walled Chefchaouen in the Rif, Asilah and its Atlantic ramparts, Cape Spartel and Hercules Caves. Arganis Nomad organises combined tours, transfers from Tangier airport or port and bespoke excursions along the northern coast.",
       highlights: [
         "Chefchaouen — blue Rif medina, photogenic and peaceful",
         "Tangier — kasbah, medina and Cape Spartel",
@@ -832,9 +832,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     fes: {
-      metaTitle: "Fes — Tours & transfers | Red Nomad",
+      metaTitle: "Fes — Tours & transfers | Arganis Nomad",
       metaDescription:
-        "Fes, spiritual capital: UNESCO medina, Chouara tanneries, crafts and medersas. Guided visits, transfers and private tours with Red Nomad.",
+        "Fes, spiritual capital: UNESCO medina, Chouara tanneries, crafts and medersas. Guided visits, transfers and private tours with Arganis Nomad.",
       subtitle: "Spiritual and craft capital",
       difficulty: "Moderate (medina)",
       duration: "1 to 5 days",
@@ -842,7 +842,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Fes",
       languages: "French, English",
       about:
-        "Fes el-Bali, the world's largest car-free zone, holds centuries-old tanneries, carved medersas and artisan skills passed down through generations. Red Nomad offers Fes-Saiss airport transfers, guided medina visits, excursions to Volubilis and Meknes, and tours to the North or desert.",
+        "Fes el-Bali, the world's largest car-free zone, holds centuries-old tanneries, carved medersas and artisan skills passed down through generations. Arganis Nomad offers Fes-Saiss airport transfers, guided medina visits, excursions to Volubilis and Meknes, and tours to the North or desert.",
       highlights: [
         "Fes el-Bali medina — UNESCO, 9,000 alleys",
         "Chouara tanneries — unique ochre craft spectacle",
@@ -907,9 +907,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     essaouira: {
-      metaTitle: "Essaouira — Tours & transfers | Red Nomad",
+      metaTitle: "Essaouira — Tours & transfers | Arganis Nomad",
       metaDescription:
-        "Essaouira: Atlantic medina, seagull harbour, UNESCO ramparts and windy beaches. Day trip from Marrakech or tailor-made stay with Red Nomad.",
+        "Essaouira: Atlantic medina, seagull harbour, UNESCO ramparts and windy beaches. Day trip from Marrakech or tailor-made stay with Arganis Nomad.",
       subtitle: "Pearl of the Atlantic",
       difficulty: "Easy",
       duration: "1 to 3 days",
@@ -917,7 +917,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech or Essaouira",
       languages: "French, English",
       about:
-        "Essaouira, ancient Mogador, blends a fortified medina, lively fishing port and Atlantic horizon. UNESCO ramparts, thuya marquetry workshops, sandy beaches and windsurf spots: Red Nomad organises the day trip from Marrakech or a relaxing stay with private transfers.",
+        "Essaouira, ancient Mogador, blends a fortified medina, lively fishing port and Atlantic horizon. UNESCO ramparts, thuya marquetry workshops, sandy beaches and windsurf spots: Arganis Nomad organises the day trip from Marrakech or a relaxing stay with private transfers.",
       highlights: [
         "Fortified medina — UNESCO, ramparts and Skala du Port",
         "Fishing port — blue boats and sardine grills",
@@ -983,9 +983,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     megdaz: {
-      metaTitle: "Megdaz — Tours & transfers | Red Nomad",
+      metaTitle: "Megdaz — Tours & transfers | Arganis Nomad",
       metaDescription:
-        "Megdaz valley, Moroccan Atlas: authentic Berber villages, treks and mountain hospitality. Private trek tours from Marrakech with Red Nomad.",
+        "Megdaz valley, Moroccan Atlas: authentic Berber villages, treks and mountain hospitality. Private trek tours from Marrakech with Arganis Nomad.",
       subtitle: "Authentic Atlas",
       difficulty: "Moderate to active",
       duration: "2 to 5 days",
@@ -993,7 +993,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech or Azilal",
       languages: "French, English",
       about:
-        "The Megdaz valley, a preserved gem of the central High Atlas, offers vertiginous landscapes, pisé villages clinging to slopes and hikes between gorges and peaks. Off the beaten track, Red Nomad organises treks with local Berber guides, muleteers and nights in homestays or mountain lodges.",
+        "The Megdaz valley, a preserved gem of the central High Atlas, offers vertiginous landscapes, pisé villages clinging to slopes and hikes between gorges and peaks. Off the beaten track, Arganis Nomad organises treks with local Berber guides, muleteers and nights in homestays or mountain lodges.",
       highlights: [
         "Authentic Berber villages — Megdaz, Tabant, Agoudi",
         "Gorges and mountain cultivated terraces",
@@ -1058,9 +1058,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     agadir: {
-      metaTitle: "Agadir — Tours & transfers | Red Nomad",
+      metaTitle: "Agadir — Tours & transfers | Arganis Nomad",
       metaDescription:
-        "Agadir, sunny bay, Atlantic beaches and Taghazout surf. Transfers, southern coast excursions and Marrakech–Agadir tours with Red Nomad.",
+        "Agadir, sunny bay, Atlantic beaches and Taghazout surf. Transfers, southern coast excursions and Marrakech–Agadir tours with Arganis Nomad.",
       subtitle: "Sunny Atlantic coast",
       difficulty: "Easy",
       duration: "1 to 5 days",
@@ -1068,7 +1068,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Agadir or Marrakech",
       languages: "French, English",
       about:
-        "Agadir and its 10 km bay offer Morocco in beach mode: near-permanent sunshine, lively corniche and proximity to Taghazout, Morocco's surf capital. Red Nomad provides Al Massira airport transfers, Marrakech–Agadir links and excursions to Paradise Valley, Souss-Massa or Agadir Oufella kasbah.",
+        "Agadir and its 10 km bay offer Morocco in beach mode: near-permanent sunshine, lively corniche and proximity to Taghazout, Morocco's surf capital. Arganis Nomad provides Al Massira airport transfers, Marrakech–Agadir links and excursions to Paradise Valley, Souss-Massa or Agadir Oufella kasbah.",
       highlights: [
         "Agadir bay — 300 days of sunshine per year",
         "Taghazout — surf, yoga and bohemian village",
@@ -1133,9 +1133,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     oualili: {
-      metaTitle: "Oualili — Tours & transfers | Red Nomad",
+      metaTitle: "Oualili — Tours & transfers | Arganis Nomad",
       metaDescription:
-        "Oualili and Volubilis: UNESCO Roman ruins, ancient mosaics and imperial Meknes. Private archaeological excursions from Fes with Red Nomad.",
+        "Oualili and Volubilis: UNESCO Roman ruins, ancient mosaics and imperial Meknes. Private archaeological excursions from Fes with Arganis Nomad.",
       subtitle: "Morocco's Roman heritage",
       difficulty: "Easy",
       duration: "1 to 3 days",
@@ -1143,7 +1143,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Fes or Meknes",
       languages: "French, English",
       about:
-        "Volubilis, the best-preserved Roman site in the Maghreb, and the Oualili (Walili) area bear 2,000 years of history in central Morocco. Mosaics, Caracalla's arch and Saiss plain views: Red Nomad organises excursions from Fes or Meknes with specialist guide and imperial city combinations.",
+        "Volubilis, the best-preserved Roman site in the Maghreb, and the Oualili (Walili) area bear 2,000 years of history in central Morocco. Mosaics, Caracalla's arch and Saiss plain views: Arganis Nomad organises excursions from Fes or Meknes with specialist guide and imperial city combinations.",
       highlights: [
         "Volubilis — UNESCO, mosaics and Roman houses",
         "Triumphal arch and ancient capitol",
@@ -1211,9 +1211,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
   },
   es: {
     marrakech: {
-      metaTitle: "Marrakech — Circuitos y traslados | Red Nomad",
+      metaTitle: "Marrakech — Circuitos y traslados | Arganis Nomad",
       metaDescription:
-        "Marrakech: ciudad imperial, medina UNESCO, plaza Jemaa el-Fna, riads y traslados al aeropuerto. Excursiones, circuitos privados y chófer a medida con Red Nomad.",
+        "Marrakech: ciudad imperial, medina UNESCO, plaza Jemaa el-Fna, riads y traslados al aeropuerto. Excursiones, circuitos privados y chófer a medida con Arganis Nomad.",
       subtitle: "Perla del Sur",
       difficulty: "Todos los niveles",
       duration: "A medida",
@@ -1221,7 +1221,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech",
       languages: "Francés, English",
       about:
-        "Marrakech es el corazón del turismo marroquí: medina laberíntica UNESCO, riads con encanto, zocos coloridos y la plaza Jemaa el-Fna que cobra vida al atardecer. Red Nomad le recibe en el aeropuerto y organiza traslados, visitas guiadas, excursiones de un día y circuitos de varios días desde la ciudad ocre.",
+        "Marrakech es el corazón del turismo marroquí: medina laberíntica UNESCO, riads con encanto, zocos coloridos y la plaza Jemaa el-Fna que cobra vida al atardecer. Arganis Nomad le recibe en el aeropuerto y organiza traslados, visitas guiadas, excursiones de un día y circuitos de varios días desde la ciudad ocre.",
       highlights: [
         "Plaza Jemaa el-Fna — espectáculo vivo UNESCO al anochecer",
         "Medina y zocos — artesanía, especias y palacios ocultos",
@@ -1286,9 +1286,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     merzouga: {
-      metaTitle: "Merzouga — Circuitos y traslados | Red Nomad",
+      metaTitle: "Merzouga — Circuitos y traslados | Arganis Nomad",
       metaDescription:
-        "Merzouga y Erg Chebbi: dunas del Sahara, paseo en camello, campamento de lujo y atardecer. Circuitos desierto privados desde Marrakech o Fez con Red Nomad.",
+        "Merzouga y Erg Chebbi: dunas del Sahara, paseo en camello, campamento de lujo y atardecer. Circuitos desierto privados desde Marrakech o Fez con Arganis Nomad.",
       subtitle: "Puerta del Sahara",
       difficulty: "Moderado (dunas)",
       duration: "2 a 4 días",
@@ -1296,7 +1296,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech o Fez",
       languages: "Francés, English",
       about:
-        "Merzouga, al pie de las dunas doradas del Erg Chebbi, ofrece la experiencia sahariana más emblemática de Marruecos. Paseo en camello al atardecer, noche en bivouac bereber o campamento de lujo bajo las estrellas: Red Nomad organiza su circuito desierto con chófer privado y alojamientos seleccionados.",
+        "Merzouga, al pie de las dunas doradas del Erg Chebbi, ofrece la experiencia sahariana más emblemática de Marruecos. Paseo en camello al atardecer, noche en bivouac bereber o campamento de lujo bajo las estrellas: Arganis Nomad organiza su circuito desierto con chófer privado y alojamientos seleccionados.",
       highlights: [
         "Erg Chebbi — dunas de arena hasta 150 m",
         "Paseo en camello al atardecer y amanecer",
@@ -1323,7 +1323,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Chófer profesional bilingüe durante todo el circuito",
         "Paseo en camello y noche en bivouac (fórmula estándar)",
         "Cena y desayuno en campamento desierto",
-        "Asistencia Red Nomad 24 h antes y durante el viaje",
+        "Asistencia Arganis Nomad 24 h antes y durante el viaje",
       ],
       notIncluded: [
         "Alojamientos en ciudad (Erfoud, Tinghir — presupuesto aparte)",
@@ -1344,9 +1344,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     "nord-maroc": {
-      metaTitle: "Norte de Marruecos — Circuitos y traslados | Red Nomad",
+      metaTitle: "Norte de Marruecos — Circuitos y traslados | Arganis Nomad",
       metaDescription:
-        "Tánger, Chefchaouen la perla azul, Asilah y la costa norte. Circuitos privados, traslados y excursiones en el Mediterráneo marroquí con Red Nomad.",
+        "Tánger, Chefchaouen la perla azul, Asilah y la costa norte. Circuitos privados, traslados y excursiones en el Mediterráneo marroquí con Arganis Nomad.",
       subtitle: "Mediterráneo y montañas del Rif",
       difficulty: "Fácil",
       duration: "3 a 7 días",
@@ -1354,7 +1354,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Tánger, Tetuán o Fez",
       languages: "Francés, English",
       about:
-        "El Norte de Marruecos revela la faceta mediterránea del reino: Tánger entre dos mares, Chefchaouen de muros azules en el Rif, Asilah y sus murallas atlánticas, cabo Espartel y grutas de Hércules. Red Nomad organiza circuitos combinados, traslados desde aeropuerto o puerto de Tánger y excursiones a medida por la costa norte.",
+        "El Norte de Marruecos revela la faceta mediterránea del reino: Tánger entre dos mares, Chefchaouen de muros azules en el Rif, Asilah y sus murallas atlánticas, cabo Espartel y grutas de Hércules. Arganis Nomad organiza circuitos combinados, traslados desde aeropuerto o puerto de Tánger y excursiones a medida por la costa norte.",
       highlights: [
         "Chefchaouen — medina azul del Rif, fotogénica y tranquila",
         "Tánger — kasbah, medina y cabo Espartel",
@@ -1402,9 +1402,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     fes: {
-      metaTitle: "Fez — Circuitos y traslados | Red Nomad",
+      metaTitle: "Fez — Circuitos y traslados | Arganis Nomad",
       metaDescription:
-        "Fez, capital espiritual: medina UNESCO, curtidurías Chouara, artesanía y medersas. Visitas guiadas, traslados y circuitos privados con Red Nomad.",
+        "Fez, capital espiritual: medina UNESCO, curtidurías Chouara, artesanía y medersas. Visitas guiadas, traslados y circuitos privados con Arganis Nomad.",
       subtitle: "Capital espiritual y artesanal",
       difficulty: "Moderado (medina)",
       duration: "1 a 5 días",
@@ -1412,7 +1412,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Fez",
       languages: "Francés, English",
       about:
-        "Fez el-Bali, la mayor zona peatonal del mundo, alberga curtidurías centenarias, medersas talladas y saber artesanal transmitido de generación en generación. Red Nomad ofrece traslados aeropuerto Fez-Saïss, visitas guiadas de la medina, excursiones a Volubilis y Meknes, y circuitos hacia el Norte o el desierto.",
+        "Fez el-Bali, la mayor zona peatonal del mundo, alberga curtidurías centenarias, medersas talladas y saber artesanal transmitido de generación en generación. Arganis Nomad ofrece traslados aeropuerto Fez-Saïss, visitas guiadas de la medina, excursiones a Volubilis y Meknes, y circuitos hacia el Norte o el desierto.",
       highlights: [
         "Medina Fez el-Bali — UNESCO, 9 000 callejuelas",
         "Curtidurías Chouara — espectáculo ocre y artesanal único",
@@ -1460,9 +1460,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     essaouira: {
-      metaTitle: "Essaouira — Circuitos y traslados | Red Nomad",
+      metaTitle: "Essaouira — Circuitos y traslados | Arganis Nomad",
       metaDescription:
-        "Essaouira: medina atlántica, puerto de gaviotas, murallas UNESCO y playas ventosas. Excursión de un día desde Marrakech o estancia a medida con Red Nomad.",
+        "Essaouira: medina atlántica, puerto de gaviotas, murallas UNESCO y playas ventosas. Excursión de un día desde Marrakech o estancia a medida con Arganis Nomad.",
       subtitle: "Perla del Atlántico",
       difficulty: "Fácil",
       duration: "1 a 3 días",
@@ -1470,7 +1470,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech o Essaouira",
       languages: "Francés, English",
       about:
-        "Essaouira, antigua Mogador, combina medina fortificada, puerto pesquero animado y horizonte atlántico. Murallas UNESCO, talleres de marquetería de thuya, playas de arena y spots de windsurf: Red Nomad organiza la excursión de un día desde Marrakech o una estancia relajante con traslados privados.",
+        "Essaouira, antigua Mogador, combina medina fortificada, puerto pesquero animado y horizonte atlántico. Murallas UNESCO, talleres de marquetería de thuya, playas de arena y spots de windsurf: Arganis Nomad organiza la excursión de un día desde Marrakech o una estancia relajante con traslados privados.",
       highlights: [
         "Medina fortificada — UNESCO, murallas y Skala del Puerto",
         "Puerto pesquero — barcas azules y parrillas de sardinas",
@@ -1519,9 +1519,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     megdaz: {
-      metaTitle: "Megdaz — Circuitos y traslados | Red Nomad",
+      metaTitle: "Megdaz — Circuitos y traslados | Arganis Nomad",
       metaDescription:
-        "Valle de Megdaz, Atlas marroquí: aldeas bereberes auténticas, treks y hospitalidad de montaña. Circuitos trek privados desde Marrakech con Red Nomad.",
+        "Valle de Megdaz, Atlas marroquí: aldeas bereberes auténticas, treks y hospitalidad de montaña. Circuitos trek privados desde Marrakech con Arganis Nomad.",
       subtitle: "Atlas auténtico",
       difficulty: "Moderado a activo",
       duration: "2 a 5 días",
@@ -1529,7 +1529,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakech o Azilal",
       languages: "Francés, English",
       about:
-        "El valle de Megdaz, joya preservada del Alto Atlas central, ofrece paisajes vertiginosos, aldeas de adobe en las laderas y senderismo entre gargantas y cumbres. Lejos de rutas masificadas, Red Nomad organiza treks con guías bereberes locales, arrieros y noches en casas de familia o refugio de montaña.",
+        "El valle de Megdaz, joya preservada del Alto Atlas central, ofrece paisajes vertiginosos, aldeas de adobe en las laderas y senderismo entre gargantas y cumbres. Lejos de rutas masificadas, Arganis Nomad organiza treks con guías bereberes locales, arrieros y noches en casas de familia o refugio de montaña.",
       highlights: [
         "Aldeas bereberes auténticas — Megdaz, Tabant, Agoudi",
         "Gargantas y terrazas cultivadas en montaña",
@@ -1577,9 +1577,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     agadir: {
-      metaTitle: "Agadir — Circuitos y traslados | Red Nomad",
+      metaTitle: "Agadir — Circuitos y traslados | Arganis Nomad",
       metaDescription:
-        "Agadir, bahía soleada, playas atlánticas y surf Taghazout. Traslados, excursiones costa sur y circuitos Marrakech–Agadir con Red Nomad.",
+        "Agadir, bahía soleada, playas atlánticas y surf Taghazout. Traslados, excursiones costa sur y circuitos Marrakech–Agadir con Arganis Nomad.",
       subtitle: "Costa atlántica soleada",
       difficulty: "Fácil",
       duration: "1 a 5 días",
@@ -1587,7 +1587,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Agadir o Marrakech",
       languages: "Francés, English",
       about:
-        "Agadir y su bahía de 10 km ofrecen Marruecos en modo playa: sol casi permanente, paseo marítimo animado y proximidad a Taghazout, capital del surf marroquí. Red Nomad gestiona traslados aeropuerto Al Massira, enlaces Marrakech–Agadir y excursiones a Paradise Valley, Souss-Massa o kasbah Agadir Oufella.",
+        "Agadir y su bahía de 10 km ofrecen Marruecos en modo playa: sol casi permanente, paseo marítimo animado y proximidad a Taghazout, capital del surf marroquí. Arganis Nomad gestiona traslados aeropuerto Al Massira, enlaces Marrakech–Agadir y excursiones a Paradise Valley, Souss-Massa o kasbah Agadir Oufella.",
       highlights: [
         "Bahía de Agadir — 300 días de sol al año",
         "Taghazout — surf, yoga y pueblo bohemio",
@@ -1635,9 +1635,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     oualili: {
-      metaTitle: "Oualili — Circuitos y traslados | Red Nomad",
+      metaTitle: "Oualili — Circuitos y traslados | Arganis Nomad",
       metaDescription:
-        "Oualili y Volubilis: ruinas romanas UNESCO, mosaicos antiguos e imperial Meknes. Excursiones arqueológicas privadas desde Fez con Red Nomad.",
+        "Oualili y Volubilis: ruinas romanas UNESCO, mosaicos antiguos e imperial Meknes. Excursiones arqueológicas privadas desde Fez con Arganis Nomad.",
       subtitle: "Herencia romana de Marruecos",
       difficulty: "Fácil",
       duration: "1 a 3 días",
@@ -1645,7 +1645,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Fez o Meknes",
       languages: "Francés, English",
       about:
-        "Volubilis, el mejor yacimiento romano conservado del Magreb, y los alrededores de Oualili (Walili) atestiguan 2 000 años de historia en el centro de Marruecos. Mosaicos, arco de Caracalla y vista sobre la llanura del Saïss: Red Nomad organiza excursiones desde Fez o Meknes con guía especializado y combinaciones con ciudades imperiales.",
+        "Volubilis, el mejor yacimiento romano conservado del Magreb, y los alrededores de Oualili (Walili) atestiguan 2 000 años de historia en el centro de Marruecos. Mosaicos, arco de Caracalla y vista sobre la llanura del Saïss: Arganis Nomad organiza excursiones desde Fez o Meknes con guía especializado y combinaciones con ciudades imperiales.",
       highlights: [
         "Volubilis — UNESCO, mosaicos y casas romanas",
         "Arco de triunfo y capitolio antiguo",
@@ -1696,9 +1696,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
   },
   de: {
     marrakech: {
-      metaTitle: "Marrakesch — Touren & Transfers | Red Nomad",
+      metaTitle: "Marrakesch — Touren & Transfers | Arganis Nomad",
       metaDescription:
-        "Marrakesch: Kaiserstadt, UNESCO-Medina, Jemaa el-Fna, Riads und Flughafentransfers. Private Ausflüge, Rundreisen und Chauffeur nach Maß mit Red Nomad.",
+        "Marrakesch: Kaiserstadt, UNESCO-Medina, Jemaa el-Fna, Riads und Flughafentransfers. Private Ausflüge, Rundreisen und Chauffeur nach Maß mit Arganis Nomad.",
       subtitle: "Perle des Südens",
       difficulty: "Alle Niveaus",
       duration: "Nach Maß",
@@ -1706,7 +1706,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakesch",
       languages: "Französisch, English",
       about:
-        "Marrakesch ist das pulsierende Herz des marokkanischen Tourismus: UNESCO-Medina, charmante Riads, farbenfrohe Souks und der Platz Jemaa el-Fna bei Sonnenuntergang. Red Nomad empfängt Sie am Flughafen und organisiert Transfers, Führungen, Tagesausflüge und Mehrtagesreisen ab der ockerfarbenen Stadt.",
+        "Marrakesch ist das pulsierende Herz des marokkanischen Tourismus: UNESCO-Medina, charmante Riads, farbenfrohe Souks und der Platz Jemaa el-Fna bei Sonnenuntergang. Arganis Nomad empfängt Sie am Flughafen und organisiert Transfers, Führungen, Tagesausflüge und Mehrtagesreisen ab der ockerfarbenen Stadt.",
       highlights: [
         "Jemaa el-Fna — UNESCO-Lebendigkeit in der Dämmerung",
         "Medina und Souks — Handwerk, Gewürze und versteckte Paläste",
@@ -1754,9 +1754,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     merzouga: {
-      metaTitle: "Merzouga — Touren & Transfers | Red Nomad",
+      metaTitle: "Merzouga — Touren & Transfers | Arganis Nomad",
       metaDescription:
-        "Merzouga und Erg Chebbi: Sahara-Dünen, Kamelritt, Luxuscamp und Sonnenuntergang. Private Wüstentouren ab Marrakesch oder Fès mit Red Nomad.",
+        "Merzouga und Erg Chebbi: Sahara-Dünen, Kamelritt, Luxuscamp und Sonnenuntergang. Private Wüstentouren ab Marrakesch oder Fès mit Arganis Nomad.",
       subtitle: "Tor zur Sahara",
       difficulty: "Mäßig (Dünen)",
       duration: "2 bis 4 Tage",
@@ -1764,7 +1764,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakesch oder Fès",
       languages: "Französisch, English",
       about:
-        "Merzouga am Fuße der goldenen Erg-Chebbi-Dünen bietet Marokkos ikonischste Sahara-Erfahrung. Kamelritt bei Sonnenuntergang, Nacht im Berber-Biwak oder Luxuscamp unter Sternen: Red Nomad organisiert Ihre Wüstentour mit privatem Chauffeur und ausgewählten Unterkünften.",
+        "Merzouga am Fuße der goldenen Erg-Chebbi-Dünen bietet Marokkos ikonischste Sahara-Erfahrung. Kamelritt bei Sonnenuntergang, Nacht im Berber-Biwak oder Luxuscamp unter Sternen: Arganis Nomad organisiert Ihre Wüstentour mit privatem Chauffeur und ausgewählten Unterkünften.",
       highlights: [
         "Erg Chebbi — Sanddünen bis 150 m",
         "Kamelritt bei Sonnenunter- und -aufgang",
@@ -1791,7 +1791,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
         "Professioneller zweisprachiger Chauffeur während der gesamten Tour",
         "Kamelritt und Biwak-Nacht (Standardpaket)",
         "Abendessen und Frühstück im Wüstencamp",
-        "Red Nomad 24/7-Assistenz vor und während der Reise",
+        "Arganis Nomad 24/7-Assistenz vor und während der Reise",
       ],
       notIncluded: [
         "Stadtunterkünfte (Erfoud, Tinghir — separat kalkuliert)",
@@ -1812,9 +1812,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     "nord-maroc": {
-      metaTitle: "Nordmarokko — Touren & Transfers | Red Nomad",
+      metaTitle: "Nordmarokko — Touren & Transfers | Arganis Nomad",
       metaDescription:
-        "Tanger, blaues Chefchaouen, Asilah und die Nordküste. Private Touren, Transfers und Ausflüge am marokkanischen Mittelmeer mit Red Nomad.",
+        "Tanger, blaues Chefchaouen, Asilah und die Nordküste. Private Touren, Transfers und Ausflüge am marokkanischen Mittelmeer mit Arganis Nomad.",
       subtitle: "Mittelmeer & Rif-Berge",
       difficulty: "Leicht",
       duration: "3 bis 7 Tage",
@@ -1822,7 +1822,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Tanger, Tétouan oder Fès",
       languages: "Französisch, English",
       about:
-        "Nordmarokko zeigt das mediterrane Gesicht des Königreichs: Tanger zwischen zwei Meeren, blaues Chefchaouen im Rif, Asilah mit atlantischen Mauern, Kap Spartel und Herkuleshöhlen. Red Nomad organisiert kombinierte Touren, Transfers ab Flughafen oder Hafen Tanger und maßgeschneiderte Ausflüge entlang der Nordküste.",
+        "Nordmarokko zeigt das mediterrane Gesicht des Königreichs: Tanger zwischen zwei Meeren, blaues Chefchaouen im Rif, Asilah mit atlantischen Mauern, Kap Spartel und Herkuleshöhlen. Arganis Nomad organisiert kombinierte Touren, Transfers ab Flughafen oder Hafen Tanger und maßgeschneiderte Ausflüge entlang der Nordküste.",
       highlights: [
         "Chefchaouen — blaue Rif-Medina, fotogen und ruhig",
         "Tanger — Kasbah, Medina und Kap Spartel",
@@ -1870,9 +1870,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     fes: {
-      metaTitle: "Fès — Touren & Transfers | Red Nomad",
+      metaTitle: "Fès — Touren & Transfers | Arganis Nomad",
       metaDescription:
-        "Fès, spirituelle Hauptstadt: UNESCO-Medina, Gerbereien Chouara, Handwerk und Medersen. Geführte Besuche, Transfers und private Touren mit Red Nomad.",
+        "Fès, spirituelle Hauptstadt: UNESCO-Medina, Gerbereien Chouara, Handwerk und Medersen. Geführte Besuche, Transfers und private Touren mit Arganis Nomad.",
       subtitle: "Spirituelle und Handwerks-Hauptstadt",
       difficulty: "Mäßig (Medina)",
       duration: "1 bis 5 Tage",
@@ -1880,7 +1880,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Fès",
       languages: "Französisch, English",
       about:
-        "Fès el-Bali, die größte Fußgängerzone der Welt, beherbergt jahrhundertealte Gerbereien, geschnitzte Medersen und Handwerkswissen von Generation zu Generation. Red Nomad bietet Fès-Saïss-Flughafentransfers, geführte Medinabesuche, Ausflüge nach Volubilis und Meknès sowie Touren in den Norden oder zur Wüste.",
+        "Fès el-Bali, die größte Fußgängerzone der Welt, beherbergt jahrhundertealte Gerbereien, geschnitzte Medersen und Handwerkswissen von Generation zu Generation. Arganis Nomad bietet Fès-Saïss-Flughafentransfers, geführte Medinabesuche, Ausflüge nach Volubilis und Meknès sowie Touren in den Norden oder zur Wüste.",
       highlights: [
         "Fès el-Bali Medina — UNESCO, 9 000 Gassen",
         "Gerbereien Chouara — einzigartiges ockerfarbenes Handwerksspektakel",
@@ -1928,9 +1928,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     essaouira: {
-      metaTitle: "Essaouira — Touren & Transfers | Red Nomad",
+      metaTitle: "Essaouira — Touren & Transfers | Arganis Nomad",
       metaDescription:
-        "Essaouira: atlantische Medina, Möwenhafen, UNESCO-Mauern und windige Strände. Tagesausflug ab Marrakesch oder maßgeschneiderter Aufenthalt mit Red Nomad.",
+        "Essaouira: atlantische Medina, Möwenhafen, UNESCO-Mauern und windige Strände. Tagesausflug ab Marrakesch oder maßgeschneiderter Aufenthalt mit Arganis Nomad.",
       subtitle: "Perle des Atlantiks",
       difficulty: "Leicht",
       duration: "1 bis 3 Tage",
@@ -1938,7 +1938,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakesch oder Essaouira",
       languages: "Französisch, English",
       about:
-        "Essaouira, das alte Mogador, verbindet befestigte Medina, lebhaften Fischhafen und Atlantik-Horizont. UNESCO-Mauern, Thuja-Einlegearbeiten, Sandstrände und Windsurf-Spots: Red Nomad organisiert den Tagesausflug ab Marrakesch oder einen erholsamen Aufenthalt mit privaten Transfers.",
+        "Essaouira, das alte Mogador, verbindet befestigte Medina, lebhaften Fischhafen und Atlantik-Horizont. UNESCO-Mauern, Thuja-Einlegearbeiten, Sandstrände und Windsurf-Spots: Arganis Nomad organisiert den Tagesausflug ab Marrakesch oder einen erholsamen Aufenthalt mit privaten Transfers.",
       highlights: [
         "Befestigte Medina — UNESCO, Mauern und Skala du Port",
         "Fischhafen — blaue Boote und Sardinengrills",
@@ -1987,9 +1987,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     megdaz: {
-      metaTitle: "Megdaz — Touren & Transfers | Red Nomad",
+      metaTitle: "Megdaz — Touren & Transfers | Arganis Nomad",
       metaDescription:
-        "Megdaz-Tal, marokkanischer Atlas: authentische Berberdörfer, Treks und Berggastfreundschaft. Private Trek-Touren ab Marrakesch mit Red Nomad.",
+        "Megdaz-Tal, marokkanischer Atlas: authentische Berberdörfer, Treks und Berggastfreundschaft. Private Trek-Touren ab Marrakesch mit Arganis Nomad.",
       subtitle: "Authentischer Atlas",
       difficulty: "Mäßig bis aktiv",
       duration: "2 bis 5 Tage",
@@ -1997,7 +1997,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Marrakesch oder Azilal",
       languages: "Französisch, English",
       about:
-        "Das Megdaz-Tal, ein bewahrtes Juwel des zentralen Hohen Atlas, bietet schwindelerregende Landschaften, Lehm-Dörfer an Hängen und Wanderungen zwischen Schluchten und Gipfeln. Abseits der Massen organisiert Red Nomad Treks mit lokalen Berber-Guides, Maultiertreibern und Nächten bei Gastgebern oder Berghütten.",
+        "Das Megdaz-Tal, ein bewahrtes Juwel des zentralen Hohen Atlas, bietet schwindelerregende Landschaften, Lehm-Dörfer an Hängen und Wanderungen zwischen Schluchten und Gipfeln. Abseits der Massen organisiert Arganis Nomad Treks mit lokalen Berber-Guides, Maultiertreibern und Nächten bei Gastgebern oder Berghütten.",
       highlights: [
         "Authentische Berberdörfer — Megdaz, Tabant, Agoudi",
         "Schluchten und bewirtschaftete Bergterrassen",
@@ -2045,9 +2045,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     agadir: {
-      metaTitle: "Agadir — Touren & Transfers | Red Nomad",
+      metaTitle: "Agadir — Touren & Transfers | Arganis Nomad",
       metaDescription:
-        "Agadir, sonnige Bucht, Atlantikstrände und Taghazout-Surf. Transfers, Südküsten-Ausflüge und Marrakesch–Agadir-Touren mit Red Nomad.",
+        "Agadir, sonnige Bucht, Atlantikstrände und Taghazout-Surf. Transfers, Südküsten-Ausflüge und Marrakesch–Agadir-Touren mit Arganis Nomad.",
       subtitle: "Sonnige Atlantikküste",
       difficulty: "Leicht",
       duration: "1 bis 5 Tage",
@@ -2055,7 +2055,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Agadir oder Marrakesch",
       languages: "Französisch, English",
       about:
-        "Agadir und seine 10 km Bucht bieten Marokko im Strandmodus: fast permanente Sonne, lebhafte Promenade und Nähe zu Taghazout, Marokkos Surfhauptstadt. Red Nomad übernimmt Al-Massira-Flughafentransfers, Marrakesch–Agadir-Verbindungen und Ausflüge nach Paradise Valley, Souss-Massa oder Kasbah Agadir Oufella.",
+        "Agadir und seine 10 km Bucht bieten Marokko im Strandmodus: fast permanente Sonne, lebhafte Promenade und Nähe zu Taghazout, Marokkos Surfhauptstadt. Arganis Nomad übernimmt Al-Massira-Flughafentransfers, Marrakesch–Agadir-Verbindungen und Ausflüge nach Paradise Valley, Souss-Massa oder Kasbah Agadir Oufella.",
       highlights: [
         "Agadir-Bucht — 300 Sonnentage pro Jahr",
         "Taghazout — Surf, Yoga und Bohème-Dorf",
@@ -2103,9 +2103,9 @@ export const destinationDetails: DestinationDetailsByLocale = {
       ],
     },
     oualili: {
-      metaTitle: "Oualili — Touren & Transfers | Red Nomad",
+      metaTitle: "Oualili — Touren & Transfers | Arganis Nomad",
       metaDescription:
-        "Oualili und Volubilis: UNESCO-Römerruinen, antike Mosaiken und kaiserliches Meknès. Private archäologische Ausflüge ab Fès mit Red Nomad.",
+        "Oualili und Volubilis: UNESCO-Römerruinen, antike Mosaiken und kaiserliches Meknès. Private archäologische Ausflüge ab Fès mit Arganis Nomad.",
       subtitle: "Marokkos römisches Erbe",
       difficulty: "Leicht",
       duration: "1 bis 3 Tage",
@@ -2113,7 +2113,7 @@ export const destinationDetails: DestinationDetailsByLocale = {
       departure: "Fès oder Meknès",
       languages: "Französisch, English",
       about:
-        "Volubilis, die besterhaltene römische Stätte im Maghreb, und die Umgebung von Oualili (Walili) bezeugen 2 000 Jahre Geschichte im Zentrum Marokkos. Mosaiken, Caracalla-Bogen und Blick auf die Saïss-Ebene: Red Nomad organisiert Ausflüge ab Fès oder Meknès mit Fachführer und Kombinationen mit Kaiserstädten.",
+        "Volubilis, die besterhaltene römische Stätte im Maghreb, und die Umgebung von Oualili (Walili) bezeugen 2 000 Jahre Geschichte im Zentrum Marokkos. Mosaiken, Caracalla-Bogen und Blick auf die Saïss-Ebene: Arganis Nomad organisiert Ausflüge ab Fès oder Meknès mit Fachführer und Kombinationen mit Kaiserstädten.",
       highlights: [
         "Volubilis — UNESCO, Mosaiken und römische Häuser",
         "Triumphbogen und antikes Kapitol",

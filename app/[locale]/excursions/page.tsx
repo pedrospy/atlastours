@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const dict = getDictionary(locale);
   return {
-    title: `${dict.excursions.title} | Red Nomad`,
+    title: `${dict.excursions.title} | Arganis Nomad`,
     description: dict.excursions.description,
     openGraph: {
       title: dict.excursions.title,

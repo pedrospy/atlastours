@@ -5,7 +5,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
   fr: {
     "circuit-sahara-atlas-3j": {
       metaTitle:
-        "Circuit 3 jours Marrakech, Sahara & Atlas | Red Nomad",
+        "Circuit 3 jours Marrakech, Sahara & Atlas | Arganis Nomad",
       metaDescription:
         "Circuit privé 3 jours depuis Marrakech : Haut Atlas, Aït Benhaddou, Merzouga, bivouac de luxe aux dunes et retour. Guide francophone, petits groupes.",
       subtitle: "Marrakech, désert et Atlas en 3 jours",
@@ -111,7 +111,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "sahara-dades-4j": {
       metaTitle:
-        "Sahara, Gorges du Dadès & Merzouga — 4 jours | Red Nomad",
+        "Sahara, Gorges du Dadès & Merzouga — 4 jours | Arganis Nomad",
       metaDescription:
         "Circuit 4 jours depuis Marrakech : Aït Benhaddou UNESCO, Gorges du Dadès et du Todra, Erg Chebbi à Merzouga, vallée du Drâa et oasis de Fint. Guide francophone.",
       subtitle: "Désert, gorges et kasbahs du Sud",
@@ -237,7 +237,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "grand-tour-3j": {
       metaTitle:
-        "Circuit 3 jours Marrakech — Chefchaouen | Red Nomad",
+        "Circuit 3 jours Marrakech — Chefchaouen | Arganis Nomad",
       metaDescription:
         "Circuit 3 jours de Marrakech à Chefchaouen : Casablanca, Rabat, Fès la ville la plus traditionnelle du Maroc et les ruelles bleues de Chefchaouen. Guide francophone.",
       subtitle: "De Marrakech à la ville bleue",
@@ -349,7 +349,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "imperial-cities-8j": {
       metaTitle:
-        "Villes Impériales Maroc 8 jours — Fès, Meknès, Marrakech | Red Nomad",
+        "Villes Impériales Maroc 8 jours — Fès, Meknès, Marrakech | Arganis Nomad",
       metaDescription:
         "Circuit 8 jours à travers les villes impériales du Maroc : Casablanca, Rabat, Volubilis, Meknès, Fès UNESCO et Chefchaouen la bleue. Guide francophone, petits groupes.",
       subtitle: "Du littoral atlantique à la ville bleue",
@@ -511,7 +511,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "southern-coast-8j": {
       metaTitle:
-        "Taroudante & Essaouira — 8 jours sud marocain & côte atlantique | Red Nomad",
+        "Taroudante & Essaouira — 8 jours sud marocain & côte atlantique | Arganis Nomad",
       metaDescription:
         "Circuit 8 jours au sud du Maroc : Taroudante, Tafraoute, Taghazout et Essaouira. Anti-Atlas, forêt d'arganiers UNESCO et côte atlantique. Départ Marrakech.",
       subtitle: "Souss, Anti-Atlas & Atlantique",
@@ -684,7 +684,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "megdaz-3j": {
       metaTitle:
-        "Vallée de Megdaz 3 jours — Trek berbère authentique | Red Nomad",
+        "Vallée de Megdaz 3 jours — Trek berbère authentique | Arganis Nomad",
       metaDescription:
         "Circuit 3 jours dans la vallée de Megdaz : trek entre villages berbères, nuit chez l'habitant, terrasses agricoles et montagnes de l'Atlas. Expérience authentique depuis Marrakech.",
       subtitle: "L'Atlas secret des Berbères",
@@ -793,7 +793,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
   en: {
     "circuit-sahara-atlas-3j": {
       metaTitle:
-        "3-Day Marrakech, Sahara & Atlas Circuit | Red Nomad",
+        "3-Day Marrakech, Sahara & Atlas Circuit | Arganis Nomad",
       metaDescription:
         "Private 3-day circuit from Marrakech: High Atlas, Aït Benhaddou, Merzouga, luxury desert camp and return. French-speaking guide, small groups.",
       subtitle: "Marrakech, desert and Atlas in 3 days",
@@ -899,7 +899,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "sahara-dades-4j": {
       metaTitle:
-        "Sahara, Dades Gorges & Merzouga — 4 Days | Red Nomad",
+        "Sahara, Dades Gorges & Merzouga — 4 Days | Arganis Nomad",
       metaDescription:
         "4-day tour from Marrakech: UNESCO Aït Benhaddou, Dades and Todra gorges, Erg Chebbi at Merzouga, Drâa Valley and Fint oasis. French-speaking guide.",
       subtitle: "Desert, gorges and southern kasbahs",
@@ -1025,7 +1025,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "grand-tour-3j": {
       metaTitle:
-        "3-Day Marrakech — Chefchaouen Tour | Red Nomad",
+        "3-Day Marrakech — Chefchaouen Tour | Arganis Nomad",
       metaDescription:
         "Join a 3-day tour from Marrakech to Chefchaouen. Discover Fez, the most traditional city in Morocco, Rabat, Casablanca and the narrow streets of the blue city.",
       subtitle: "From Marrakech to the blue city",
@@ -1137,7 +1137,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "imperial-cities-8j": {
       metaTitle:
-        "Imperial Cities Morocco 8 Days — Fez, Meknes, Marrakech | Red Nomad",
+        "Imperial Cities Morocco 8 Days — Fez, Meknes, Marrakech | Arganis Nomad",
       metaDescription:
         "8-day tour through Morocco's imperial cities: Casablanca, Rabat, Volubilis, Meknes, UNESCO Fez and blue Chefchaouen. French-speaking guide, small groups.",
       subtitle: "From the Atlantic coast to the blue city",
@@ -1299,7 +1299,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "southern-coast-8j": {
       metaTitle:
-        "Taroudante & Essaouira — 8-Day Southern Morocco & Atlantic Coast | Red Nomad",
+        "Taroudante & Essaouira — 8-Day Southern Morocco & Atlantic Coast | Arganis Nomad",
       metaDescription:
         "8-day tour in southern Morocco: Taroudante, Tafraoute, Taghazout and Essaouira. Anti-Atlas, UNESCO argan forest and Atlantic coast. Departure from Marrakech.",
       subtitle: "Souss, Anti-Atlas & Atlantic",
@@ -1472,7 +1472,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "megdaz-3j": {
       metaTitle:
-        "Megdaz Valley 3 Days — Authentic Berber Trek | Red Nomad",
+        "Megdaz Valley 3 Days — Authentic Berber Trek | Arganis Nomad",
       metaDescription:
         "3-day circuit in the Megdaz Valley: trek between Berber villages, homestay night, agricultural terraces and Atlas mountains. Authentic experience from Marrakech.",
       subtitle: "The secret Atlas of the Berbers",
@@ -1581,7 +1581,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
   es: {
     "circuit-sahara-atlas-3j": {
       metaTitle:
-        "Circuito 3 días Marrakech, Sahara y Atlas | Red Nomad",
+        "Circuito 3 días Marrakech, Sahara y Atlas | Arganis Nomad",
       metaDescription:
         "Circuito privado de 3 días desde Marrakech: Alto Atlas, Aït Benhaddou, Merzouga, bivouac de lujo y regreso. Guía francófono, grupos pequeños.",
       subtitle: "Marrakech, desierto y Atlas en 3 días",
@@ -1684,7 +1684,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "sahara-dades-4j": {
       metaTitle:
-        "Sahara, Gargantas del Dadès y Merzouga — 4 días | Red Nomad",
+        "Sahara, Gargantas del Dadès y Merzouga — 4 días | Arganis Nomad",
       metaDescription:
         "Circuito de 4 días desde Marrakech: Aït Benhaddou UNESCO, gargantas del Dadès y Todra, Erg Chebbi en Merzouga, valle del Drâa y oasis de Fint.",
       subtitle: "Desierto, gargantas y kasbahs del Sur",
@@ -1810,7 +1810,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "grand-tour-3j": {
       metaTitle:
-        "Circuito 3 días Marrakech — Chefchaouen | Red Nomad",
+        "Circuito 3 días Marrakech — Chefchaouen | Arganis Nomad",
       metaDescription:
         "Circuito de 3 días de Marrakech a Chefchaouen: Casablanca, Rabat, Fez la ciudad más tradicional y las callejuelas azules de Chefchaouen. Guía francófono.",
       subtitle: "De Marrakech a la ciudad azul",
@@ -1922,7 +1922,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "imperial-cities-8j": {
       metaTitle:
-        "Ciudades Imperiales Marruecos 8 días — Fez, Meknes, Marrakech | Red Nomad",
+        "Ciudades Imperiales Marruecos 8 días — Fez, Meknes, Marrakech | Arganis Nomad",
       metaDescription:
         "Circuito de 8 días por las ciudades imperiales de Marruecos: Casablanca, Rabat, Volubilis, Meknes, Fez UNESCO y Chefchaouen la azul. Guía francófono, grupos reducidos.",
       subtitle: "De la costa atlántica a la ciudad azul",
@@ -2084,7 +2084,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "southern-coast-8j": {
       metaTitle:
-        "Taroudante y Essaouira — 8 días sur marroquí y costa atlántica | Red Nomad",
+        "Taroudante y Essaouira — 8 días sur marroquí y costa atlántica | Arganis Nomad",
       metaDescription:
         "Circuito de 8 días en el sur de Marruecos: Taroudante, Tafraoute, Taghazout y Essaouira. Anti-Atlas, bosque de argán UNESCO y costa atlántica. Salida desde Marrakech.",
       subtitle: "Souss, Anti-Atlas y Atlántico",
@@ -2257,7 +2257,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "megdaz-3j": {
       metaTitle:
-        "Valle de Megdaz 3 días — Trek bereber auténtico | Red Nomad",
+        "Valle de Megdaz 3 días — Trek bereber auténtico | Arganis Nomad",
       metaDescription:
         "Circuito de 3 días en el valle de Megdaz: trek entre pueblos bereberes, noche en casa de familia, terrazas agrícolas y montañas del Atlas. Experiencia auténtica desde Marrakech.",
       subtitle: "El Atlas secreto de los bereberes",
@@ -2366,7 +2366,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
   de: {
     "circuit-sahara-atlas-3j": {
       metaTitle:
-        "3-Tage-Tour Marrakesch, Sahara & Atlas | Red Nomad",
+        "3-Tage-Tour Marrakesch, Sahara & Atlas | Arganis Nomad",
       metaDescription:
         "Private 3-Tage-Rundreise ab Marrakesch: Hoher Atlas, Aït Benhaddou, Merzouga, Luxus-Camp und Rückkehr. Französischsprachiger Guide, kleine Gruppen.",
       subtitle: "Marrakesch, Wüste und Atlas in 3 Tagen",
@@ -2469,7 +2469,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "sahara-dades-4j": {
       metaTitle:
-        "Sahara, Dadès-Schluchten & Merzouga — 4 Tage | Red Nomad",
+        "Sahara, Dadès-Schluchten & Merzouga — 4 Tage | Arganis Nomad",
       metaDescription:
         "4-Tage-Tour ab Marrakesch: UNESCO Aït Benhaddou, Dadès- und Todra-Schluchten, Erg Chebbi in Merzouga, Drâa-Tal und Fint-Oase.",
       subtitle: "Wüste, Schluchten und Kasbahs des Südens",
@@ -2595,7 +2595,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "grand-tour-3j": {
       metaTitle:
-        "3-Tage-Tour Marrakesch — Chefchaouen | Red Nomad",
+        "3-Tage-Tour Marrakesch — Chefchaouen | Arganis Nomad",
       metaDescription:
         "3-Tage-Rundreise von Marrakesch nach Chefchaouen: Casablanca, Rabat, Fès die traditionellste Stadt Marokkos und die engen Gassen der blauen Stadt.",
       subtitle: "Von Marrakesch zur blauen Stadt",
@@ -2707,7 +2707,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "imperial-cities-8j": {
       metaTitle:
-        "Kaiserstädte Marokko 8 Tage — Fès, Meknès, Marrakesch | Red Nomad",
+        "Kaiserstädte Marokko 8 Tage — Fès, Meknès, Marrakesch | Arganis Nomad",
       metaDescription:
         "8-Tage-Rundreise durch Marokkos Kaiserstädte: Casablanca, Rabat, Volubilis, Meknès, UNESCO-Fès und blaues Chefchaouen. Französischsprachiger Guide, kleine Gruppen.",
       subtitle: "Von der Atlantikküste zur blauen Stadt",
@@ -2869,7 +2869,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "southern-coast-8j": {
       metaTitle:
-        "Taroudante & Essaouira — 8 Tage Süden Marokkos & Atlantikküste | Red Nomad",
+        "Taroudante & Essaouira — 8 Tage Süden Marokkos & Atlantikküste | Arganis Nomad",
       metaDescription:
         "8-Tage-Rundreise im Süden Marokkos: Taroudante, Tafraoute, Taghazout und Essaouira. Anti-Atlas, UNESCO-Arganwald und Atlantikküste. Abfahrt ab Marrakesch.",
       subtitle: "Souss, Anti-Atlas & Atlantik",
@@ -3042,7 +3042,7 @@ export const circuitDetails: ExperienceDetailsByLocale<CircuitId> = {
     },
     "megdaz-3j": {
       metaTitle:
-        "Megdaz-Tal 3 Tage — Authentische Berber-Wanderung | Red Nomad",
+        "Megdaz-Tal 3 Tage — Authentische Berber-Wanderung | Arganis Nomad",
       metaDescription:
         "3-Tage-Rundreise im Megdaz-Tal: Trek zwischen Berberdörfern, Homestay-Nacht, landwirtschaftliche Terrassen und Atlas-Berge. Authentisches Erlebnis ab Marrakesch.",
       subtitle: "Der geheime Atlas der Berber",

@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Red Nomad",
-  whatsappName: "Red Nomad",
+  name: "Arganis Nomad",
+  whatsappName: "Arganis Nomad",
   phone: "+212634411760",
   whatsapp: "212634411760",
-  email: "contact@rednomad.ma",
+  email: "contact@arganisnomad.ma",
   googleRating: 4.9,
   reviewCount: 36,
   travelers: 300,

@@ -10,7 +10,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
   fr: {
     "ait-benhaddou": {
       metaTitle:
-        "Aït Benhaddou UNESCO & Ouarzazate — Hollywood du Maroc | 1j | Red Nomad",
+        "Aït Benhaddou UNESCO & Ouarzazate — Hollywood du Maroc | 1j | Arganis Nomad",
       metaDescription:
         "Excursion d'une journée depuis Marrakech : Col du Tizi n'Tichka, kasbah UNESCO d'Aït Benhaddou, studios de cinéma et Ouarzazate. Chauffeur privé et guide local.",
       subtitle: "Hollywood du Maroc",
@@ -93,7 +93,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
       ],
     },
     ouzoud: {
-      metaTitle: "Cascades d'Ouzoud — Excursion d'une journée | Red Nomad",
+      metaTitle: "Cascades d'Ouzoud — Excursion d'une journée | Arganis Nomad",
       metaDescription:
         "Excursion aux cascades d'Ouzoud (110 m) depuis Marrakech. Singes magots, balade au pied des chutes, déjeuner face aux cascades. Chauffeur privé.",
       subtitle: "Les plus grandes chutes du Maroc",
@@ -169,7 +169,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
       ],
     },
     essaouira: {
-      metaTitle: "Essaouira Médina UNESCO — Excursion Atlantique | Red Nomad",
+      metaTitle: "Essaouira Médina UNESCO — Excursion Atlantique | Arganis Nomad",
       metaDescription:
         "Excursion d'une journée à Essaouira depuis Marrakech : médina UNESCO, port de pêche, remparts et plage. Chauffeur privé, retour le soir.",
       subtitle: "Perle de l'Atlantique",
@@ -246,7 +246,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
     },
     ourika: {
       metaTitle:
-        "Vallée de l'Ourika & cascades — Excursion privée avec déjeuner | Red Nomad",
+        "Vallée de l'Ourika & cascades — Excursion privée avec déjeuner | Arganis Nomad",
       metaDescription:
         "Excursion privée d'une journée à la vallée de l'Ourika depuis Marrakech : cascades Setti Fatma, coopérative d'argan, maison berbère, déjeuner traditionnel au bord de la rivière.",
       subtitle: "Cascades, argan & déjeuner berbère",
@@ -336,7 +336,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
   en: {
     "ait-benhaddou": {
       metaTitle:
-        "Aït Benhaddou UNESCO & Ouarzazate — Morocco's Hollywood | 1 day | Red Nomad",
+        "Aït Benhaddou UNESCO & Ouarzazate — Morocco's Hollywood | 1 day | Arganis Nomad",
       metaDescription:
         "Day trip from Marrakech: Tizi n'Tichka pass, UNESCO Aït Benhaddou kasbah, film studios and Ouarzazate. Private driver and local guide.",
       subtitle: "Morocco's Hollywood",
@@ -414,7 +414,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
       ],
     },
     ouzoud: {
-      metaTitle: "Ouzoud Waterfalls — Day Trip | Red Nomad",
+      metaTitle: "Ouzoud Waterfalls — Day Trip | Arganis Nomad",
       metaDescription:
         "Day trip to Ouzoud Falls (110 m) from Marrakech. Barbary macaques, walk at the base of the falls. Private driver.",
       subtitle: "Morocco's tallest waterfalls",
@@ -487,7 +487,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
       ],
     },
     essaouira: {
-      metaTitle: "Essaouira UNESCO Medina — Atlantic Day Trip | Red Nomad",
+      metaTitle: "Essaouira UNESCO Medina — Atlantic Day Trip | Arganis Nomad",
       metaDescription:
         "Day trip to Essaouira from Marrakech: UNESCO medina, fishing port, ramparts and beach. Private driver, evening return.",
       subtitle: "Pearl of the Atlantic",
@@ -561,7 +561,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
     },
     ourika: {
       metaTitle:
-        "Ourika Valley & Waterfalls — Private Day Trip with Lunch | Red Nomad",
+        "Ourika Valley & Waterfalls — Private Day Trip with Lunch | Arganis Nomad",
       metaDescription:
         "Private day trip to Ourika Valley from Marrakech: Setti Fatma waterfalls, argan cooperative, Berber house visit, traditional riverside lunch.",
       subtitle: "Waterfalls, argan & Berber lunch",
@@ -651,7 +651,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
   es: {
     "ait-benhaddou": {
       metaTitle:
-        "Aït Benhaddou UNESCO y Ouarzazate — Hollywood de Marruecos | 1 día | Red Nomad",
+        "Aït Benhaddou UNESCO y Ouarzazate — Hollywood de Marruecos | 1 día | Arganis Nomad",
       metaDescription:
         "Excursión de un día desde Marrakech: paso Tizi n'Tichka, kasbah UNESCO, estudios de cine y Ouarzazate. Chófer privado y guía local.",
       subtitle: "Hollywood de Marruecos",
@@ -728,7 +728,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
       ],
     },
     ouzoud: {
-      metaTitle: "Cascadas de Ouzoud — Excursión de un día | Red Nomad",
+      metaTitle: "Cascadas de Ouzoud — Excursión de un día | Arganis Nomad",
       metaDescription:
         "Excursión a las cascadas de Ouzoud (110 m) desde Marrakech. Monos, paseo al pie de las cataratas. Chófer privado.",
       subtitle: "Las cascadas más altas de Marruecos",
@@ -801,7 +801,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
       ],
     },
     essaouira: {
-      metaTitle: "Essaouira Medina UNESCO — Excursión Atlántica | Red Nomad",
+      metaTitle: "Essaouira Medina UNESCO — Excursión Atlántica | Arganis Nomad",
       metaDescription:
         "Excursión de un día a Essaouira desde Marrakech: medina UNESCO, puerto pesquero, murallas y playa.",
       subtitle: "Perla del Atlántico",
@@ -875,7 +875,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
     },
     ourika: {
       metaTitle:
-        "Valle de Ourika y cascadas — Excursión privada con almuerzo | Red Nomad",
+        "Valle de Ourika y cascadas — Excursión privada con almuerzo | Arganis Nomad",
       metaDescription:
         "Excursión privada al valle de Ourika desde Marrakech: cascadas Setti Fatma, cooperativa de argán, casa bereber, almuerzo tradicional junto al río.",
       subtitle: "Cascadas, argán y almuerzo bereber",
@@ -965,7 +965,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
   de: {
     "ait-benhaddou": {
       metaTitle:
-        "Aït Benhaddou UNESCO & Ouarzazate — Hollywood Marokkos | 1 Tag | Red Nomad",
+        "Aït Benhaddou UNESCO & Ouarzazate — Hollywood Marokkos | 1 Tag | Arganis Nomad",
       metaDescription:
         "Tagesausflug ab Marrakesch: Tizi n'Tichka-Pass, UNESCO-Kasbah, Filmstudios und Ouarzazate. Privatchauffeur und lokaler Guide.",
       subtitle: "Hollywood Marokkos",
@@ -1042,7 +1042,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
       ],
     },
     ouzoud: {
-      metaTitle: "Ouzoud-Wasserfälle — Tagesausflug | Red Nomad",
+      metaTitle: "Ouzoud-Wasserfälle — Tagesausflug | Arganis Nomad",
       metaDescription:
         "Tagesausflug zu den Ouzoud-Wasserfällen (110 m) ab Marrakesch. Berberaffen, Spaziergang am Fuß der Fälle.",
       subtitle: "Marokkos höchste Wasserfälle",
@@ -1115,7 +1115,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
       ],
     },
     essaouira: {
-      metaTitle: "Essaouira UNESCO-Medina — Atlantik-Tagesausflug | Red Nomad",
+      metaTitle: "Essaouira UNESCO-Medina — Atlantik-Tagesausflug | Arganis Nomad",
       metaDescription:
         "Tagesausflug nach Essaouira ab Marrakesch: UNESCO-Medina, Fischhafen, Stadtmauer und Strand.",
       subtitle: "Perle des Atlantiks",
@@ -1189,7 +1189,7 @@ export const excursionDetails: ExcursionDetailsByLocale = {
     },
     ourika: {
       metaTitle:
-        "Ourika-Tal & Wasserfälle — Privater Tagesausflug mit Mittagessen | Red Nomad",
+        "Ourika-Tal & Wasserfälle — Privater Tagesausflug mit Mittagessen | Arganis Nomad",
       metaDescription:
         "Privater Tagesausflug ins Ourika-Tal ab Marrakesch: Setti-Fatma-Wasserfälle, Argan-Kooperative, Berberhaus, traditionelles Mittagessen am Fluss.",
       subtitle: "Wasserfälle, Argan & Berber-Mittagessen",

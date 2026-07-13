@@ -47,8 +47,8 @@ export function Logo({
   if (variant === "image") {
     return (
       <Image
-        src="/red-nomad-logo.png"
-        alt="Red Nomad"
+        src="/arganis-nomad-logo.png"
+        alt="Arganis Nomad"
         width={size}
         height={size}
         unoptimized
@@ -66,7 +66,7 @@ export function Logo({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Red Nomad — tourism and transport"
+      aria-label="Arganis Nomad — tourism and transport"
       className={`logo-svg shrink-0 ${className}`}
     >
       <defs>
@@ -177,7 +177,7 @@ export function BrandWordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex flex-col ${className}`}>
       <span className="font-display text-lg font-semibold leading-none tracking-[0.04em] sm:text-xl">
-        <span className="text-white">Red</span>{" "}
+        <span className="text-white">Arganis</span>{" "}
         <span className="bg-gradient-to-r from-gold-light to-gold bg-clip-text text-transparent">
           Nomad
         </span>

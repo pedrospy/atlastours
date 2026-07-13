@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Red Nomad",
+  name: "Arganis Nomad",
   tagline: "Transferts aéroport · Excursions · Circuits privés au Maroc",
   phone: "+212634411760",
   whatsapp: "212634411760",
-  email: "contact@rednomad.ma",
+  email: "contact@arganisnomad.ma",
   address: "Marrakech, Maroc",
   googleRating: 4.9,
   reviewCount: 36,

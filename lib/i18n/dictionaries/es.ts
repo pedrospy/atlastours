@@ -3,7 +3,7 @@ import type { Dictionary } from "../types";
 export const es: Dictionary = {
   locale: "es",
   meta: {
-    title: "Traslados aeropuerto y circuitos | Red Nomad",
+    title: "Traslados aeropuerto y circuitos | Arganis Nomad",
     description:
       "Traslados al aeropuerto, excursiones y circuitos privados en Marruecos. Vehículos modernos, conductores locales, viajes a medida de Marrakech al Sahara.",
     keywords: [
@@ -14,7 +14,7 @@ export const es: Dictionary = {
       "Marrakech",
       "excursiones",
     ],
-    ogTitle: "Red Nomad — Traslados al aeropuerto, excursiones y circuitos en Marruecos",
+    ogTitle: "Arganis Nomad — Traslados al aeropuerto, excursiones y circuitos en Marruecos",
     ogDescription:
       "Traslados al aeropuerto, excursiones y circuitos privados en Marruecos con conductores locales.",
   },
@@ -40,9 +40,9 @@ export const es: Dictionary = {
     perTrip: "/viaje",
     menu: "Menú",
     discover: "Descubrir",
-    whatsapp: "Red Nomad",
-    whatsappAria: "Contactar Red Nomad por WhatsApp",
-    whatsappMessage: "Hola Red Nomad, ",
+    whatsapp: "Arganis Nomad",
+    whatsappAria: "Contactar Arganis Nomad por WhatsApp",
+    whatsappMessage: "Hola Arganis Nomad, ",
     excursionsCount: "excursiones",
     close: "Cerrar",
   },
@@ -372,7 +372,7 @@ export const es: Dictionary = {
     notIncluded: "No incluido",
     groupPricing: "Tarifas por grupo",
     faq: "Preguntas frecuentes",
-    whyBook: "¿Por qué reservar con Red Nomad?",
+    whyBook: "¿Por qué reservar con Arganis Nomad?",
     book: "Reservar",
     requestQuote: "Solicitar presupuesto",
     freeCancel: "Cancelación gratuita 48h antes",

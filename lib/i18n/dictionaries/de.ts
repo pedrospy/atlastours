@@ -3,7 +3,7 @@ import type { Dictionary } from "../types";
 export const de: Dictionary = {
   locale: "de",
   meta: {
-    title: "Flughafentransfers & Touren | Red Nomad",
+    title: "Flughafentransfers & Touren | Arganis Nomad",
     description:
       "Flughafentransfers, Tagesausflüge und private Touren in Marokko. Moderne Fahrzeuge, lokale Fahrer, maßgeschneiderte Reisen von Marrakesch bis in die Sahara.",
     keywords: [
@@ -14,7 +14,7 @@ export const de: Dictionary = {
       "Marrakesch",
       "Tagesausflüge",
     ],
-    ogTitle: "Red Nomad — Flughafentransfers, Tagesausflüge und private Touren in Marokko",
+    ogTitle: "Arganis Nomad — Flughafentransfers, Tagesausflüge und private Touren in Marokko",
     ogDescription:
       "Flughafentransfers, Ausflüge und private Touren in Marokko mit lokalen Fahrern.",
   },
@@ -40,9 +40,9 @@ export const de: Dictionary = {
     perTrip: "/Fahrt",
     menu: "Menü",
     discover: "Entdecken",
-    whatsapp: "Red Nomad",
-    whatsappAria: "Red Nomad über WhatsApp kontaktieren",
-    whatsappMessage: "Hallo Red Nomad, ",
+    whatsapp: "Arganis Nomad",
+    whatsappAria: "Arganis Nomad über WhatsApp kontaktieren",
+    whatsappMessage: "Hallo Arganis Nomad, ",
     excursionsCount: "Ausflüge",
     close: "Schließen",
   },
@@ -372,7 +372,7 @@ export const de: Dictionary = {
     notIncluded: "Nicht inklusive",
     groupPricing: "Gruppentarife",
     faq: "Häufige Fragen",
-    whyBook: "Warum bei Red Nomad buchen?",
+    whyBook: "Warum bei Arganis Nomad buchen?",
     book: "Buchen",
     requestQuote: "Angebot anfordern",
     freeCancel: "Kostenlose Stornierung 48h vorher",

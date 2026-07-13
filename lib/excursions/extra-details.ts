@@ -45,7 +45,7 @@ const sharedFaqsFr = [
 
 export const extraExcursionDetailsFr: LocaleBlock = {
   imlil: {
-    metaTitle: "Imlil & Mont Toubkal — Randonnée Haut Atlas 1 jour | Red Nomad",
+    metaTitle: "Imlil & Mont Toubkal — Randonnée Haut Atlas 1 jour | Arganis Nomad",
     metaDescription:
       "Excursion privée Imlil (1740 m), porte du Toubkal : douars berbères, panoramas alpins et déjeuner en montagne depuis Marrakech.",
     subtitle: "Porte du Toubkal",
@@ -90,7 +90,7 @@ export const extraExcursionDetailsFr: LocaleBlock = {
     faqs: sharedFaqsFr,
   },
   "trois-vallees": {
-    metaTitle: "3 Vallées du Haut Atlas — Journée 4×4 depuis Marrakech | Red Nomad",
+    metaTitle: "3 Vallées du Haut Atlas — Journée 4×4 depuis Marrakech | Arganis Nomad",
     metaDescription:
       "Ourika, Setti Fatma et Oukaimeden (2650 m) : le meilleur du Haut Atlas en une journée 4×4 depuis Marrakech.",
     subtitle: "Ourika, Setti Fatma & Oukaimeden",
@@ -134,7 +134,7 @@ export const extraExcursionDetailsFr: LocaleBlock = {
     faqs: sharedFaqsFr,
   },
   casablanca: {
-    metaTitle: "Casablanca — Mosquée Hassan II, journée depuis Marrakech | Red Nomad",
+    metaTitle: "Casablanca — Mosquée Hassan II, journée depuis Marrakech | Arganis Nomad",
     metaDescription:
       "Excursion privée Casablanca : mosquée Hassan II, architecture Art Déco et corniche atlantique depuis Marrakech.",
     subtitle: "Mosquée Hassan II & corniche",
@@ -181,7 +181,7 @@ export const extraExcursionDetailsFr: LocaleBlock = {
     faqs: sharedFaqsFr,
   },
   "agadir-taghazout": {
-    metaTitle: "Agadir & Taghazout — Surf et plage atlantique, journée | Red Nomad",
+    metaTitle: "Agadir & Taghazout — Surf et plage atlantique, journée | Arganis Nomad",
     metaDescription:
       "Excursion Agadir et Taghazout : plages atlantiques, village de surf et corniche ensoleillée depuis Marrakech.",
     subtitle: "Côte atlantique & surf",
@@ -224,7 +224,7 @@ export const extraExcursionDetailsFr: LocaleBlock = {
     faqs: sharedFaqsFr,
   },
   agafay: {
-    metaTitle: "Désert d'Agafay — Excursion 1 jour depuis Marrakech | Red Nomad",
+    metaTitle: "Désert d'Agafay — Excursion 1 jour depuis Marrakech | Arganis Nomad",
     metaDescription:
       "Excursion privée au désert d'Agafay depuis Marrakech : paysages lunaires, balade à dos de chameau, coucher de soleil et déjeuner berbère dans un camp de luxe à 45 min de la ville.",
     subtitle: "Désert de pierre & coucher de soleil",
@@ -307,7 +307,7 @@ export const extraExcursionDetailsFr: LocaleBlock = {
 
 export const extraExcursionDetailsEn: LocaleBlock = {
   imlil: {
-    metaTitle: "Imlil & Mount Toubkal — High Atlas Day Hike | Red Nomad",
+    metaTitle: "Imlil & Mount Toubkal — High Atlas Day Hike | Arganis Nomad",
     metaDescription:
       "Private Imlil day trip (1740 m): Berber villages, alpine views and mountain lunch from Marrakech.",
     subtitle: "Gateway to Toubkal",
@@ -370,7 +370,7 @@ export const extraExcursionDetailsEn: LocaleBlock = {
     ],
   },
   "trois-vallees": {
-    metaTitle: "3 High Atlas Valleys — 4×4 Day Trip from Marrakech | Red Nomad",
+    metaTitle: "3 High Atlas Valleys — 4×4 Day Trip from Marrakech | Arganis Nomad",
     metaDescription:
       "Ourika, Setti Fatma and Oukaimeden (2650 m): the best of the High Atlas in one 4×4 day from Marrakech.",
     subtitle: "Ourika, Setti Fatma & Oukaimeden",
@@ -431,7 +431,7 @@ export const extraExcursionDetailsEn: LocaleBlock = {
     ],
   },
   casablanca: {
-    metaTitle: "Casablanca — Hassan II Mosque Day Trip from Marrakech | Red Nomad",
+    metaTitle: "Casablanca — Hassan II Mosque Day Trip from Marrakech | Arganis Nomad",
     metaDescription:
       "Private Casablanca day trip: Hassan II Mosque, Art Deco architecture and Atlantic corniche from Marrakech.",
     subtitle: "Hassan II Mosque & corniche",
@@ -495,7 +495,7 @@ export const extraExcursionDetailsEn: LocaleBlock = {
     ],
   },
   "agadir-taghazout": {
-    metaTitle: "Agadir & Taghazout — Surf & Atlantic Beach Day Trip | Red Nomad",
+    metaTitle: "Agadir & Taghazout — Surf & Atlantic Beach Day Trip | Arganis Nomad",
     metaDescription:
       "Agadir and Taghazout day trip: Atlantic beaches, surf village and sunny corniche from Marrakech.",
     subtitle: "Atlantic coast & surf",
@@ -555,7 +555,7 @@ export const extraExcursionDetailsEn: LocaleBlock = {
     ],
   },
   agafay: {
-    metaTitle: "Agafay Desert — Day Trip from Marrakech | Red Nomad",
+    metaTitle: "Agafay Desert — Day Trip from Marrakech | Arganis Nomad",
     metaDescription:
       "Private Agafay desert trip from Marrakech: lunar landscapes, camel ride, sunset and Berber dinner at a luxury camp just 45 minutes from the city.",
     subtitle: "Stone desert & sunset",
@@ -639,7 +639,7 @@ export const extraExcursionDetailsEn: LocaleBlock = {
 export const extraExcursionDetailsEs: LocaleBlock = {
   imlil: {
     ...extraExcursionDetailsEn.imlil,
-    metaTitle: "Imlil y Monte Toubkal — Excursión Atlas 1 día | Red Nomad",
+    metaTitle: "Imlil y Monte Toubkal — Excursión Atlas 1 día | Arganis Nomad",
     subtitle: "Puerta del Toubkal",
     difficulty: "Moderado",
     duration: "1 día",
@@ -663,7 +663,7 @@ export const extraExcursionDetailsEs: LocaleBlock = {
   },
   "trois-vallees": {
     ...extraExcursionDetailsEn["trois-vallees"],
-    metaTitle: "3 Valles del Alto Atlas — Excursión 4×4 | Red Nomad",
+    metaTitle: "3 Valles del Alto Atlas — Excursión 4×4 | Arganis Nomad",
     subtitle: "Ourika, Setti Fatma y Oukaimeden",
     difficulty: "Fácil",
     duration: "1 día",
@@ -678,7 +678,7 @@ export const extraExcursionDetailsEs: LocaleBlock = {
   },
   casablanca: {
     ...extraExcursionDetailsEn.casablanca,
-    metaTitle: "Casablanca — Mezquita Hassan II, excursión | Red Nomad",
+    metaTitle: "Casablanca — Mezquita Hassan II, excursión | Arganis Nomad",
     difficulty: "Fácil",
     duration: "1 día",
     groupPricing: [
@@ -692,7 +692,7 @@ export const extraExcursionDetailsEs: LocaleBlock = {
   },
   "agadir-taghazout": {
     ...extraExcursionDetailsEn["agadir-taghazout"],
-    metaTitle: "Agadir y Taghazout — Surf y playa atlántica | Red Nomad",
+    metaTitle: "Agadir y Taghazout — Surf y playa atlántica | Arganis Nomad",
     difficulty: "Fácil",
     duration: "1 día",
     groupPricing: [
@@ -706,7 +706,7 @@ export const extraExcursionDetailsEs: LocaleBlock = {
   },
   agafay: {
     ...extraExcursionDetailsEn.agafay,
-    metaTitle: "Desierto de Agafay — Excursión 1 día desde Marrakech | Red Nomad",
+    metaTitle: "Desierto de Agafay — Excursión 1 día desde Marrakech | Arganis Nomad",
     subtitle: "Desierto de piedra y atardecer",
     difficulty: "Fácil",
     duration: "Medio día o 1 día",
@@ -729,7 +729,7 @@ export const extraExcursionDetailsEs: LocaleBlock = {
 export const extraExcursionDetailsDe: LocaleBlock = {
   imlil: {
     ...extraExcursionDetailsEn.imlil,
-    metaTitle: "Imlil & Mount Toubkal — Atlas-Tagesausflug | Red Nomad",
+    metaTitle: "Imlil & Mount Toubkal — Atlas-Tagesausflug | Arganis Nomad",
     subtitle: "Tor zum Toubkal",
     difficulty: "Mittel",
     duration: "1 Tag",
@@ -747,7 +747,7 @@ export const extraExcursionDetailsDe: LocaleBlock = {
   },
   "trois-vallees": {
     ...extraExcursionDetailsEn["trois-vallees"],
-    metaTitle: "3 Täler im Hohen Atlas — 4×4 Tagesausflug | Red Nomad",
+    metaTitle: "3 Täler im Hohen Atlas — 4×4 Tagesausflug | Arganis Nomad",
     difficulty: "Leicht",
     duration: "1 Tag",
     groupPricing: [
@@ -761,7 +761,7 @@ export const extraExcursionDetailsDe: LocaleBlock = {
   },
   casablanca: {
     ...extraExcursionDetailsEn.casablanca,
-    metaTitle: "Casablanca — Hassan-II-Moschee Tagesausflug | Red Nomad",
+    metaTitle: "Casablanca — Hassan-II-Moschee Tagesausflug | Arganis Nomad",
     difficulty: "Leicht",
     duration: "1 Tag",
     groupPricing: [
@@ -775,7 +775,7 @@ export const extraExcursionDetailsDe: LocaleBlock = {
   },
   "agadir-taghazout": {
     ...extraExcursionDetailsEn["agadir-taghazout"],
-    metaTitle: "Agadir & Taghazout — Surf & Atlantikstrand | Red Nomad",
+    metaTitle: "Agadir & Taghazout — Surf & Atlantikstrand | Arganis Nomad",
     difficulty: "Leicht",
     duration: "1 Tag",
     groupPricing: [
@@ -789,7 +789,7 @@ export const extraExcursionDetailsDe: LocaleBlock = {
   },
   agafay: {
     ...extraExcursionDetailsEn.agafay,
-    metaTitle: "Agafay-Wüste — Tagesausflug ab Marrakesch | Red Nomad",
+    metaTitle: "Agafay-Wüste — Tagesausflug ab Marrakesch | Arganis Nomad",
     subtitle: "Steinwüste & Sonnenuntergang",
     difficulty: "Leicht",
     duration: "Halbtag oder 1 Tag",

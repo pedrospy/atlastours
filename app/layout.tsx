@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3003"
   ),
-  title: "Red Nomad",
+  title: "Arganis Nomad",
   description: "Transferts aéroport · Excursions · Circuits privés au Maroc",
   icons: {
-    icon: "/red-nomad-mark.svg",
-    apple: "/red-nomad-mark.svg",
+    icon: "/arganis-nomad-mark.svg",
+    apple: "/arganis-nomad-mark.svg",
   },
 };
 
