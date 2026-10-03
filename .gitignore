@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# boutique
+/boutique/data/*.sqlite
+/boutique/data/*.sqlite-wal
+/boutique/data/*.sqlite-shm
