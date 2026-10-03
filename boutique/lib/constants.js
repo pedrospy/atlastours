@@ -1,10 +1,6 @@
 export const CATEGORIES = [
-  ["hauts", "Hauts"],
-  ["bas", "Bas"],
-  ["robes", "Robes"],
-  ["vestes", "Vestes"],
-  ["chaussures", "Chaussures"],
-  ["accessoires", "Accessoires"],
+  ["takchita", "Takchita"],
+  ["caftan", "Caftan"],
 ];
 
 export const ROLES = [
@@ -25,6 +21,13 @@ export const MOVEMENT_TYPES = [
   ["ajustement", "Ajustement"],
 ];
 
+export const JOURNAL_TYPES = [...MOVEMENT_TYPES, ["location", "Location"]];
+
+export const RENTAL_CREATE_STATUSES = [
+  ["reservee", "Réservée"],
+  ["en_location", "En location"],
+];
+
 export const CONTRACTS = [
   ["horaire", "Horaire"],
   ["mensuel", "Mensuel"],
@@ -32,36 +35,23 @@ export const CONTRACTS = [
 
 export const CONTRIBUTION_RATE = 0.22;
 
-export const BRANDS = [
-  "Maison Céleste",
-  "Atelier Brume",
-  "Filature Alma",
-  "Studio Lina",
-  "Cuir du Rhône",
-  "Soieries Céleste",
-];
+export const BRANDS = ["Maison Céleste", "Soieries Céleste", "Atelier Brume"];
 
 export const COLOR_SUGGESTIONS = [
   "Ivoire",
   "Écru",
-  "Noir",
-  "Blanc",
-  "Bleu nuit",
   "Bordeaux",
-  "Camel",
-  "Terracotta",
-  "Vert sauge",
-  "Gris perle",
-  "Indigo",
-  "Cognac",
-  "Beige",
-  "Charbon",
   "Or vieilli",
+  "Émeraude",
+  "Prune",
+  "Grenat",
+  "Blush",
+  "Bleu nuit",
+  "Noir",
 ];
 
-export const APPAREL_SIZES = ["XS", "S", "M", "L", "XL"];
-export const SHOE_SIZES = ["37", "38", "39", "40", "41", "42"];
-export const ACCESSORY_SIZES = ["TU", "80", "85", "90"];
+export const NUMERIC_SIZES = ["36", "38", "40", "42", "44", "46"];
+export const LETTER_SIZES = ["S", "M", "L", "XL"];
 
 export const COLOR_HEX = {
   ivoire: "#f4efe4",
@@ -80,6 +70,11 @@ export const COLOR_HEX = {
   beige: "#e4d5bc",
   cognac: "#8d4e2a",
   "or vieilli": "#b89a55",
+  émeraude: "#0e6b4f",
+  emeraude: "#0e6b4f",
+  prune: "#5c2a45",
+  grenat: "#7a1f32",
+  blush: "#e8c6c4",
 };
 
 export const LIGHT_COLORS = new Set([
@@ -90,4 +85,5 @@ export const LIGHT_COLORS = new Set([
   "beige",
   "gris perle",
   "or vieilli",
+  "blush",
 ]);

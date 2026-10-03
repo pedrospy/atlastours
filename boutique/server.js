@@ -223,7 +223,7 @@ const server = http.createServer(async (req, res) => {
 
     if (pathname === "/mouvements" && req.method === "GET") {
       const filtre = url.searchParams.get("filtre") || "";
-      const allowed = ["entree", "vente", "retour", "ajustement"];
+      const allowed = ["entree", "vente", "retour", "ajustement", "location"];
       send(
         res,
         views.movementsPage({
@@ -264,6 +264,63 @@ const server = http.createServer(async (req, res) => {
 
     if (pathname === "/alertes" && req.method === "GET") {
       send(res, views.alertsPage(db.listLowStock(), url.searchParams));
+      return;
+    }
+
+    if (pathname === "/locations" && req.method === "GET") {
+      send(
+        res,
+        views.locationsPage({
+          boards: db.rentalBoards(),
+          variants: db.listVariantsDetailed(),
+          query: url.searchParams,
+        }),
+      );
+      return;
+    }
+
+    if (pathname === "/locations" && req.method === "POST") {
+      const form = await readForm(req);
+      const result = db.createRental({
+        variantId: form.get("variant_id"),
+        clientName: form.get("client_name"),
+        clientPhone: form.get("client_phone"),
+        startDate: form.get("start_date"),
+        dueDate: form.get("due_date"),
+        price: form.get("price"),
+        deposit: form.get("deposit"),
+        status: form.get("status"),
+      });
+      if (!result.ok) {
+        send(
+          res,
+          views.locationsPage({
+            boards: db.rentalBoards(),
+            variants: db.listVariantsDetailed(),
+            values: result.values,
+            errors: result.errors,
+            query: url.searchParams,
+          }),
+          422,
+        );
+        return;
+      }
+      redirect(res, `/locations?ok=location&reste=${result.stock}`);
+      return;
+    }
+
+    const rentalReturn = pathname.match(/^\/locations\/(\d+)\/retour$/);
+    if (rentalReturn && req.method === "POST") {
+      const result = db.returnRental(idFrom(rentalReturn[1]));
+      if (!result || result.notFound) {
+        send(res, views.notFoundPage(url.searchParams), 404);
+        return;
+      }
+      if (!result.ok) {
+        redirect(res, `/locations?err=${encodeURIComponent(result.errors.status || "Retour impossible.")}`);
+        return;
+      }
+      redirect(res, "/locations?ok=location-retour");
       return;
     }
 

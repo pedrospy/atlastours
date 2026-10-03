@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Gestion de stock et aide à la paie pour la boutique Maison Céleste.",
+  "description": "Gestion de stock et aide à la paie pour la boutique de takchitas et caftans Maison Céleste.",
   "engines": {
     "node": ">=22.13"
   },

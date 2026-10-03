@@ -1,4 +1,4 @@
-import { CATEGORIES, CONTRACTS, MOVEMENT_TYPES } from "./constants.js";
+import { CATEGORIES, CONTRACTS, JOURNAL_TYPES } from "./constants.js";
 
 export function esc(value) {
   return String(value ?? "")
@@ -93,7 +93,16 @@ export function contractLabel(id) {
 }
 
 export function movementLabel(id) {
-  return MOVEMENT_TYPES.find(([key]) => key === id)?.[1] || id;
+  return JOURNAL_TYPES.find(([key]) => key === id)?.[1] || id;
+}
+
+export function rentalStatusLabel(status) {
+  return {
+    reservee: "Réservée",
+    en_location: "En location",
+    retournee: "Retournée",
+    en_retard: "En retard",
+  }[status] || status;
 }
 
 export function rateLabel(contract, cents) {

@@ -1,16 +1,17 @@
 import {
-  ACCESSORY_SIZES,
-  APPAREL_SIZES,
   BRANDS,
   CATEGORIES,
   COLOR_HEX,
   COLOR_SUGGESTIONS,
   CONTRIBUTION_RATE,
   CONTRACTS,
+  JOURNAL_TYPES,
+  LETTER_SIZES,
   LIGHT_COLORS,
   MOVEMENT_TYPES,
+  NUMERIC_SIZES,
+  RENTAL_CREATE_STATUSES,
   ROLES,
-  SHOE_SIZES,
 } from "./constants.js";
 import { navCounts } from "./db.js";
 import {
@@ -28,6 +29,7 @@ import {
   moneyValue,
   movementLabel,
   rateLabel,
+  rentalStatusLabel,
   stockState,
 } from "./format.js";
 
@@ -36,6 +38,7 @@ const STOCK_NAV = [
   ["catalogue", "/catalogue", "Catalogue"],
   ["nouveau", "/catalogue/nouveau", "Nouveau produit"],
   ["mouvements", "/mouvements", "Mouvements"],
+  ["locations", "/locations", "Locations"],
   ["alertes", "/alertes", "Alertes"],
 ];
 
@@ -47,11 +50,12 @@ const PAY_NAV = [
 ];
 
 function layout({ title, section, active, body, query }) {
-  const { alerts } = navCounts();
+  const { alerts, locations } = navCounts();
   const items = section === "paie" ? PAY_NAV : STOCK_NAV;
   const nav = items
     .map(([key, href, label]) => {
-      const badge = key === "alertes" && alerts > 0 ? `<span class="count-pill">${alerts}</span>` : "";
+      const count = key === "alertes" ? alerts : key === "locations" ? locations : 0;
+      const badge = count > 0 ? `<span class="count-pill">${count}</span>` : "";
       return `<a href="${href}" class="${key === active ? "on" : ""}" ${key === active ? 'aria-current="page"' : ""}>${esc(label)}${badge}</a>`;
     })
     .join("");
@@ -72,7 +76,7 @@ function layout({ title, section, active, body, query }) {
       <span class="mark" aria-hidden="true">C</span>
       <span class="brand-text">
         <strong>Maison Céleste</strong>
-        <em>Lyon · prêt-à-porter</em>
+        <em>Takchitas et caftans</em>
       </span>
     </a>
     <nav class="sections" aria-label="Espaces">
@@ -109,6 +113,12 @@ function renderFlash(query) {
     if (alerte) message += " Cette variante est sous le seuil d’alerte.";
     return `<p class="flash flash-ok" role="status">${esc(message)}</p>`;
   }
+  if (ok === "location") {
+    const reste = Number(query.get("reste"));
+    let message = "Location enregistrée. La pièce sort du stock vendable jusqu’au retour.";
+    if (Number.isInteger(reste) && reste >= 0) message += ` Stock restant de cette variante : ${formatInt(reste)}.`;
+    return `<p class="flash flash-ok" role="status">${esc(message)}</p>`;
+  }
   const messages = {
     produit: "Produit ajouté au catalogue.",
     "produit-modifie": "Fiche produit mise à jour.",
@@ -118,6 +128,7 @@ function renderFlash(query) {
     "employe-modifie": "Fiche employé mise à jour.",
     heures: "Heures enregistrées.",
     bulletin: "Estimation de paie préparée.",
+    "location-retour": "Pièce retournée. Elle est de nouveau disponible.",
   };
   if (ok && messages[ok]) return `<p class="flash flash-ok" role="status">${esc(messages[ok])}</p>`;
   if (err) return `<p class="flash flash-err" role="alert">${esc(err)}</p>`;
@@ -209,7 +220,7 @@ function datalists() {
 export function dashboardPage(data, query) {
   const kpis = [
     ["Valeur du stock", euro(data.purchaseValue), `Vente potentielle ${euro(data.saleValue)}`],
-    ["Pièces en rayon", formatInt(data.units), `${formatInt(data.productCount)} modèles · ${formatInt(data.variantCount)} variantes`],
+    ["Pièces en stock", formatInt(data.units), `${formatInt(data.productCount)} modèles · ${formatInt(data.variantCount)} variantes`],
     ["Alertes stock bas", formatInt(data.alerts), data.alerts ? "Sous le seuil ou en rupture" : "Tous les seuils sont tenus"],
     ["Mouvements, 30 jours", formatInt(data.recentCount), "Entrées, ventes, retours, ajustements"],
   ]
@@ -243,14 +254,14 @@ export function dashboardPage(data, query) {
         )
         .join("")}</ul>
       <a class="text-link" href="/alertes">Voir les ${formatInt(data.alerts)} alertes</a>`
-    : `<p class="muted">Aucune alerte. Le rayon est au-dessus des seuils.</p>`;
+    : `<p class="muted">Aucune alerte. Les seuils sont tenus.</p>`;
 
   const body = `
     ${pageHead({
       eyebrow: "Comptoir",
       title: "Tableau de bord",
-      lede: "Valeur du rayon, pièces à réassortir et derniers mouvements de la boutique.",
-      actions: `<a class="btn btn-ghost" href="/mouvements">Enregistrer un mouvement</a><a class="btn btn-primary" href="/catalogue/nouveau">Nouveau produit</a>`,
+      lede: "Valeur du stock, takchitas et caftans à réassortir, derniers mouvements.",
+      actions: `<a class="btn btn-ghost" href="/locations">Locations</a><a class="btn btn-ghost" href="/mouvements">Enregistrer un mouvement</a><a class="btn btn-primary" href="/catalogue/nouveau">Nouveau produit</a>`,
     })}
     <section class="kpis">${kpis}</section>
     <section class="dash-grid">
@@ -325,7 +336,7 @@ export function cataloguePage(products, query) {
   const body = `
     ${pageHead({
       eyebrow: "Catalogue",
-      title: "Pièces en boutique",
+      title: "Takchitas et caftans",
       lede: `${formatInt(products.length)} modèle${products.length > 1 ? "s" : ""} affiché${products.length > 1 ? "s" : ""}. Le stock se suit par couleur et par taille.`,
       actions: `<a class="btn btn-primary" href="/catalogue/nouveau">Nouveau produit</a>`,
     })}
@@ -369,25 +380,21 @@ export function newProductPage({ values = {}, errors = {}, query }) {
         ${field({ label: "Nom", name: "name", value: values.name, error: errors.name, required: true, attrs: 'maxlength="80" autocomplete="off"' })}
         ${selectField({ label: "Catégorie", name: "category", value: values.category, options: CATEGORIES, required: true, error: errors.category })}
         ${field({ label: "Marque", name: "brand", value: values.brand, error: errors.brand, required: true, list: "marques", attrs: 'maxlength="60"' })}
-        ${field({ label: "SKU", name: "sku", value: values.sku, error: errors.sku, hint: "Laissé vide, il est généré à partir du nom.", attrs: 'maxlength="32" placeholder="CEL-RIV" autocomplete="off"' })}
-        ${field({ label: "Prix d’achat", name: "purchase", value: values.purchase, error: errors.purchase, required: true, hint: "En euros, par exemple 42,00.", attrs: 'inputmode="decimal" placeholder="42,00"' })}
-        ${field({ label: "Prix de vente", name: "sale", value: values.sale, error: errors.sale, required: true, hint: "Prix boutique TTC indicatif.", attrs: 'inputmode="decimal" placeholder="95,00"' })}
+        ${field({ label: "SKU", name: "sku", value: values.sku, error: errors.sku, hint: "Laissé vide, il est généré à partir du nom.", attrs: 'maxlength="32" placeholder="CEL-AMB" autocomplete="off"' })}
+        ${field({ label: "Prix d’achat", name: "purchase", value: values.purchase, error: errors.purchase, required: true, hint: "En euros, par exemple 280,00.", attrs: 'inputmode="decimal" placeholder="280,00"' })}
+        ${field({ label: "Prix de vente", name: "sale", value: values.sale, error: errors.sale, required: true, hint: "Prix boutique TTC indicatif.", attrs: 'inputmode="decimal" placeholder="890,00"' })}
         ${field({ label: "Couleur", name: "color", value: values.color, error: errors.color, required: true, list: "couleurs", attrs: 'class="wide-input" maxlength="40"', })}
       </div>
       <fieldset class="sizes">
         <legend>Tailles et stock initial</legend>
         <div class="chip-groups">
           <div>
-            <p>Vêtements</p>
-            <div class="chips">${APPAREL_SIZES.map((size) => `<button type="button" class="chip" data-size="${esc(size)}">${esc(size)}</button>`).join("")}</div>
+            <p>36 à 46</p>
+            <div class="chips">${NUMERIC_SIZES.map((size) => `<button type="button" class="chip" data-size="${esc(size)}">${esc(size)}</button>`).join("")}</div>
           </div>
           <div>
-            <p>Chaussures</p>
-            <div class="chips">${SHOE_SIZES.map((size) => `<button type="button" class="chip" data-size="${esc(size)}">${esc(size)}</button>`).join("")}</div>
-          </div>
-          <div>
-            <p>Accessoires</p>
-            <div class="chips">${ACCESSORY_SIZES.map((size) => `<button type="button" class="chip" data-size="${esc(size)}">${esc(size)}</button>`).join("")}</div>
+            <p>S à XL</p>
+            <div class="chips">${LETTER_SIZES.map((size) => `<button type="button" class="chip" data-size="${esc(size)}">${esc(size)}</button>`).join("")}</div>
           </div>
         </div>
         <div id="size-rows">${sizeRows(rows, errors)}</div>
@@ -404,7 +411,7 @@ export function newProductPage({ values = {}, errors = {}, query }) {
 }
 
 export function productPage({ record, errors = {}, values = {}, query, mode = "edit" }) {
-  const { product, variants, movements } = record;
+  const { product, variants, movements, rentals = [] } = record;
   const editValues = {
     name: values.name ?? product.name,
     category: values.category ?? product.category,
@@ -458,12 +465,29 @@ export function productPage({ record, errors = {}, values = {}, query, mode = "e
       </table></div>`
     : `<p class="muted">Pas encore de mouvement sur cette fiche.</p>`;
 
+  const rentalBlock = rentals.length
+    ? `<div class="table-wrap"><table class="table">
+        <thead><tr><th>Cliente</th><th>Variante</th><th>Sortie</th><th>Retour prévu</th><th>Statut</th></tr></thead>
+        <tbody>${rentals
+          .map(
+            (rental) => `<tr class="${rental.display_status === "en_retard" ? "is-out" : ""}">
+              <td><strong>${esc(rental.client_name)}</strong><small class="sub">${esc(rental.client_phone)}</small></td>
+              <td>${dot(rental.color)} ${esc(rental.color)} · ${esc(rental.size)}</td>
+              <td>${esc(formatDateMedium(rental.start_date))}</td>
+              <td>${esc(formatDateMedium(rental.due_date))}</td>
+              <td>${rentalBadge(rental.display_status)}</td>
+            </tr>`,
+          )
+          .join("")}</tbody>
+      </table></div>`
+    : "";
+
   const body = `
     ${pageHead({
       eyebrow: categoryLabel(product.category),
       title: product.name,
       lede: `${esc(product.brand)} · SKU ${esc(product.sku)} · ${formatInt(stock)} pièce${stock > 1 ? "s" : ""} · marge ${esc(euro(margin))}`,
-      actions: `<a class="btn btn-ghost" href="/catalogue">Retour catalogue</a><a class="btn btn-primary" href="/mouvements?type=vente">Enregistrer une vente</a>`,
+      actions: `<a class="btn btn-ghost" href="/catalogue">Retour catalogue</a><a class="btn btn-ghost" href="/locations">Louer</a><a class="btn btn-primary" href="/mouvements?type=vente">Enregistrer une vente</a>`,
     })}
     <section class="split">
       <article class="panel">
@@ -501,6 +525,15 @@ export function productPage({ record, errors = {}, values = {}, query, mode = "e
         </article>
       </div>
     </section>
+    ${
+      rentalBlock
+        ? `<article class="panel">
+            <div class="panel-head"><h2>Locations en cours</h2><a href="/locations">Toutes les locations</a></div>
+            <p class="hint-block">Ces pièces ne sont plus disponibles à la vente ni à une nouvelle location.</p>
+            ${rentalBlock}
+          </article>`
+        : ""
+    }
     <article class="panel">
       <div class="panel-head"><h2>Mouvements de cette pièce</h2><a href="/mouvements">Journal</a></div>
       ${history}
@@ -583,11 +616,116 @@ export function movementsPage({ movements, variants, values = {}, errors = {}, q
       <div class="form-actions"><button class="btn btn-primary" type="submit">Enregistrer le mouvement</button></div>
     </form>
     <form class="filters" method="get" action="/mouvements">
-      ${selectField({ label: "Filtrer", name: "filtre", value: filter, options: MOVEMENT_TYPES, placeholder: "Tous les types" })}
+      ${selectField({ label: "Filtrer", name: "filtre", value: filter, options: JOURNAL_TYPES, placeholder: "Tous les types" })}
       <button class="btn btn-ghost" type="submit">Afficher</button>
     </form>
     <article class="panel">${table}</article>`;
   return layout({ title: "Mouvements", section: "stock", active: "mouvements", body, query });
+}
+
+function rentalBadge(status) {
+  return `<span class="tag tag-${esc(status)}">${esc(rentalStatusLabel(status))}</span>`;
+}
+
+function rentalRows(rows, { returned = false } = {}) {
+  if (!rows.length) return `<p class="muted">Aucune location dans cette liste.</p>`;
+  return `<div class="table-wrap"><table class="table">
+    <thead><tr>
+      <th>Pièce</th><th>Cliente</th><th>Sortie</th><th>Retour prévu</th>
+      <th class="num">Forfait</th><th class="num">Caution</th><th>Statut</th><th></th>
+    </tr></thead>
+    <tbody>${rows
+      .map((rental) => {
+        const late = rental.display_status === "en_retard";
+        const action = returned
+          ? `<span class="muted">${esc(formatDateMedium(rental.returned_date))}</span>`
+          : `<form class="return-form" method="post" action="/locations/${rental.id}/retour">
+              <button class="btn btn-small btn-ghost" type="submit">Marquer retournée</button>
+            </form>`;
+        return `<tr class="${late ? "is-out" : ""}">
+          <td><a href="/catalogue/${rental.product_id}"><strong>${esc(rental.name)}</strong></a><small class="sub">${dot(rental.color)} ${esc(rental.color)} · ${esc(rental.size)}</small></td>
+          <td><strong>${esc(rental.client_name)}</strong><small class="sub">${esc(rental.client_phone)}</small></td>
+          <td>${esc(formatDateMedium(rental.start_date))}</td>
+          <td>${esc(formatDateMedium(rental.due_date))}</td>
+          <td class="num">${esc(euro(rental.price_cents))}</td>
+          <td class="num">${esc(euro(rental.deposit_cents))}</td>
+          <td>${rentalBadge(rental.display_status)}</td>
+          <td>${action}</td>
+        </tr>`;
+      })
+      .join("")}</tbody>
+  </table></div>`;
+}
+
+function variantOptions(variants, selected) {
+  const groups = new Map();
+  for (const variant of variants) {
+    if (variant.quantity < 1) continue;
+    if (!groups.has(variant.name)) groups.set(variant.name, []);
+    groups.get(variant.name).push(variant);
+  }
+  const options = [`<option value="">Choisir une pièce disponible</option>`];
+  for (const [name, items] of groups) {
+    options.push(`<optgroup label="${esc(name)}">`);
+    for (const item of items) {
+      const selectedAttr = String(item.id) === String(selected) ? " selected" : "";
+      options.push(
+        `<option value="${item.id}"${selectedAttr}>${esc(item.color)} · ${esc(item.size)} — ${formatInt(item.quantity)} en stock</option>`,
+      );
+    }
+    options.push(`</optgroup>`);
+  }
+  return options.join("");
+}
+
+export function locationsPage({ boards, variants, values = {}, errors = {}, query }) {
+  const selected = values.variant_id || "";
+  const body = `
+    ${pageHead({
+      eyebrow: "Comptoir",
+      title: "Locations",
+      lede: "Une takchita ou un caftan peut être loué en plus d’être vendu. Le prix est un forfait. Tant que la pièce est réservée ou en location, elle n’est plus disponible.",
+    })}
+    ${errorSummary(errors)}
+    <form class="form-card panel" method="post" action="/locations">
+      <div class="panel-head"><h2>Nouvelle location</h2></div>
+      <div class="form-grid">
+        <label class="field wide">
+          <span>Pièce <i>*</i></span>
+          <select name="variant_id" required>${variantOptions(variants, selected)}</select>
+          <small>Seules les variantes encore en stock apparaissent.</small>
+          ${errors.variant_id ? `<em class="field-error">${esc(errors.variant_id)}</em>` : ""}
+        </label>
+        ${field({ label: "Cliente", name: "client_name", value: values.client_name || "", error: errors.client_name, required: true, attrs: 'maxlength="80" placeholder="Nadia El Fassi"' })}
+        ${field({ label: "Téléphone", name: "client_phone", value: values.client_phone || "", error: errors.client_phone, required: true, attrs: 'maxlength="24" placeholder="06 12 34 56 78"' })}
+        ${field({ label: "Date de sortie", name: "start_date", value: values.start_date || "", error: errors.start_date, required: true, type: "date" })}
+        ${field({ label: "Date de retour prévue", name: "due_date", value: values.due_date || "", error: errors.due_date, required: true, type: "date" })}
+        ${field({ label: "Prix de location", name: "price", value: values.price || "", error: errors.price, required: true, hint: "Forfait pour toute la période, pas un tarif à la journée.", attrs: 'inputmode="decimal" placeholder="180,00"' })}
+        ${field({ label: "Caution", name: "deposit", value: values.deposit || "", error: errors.deposit, hint: "Montant conservé jusqu’au retour. 0 si aucune caution.", attrs: 'inputmode="decimal" placeholder="400,00"' })}
+        ${selectField({ label: "Statut", name: "status", value: values.status || "en_location", options: RENTAL_CREATE_STATUSES, required: true, error: errors.status, placeholder: "Choisir" })}
+      </div>
+      <div class="form-actions"><button class="btn btn-primary" type="submit">Enregistrer la location</button></div>
+    </form>
+    <article class="panel board">
+      <div class="panel-head"><h2>Retards</h2><span class="count-pill">${formatInt(boards.late.length)}</span></div>
+      <p class="hint-block">Retour prévu dépassé, pièce toujours sortie.</p>
+      ${rentalRows(boards.late)}
+    </article>
+    <article class="panel board">
+      <div class="panel-head"><h2>Retours prévus</h2><span class="count-pill">${formatInt(boards.upcoming.length)}</span></div>
+      <p class="hint-block">Retour prévu dans les 14 prochains jours.</p>
+      ${rentalRows(boards.upcoming)}
+    </article>
+    <article class="panel board">
+      <div class="panel-head"><h2>En cours</h2><span class="count-pill">${formatInt(boards.current.length)}</span></div>
+      <p class="hint-block">Réservées ou sorties, retour prévu plus tard.</p>
+      ${rentalRows(boards.current)}
+    </article>
+    <article class="panel board">
+      <div class="panel-head"><h2>Retournées</h2></div>
+      ${rentalRows(boards.returned, { returned: true })}
+    </article>`;
+  return layout({ title: "Locations", section: "stock", active: "locations", body, query });
 }
 
 export function alertsPage(rows, query) {
@@ -960,7 +1098,7 @@ export function payslipPage({ detail, query }) {
       <p class="slip-banner">Ces montants sont des estimations pour la gestion de la boutique. Ce document n’est pas un bulletin de paie officiel.</p>
       <header class="slip-head">
         <div>
-          <p class="eyebrow">Maison Céleste · Lyon</p>
+          <p class="eyebrow">Maison Céleste · Takchitas et caftans</p>
           <h2>Estimation de rémunération</h2>
           <p>Préparée le ${esc(formatDateTime(run.created_at))}</p>
         </div>

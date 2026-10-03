@@ -42,7 +42,7 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS movements (
     id INTEGER PRIMARY KEY,
     variant_id INTEGER NOT NULL REFERENCES variants(id) ON DELETE CASCADE,
-    type TEXT NOT NULL CHECK (type IN ('entree', 'vente', 'retour', 'ajustement')),
+    type TEXT NOT NULL CHECK (type IN ('entree', 'vente', 'retour', 'ajustement', 'location')),
     quantity INTEGER NOT NULL,
     note TEXT NOT NULL DEFAULT '',
     created_at TEXT NOT NULL
@@ -88,7 +88,22 @@ db.exec(`
   );
 
   CREATE INDEX IF NOT EXISTS idx_variants_product ON variants(product_id);
+  CREATE TABLE IF NOT EXISTS rentals (
+    id INTEGER PRIMARY KEY,
+    variant_id INTEGER NOT NULL REFERENCES variants(id),
+    client_name TEXT NOT NULL,
+    client_phone TEXT NOT NULL,
+    start_date TEXT NOT NULL,
+    due_date TEXT NOT NULL,
+    returned_date TEXT,
+    price_cents INTEGER NOT NULL,
+    deposit_cents INTEGER NOT NULL,
+    status TEXT NOT NULL CHECK (status IN ('reservee', 'en_location', 'retournee')),
+    created_at TEXT NOT NULL
+  );
+
   CREATE INDEX IF NOT EXISTS idx_movements_created ON movements(created_at);
+  CREATE INDEX IF NOT EXISTS idx_rentals_status ON rentals(status, due_date);
   CREATE INDEX IF NOT EXISTS idx_shifts_employee ON shifts(employee_id, work_date);
 `);
 
@@ -226,7 +241,8 @@ function sortVariants(rows) {
 
 export function navCounts() {
   const alerts = qGet(`SELECT COUNT(*) AS n FROM variants WHERE quantity <= threshold`).n;
-  return { alerts };
+  const locations = qGet(`SELECT COUNT(*) AS n FROM rentals WHERE status != 'retournee'`).n;
+  return { alerts, locations };
 }
 
 export function getDashboard() {
@@ -319,7 +335,8 @@ export function getProduct(id) {
     `,
     id,
   );
-  return { product, variants, movements };
+  const rentals = listRentals().filter((rental) => rental.product_id === id && rental.status !== "retournee");
+  return { product, variants, movements, rentals };
 }
 
 function productValues(input, rows = []) {
@@ -654,12 +671,13 @@ export function recordMovement(input) {
   if (type === "ajustement") signed = direction === "moins" ? -qty : qty;
   if (variant.quantity + signed < 0) {
     const pieces = variant.quantity > 1 ? "pièces" : "pièce";
-    return fail(
-      {
-        quantity: `Stock insuffisant : il reste ${variant.quantity} ${pieces} en ${variant.color} / ${variant.size}.`,
-      },
-      values,
-    );
+    const held = qGet(
+      `SELECT COUNT(*) AS n FROM rentals WHERE variant_id = ? AND status != 'retournee'`,
+      variant.id,
+    ).n;
+    let message = `Stock insuffisant : il reste ${variant.quantity} ${pieces} en ${variant.color} / ${variant.size}.`;
+    if (held > 0) message += " Une pièce de cette variante est réservée ou en location.";
+    return fail({ quantity: message }, values);
   }
 
   const now = new Date().toISOString();
@@ -1030,6 +1048,178 @@ export function activeEmployees() {
   );
 }
 
+function rentalDisplayStatus(rental, today = todayParis()) {
+  if (rental.status === "retournee") return "retournee";
+  if (rental.due_date < today) return "en_retard";
+  return rental.status;
+}
+
+export function listRentals() {
+  const today = todayParis();
+  return qAll(
+    `
+      SELECT r.*, v.color, v.size, v.sku AS variant_sku, v.quantity AS stock,
+             p.name, p.category, p.id AS product_id
+      FROM rentals r
+      JOIN variants v ON v.id = r.variant_id
+      JOIN products p ON p.id = v.product_id
+      ORDER BY r.status = 'retournee', r.due_date, r.id
+    `,
+  ).map((rental) => ({ ...rental, display_status: rentalDisplayStatus(rental, today) }));
+}
+
+export function rentalBoards(today = todayParis()) {
+  const rentals = listRentals();
+  const active = rentals.filter((rental) => rental.status !== "retournee");
+  const horizon = addDays(today, 14);
+  const upcoming = active.filter((rental) => rental.due_date >= today && rental.due_date <= horizon);
+  const upcomingIds = new Set(upcoming.map((rental) => rental.id));
+  return {
+    late: active.filter((rental) => rental.display_status === "en_retard"),
+    upcoming,
+    current: active.filter((rental) => rental.display_status !== "en_retard" && !upcomingIds.has(rental.id)),
+    returned: rentals.filter((rental) => rental.status === "retournee"),
+  };
+}
+
+function addDays(iso, days) {
+  const [year, month, day] = iso.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
+}
+
+function parsePhone(value) {
+  const text = cleanText(value, 24);
+  if (text.tooLong) return { error: "Le téléphone est trop long." };
+  const digits = text.text.replace(/\D/g, "");
+  if (!text.text) return { error: "Indiquez le téléphone de la cliente." };
+  if (digits.length < 8 || digits.length > 15) return { error: "Indiquez un téléphone valide, par exemple 06 12 34 56 78." };
+  return { phone: text.text };
+}
+
+export function createRental(input) {
+  const values = {
+    variant_id: String(input.variantId ?? ""),
+    client_name: String(input.clientName ?? ""),
+    client_phone: String(input.clientPhone ?? ""),
+    start_date: String(input.startDate ?? ""),
+    due_date: String(input.dueDate ?? ""),
+    price: String(input.price ?? ""),
+    deposit: String(input.deposit ?? ""),
+    status: String(input.status ?? "en_location"),
+  };
+  const errors = {};
+  const variant = qGet(
+    `SELECT v.*, p.name FROM variants v JOIN products p ON p.id = v.product_id WHERE v.id = ?`,
+    Number(input.variantId),
+  );
+  const name = cleanText(input.clientName, 80);
+  const phone = parsePhone(input.clientPhone);
+  const start = parseDate(input.startDate);
+  const due = parseDate(input.dueDate);
+  const price = parseMoney(input.price);
+  const depositRaw = String(input.deposit ?? "").trim();
+  const deposit = depositRaw === "" ? 0 : parseMoney(depositRaw);
+  const status = String(input.status ?? "");
+  const today = todayParis();
+  if (!variant) errors.variant_id = "Choisissez une takchita ou un caftan.";
+  else if (variant.quantity < 1) {
+    errors.variant_id = "Cette variante n’est pas disponible : elle est déjà réservée, en location, ou en rupture.";
+  }
+  if (!name.text) errors.client_name = "Indiquez le nom de la cliente.";
+  else if (name.tooLong) errors.client_name = "Le nom est trop long.";
+  if (phone.error) errors.client_phone = phone.error;
+  if (!start) errors.start_date = "Indiquez la date de sortie.";
+  if (!due) errors.due_date = "Indiquez la date de retour prévue.";
+  if (start && due && due < start) errors.due_date = "Le retour prévu doit suivre la date de sortie.";
+  if (start && due && due >= start) {
+    const span = Math.round((Date.parse(`${due}T00:00:00Z`) - Date.parse(`${start}T00:00:00Z`)) / 86400000);
+    if (span > 60) errors.due_date = "Une location ne dépasse pas 60 jours.";
+  }
+  if (!["reservee", "en_location"].includes(status)) errors.status = "Choisissez réservée ou en location.";
+  if (status === "reservee" && start && start < today) errors.start_date = "Une réservation part aujourd’hui ou plus tard.";
+  if (status === "en_location" && start && start > today) errors.start_date = "Une sortie en location ne peut pas être dans le futur.";
+  if (price == null || price <= 0 || price > 1_000_000) errors.price = "Indiquez le forfait de location, par exemple 180,00.";
+  if (deposit == null || deposit < 0 || deposit > 1_000_000) errors.deposit = "Indiquez la caution, ou 0.";
+  if (Object.keys(errors).length) return fail(errors, values);
+
+  const now = new Date().toISOString();
+  const note = status === "reservee"
+    ? `Réservation — ${name.text}`
+    : `Sortie en location — ${name.text}`;
+  db.exec("BEGIN");
+  try {
+    const current = qGet(`SELECT quantity FROM variants WHERE id = ?`, variant.id);
+    if (current.quantity < 1) {
+      db.exec("ROLLBACK");
+      return fail(
+        { variant_id: "Cette variante vient d’être prise. Choisissez-en une autre." },
+        values,
+      );
+    }
+    qRun(`UPDATE variants SET quantity = quantity - 1 WHERE id = ?`, variant.id);
+    qRun(
+      `INSERT INTO movements (variant_id, type, quantity, note, created_at) VALUES (?, 'location', -1, ?, ?)`,
+      variant.id,
+      note,
+      now,
+    );
+    const id = insertId(
+      qRun(
+        `INSERT INTO rentals (
+           variant_id, client_name, client_phone, start_date, due_date, returned_date,
+           price_cents, deposit_cents, status, created_at
+         ) VALUES (?, ?, ?, ?, ?, NULL, ?, ?, ?, ?)`,
+        variant.id,
+        name.text,
+        phone.phone,
+        start,
+        due,
+        price,
+        deposit,
+        status,
+        now,
+      ),
+    );
+    db.exec("COMMIT");
+    return { ok: true, id, stock: current.quantity - 1 };
+  } catch (error) {
+    db.exec("ROLLBACK");
+    throw error;
+  }
+}
+
+export function returnRental(id) {
+  const rental = qGet(`SELECT * FROM rentals WHERE id = ?`, id);
+  if (!rental) return { ok: false, notFound: true };
+  if (rental.status === "retournee") {
+    return { ok: false, errors: { status: "Cette location est déjà retournée." } };
+  }
+  const today = todayParis();
+  const now = new Date().toISOString();
+  db.exec("BEGIN");
+  try {
+    qRun(`UPDATE variants SET quantity = quantity + 1 WHERE id = ?`, rental.variant_id);
+    qRun(
+      `INSERT INTO movements (variant_id, type, quantity, note, created_at) VALUES (?, 'location', 1, ?, ?)`,
+      rental.variant_id,
+      `Retour de location — ${rental.client_name}`,
+      now,
+    );
+    qRun(
+      `UPDATE rentals SET status = 'retournee', returned_date = ? WHERE id = ?`,
+      today,
+      rental.id,
+    );
+    db.exec("COMMIT");
+    return { ok: true, id: rental.id };
+  } catch (error) {
+    db.exec("ROLLBACK");
+    throw error;
+  }
+}
+
 function paris(day, time) {
   return new Date(`${day}T${time}:00+02:00`).toISOString();
 }
@@ -1055,6 +1245,7 @@ function seed() {
   try {
     seedCatalogue();
     seedTeam();
+    seedRentals();
     const mismatch = qAll(`
       SELECT v.id, v.sku, v.quantity, COALESCE(SUM(m.quantity), 0) AS ledger
       FROM variants v
@@ -1075,181 +1266,119 @@ function seed() {
 function seedCatalogue() {
   const catalogue = [
     {
-      name: "Chemise lin Rivage",
-      category: "hauts",
+      name: "Takchita mariage soie Ambre",
+      category: "takchita",
       brand: "Maison Céleste",
-      sku: "CEL-RIV",
-      purchase: 4200,
-      sale: 9500,
+      sku: "CEL-AMB",
+      purchase: 28000,
+      sale: 89000,
       variants: [
-        ["Ivoire", "XS", 3],
-        ["Ivoire", "S", 6],
-        ["Ivoire", "M", 8, 2, [{ type: "retour", quantity: 1, at: paris("2026-10-01", "15:05"), note: "Échange de taille" }]],
-        ["Ivoire", "L", 5],
-        ["Ivoire", "XL", 1, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-28", "14:10"), note: "Vente comptoir" }]],
-        ["Bleu nuit", "S", 4],
-        ["Bleu nuit", "M", 5],
-        ["Bleu nuit", "L", 3],
+        ["Bordeaux", "38", 3],
+        ["Bordeaux", "40", 4, 2, [{ type: "entree", quantity: 2, at: paris("2026-10-02", "11:05"), note: "Livraison soieries" }]],
+        ["Bordeaux", "42", 3],
+        ["Bordeaux", "44", 1, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-19", "17:20"), note: "Vente mariage" }]],
+        ["Or vieilli", "40", 2],
+        ["Or vieilli", "42", 3],
       ],
     },
     {
-      name: "Pull mérinos Fourvière",
-      category: "hauts",
-      brand: "Filature Alma",
-      sku: "FIL-FOU",
-      purchase: 4800,
-      sale: 12800,
-      variants: [
-        ["Bordeaux", "S", 1, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-27", "16:15"), note: "Vente comptoir" }]],
-        ["Bordeaux", "M", 5],
-        ["Bordeaux", "L", 4],
-        ["Gris perle", "M", 4],
-        ["Gris perle", "L", 3],
-      ],
-    },
-    {
-      name: "Jean droit Canut",
-      category: "bas",
-      brand: "Atelier Brume",
-      sku: "BRU-CAN",
-      purchase: 3600,
-      sale: 11000,
-      variants: [
-        ["Indigo", "36", 4],
-        ["Indigo", "38", 6, 2, [{ type: "entree", quantity: 2, at: paris("2026-10-02", "11:05"), note: "Livraison Atelier Brume" }]],
-        ["Indigo", "40", 5],
-        ["Indigo", "42", 1, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-18", "15:10"), note: "Vente comptoir" }]],
-      ],
-    },
-    {
-      name: "Pantalon tailleur Bellecour",
-      category: "bas",
+      name: "Takchita mariage velours Noces",
+      category: "takchita",
       brand: "Maison Céleste",
-      sku: "CEL-BEL",
-      purchase: 5200,
-      sale: 14500,
+      sku: "CEL-NOC",
+      purchase: 32000,
+      sale: 98000,
       variants: [
-        ["Noir", "36", 4],
-        ["Noir", "38", 5],
-        ["Noir", "40", 3],
-        ["Noir", "42", 0, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-19", "17:20"), note: "Dernière pièce" }]],
-        ["Camel", "38", 3],
-        ["Camel", "40", 4],
+        ["Émeraude", "38", 3],
+        ["Émeraude", "40", 4],
+        ["Émeraude", "42", 2],
+        ["Prune", "40", 1, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-27", "16:15"), note: "Vente mariage" }]],
+        ["Prune", "42", 3],
       ],
     },
     {
-      name: "Robe midi Saône",
-      category: "robes",
-      brand: "Maison Céleste",
-      sku: "CEL-SAO",
-      purchase: 5800,
-      sale: 16500,
-      variants: [
-        ["Terracotta", "XS", 3],
-        ["Terracotta", "S", 4],
-        ["Terracotta", "M", 6, 2, [{ type: "vente", quantity: -1, at: paris("2026-10-02", "16:20"), note: "Vente comptoir" }]],
-        ["Terracotta", "L", 3],
-        ["Écru", "S", 3],
-        ["Écru", "M", 4],
-        ["Écru", "L", 3],
-      ],
-    },
-    {
-      name: "Robe chemise Céladon",
-      category: "robes",
-      brand: "Studio Lina",
-      sku: "LIN-CEL",
-      purchase: 4400,
-      sale: 12500,
-      variants: [
-        ["Vert sauge", "S", 0, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-14", "16:00"), note: "Vente comptoir" }]],
-        ["Vert sauge", "M", 4, 2, [{ type: "retour", quantity: 1, at: paris("2026-09-22", "10:30"), note: "Retour — taille trop petite" }]],
-        ["Vert sauge", "L", 3],
-      ],
-    },
-    {
-      name: "Veste laine Croix-Rousse",
-      category: "vestes",
-      brand: "Filature Alma",
-      sku: "FIL-CRO",
-      purchase: 9200,
-      sale: 24500,
-      variants: [
-        ["Camel", "S", 3],
-        ["Camel", "M", 4, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-30", "18:00"), note: "Vente comptoir" }]],
-        ["Camel", "L", 3],
-        ["Charbon", "M", 3],
-        ["Charbon", "L", 1, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-17", "15:40"), note: "Vente comptoir" }]],
-      ],
-    },
-    {
-      name: "Trench coton Presqu’île",
-      category: "vestes",
-      brand: "Maison Céleste",
-      sku: "CEL-PRE",
-      purchase: 11000,
-      sale: 28900,
-      variants: [
-        ["Beige", "36", 3],
-        ["Beige", "38", 4, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-24", "15:40"), note: "Vente comptoir" }]],
-        ["Beige", "40", 3],
-        ["Beige", "42", 3],
-      ],
-    },
-    {
-      name: "Bottines Terreaux",
-      category: "chaussures",
-      brand: "Cuir du Rhône",
-      sku: "RHO-TER",
-      purchase: 6800,
-      sale: 17900,
-      variants: [
-        ["Cognac", "37", 3],
-        ["Cognac", "38", 4],
-        ["Cognac", "39", 4, 2, [{ type: "vente", quantity: -1, at: paris("2026-10-01", "17:10"), note: "Vente comptoir" }]],
-        ["Cognac", "40", 3],
-        ["Cognac", "41", 0, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-11", "16:45"), note: "Dernière pointure" }]],
-      ],
-    },
-    {
-      name: "Baskets toile Confluence",
-      category: "chaussures",
-      brand: "Atelier Brume",
-      sku: "BRU-CON",
-      purchase: 2900,
-      sale: 8500,
-      variants: [
-        ["Blanc", "37", 5],
-        ["Blanc", "38", 6, 2, [{ type: "entree", quantity: 4, at: paris("2026-09-12", "09:40"), note: "Livraison Atelier Brume" }]],
-        ["Blanc", "39", 4],
-        ["Blanc", "40", 3],
-        ["Blanc", "41", 3],
-      ],
-    },
-    {
-      name: "Foulard soie Soie d’or",
-      category: "accessoires",
+      name: "Takchita henné brocart Lune",
+      category: "takchita",
       brand: "Soieries Céleste",
-      sku: "SOI-OR",
-      purchase: 2200,
-      sale: 6200,
+      sku: "SOI-LUN",
+      purchase: 35000,
+      sale: 115000,
       variants: [
-        ["Or vieilli", "TU", 2, 4, [{ type: "ajustement", quantity: -1, at: paris("2026-09-29", "12:30"), note: "Écart d’inventaire vitrine" }]],
-        ["Bordeaux", "TU", 8, 4],
+        ["Ivoire", "36", 2],
+        ["Ivoire", "38", 3],
+        ["Ivoire", "40", 4],
+        ["Ivoire", "42", 2],
+        ["Or vieilli", "40", 0, 2, [{ type: "vente", quantity: -1, at: paris("2026-10-01", "17:10"), note: "Dernière pièce — commande henné" }]],
       ],
     },
     {
-      name: "Ceinture cuir Quai",
-      category: "accessoires",
-      brand: "Cuir du Rhône",
-      sku: "RHO-QUA",
-      purchase: 1600,
-      sale: 4800,
+      name: "Takchita soirée crêpe Aurore",
+      category: "takchita",
+      brand: "Atelier Brume",
+      sku: "BRU-AUR",
+      purchase: 19000,
+      sale: 64000,
       variants: [
-        ["Noir", "80", 4],
-        ["Noir", "85", 5, 2, [{ type: "entree", quantity: 3, at: paris("2026-09-26", "11:00"), note: "Livraison Cuir du Rhône" }]],
-        ["Noir", "90", 3],
-        ["Camel", "85", 3],
+        ["Blush", "38", 3],
+        ["Blush", "40", 4, 2, [{ type: "retour", quantity: 1, at: paris("2026-10-01", "15:05"), note: "Retour essayage" }]],
+        ["Blush", "42", 2],
+        ["Blush", "44", 3],
+      ],
+    },
+    {
+      name: "Caftan soirée soie Jasmin",
+      category: "caftan",
+      brand: "Soieries Céleste",
+      sku: "SOI-JAS",
+      purchase: 14000,
+      sale: 45000,
+      variants: [
+        ["Bleu nuit", "38", 4],
+        ["Bleu nuit", "40", 3, 2, [{ type: "vente", quantity: -1, at: paris("2026-10-02", "16:20"), note: "Vente soirée" }]],
+        ["Bleu nuit", "42", 4],
+        ["Bleu nuit", "44", 2],
+      ],
+    },
+    {
+      name: "Caftan henné velours Grenat",
+      category: "caftan",
+      brand: "Maison Céleste",
+      sku: "CEL-GRE",
+      purchase: 16000,
+      sale: 52000,
+      variants: [
+        ["Grenat", "38", 3],
+        ["Grenat", "40", 1, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-17", "15:40"), note: "Vente henné" }]],
+        ["Grenat", "42", 4, 2, [{ type: "entree", quantity: 2, at: paris("2026-09-26", "11:00"), note: "Livraison velours" }]],
+        ["Grenat", "44", 2],
+      ],
+    },
+    {
+      name: "Caftan mariage brocart Étoile",
+      category: "caftan",
+      brand: "Soieries Céleste",
+      sku: "SOI-ETO",
+      purchase: 21000,
+      sale: 68000,
+      variants: [
+        ["Or vieilli", "38", 2],
+        ["Or vieilli", "40", 3],
+        ["Or vieilli", "42", 2, 2, [{ type: "vente", quantity: -1, at: paris("2026-09-30", "18:00"), note: "Vente mariage" }]],
+        ["Or vieilli", "44", 2],
+      ],
+    },
+    {
+      name: "Caftan soirée crêpe Brume",
+      category: "caftan",
+      brand: "Atelier Brume",
+      sku: "BRU-CRE",
+      purchase: 9500,
+      sale: 29000,
+      variants: [
+        ["Écru", "38", 4, 2, [{ type: "ajustement", quantity: -1, at: paris("2026-09-29", "12:30"), note: "Écart d’inventaire cabine" }]],
+        ["Écru", "40", 4],
+        ["Écru", "42", 3],
+        ["Écru", "46", 1],
       ],
     },
   ];
@@ -1295,7 +1424,7 @@ function seedCatalogue() {
           `INSERT INTO movements (variant_id, type, quantity, note, created_at) VALUES (?, 'entree', ?, ?, ?)`,
           variantId,
           opening,
-          "Stock d’ouverture — rentrée",
+          "Stock d’ouverture",
           paris("2026-08-18", "09:00"),
         );
       }
@@ -1415,6 +1544,165 @@ function seedTeam() {
   }
 }
 
+function ensureMovementTypes() {
+  const row = qGet(`SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'movements'`);
+  if (!row?.sql || row.sql.includes("'location'")) return;
+  db.exec("PRAGMA foreign_keys = OFF");
+  db.exec("BEGIN");
+  try {
+    db.exec(`
+      CREATE TABLE movements_new (
+        id INTEGER PRIMARY KEY,
+        variant_id INTEGER NOT NULL,
+        type TEXT NOT NULL CHECK (type IN ('entree', 'vente', 'retour', 'ajustement', 'location')),
+        quantity INTEGER NOT NULL,
+        note TEXT NOT NULL DEFAULT '',
+        created_at TEXT NOT NULL
+      );
+      INSERT INTO movements_new (id, variant_id, type, quantity, note, created_at)
+      SELECT id, variant_id, type, quantity, note, created_at FROM movements;
+      DROP TABLE movements;
+      ALTER TABLE movements_new RENAME TO movements;
+      CREATE INDEX IF NOT EXISTS idx_movements_created ON movements(created_at);
+    `);
+    db.exec("COMMIT");
+  } catch (error) {
+    db.exec("ROLLBACK");
+    throw error;
+  }
+  db.exec("PRAGMA foreign_keys = ON");
+}
+
+function variantBy(productSku, color, size) {
+  const row = qGet(
+    `SELECT v.id, v.quantity FROM variants v JOIN products p ON p.id = v.product_id
+     WHERE p.sku = ? AND v.color = ? AND v.size = ?`,
+    productSku,
+    color,
+    size,
+  );
+  if (!row) throw new Error(`Variante introuvable : ${productSku} ${color} ${size}`);
+  return row;
+}
+
+function seedActiveRental(item) {
+  const variant = variantBy(item.sku, item.color, item.size);
+  if (variant.quantity < 1) throw new Error(`Plus de stock pour louer ${item.sku} ${item.color} ${item.size}`);
+  qRun(`UPDATE variants SET quantity = quantity - 1 WHERE id = ?`, variant.id);
+  qRun(
+    `INSERT INTO movements (variant_id, type, quantity, note, created_at) VALUES (?, 'location', -1, ?, ?)`,
+    variant.id,
+    item.note,
+    item.at,
+  );
+  qRun(
+    `INSERT INTO rentals (
+       variant_id, client_name, client_phone, start_date, due_date, returned_date,
+       price_cents, deposit_cents, status, created_at
+     ) VALUES (?, ?, ?, ?, ?, NULL, ?, ?, ?, ?)`,
+    variant.id,
+    item.name,
+    item.phone,
+    item.start,
+    item.due,
+    item.price,
+    item.deposit,
+    item.status,
+    item.at,
+  );
+}
+
+function seedRentals() {
+  seedActiveRental({
+    sku: "CEL-GRE",
+    color: "Grenat",
+    size: "38",
+    name: "Nadia El Fassi",
+    phone: "06 18 44 20 13",
+    start: "2026-09-20",
+    due: "2026-09-28",
+    price: 15000,
+    deposit: 30000,
+    status: "en_location",
+    at: paris("2026-09-20", "10:00"),
+    note: "Sortie en location — Nadia El Fassi",
+  });
+  seedActiveRental({
+    sku: "SOI-JAS",
+    color: "Bleu nuit",
+    size: "42",
+    name: "Leïla Chraibi",
+    phone: "07 62 18 40 55",
+    start: "2026-09-30",
+    due: "2026-10-08",
+    price: 12000,
+    deposit: 25000,
+    status: "en_location",
+    at: paris("2026-09-30", "11:30"),
+    note: "Sortie en location — Leïla Chraibi",
+  });
+  seedActiveRental({
+    sku: "CEL-AMB",
+    color: "Bordeaux",
+    size: "38",
+    name: "Amina Benali",
+    phone: "06 22 90 14 33",
+    start: "2026-10-10",
+    due: "2026-10-13",
+    price: 18000,
+    deposit: 40000,
+    status: "reservee",
+    at: paris("2026-10-02", "16:40"),
+    note: "Réservation — Amina Benali",
+  });
+  seedActiveRental({
+    sku: "CEL-NOC",
+    color: "Émeraude",
+    size: "42",
+    name: "Yasmine Berrada",
+    phone: "06 44 12 88 07",
+    start: "2026-09-18",
+    due: "2026-10-24",
+    price: 22000,
+    deposit: 45000,
+    status: "en_location",
+    at: paris("2026-09-18", "14:20"),
+    note: "Sortie en location — Yasmine Berrada",
+  });
+
+  const returned = variantBy("BRU-AUR", "Blush", "38");
+  const leftAt = paris("2026-08-22", "10:15");
+  const backAt = paris("2026-08-26", "18:10");
+  qRun(
+    `INSERT INTO movements (variant_id, type, quantity, note, created_at) VALUES (?, 'location', -1, ?, ?)`,
+    returned.id,
+    "Sortie en location — Sara Mouline",
+    leftAt,
+  );
+  qRun(
+    `INSERT INTO movements (variant_id, type, quantity, note, created_at) VALUES (?, 'location', 1, ?, ?)`,
+    returned.id,
+    "Retour de location — Sara Mouline",
+    backAt,
+  );
+  qRun(
+    `INSERT INTO rentals (
+       variant_id, client_name, client_phone, start_date, due_date, returned_date,
+       price_cents, deposit_cents, status, created_at
+     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'retournee', ?)`,
+    returned.id,
+    "Sara Mouline",
+    "06 51 77 02 18",
+    "2026-08-22",
+    "2026-08-26",
+    "2026-08-26",
+    9500,
+    20000,
+    leftAt,
+  );
+}
+
+ensureMovementTypes();
 seed();
 
 export function monthRange(which = "current") {

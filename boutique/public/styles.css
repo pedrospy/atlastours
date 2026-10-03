@@ -289,8 +289,14 @@ main > .panel { margin-bottom: 16px; }
 .badge-vente { background: #f8e6dc; color: #8d3b22; }
 .badge-retour { background: #f6efd8; color: #6d5420; }
 .badge-ajustement { background: #efe8df; color: #4d433a; }
+.badge-location, .tag-en_location { background: #e7eef8; color: #1e3f66; }
+.tag-reservee { background: #efe6f4; color: #5a3d6e; }
+.tag-en_retard { background: #f8e7e3; color: var(--danger); }
+.tag-retournee { background: #e5f2ea; color: #1d5a45; }
 .tag-low { background: #f8efd4; color: #8a5a14; }
 .tag-out { background: #f8e7e3; color: var(--danger); }
+.return-form { margin: 0; }
+.board + .board { margin-top: 14px; }
 
 .btn {
   display: inline-flex;
