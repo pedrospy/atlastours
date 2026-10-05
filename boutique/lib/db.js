@@ -1,3 +1,4 @@
+import { randomBytes } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { DatabaseSync } from "node:sqlite";
@@ -7,7 +8,8 @@ import { compareSize, todayParis } from "./format.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dataDir = path.join(root, "data");
-fs.mkdirSync(dataDir, { recursive: true });
+const photosDir = path.join(dataDir, "photos");
+fs.mkdirSync(photosDir, { recursive: true });
 
 const db = new DatabaseSync(path.join(dataDir, "maison-celeste.sqlite"));
 db.exec(`
@@ -117,6 +119,50 @@ function qGet(sql, ...params) {
 
 function qRun(sql, ...params) {
   return db.prepare(sql).run(...params);
+}
+
+const PHOTO_FILE = /^[1-9]\d*-[a-f0-9]{16}\.(jpg|png|webp)$/;
+const PHOTO_EXTS = new Set(["jpg", "png", "webp"]);
+const PHOTO_MAX = 5_000_000;
+
+function ensurePhotoColumn() {
+  const columns = qAll(`PRAGMA table_info(products)`);
+  if (!columns.some((column) => column.name === "photo_path")) {
+    db.exec(`ALTER TABLE products ADD COLUMN photo_path TEXT`);
+  }
+}
+
+ensurePhotoColumn();
+
+function photoFullPath(name) {
+  if (typeof name !== "string" || !PHOTO_FILE.test(name)) return null;
+  const full = path.resolve(photosDir, name);
+  if (path.dirname(full) !== path.resolve(photosDir)) return null;
+  return full;
+}
+
+export function readProductPhoto(name) {
+  const full = photoFullPath(name);
+  if (!full || !fs.existsSync(full)) return null;
+  return full;
+}
+
+function removePhotoFile(name) {
+  const full = photoFullPath(name);
+  if (full) fs.rmSync(full, { force: true });
+}
+
+function storeProductPhoto(productId, photo) {
+  const ext = photo?.ext;
+  if (!PHOTO_EXTS.has(ext) || !Buffer.isBuffer(photo.buffer) || photo.buffer.length > PHOTO_MAX) {
+    throw Object.assign(new Error("Photo invalide."), { status: 400 });
+  }
+  const name = `${productId}-${randomBytes(8).toString("hex")}.${ext}`;
+  const full = path.join(photosDir, name);
+  fs.writeFileSync(full, photo.buffer);
+  const previous = qGet(`SELECT photo_path FROM products WHERE id = ?`, productId)?.photo_path || "";
+  qRun(`UPDATE products SET photo_path = ? WHERE id = ?`, name, productId);
+  return { name, full, previous };
 }
 
 function insertId(result) {
@@ -382,6 +428,7 @@ export function createProduct(input) {
   else if (sale <= 0 || sale > 1_000_000) errors.sale = "Le prix de vente doit être compris entre 0,01 € et 10 000 €.";
   if (!color.text) errors.color = "Indiquez une couleur.";
   else if (color.tooLong) errors.color = "La couleur est trop longue.";
+  if (input.photoError) errors.photo = input.photoError;
 
   const parsedRows = [];
   const seen = new Set();
@@ -411,6 +458,7 @@ export function createProduct(input) {
   }
 
   const now = new Date().toISOString();
+  let stored = null;
   db.exec("BEGIN");
   try {
     const productId = insertId(
@@ -439,10 +487,12 @@ export function createProduct(input) {
         return fail(created.errors, values);
       }
     }
+    if (input.photo) stored = storeProductPhoto(productId, input.photo);
     db.exec("COMMIT");
     return { ok: true, id: productId };
   } catch (error) {
     db.exec("ROLLBACK");
+    if (stored?.full) fs.rmSync(stored.full, { force: true });
     throw error;
   }
 }
@@ -508,17 +558,29 @@ export function updateProduct(id, input) {
   if (sale == null || sale <= 0 || sale > 1_000_000) {
     errors.sale = "Indiquez un prix de vente valide, par exemple 95,00.";
   }
+  if (input.photoError) errors.photo = input.photoError;
   if (Object.keys(errors).length) return fail(errors, values);
-  qRun(
-    `UPDATE products SET name = ?, category = ?, brand = ?, sku = ?, purchase_cents = ?, sale_cents = ? WHERE id = ?`,
-    name.text,
-    input.category,
-    brand.text,
-    sku,
-    purchase,
-    sale,
-    id,
-  );
+  let stored = null;
+  db.exec("BEGIN");
+  try {
+    qRun(
+      `UPDATE products SET name = ?, category = ?, brand = ?, sku = ?, purchase_cents = ?, sale_cents = ? WHERE id = ?`,
+      name.text,
+      input.category,
+      brand.text,
+      sku,
+      purchase,
+      sale,
+      id,
+    );
+    if (input.photo) stored = storeProductPhoto(id, input.photo);
+    db.exec("COMMIT");
+  } catch (error) {
+    db.exec("ROLLBACK");
+    if (stored?.full) fs.rmSync(stored.full, { force: true });
+    throw error;
+  }
+  if (stored?.previous && stored.previous !== stored.name) removePhotoFile(stored.previous);
   return { ok: true, id };
 }
 

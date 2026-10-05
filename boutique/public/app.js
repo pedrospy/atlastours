@@ -70,6 +70,42 @@ function bindPrint() {
   document.querySelector("[data-print]")?.addEventListener("click", () => window.print());
 }
 
+function bindPhotoPreview() {
+  document.querySelectorAll("[data-photo-input]").forEach((input) => {
+    const field = input.closest(".field-photo");
+    const preview = field?.querySelector("[data-photo-preview]");
+    const note = field?.querySelector("[data-photo-note]");
+    const current = field?.querySelector("[data-photo-current]");
+    if (!preview) return;
+    let objectUrl = "";
+    input.addEventListener("change", () => {
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+      objectUrl = "";
+      const file = input.files?.[0];
+      const allowed = file && (
+        ["image/jpeg", "image/png", "image/webp"].includes(file.type) ||
+        /\.(jpe?g|png|webp)$/i.test(file.name)
+      );
+      if (!file || !allowed) {
+        preview.hidden = true;
+        preview.removeAttribute("src");
+        if (current) current.hidden = false;
+        if (note) {
+          note.hidden = !file;
+          if (file) note.textContent = "Choisissez une image JPEG, PNG ou WebP.";
+        }
+        return;
+      }
+      objectUrl = URL.createObjectURL(file);
+      preview.src = objectUrl;
+      preview.hidden = false;
+      if (note) note.hidden = true;
+      if (current) current.hidden = true;
+    });
+  });
+}
+
 bindSizeEditor();
 bindMovementType();
 bindPrint();
+bindPhotoPreview();

@@ -28,24 +28,120 @@ function redirect(res, location) {
   res.end();
 }
 
-function readForm(req) {
+const TEXT_LIMIT = 200_000;
+const FILE_LIMIT = 8_000_000;
+const PHOTO_MAX = 5_000_000;
+
+function readBody(req, limit) {
   return new Promise((resolve, reject) => {
     const chunks = [];
     let size = 0;
     req.on("data", (chunk) => {
       size += chunk.length;
-      if (size > 200_000) {
+      if (size > limit) {
         reject(Object.assign(new Error("Corps de requête trop volumineux."), { status: 413 }));
         req.destroy();
         return;
       }
       chunks.push(chunk);
     });
-    req.on("end", () => {
-      resolve(new URLSearchParams(Buffer.concat(chunks).toString("utf8")));
-    });
+    req.on("end", () => resolve(Buffer.concat(chunks)));
     req.on("error", reject);
   });
+}
+
+function formFromParams(params, file = null) {
+  return {
+    get: (name) => params.get(name),
+    getAll: (name) => params.getAll(name),
+    entries: () => params.entries(),
+    has: (name) => params.has(name),
+    file,
+  };
+}
+
+function headerValue(header, key) {
+  const match = new RegExp(`${key}="([^"]*)"`, "i").exec(header);
+  return match ? match[1] : "";
+}
+
+function parseMultipart(buffer, contentType) {
+  const match = /boundary=(?:"([^"]+)"|([^;]+))/i.exec(contentType);
+  const boundary = (match?.[1] || match?.[2] || "").trim();
+  if (!boundary) throw Object.assign(new Error("Formulaire incomplet."), { status: 400 });
+  const delimiter = Buffer.from(`--${boundary}`);
+  const params = new URLSearchParams();
+  let file = null;
+  let start = buffer.indexOf(delimiter);
+  if (start < 0) throw Object.assign(new Error("Formulaire incomplet."), { status: 400 });
+  while (start >= 0 && start < buffer.length) {
+    let cursor = start + delimiter.length;
+    if (buffer[cursor] === 45 && buffer[cursor + 1] === 45) break;
+    if (buffer[cursor] === 13 && buffer[cursor + 1] === 10) cursor += 2;
+    const next = buffer.indexOf(delimiter, cursor);
+    if (next < 0) break;
+    let partEnd = next;
+    if (partEnd >= 2 && buffer[partEnd - 2] === 13 && buffer[partEnd - 1] === 10) partEnd -= 2;
+    const part = buffer.subarray(cursor, partEnd);
+    const sep = part.indexOf(Buffer.from("\r\n\r\n"));
+    if (sep >= 0) {
+      const header = part.subarray(0, sep).toString("latin1");
+      const body = part.subarray(sep + 4);
+      const name = headerValue(header, "name");
+      if (name && /filename="/i.test(header)) {
+        const filename = headerValue(header, "filename");
+        if (name === "photo" && filename && body.length) file = { filename, buffer: Buffer.from(body) };
+      } else if (name) {
+        params.append(name, body.toString("utf8"));
+      }
+    }
+    start = next;
+  }
+  return formFromParams(params, file);
+}
+
+function readForm(req) {
+  const type = String(req.headers["content-type"] || "");
+  if (type.toLowerCase().includes("multipart/form-data")) {
+    return readBody(req, FILE_LIMIT).then((body) => parseMultipart(body, type));
+  }
+  return readBody(req, TEXT_LIMIT).then((body) => formFromParams(new URLSearchParams(body.toString("utf8"))));
+}
+
+function imageKind(buffer) {
+  if (!Buffer.isBuffer(buffer) || buffer.length < 12) return null;
+  if (buffer[0] === 0xff && buffer[1] === 0xd8 && buffer[2] === 0xff) return "jpg";
+  if (buffer[0] === 0x89 && buffer[1] === 0x50 && buffer[2] === 0x4e && buffer[3] === 0x47) return "png";
+  if (buffer.toString("ascii", 0, 4) === "RIFF" && buffer.toString("ascii", 8, 12) === "WEBP") return "webp";
+  return null;
+}
+
+function takePhoto(form) {
+  const file = form.file;
+  if (!file) return { file: null, error: "" };
+  if (file.buffer.length > PHOTO_MAX) return { file: null, error: "La photo dépasse 5 Mo." };
+  const ext = imageKind(file.buffer);
+  if (!ext) return { file: null, error: "Choisissez une image JPEG, PNG ou WebP." };
+  return { file: { buffer: file.buffer, ext }, error: "" };
+}
+
+function servePhoto(pathname, res) {
+  let name = pathname.slice("/photos/".length);
+  try {
+    name = decodeURIComponent(name);
+  } catch {
+    return false;
+  }
+  if (name.includes("/") || name.includes("\\")) return false;
+  const full = db.readProductPhoto(name);
+  if (!full) return false;
+  const types = { ".jpg": "image/jpeg", ".png": "image/png", ".webp": "image/webp" };
+  res.writeHead(200, {
+    "Content-Type": types[path.extname(full).toLowerCase()] || "application/octet-stream",
+    "Cache-Control": "private, max-age=86400",
+  });
+  res.end(fs.readFileSync(full));
+  return true;
 }
 
 function idFrom(value) {
@@ -98,6 +194,11 @@ const server = http.createServer(async (req, res) => {
   const pathname = url.pathname.replace(/\/+$/, "") || "/";
   try {
     if (req.method === "GET" && serveStatic(pathname, res)) return;
+    if (req.method === "GET" && pathname.startsWith("/photos/")) {
+      if (servePhoto(pathname, res)) return;
+      send(res, views.notFoundPage(url.searchParams), 404);
+      return;
+    }
     if (req.method !== "GET" && req.method !== "POST") {
       res.writeHead(405, { Allow: "GET, POST" });
       res.end("Méthode non prise en charge.");
@@ -127,6 +228,7 @@ const server = http.createServer(async (req, res) => {
 
     if (req.method === "POST" && pathname === "/catalogue") {
       const form = await readForm(req);
+      const photo = takePhoto(form);
       const result = db.createProduct({
         name: form.get("name"),
         category: form.get("category"),
@@ -136,6 +238,8 @@ const server = http.createServer(async (req, res) => {
         sale: form.get("sale"),
         color: form.get("color"),
         rows: sizeRows(form),
+        photo: photo.file,
+        photoError: photo.error,
       });
       if (!result.ok) {
         send(res, views.newProductPage({ values: result.values, errors: result.errors, query: url.searchParams }), 422);
@@ -159,6 +263,7 @@ const server = http.createServer(async (req, res) => {
     if (productMatch && req.method === "POST") {
       const id = idFrom(productMatch[1]);
       const form = await readForm(req);
+      const photo = takePhoto(form);
       const result = db.updateProduct(id, {
         name: form.get("name"),
         category: form.get("category"),
@@ -166,6 +271,8 @@ const server = http.createServer(async (req, res) => {
         sku: form.get("sku"),
         purchase: form.get("purchase"),
         sale: form.get("sale"),
+        photo: photo.file,
+        photoError: photo.error,
       });
       if (result.notFound) {
         send(res, views.notFoundPage(url.searchParams), 404);

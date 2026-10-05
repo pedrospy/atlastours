@@ -146,6 +146,26 @@ function pageHead({ eyebrow, title, lede, actions = "" }) {
   </div>`;
 }
 
+function photoUrl(photoPath) {
+  if (!photoPath) return "";
+  return `/photos/${encodeURIComponent(photoPath)}`;
+}
+
+function photoField({ error, current }) {
+  const currentImg = current
+    ? `<img class="photo-current" data-photo-current src="${esc(current.src)}" alt="${esc(current.alt)}">`
+    : "";
+  return `<label class="field field-photo">
+    <span>Photo</span>
+    ${currentImg}
+    <input type="file" name="photo" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" data-photo-input>
+    <img class="photo-preview" data-photo-preview alt="Aperçu de la photo" hidden>
+    <p class="field-error" data-photo-note hidden></p>
+    <small>${current ? "JPEG, PNG ou WebP. Une nouvelle image remplace la photo actuelle." : "JPEG, PNG ou WebP. Facultatif."}</small>
+    ${error ? `<em class="field-error">${esc(error)}</em>` : ""}
+  </label>`;
+}
+
 function field({ label, name, value = "", error, type = "text", required = false, hint, attrs = "", list }) {
   const listAttr = list ? ` list="${esc(list)}"` : "";
   return `<label class="field">
@@ -314,10 +334,19 @@ export function cataloguePage(products, query) {
             const state = product.alerts > 0 ? (product.stock === 0 ? tag(0, 1) : `<span class="tag tag-low">${product.alerts} alerte${product.alerts > 1 ? "s" : ""}</span>`) : tag(1, 0);
             return `<tr>
               <td>
-                <a href="/catalogue/${product.id}"><strong>${esc(product.name)}</strong></a>
-                <small class="sub">${esc(product.brand)} · ${esc(product.sku)}</small>
-                <span class="swatches">${product.colors.map((color) => `${dot(color)}<span>${esc(color)}</span>`).join("")}</span>
-                <small class="sub">${esc(product.sizes.join(" · "))}</small>
+                <a class="catalogue-item" href="/catalogue/${product.id}">
+                  ${
+                    product.photo_path
+                      ? `<img class="thumb" src="${esc(photoUrl(product.photo_path))}" alt="">`
+                      : `<span class="thumb thumb-empty" aria-hidden="true"></span>`
+                  }
+                  <span class="catalogue-copy">
+                    <strong>${esc(product.name)}</strong>
+                    <small class="sub">${esc(product.brand)} · ${esc(product.sku)}</small>
+                    <span class="swatches">${product.colors.map((color) => `${dot(color)}<span>${esc(color)}</span>`).join("")}</span>
+                    <small class="sub">${esc(product.sizes.join(" · "))}</small>
+                  </span>
+                </a>
               </td>
               <td>${esc(categoryLabel(product.category))}</td>
               <td class="num stock-num">${formatInt(product.stock)}</td>
@@ -375,8 +404,9 @@ export function newProductPage({ values = {}, errors = {}, query }) {
       lede: "Une fiche par modèle. Les tailles de la première couleur deviennent des variantes, avec leur propre stock.",
     })}
     ${errorSummary(errors)}
-    <form class="form-card" method="post" action="/catalogue">
+    <form class="form-card" method="post" action="/catalogue" enctype="multipart/form-data">
       <div class="form-grid">
+        ${photoField({ error: errors.photo })}
         ${field({ label: "Nom", name: "name", value: values.name, error: errors.name, required: true, attrs: 'maxlength="80" autocomplete="off"' })}
         ${selectField({ label: "Catégorie", name: "category", value: values.category, options: CATEGORIES, required: true, error: errors.category })}
         ${field({ label: "Marque", name: "brand", value: values.brand, error: errors.brand, required: true, list: "marques", attrs: 'maxlength="60"' })}
@@ -498,9 +528,13 @@ export function productPage({ record, errors = {}, values = {}, query, mode = "e
       <div class="stack">
         <article class="panel">
           <div class="panel-head"><h2>Fiche</h2></div>
-          ${mode === "edit" ? errorSummary(errors.name || errors.category || errors.brand || errors.sku || errors.purchase || errors.sale ? errors : {}) : ""}
-          <form method="post" action="/catalogue/${product.id}">
+          ${mode === "edit" ? errorSummary(["name", "category", "brand", "sku", "purchase", "sale", "photo"].some((key) => errors[key]) ? errors : {}) : ""}
+          <form method="post" action="/catalogue/${product.id}" enctype="multipart/form-data">
             <div class="form-grid one">
+              ${photoField({
+                error: errors.photo,
+                current: product.photo_path ? { src: photoUrl(product.photo_path), alt: `Photo de ${product.name}` } : null,
+              })}
               ${field({ label: "Nom", name: "name", value: editValues.name, error: errors.name, required: true, attrs: 'maxlength="80"' })}
               ${selectField({ label: "Catégorie", name: "category", value: editValues.category, options: CATEGORIES, required: true, error: errors.category })}
               ${field({ label: "Marque", name: "brand", value: editValues.brand, error: errors.brand, required: true, list: "marques", attrs: 'maxlength="60"' })}

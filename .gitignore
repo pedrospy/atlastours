@@ -39,3 +39,4 @@ next-env.d.ts
 /boutique/data/*.sqlite
 /boutique/data/*.sqlite-wal
 /boutique/data/*.sqlite-shm
+/boutique/data/photos/
