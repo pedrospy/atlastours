@@ -9,6 +9,9 @@ import {
   getExcursionDetail,
 } from "@/lib/excursions";
 import type { ExcursionId } from "@/lib/excursions/types";
+import { getAddonsForExperience } from "@/lib/booking/addons";
+import { isOnlinePaymentEnabled } from "@/lib/payments/config";
+import { ExperienceJsonLd } from "@/components/seo/ExperienceJsonLd";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -50,11 +53,30 @@ export default async function ExcursionPage({ params }: Props) {
   const detail = getExcursionDetail(locale as Locale, excursion.id as ExcursionId);
 
   return (
-    <ExcursionDetailPage
-      excursion={excursion}
-      detail={detail}
-      cardTitle={card.title}
-      badge={card.badge}
-    />
+    <>
+      <ExperienceJsonLd
+        kind="excursion"
+        slug={excursion.slug}
+        locale={locale as Locale}
+        title={card.title}
+        description={detail.metaDescription}
+        image={excursion.image}
+        price={excursion.price}
+        rating={excursion.rating}
+        reviews={excursion.reviews}
+      />
+      <ExcursionDetailPage
+        excursion={excursion}
+        detail={detail}
+        cardTitle={card.title}
+        badge={card.badge}
+        booking={{
+          kind: "excursion",
+          slug: excursion.slug,
+          addons: getAddonsForExperience(excursion),
+          paymentsEnabled: isOnlinePaymentEnabled(),
+        }}
+      />
+    </>
   );
 }

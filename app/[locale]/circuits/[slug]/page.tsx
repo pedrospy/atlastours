@@ -9,6 +9,9 @@ import {
   getCircuitDetail,
 } from "@/lib/circuits";
 import type { CircuitId } from "@/lib/circuits/types";
+import { getAddonsForExperience } from "@/lib/booking/addons";
+import { isOnlinePaymentEnabled } from "@/lib/payments/config";
+import { ExperienceJsonLd } from "@/components/seo/ExperienceJsonLd";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -50,11 +53,30 @@ export default async function CircuitPage({ params }: Props) {
   const detail = getCircuitDetail(locale as Locale, circuit.id as CircuitId);
 
   return (
-    <CircuitDetailPage
-      circuit={circuit}
-      detail={detail}
-      cardTitle={card.title}
-      badge={card.badge}
-    />
+    <>
+      <ExperienceJsonLd
+        kind="circuit"
+        slug={circuit.slug}
+        locale={locale as Locale}
+        title={card.title}
+        description={detail.metaDescription}
+        image={circuit.image}
+        price={circuit.price}
+        rating={circuit.rating}
+        reviews={circuit.reviews}
+      />
+      <CircuitDetailPage
+        circuit={circuit}
+        detail={detail}
+        cardTitle={card.title}
+        badge={card.badge}
+        booking={{
+          kind: "circuit",
+          slug: circuit.slug,
+          addons: getAddonsForExperience(circuit),
+          paymentsEnabled: isOnlinePaymentEnabled(),
+        }}
+      />
+    </>
   );
 }

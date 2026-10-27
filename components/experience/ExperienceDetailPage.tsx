@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { BookingForm, type BookingFormConfig } from "@/components/booking/BookingForm";
 import { getWhatsAppUrl, siteConfig } from "@/lib/catalog";
 import type { ExperienceDetailContent } from "@/lib/experiences/types";
 import { getTwoTravelerTotal } from "@/lib/experiences/pricing";
@@ -43,6 +44,7 @@ type Props = {
   };
   listAnchor: "#excursions" | "/excursions" | "#circuits" | "/circuits" | "#destinations";
   listLabel: string;
+  booking?: BookingFormConfig;
 };
 
 export function ExperienceDetailPage({
@@ -54,6 +56,7 @@ export function ExperienceDetailPage({
   textClasses,
   listAnchor,
   listLabel,
+  booking,
 }: Props) {
   const dict = useDictionary();
   const { locale } = useLocale();
@@ -254,7 +257,7 @@ export function ExperienceDetailPage({
             </motion.div>
           </div>
 
-          <aside className="lg:sticky lg:top-20 lg:self-start">
+          <aside className={booking ? "lg:self-start" : "lg:sticky lg:top-20 lg:self-start"}>
             <div className="border border-gold/30 bg-white p-6 shadow-card">
               <p className="text-xs uppercase tracking-wider text-midnight/50">{t.from}</p>
               <p className={`font-display text-4xl font-bold ${textClasses?.price ?? "text-midnight"}`}>
@@ -310,15 +313,25 @@ export function ExperienceDetailPage({
                 </ul>
               )}
 
-              <div className="mt-6 space-y-3">
-                <a href={getWhatsAppUrl(whatsappMessage)} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">
-                  <MessageCircle className="h-5 w-5" />
-                  {t.book}
-                </a>
-                <Link href={`/${locale}#contact`} className="btn-outline w-full">
-                  {t.requestQuote}
-                </Link>
-              </div>
+              {booking ? (
+                <BookingForm
+                  {...booking}
+                  basePrice={item.price}
+                  flatPrice={Boolean(item.flatPrice)}
+                  tiers={detail.groupPricing}
+                  whatsappUrl={getWhatsAppUrl(whatsappMessage)}
+                />
+              ) : (
+                <div className="mt-6 space-y-3">
+                  <a href={getWhatsAppUrl(whatsappMessage)} target="_blank" rel="noopener noreferrer" className="btn-primary w-full">
+                    <MessageCircle className="h-5 w-5" />
+                    {t.book}
+                  </a>
+                  <Link href={`/${locale}#contact`} className="btn-outline w-full">
+                    {t.requestQuote}
+                  </Link>
+                </div>
+              )}
 
               <div className="mt-4 space-y-2 text-xs text-midnight/55">
                 <p className="flex items-center gap-2">
