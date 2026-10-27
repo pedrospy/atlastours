@@ -1,0 +1,94 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum SiteStatus {
+  DRAFT
+  PUBLISHED
+}
+
+enum OrderStatus {
+  NOUVEAU
+  PAYE
+  PUBLIE
+  ANNULE
+}
+
+enum ProspectStatus {
+  CONTACTE
+  INTERESSE
+  GAGNE
+  PERDU
+}
+
+model Site {
+  id           String     @id @default(cuid())
+  slug         String     @unique
+  status       SiteStatus @default(DRAFT)
+  businessName String
+  category     String
+  city         String
+  address      String     @default("")
+  phone        String     @default("")
+  whatsapp     String     @default("")
+  email        String     @default("")
+  instagram    String     @default("")
+  facebook     String     @default("")
+  tagline      String     @default("")
+  description  String     @default("")
+  hours        String     @default("")
+  services     Json       @default("[]")
+  reviews      Json       @default("[]")
+  photos       String[]   @default([])
+  color        String     @default("#0f766e")
+  currency     String     @default("MAD")
+  publishedAt  DateTime?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  order        Order?
+  prospect     Prospect?
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  number          Int         @unique @default(autoincrement())
+  status          OrderStatus @default(NOUVEAU)
+  plan            String
+  amount          Int
+  monthly         Int
+  currency        String      @default("EUR")
+  customerName    String
+  customerEmail   String      @default("")
+  customerPhone   String
+  note            String      @default("")
+  paymentMethod   String      @default("")
+  stripeSessionId String?     @unique
+  paidAt          DateTime?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  siteId          String      @unique
+  site            Site        @relation(fields: [siteId], references: [id], onDelete: Cascade)
+
+  @@index([status])
+}
+
+model Prospect {
+  id           String         @id @default(cuid())
+  businessName String
+  category     String
+  city         String
+  phone        String         @default("")
+  notes        String         @default("")
+  status       ProspectStatus @default(CONTACTE)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  siteId       String         @unique
+  site         Site           @relation(fields: [siteId], references: [id], onDelete: Cascade)
+
+  @@index([status])
+}
