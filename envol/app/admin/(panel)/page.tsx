@@ -88,7 +88,7 @@ export default async function AdminDashboard({ searchParams }: { searchParams: P
         {[
           ["Ventes du mois", String(s.sales), `Panier moyen ${formatMoney(s.averageBasket)}`],
           ["Prospects du mois", String(s.leads), `Mois précédent : ${s.previousLeads}`],
-          ["Conversion prospects → ventes", `${(s.conversion * 100).toFixed(1)} %`, "Repère : 2 à 5 %"],
+          ["Prospects du mois devenus clients", `${(s.conversion * 100).toFixed(1)} %`, "Repère : 2 à 5 %"],
           ["Paiements en attente", formatMoney(s.pendingAmount), `${s.pendingCount} commande(s) à relancer`],
         ].map(([label, value, hint]) => (
           <div key={label} className="card p-5">
