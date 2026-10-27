@@ -132,6 +132,12 @@ export async function createProspect(_: FormState, formData: FormData): Promise<
   redirect(`/admin/prospects/${prospect.id}`);
 }
 
+export async function markFollowedUp(formData: FormData) {
+  await requireAdmin();
+  await db.prospect.update({ where: { id: String(formData.get("prospectId") ?? "") }, data: { updatedAt: new Date() } }).catch(() => null);
+  refresh();
+}
+
 export async function updateProspect(formData: FormData) {
   await requireAdmin();
   const id = String(formData.get("prospectId") ?? "");

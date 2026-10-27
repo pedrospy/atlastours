@@ -86,10 +86,12 @@ const sites = [
   },
 ];
 
+const keepExisting = process.argv.includes("--if-missing");
+
 for (const site of sites) {
   await db.site.upsert({
     where: { slug: site.slug },
-    update: { ...site, status: "PUBLISHED" },
+    update: keepExisting ? {} : { ...site, status: "PUBLISHED" },
     create: { ...site, status: "PUBLISHED", publishedAt: new Date(), currency: "MAD" },
   });
   console.log(`✔ /s/${site.slug}`);

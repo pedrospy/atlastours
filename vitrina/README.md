@@ -6,6 +6,29 @@ Le levier : les sites sont **générés automatiquement** à partir de données 
 
 > Projet indépendant, sans lien avec le site AtlasTours présent dans ce dépôt (dossier séparé, `package.json`, base de données et déploiement propres).
 
+## Mettre en ligne en 15 minutes, sans ligne de commande
+
+1. **Vercel** → **Add New** → **Project** → choisissez ce dépôt. À **Root Directory**, cliquez **Edit** et choisissez **`vitrina`**. Ne cliquez pas encore sur Deploy.
+2. Dans **Environment Variables**, ajoutez au minimum :
+   - `ADMIN_PASSWORD` : le mot de passe de votre admin (c'est vous qui le choisissez) ;
+   - `OWNER_NAME` : votre prénom ; `OWNER_WHATSAPP` : votre numéro au format `212612345678` ;
+   - `BANK_NAME`, `BANK_HOLDER`, `BANK_RIB` : pour le paiement par virement.
+3. Cliquez **Deploy**. Le premier déploiement peut échouer faute de base de données : c'est normal.
+4. Dans le projet, onglet **Storage** → **Create Database** → **Neon** (gratuit) → **Connect**. Vercel ajoute `DATABASE_URL` tout seul.
+5. **Deployments** → « … » sur le dernier déploiement → **Redeploy**. Les tables et les 3 sites d'exemple sont créés automatiquement à chaque déploiement.
+6. Ouvrez `https://votre-projet.vercel.app/admin` et tapez votre `ADMIN_PASSWORD`.
+
+Si un réglage manque, la page de connexion et le tableau de bord vous disent lequel. Après toute modification d'une variable, refaites **Redeploy**.
+
+## Votre journée type (dès demain)
+
+Le tableau de bord vous donne chaque matin votre **mission du jour** :
+- **Objectif du mois** (3 000 € par défaut, variable `MONTHLY_GOAL`) et le nombre de sites qu'il manque pour l'atteindre ;
+- **20 démos par jour** : chaque démo se crée en 1 minute dans *Prospection* et s'envoie sur WhatsApp en un clic ;
+- **À relancer aujourd'hui** : les commerçants sans nouvelles depuis 2 jours, avec un message de relance WhatsApp déjà rédigé. Cliquez « Fait » après l'envoi.
+
+Matin : 20 démos envoyées depuis Google Maps. Après-midi : 15 visites dans une même rue avec la démo sur votre téléphone. Fin de journée : les relances. Le plan détaillé de la première semaine est plus bas.
+
 ## Fonctionnalités
 
 | Page | Rôle |
@@ -50,9 +73,10 @@ Contrôles : `npm run typecheck` et `npm run build`.
 | Variable | Obligatoire | Description |
 | --- | --- | --- |
 | `DATABASE_URL` | oui | URL PostgreSQL (Neon, Supabase, local) |
-| `NEXT_PUBLIC_APP_URL` | oui | URL publique, sans `/` final (sert aux liens de démo, QR codes, sitemap) |
+| `NEXT_PUBLIC_APP_URL` | non sur Vercel | URL publique, sans `/` final (liens de démo, QR codes, sitemap). Sur Vercel, l'adresse du projet est utilisée par défaut : renseignez-la quand vous branchez votre propre domaine |
 | `ADMIN_PASSWORD` | oui | Mot de passe de `/admin` |
-| `AUTH_SECRET` | oui | ≥ 32 caractères aléatoires (`openssl rand -base64 32`) |
+| `AUTH_SECRET` | non | ≥ 32 caractères aléatoires ; sans lui, la session est signée à partir d'`ADMIN_PASSWORD` |
+| `MONTHLY_GOAL` | non | Objectif mensuel en euros affiché dans le tableau de bord (défaut 3000) |
 | `OWNER_NAME`, `OWNER_WHATSAPP`, `OWNER_EMAIL` | conseillé | Votre prénom (signé dans les messages), votre WhatsApp au format `2126XXXXXXXX` |
 | `BANK_NAME`, `BANK_HOLDER`, `BANK_RIB` | conseillé | Coordonnées affichées pour le paiement par virement |
 | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | non | Active le paiement par carte |
@@ -63,10 +87,10 @@ Sans Stripe, la page de commande affiche les instructions de virement / espèces
 
 ## Déploiement (Vercel + Neon)
 
-1. **Base de données** : créez un projet sur [neon.tech](https://neon.tech) (gratuit), copiez l'URL de connexion.
-2. Depuis votre machine : `DATABASE_URL="…neon…" npx prisma db push` puis, si vous voulez les exemples, `DATABASE_URL="…" npm run db:seed`.
-3. **Vercel** : importez le dépôt, **Root Directory = `vitrina`**, framework Next.js. Ajoutez les variables d'environnement ci-dessus (`NEXT_PUBLIC_APP_URL` = votre domaine).
-4. **Domaine** : achetez un domaine (ex. `vitrina.ma` ou `monsiteexpress.com`) et branchez-le dans Vercel.
+1. Suivez « Mettre en ligne en 15 minutes » en haut de ce fichier. Sur Vercel, le script `vercel-build` crée les tables (`prisma db push`) et ajoute les 3 sites d'exemple s'ils n'existent pas, sans jamais écraser vos modifications.
+2. Hors Vercel, ou avec une base Neon créée à la main : `DATABASE_URL="…" npx prisma db push` puis `DATABASE_URL="…" npm run db:seed`.
+3. `db push` refuse les changements de schéma qui perdraient des données : le déploiement échoue au lieu de supprimer quoi que ce soit.
+4. **Domaine** : achetez un domaine (ex. `vitrina.ma` ou `monsiteexpress.com`), branchez-le dans Vercel et renseignez `NEXT_PUBLIC_APP_URL`.
 5. **Stripe (optionnel)** : créez 3 produits à prix unique (290 €, 590 €, 990 €), éventuellement 3 prix mensuels (19, 29, 49 €), renseignez les ID. Ajoutez un webhook vers `https://votre-domaine/api/stripe/webhook` avec les événements `checkout.session.completed` et `checkout.session.async_payment_succeeded`.
 
 > Stripe n'ouvre pas de compte marchand à une entreprise marocaine. Si vous n'avez pas de structure dans un pays pris en charge, restez sur virement / espèces / Wafacash — c'est de toute façon ce que préfèrent la plupart des commerçants au Maroc.
