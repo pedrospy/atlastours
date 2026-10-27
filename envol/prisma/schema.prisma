@@ -1,0 +1,90 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum OrderStatus {
+  EN_ATTENTE
+  PAYEE
+  REMBOURSEE
+  ANNULEE
+}
+
+model Student {
+  id           String           @id @default(cuid())
+  email        String           @unique
+  name         String
+  phone        String           @default("")
+  passwordHash String
+  lastSeenAt   DateTime?
+  createdAt    DateTime         @default(now())
+  orders       Order[]
+  progress     LessonProgress[]
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  number          Int         @unique @default(autoincrement())
+  offer           String
+  amount          Int
+  status          OrderStatus @default(EN_ATTENTE)
+  paymentMethod   String      @default("")
+  note            String      @default("")
+  stripeSessionId String?     @unique
+  paidAt          DateTime?
+  refundedAt      DateTime?
+  createdAt       DateTime    @default(now())
+  studentId       String
+  student         Student     @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@index([status, paidAt])
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String   @default("")
+  source    String   @default("")
+  createdAt DateTime @default(now())
+}
+
+model Module {
+  id       String   @id @default(cuid())
+  position Int
+  title    String
+  summary  String   @default("")
+  tier     String   @default("essentiel")
+  lessons  Lesson[]
+}
+
+model Lesson {
+  id          String           @id @default(cuid())
+  position    Int
+  slug        String           @unique
+  title       String
+  duration    Int              @default(10)
+  videoUrl    String           @default("")
+  content     String           @default("")
+  resources   Json             @default("[]")
+  freePreview Boolean          @default(false)
+  published   Boolean          @default(true)
+  moduleId    String
+  module      Module           @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  progress    LessonProgress[]
+
+  @@index([moduleId, position])
+}
+
+model LessonProgress {
+  studentId   String
+  lessonId    String
+  completedAt DateTime @default(now())
+  student     Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  lesson      Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@id([studentId, lessonId])
+}
