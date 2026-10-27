@@ -29,7 +29,7 @@ Un élève peut passer à l'offre supérieure plus tard en ne payant que la diff
 | --- | --- | --- | --- | --- |
 | Lancement (mois 1–2) | 4 | 2 | 0 | **1 782 €** |
 | Objectif bas (mois 3–4) | 5 | 3 | 0 ou 1 | **2 476 € à 3 966 €** |
-| Objectif haut (mois 5–6) | 6 | 5 | 1 | **5 147 €** |
+| Objectif haut (mois 5–6) | 6 | 5 | 1 | **5 157 €** |
 
 Soit **10 à 12 ventes par mois** pour l'objectif haut, avec un panier moyen d'environ 430 €.
 
