@@ -56,7 +56,14 @@ export default async function AdminPage({ searchParams }: Props) {
   return (
     <main className="min-h-screen bg-sand-50 px-4 py-10 text-midnight sm:px-8">
       <div className="mx-auto max-w-7xl">
-        <h1 className="font-display text-3xl font-bold">Réservations</h1>
+        <div className="flex items-center justify-between gap-4">
+          <h1 className="font-display text-3xl font-bold">Réservations</h1>
+          <form action="/api/admin/logout" method="post">
+            <button type="submit" className="text-sm text-midnight/60 underline hover:text-burgundy">
+              Se déconnecter
+            </button>
+          </form>
+        </div>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
