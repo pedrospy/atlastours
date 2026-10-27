@@ -3,16 +3,36 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Gift, ArrowRight } from "lucide-react";
-import { useDictionary } from "@/lib/i18n/locale-context";
+import { fill } from "@/lib/i18n/format";
+import { useDictionary, useLocale } from "@/lib/i18n/locale-context";
 
 export function NewsletterSection() {
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [promo, setPromo] = useState<{ promoCode: string; percent: number } | null>(null);
+  const [error, setError] = useState(false);
+  const { locale } = useLocale();
   const t = useDictionary().newsletter;
+  const submitted = promo != null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) setSubmitted(true);
+    if (!email) return;
+    setSubmitting(true);
+    setError(false);
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, locale }),
+      });
+      if (!response.ok) throw new Error("subscribe_failed");
+      setPromo(await response.json());
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -36,9 +56,12 @@ export function NewsletterSection() {
           <p className="text-sand-200/75">{t.description}</p>
 
           {submitted ? (
-            <p className="mt-8 border border-gold/30 bg-gold/10 px-6 py-4 text-lg">
-              {t.success}
-            </p>
+            <div className="mt-8 border border-gold/30 bg-gold/10 px-6 py-4 text-lg">
+              <p>{t.success}</p>
+              <p className="mt-2 font-semibold text-gold-light">
+                {fill(t.promoMessage, { code: promo.promoCode, percent: promo.percent })}
+              </p>
+            </div>
           ) : (
             <form
               onSubmit={handleSubmit}
@@ -55,13 +78,14 @@ export function NewsletterSection() {
                   className="w-full border border-gold/30 bg-burgundy/50 py-4 pl-12 pr-4 text-white placeholder:text-white/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
                 />
               </div>
-              <button type="submit" className="btn-primary group">
+              <button type="submit" disabled={submitting} className="btn-primary group disabled:opacity-60">
                 {t.submit}
                 <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
               </button>
             </form>
           )}
 
+          {error && <p className="mt-4 text-sm text-terracotta-light" role="alert">{t.error}</p>}
           <p className="mt-4 text-sm text-sand-200/50">{t.disclaimer}</p>
         </motion.div>
       </div>
