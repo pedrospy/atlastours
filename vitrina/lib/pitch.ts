@@ -4,11 +4,11 @@ import { plans } from "./plans";
 
 export function pitchMessage({ businessName, category, city, link, ownerName }: { businessName: string; category: string; city: string; link: string; ownerName: string }) {
   const essentiel = plans[0];
-  const label = getCategory(category).label.split(" (")[0].toLowerCase();
+  const noun = getCategory(category).noun;
   return [
     `Salam ${businessName},`,
     "",
-    `Je m'appelle ${ownerName}. J'ai préparé gratuitement un exemple de site internet pour votre ${label} à ${city} :`,
+    `Je m'appelle ${ownerName}. J'ai préparé gratuitement un exemple de site internet pour votre ${noun} à ${city} :`,
     link,
     "",
     "Regardez sur votre téléphone : vos clients peuvent vous appeler, vous écrire sur WhatsApp et trouver votre adresse en 1 clic.",

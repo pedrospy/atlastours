@@ -5,6 +5,7 @@ export type ServiceItem = { name: string; price: number | null; description: str
 export type Category = {
   id: string;
   label: string;
+  noun: string;
   template: TemplateId;
   servicesTitle: string;
   ctaLabel: string;
@@ -25,6 +26,7 @@ export const categories: Category[] = [
   {
     id: "restaurant",
     label: "Restaurant",
+    noun: "restaurant",
     template: "saveur",
     servicesTitle: "Notre carte",
     ctaLabel: "Réserver une table",
@@ -44,6 +46,7 @@ export const categories: Category[] = [
   {
     id: "cafe",
     label: "Café / Pâtisserie",
+    noun: "café",
     template: "saveur",
     servicesTitle: "La carte",
     ctaLabel: "Commander sur WhatsApp",
@@ -63,6 +66,7 @@ export const categories: Category[] = [
   {
     id: "coiffeur",
     label: "Coiffeur / Barbier",
+    noun: "salon",
     template: "eclat",
     servicesTitle: "Prestations & tarifs",
     ctaLabel: "Prendre rendez-vous",
@@ -82,6 +86,7 @@ export const categories: Category[] = [
   {
     id: "beaute",
     label: "Salon de beauté / Spa",
+    noun: "salon",
     template: "eclat",
     servicesTitle: "Soins & tarifs",
     ctaLabel: "Prendre rendez-vous",
@@ -101,6 +106,7 @@ export const categories: Category[] = [
   {
     id: "sante",
     label: "Médecin / Dentiste / Kiné",
+    noun: "cabinet",
     template: "eclat",
     servicesTitle: "Consultations",
     ctaLabel: "Prendre rendez-vous",
@@ -118,6 +124,7 @@ export const categories: Category[] = [
   {
     id: "coach",
     label: "Coach / Salle de sport / Cours",
+    noun: "activité",
     template: "eclat",
     servicesTitle: "Formules",
     ctaLabel: "Réserver une séance",
@@ -136,6 +143,7 @@ export const categories: Category[] = [
   {
     id: "artisan",
     label: "Artisan (plombier, électricien, menuisier…)",
+    noun: "entreprise",
     template: "atelier",
     servicesTitle: "Nos services",
     ctaLabel: "Demander un devis",
@@ -154,6 +162,7 @@ export const categories: Category[] = [
   {
     id: "garage",
     label: "Garage / Mécanique / Lavage auto",
+    noun: "garage",
     template: "atelier",
     servicesTitle: "Prestations",
     ctaLabel: "Prendre rendez-vous",
@@ -173,6 +182,7 @@ export const categories: Category[] = [
   {
     id: "boutique",
     label: "Boutique / Commerce",
+    noun: "boutique",
     template: "atelier",
     servicesTitle: "Nos produits",
     ctaLabel: "Commander sur WhatsApp",
@@ -190,6 +200,7 @@ export const categories: Category[] = [
   {
     id: "autre",
     label: "Autre activité",
+    noun: "commerce",
     template: "atelier",
     servicesTitle: "Nos services",
     ctaLabel: "Nous contacter",

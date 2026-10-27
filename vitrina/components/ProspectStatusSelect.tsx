@@ -6,7 +6,7 @@ import { prospectStatusLabels } from "./StatusBadge";
 
 export function ProspectStatusSelect({ id, status, className = "field py-1.5 text-xs" }: { id: string; status: ProspectStatus; className?: string }) {
   return (
-    <form action={updateProspect}>
+    <form key={status} action={updateProspect}>
       <input type="hidden" name="prospectId" value={id} />
       <select
         name="status"

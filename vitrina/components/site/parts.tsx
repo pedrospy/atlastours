@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Clock, MapPin, MessageCircle, Phone, Star } from "lucide-react";
 import type { ServiceItem } from "@/lib/categories";
-import { formatMoney, telLink, waLink } from "@/lib/format";
+import { appUrl, formatMoney, telLink, waLink } from "@/lib/format";
+import { owner } from "@/lib/owner";
 
 export type SiteData = {
   slug: string;
@@ -67,12 +68,16 @@ export function initials(name: string) {
 
 export function DemoBanner({ site }: { site: SiteData }) {
   if (site.status === "PUBLISHED") return null;
+  const ownerWhatsapp = owner().whatsapp;
+  const href = ownerWhatsapp
+    ? waLink(ownerWhatsapp, `Bonjour, je souhaite mettre en ligne le site « ${site.businessName} » : ${appUrl()}/s/${site.slug}`)
+    : "/commander";
   return (
     <div className="sticky top-0 z-50 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 bg-ink/90 px-4 py-2 text-center text-xs text-white backdrop-blur">
       <span>Aperçu – site de démonstration Vitrina</span>
-      <Link href="/commander" className="font-semibold text-amber-300 underline-offset-2 hover:underline">
+      <a href={href} className="font-semibold text-amber-300 underline-offset-2 hover:underline">
         Obtenir ce site
-      </Link>
+      </a>
     </div>
   );
 }
@@ -80,13 +85,25 @@ export function DemoBanner({ site }: { site: SiteData }) {
 export function MapEmbed({ site, className = "" }: { site: SiteData; className?: string }) {
   const query = encodeURIComponent(`${site.businessName}, ${fullAddress(site)}`);
   return (
-    <iframe
-      title={`Carte – ${site.businessName}`}
-      src={`https://www.google.com/maps?q=${query}&output=embed`}
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      className={`h-72 w-full border-0 ${className}`}
-    />
+    <div className={`relative isolate h-72 w-full overflow-hidden bg-[#e8eef0] ${className}`}>
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.7)_2px,transparent_2px),linear-gradient(rgba(255,255,255,0.7)_2px,transparent_2px)] bg-[size:48px_48px]" />
+      <a
+        href={mapsLink(site)}
+        target="_blank"
+        rel="noopener"
+        className="absolute inset-0 -z-10 flex flex-col items-center justify-center gap-2 text-sm font-semibold text-slate-700"
+      >
+        <MapPin className="h-8 w-8 text-[var(--c)]" />
+        Ouvrir dans Google Maps
+      </a>
+      <iframe
+        title={`Carte – ${site.businessName}`}
+        src={`https://maps.google.com/maps?q=${query}&output=embed`}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="absolute inset-0 h-full w-full border-0"
+      />
+    </div>
   );
 }
 

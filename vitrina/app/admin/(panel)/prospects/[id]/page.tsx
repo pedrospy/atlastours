@@ -43,7 +43,7 @@ export default async function ProspectPage({ params }: { params: Promise<{ id: s
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[22rem_1fr]">
-        <section className="card text-center shadow-card">
+        <section className="card h-fit text-center shadow-card">
           <p className="eyebrow">Démo prête</p>
           <p className="mt-1 text-sm text-ink/60">Faites scanner ce QR code au commerçant</p>
           <div className="mx-auto mt-5 w-full max-w-[16rem] rounded-2xl border border-ink/10 p-3 [&_svg]:h-auto [&_svg]:w-full" data-testid="prospect-qr" dangerouslySetInnerHTML={{ __html: qr }} />

@@ -60,7 +60,7 @@ export function TemplateAtelier({ site, servicesTitle, ctaLabel }: TemplateProps
         </div>
       </header>
 
-      <section className="mx-auto -mt-8 grid max-w-6xl gap-3 px-5 sm:grid-cols-3">
+      <section className="relative z-10 mx-auto -mt-8 grid max-w-6xl gap-3 px-5 sm:grid-cols-3">
         {promises.map(({ icon: Icon, title, text }) => (
           <div key={title} className="flex items-start gap-4 rounded-md border-b-4 border-[var(--c)] bg-white p-5 shadow-lg">
             <Icon className="h-7 w-7 shrink-0 text-[var(--c)]" />
