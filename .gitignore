@@ -31,6 +31,16 @@ yarn-error.log*
 # env files
 .env
 .env*.local
+.env
+
+# python / reviews-api
+reviews-api/.venv/
+reviews-api/**/__pycache__/
+reviews-api/.pytest_cache/
+reviews-api/*.db
+reviews-api/**/*.db
+*.pyc
+.venv/
 
 # typescript
 *.tsbuildinfo
