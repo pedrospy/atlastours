@@ -9,7 +9,7 @@ export function Hero() {
         <div>
           <p className="eyebrow">Pour riads, maisons d&apos;hôtes et agences au Maroc</p>
           <h1 className="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Arrêtez d&apos;offrir <span className="text-brand">17 %</span> de chaque réservation à Booking.
+            Arrêtez d&apos;offrir <span className="whitespace-nowrap text-brand">17 %</span> de chaque réservation à Booking.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-ink/70">
             Nous créons votre site avec réservation et paiement en ligne. Vos clients réservent chez
