@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Download, MessageCircle } from "lucide-react";
 import { parseStoredAddons } from "@/lib/booking/addons";
 import { bookingStatuses, filtersToSearchParams, listBookings, parseBookingFilters } from "@/lib/booking/admin";
@@ -86,7 +87,7 @@ export default async function AdminPage({ searchParams }: Props) {
             <input type="date" name="to" defaultValue={filters.to} className={`${inputClass} mt-1 block`} />
           </label>
           <button type="submit" className="btn-primary !py-2">Filtrer</button>
-          <a href="/admin" className="btn-outline !py-2">Réinitialiser</a>
+          <Link href="/admin" className="btn-outline !py-2">Réinitialiser</Link>
           <a href={csvHref} className="btn-outline !py-2 ml-auto">
             <Download className="h-4 w-4" />
             Export CSV
