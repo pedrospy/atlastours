@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Plan {
+  FREE
+  PRO
+}
+
+enum DocType {
+  INVOICE
+  QUOTE
+}
+
+enum DocStatus {
+  DRAFT
+  SENT
+  PAID
+  CANCELLED
+}
+
+model User {
+  id               String     @id @default(cuid())
+  email            String     @unique
+  passwordHash     String
+  name             String
+  businessName     String     @default("")
+  address          String     @default("")
+  taxId            String     @default("")
+  phone            String     @default("")
+  iban             String     @default("")
+  currency         String     @default("MAD")
+  defaultVat       Float      @default(20)
+  plan             Plan       @default(FREE)
+  stripeCustomerId String?    @unique
+  createdAt        DateTime   @default(now())
+  clients          Client[]
+  documents        Document[]
+}
+
+model Client {
+  id        String     @id @default(cuid())
+  userId    String
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  email     String     @default("")
+  address   String     @default("")
+  taxId     String     @default("")
+  createdAt DateTime   @default(now())
+  documents Document[]
+
+  @@index([userId])
+}
+
+model Document {
+  id        String     @id @default(cuid())
+  userId    String
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  clientId  String
+  client    Client     @relation(fields: [clientId], references: [id], onDelete: Restrict)
+  type      DocType
+  number    String
+  status    DocStatus  @default(DRAFT)
+  issueDate DateTime
+  dueDate   DateTime?
+  currency  String
+  notes     String     @default("")
+  createdAt DateTime   @default(now())
+  items     LineItem[]
+
+  @@unique([userId, number])
+  @@index([userId, type])
+}
+
+model LineItem {
+  id          String   @id @default(cuid())
+  documentId  String
+  document    Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  position    Int
+  description String
+  quantity    Float
+  unitPrice   Int
+  vatRate     Float
+}
