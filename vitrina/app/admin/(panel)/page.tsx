@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { OrderStatus } from "@prisma/client";
 import { ArrowRight, Banknote, Inbox, Repeat, Target } from "lucide-react";
 import { markPaid, setSitePublished } from "@/app/actions/admin";
+import { DailyMission } from "@/components/DailyMission";
+import { SetupChecklist } from "@/components/SetupChecklist";
 import { StatusBadge, orderStatusLabels } from "@/components/StatusBadge";
 import { db } from "@/lib/db";
 import { formatDateTime, formatMoney } from "@/lib/format";
@@ -47,6 +49,10 @@ export default async function AdminDashboard({ searchParams }: { searchParams: P
           <Target className="h-4 w-4" /> Créer une démo prospect
         </Link>
       </div>
+
+      <SetupChecklist onlyMissing />
+
+      <DailyMission />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map(({ icon: Icon, label, value, sub }) => (

@@ -7,10 +7,13 @@ import { SignJWT, jwtVerify } from "jose";
 const COOKIE = "vitrina_admin";
 const MAX_AGE = 60 * 60 * 24 * 14;
 
+// Without AUTH_SECRET, the signing key is derived from ADMIN_PASSWORD, so changing the password logs every session out.
 function secret() {
-  const value = process.env.AUTH_SECRET;
-  if (!value || value.length < 32) throw new Error("AUTH_SECRET doit contenir au moins 32 caractères");
-  return new TextEncoder().encode(value);
+  const explicit = process.env.AUTH_SECRET;
+  if (explicit && explicit.length >= 32) return new TextEncoder().encode(explicit);
+  const password = process.env.ADMIN_PASSWORD;
+  if (!password) throw new Error("ADMIN_PASSWORD n'est pas configuré");
+  return createHash("sha256").update(`vitrina-session:${password}`).digest();
 }
 
 export function checkPassword(candidate: string) {
