@@ -194,6 +194,85 @@ export type Dictionary = {
     submit: string;
     success: string;
     disclaimer: string;
+    promoMessage: string;
+    error: string;
+  };
+  booking: {
+    title: string;
+    subtitle: string;
+    date: string;
+    travelers: string;
+    addonsTitle: string;
+    perPerson: string;
+    perGroup: string;
+    name: string;
+    email: string;
+    phone: string;
+    notes: string;
+    notesPlaceholder: string;
+    promo: string;
+    promoPlaceholder: string;
+    promoNote: string;
+    summaryBase: string;
+    summaryAddons: string;
+    total: string;
+    deposit: string;
+    balance: string;
+    submitPay: string;
+    submitRequest: string;
+    submitting: string;
+    requestNote: string;
+    secureNote: string;
+    orWhatsapp: string;
+    errorGeneric: string;
+    addons: Record<
+      | "airportTransfer"
+      | "camel"
+      | "quad"
+      | "sunset"
+      | "balloon"
+      | "chef"
+      | "spa"
+      | "privateGuide"
+      | "photographer",
+      string
+    >;
+    confirmation: {
+      metaTitle: string;
+      titlePaid: string;
+      titlePending: string;
+      titleCancelled: string;
+      introPaid: string;
+      introPending: string;
+      introCancelled: string;
+      reference: string;
+      experience: string;
+      date: string;
+      travelers: string;
+      options: string;
+      discount: string;
+      total: string;
+      depositPaid: string;
+      depositDue: string;
+      balanceDue: string;
+      payNow: string;
+      contactWhatsapp: string;
+      whatsappMessage: string;
+      upsellTitle: string;
+      upsellText: string;
+      backHome: string;
+    };
+    emails: {
+      subjectPaid: string;
+      subjectPending: string;
+      greeting: string;
+      bodyPaid: string;
+      bodyPending: string;
+      viewBooking: string;
+      signoff: string;
+      newsletterSubject: string;
+      newsletterBody: string;
+    };
   };
   footer: {
     ctaTitle: string;
