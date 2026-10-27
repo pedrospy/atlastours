@@ -6,6 +6,7 @@
     "dev": "next dev -p 3003",
     "dev:clean": "node -e \"require('node:fs').rmSync('.next',{recursive:true,force:true})\" && next dev -p 3003",
     "build": "next build",
+    "vercel-build": "([ -z \"$DATABASE_URL\" ] || prisma db push --skip-generate) && next build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
