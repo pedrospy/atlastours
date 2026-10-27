@@ -36,7 +36,9 @@ export function slugify(value: string) {
 }
 
 export function appUrl() {
-  return (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3050").replace(/\/$/, "");
+  const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+  const url = process.env.NEXT_PUBLIC_APP_URL || (vercelHost ? `https://${vercelHost}` : "http://localhost:3050");
+  return url.replace(/\/$/, "");
 }
 
 export function isEmail(value: string) {

@@ -125,9 +125,9 @@ Contrôles : `npm run typecheck` et `npm run build`.
 | Variable | Obligatoire | Description |
 | --- | --- | --- |
 | `DATABASE_URL` | oui | URL PostgreSQL (Neon, Supabase, local) |
-| `NEXT_PUBLIC_APP_URL` | oui | URL publique, sans `/` final |
+| `NEXT_PUBLIC_APP_URL` | non sur Vercel | URL publique, sans `/` final. Sur Vercel, l'adresse du projet est utilisée par défaut : renseignez-la quand vous branchez votre domaine |
 | `ADMIN_PASSWORD` | oui | Mot de passe de `/admin` |
-| `AUTH_SECRET` | oui | ≥ 32 caractères aléatoires (`openssl rand -base64 32`) |
+| `AUTH_SECRET` | non | ≥ 32 caractères aléatoires ; sans lui, les sessions sont signées à partir d'`ADMIN_PASSWORD` |
 | `OWNER_NAME`, `OWNER_WHATSAPP`, `OWNER_EMAIL` | conseillé | Votre nom (certificats, messages), WhatsApp au format international sans `+` |
 | `OWNER_BIO` | conseillé | Votre présentation sur la page de vente (section masquée si vide) |
 | `LEGAL_ENTITY` | conseillé | Forme juridique et numéro d'entreprise pour les mentions légales |
@@ -137,13 +137,19 @@ Contrôles : `npm run typecheck` et `npm run build`.
 | `COACHING_LINK`, `COMMUNITY_LINK`, `VIP_BOOKING_LINK` | non | Liens affichés aux élèves Pro et VIP (Zoom/Calendly, groupe WhatsApp/Discord) |
 | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` | non | Paiement par carte avec ouverture automatique de l'accès (aucun produit à créer dans Stripe) |
 
-## Déploiement (Vercel + Neon)
+## Mettre en ligne en 15 minutes, sans ligne de commande
 
-1. Créez une base sur [neon.tech](https://neon.tech) (gratuit) et copiez l'URL.
-2. Depuis votre machine : `DATABASE_URL="…" npx prisma db push` puis `DATABASE_URL="…" npm run db:seed`.
-3. Sur Vercel, importez le dépôt avec **Root Directory = `envol`**, et ajoutez les variables d'environnement.
-4. Branchez un domaine (par exemple `envol-academie.com`).
-5. Stripe (optionnel) : ajoutez un webhook vers `https://votre-domaine/api/stripe/webhook` avec les événements `checkout.session.completed` et `checkout.session.async_payment_succeeded`. Le retour de paiement confirme aussi la commande directement, même si le webhook est en retard.
+1. **Vercel** → **Add New** → **Project** → section **Import Git Repository** → dépôt `atlastours` → **Import**. N'utilisez pas le champ « Build » en haut de la page : il génère un autre site avec l'IA.
+2. **Root Directory** → **Edit** → choisissez **`envol`**.
+3. **Environment Variables** : au minimum `ADMIN_PASSWORD` (votre mot de passe admin, choisi par vous), `OWNER_NAME`, `OWNER_WHATSAPP`, et vos coordonnées de paiement (`BANK_RIB`, `BANK_NAME`, `BANK_HOLDER`, `PAYPAL_ME`).
+4. **Deploy**. Tant que la base de données n'est pas branchée, le site affiche « Le site est momentanément indisponible » : c'est normal.
+5. Onglet **Storage** → **Create Database** → **Neon** (gratuit) → **Connect**. Vercel ajoute `DATABASE_URL` tout seul.
+6. **Deployments** → « … » → **Redeploy**. Le script `vercel-build` crée les tables (`prisma db push`) et, si la base est vide, les 7 modules et 24 leçons de la formation. Il ne touche jamais à un contenu existant.
+7. Ouvrez `https://votre-projet.vercel.app/admin`. Si un réglage manque, la page de connexion vous dit lequel.
+
+Après toute modification d'une variable, refaites **Redeploy**. `db push` refuse les changements de schéma qui perdraient des données : le déploiement échoue au lieu de supprimer quoi que ce soit.
+
+**Stripe (optionnel)** : ajoutez un webhook vers `https://votre-domaine/api/stripe/webhook` avec les événements `checkout.session.completed` et `checkout.session.async_payment_succeeded`. Le retour de paiement confirme aussi la commande directement, même si le webhook est en retard.
 
 > **Paiement depuis le Maroc** : Stripe n'ouvre pas de compte à une entreprise marocaine. Sans structure dans un pays pris en charge, utilisez PayPal (pour les clients européens), le virement et, pour les clients marocains, Wafacash / Cash Plus. Vous marquez ensuite la commande « payée » dans l'admin. Les plateformes « marchand de référence » (Lemon Squeezy, Paddle, Gumroad) sont une autre option : vérifiez qu'elles prennent en charge les versements vers votre pays avant de vous lancer.
 
