@@ -5,7 +5,6 @@ import { bookingStatuses, filtersToSearchParams, listBookings, parseBookingFilte
 import { prisma } from "@/lib/db";
 import { formatDate, formatMoney } from "@/lib/i18n/format";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
-import { updateBookingStatus } from "./actions";
 
 export const dynamic = "force-dynamic";
 
@@ -49,7 +48,9 @@ export default async function AdminPage({ searchParams }: Props) {
     { label: "Demandes en attente", value: String(pendingCount) },
   ];
 
-  const csvHref = `/api/admin/bookings?${filtersToSearchParams(filters).toString()}`;
+  const filterQuery = filtersToSearchParams(filters).toString();
+  const csvHref = `/api/admin/bookings?${filterQuery}`;
+  const backPath = filterQuery ? `/admin?${filterQuery}` : "/admin";
   const inputClass = "border border-sand-200 bg-white px-3 py-2 text-sm";
 
   return (
@@ -156,8 +157,9 @@ export default async function AdminPage({ searchParams }: Props) {
                         {bookingStatuses
                           .filter((status) => status !== booking.status && !(booking.status === "paid" && status === "pending"))
                           .map((status) => (
-                            <form key={status} action={updateBookingStatus}>
+                            <form key={status} action="/api/admin/bookings/status" method="post">
                               <input type="hidden" name="id" value={booking.id} />
+                              <input type="hidden" name="back" value={backPath} />
                               <input type="hidden" name="status" value={status} />
                               <button type="submit" className="text-xs text-burgundy underline hover:text-burgundy-light">
                                 {status === "paid" ? "Marquer payé" : status === "cancelled" ? "Annuler" : "Remettre en attente"}
