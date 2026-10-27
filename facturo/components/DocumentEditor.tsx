@@ -1,11 +1,12 @@
 "use client";
 
-import { useActionState, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Plus, Trash2 } from "lucide-react";
 import { saveDocument } from "@/app/actions/documents";
 import { computeTotals, currencies, formatMoney, toCents } from "@/lib/money";
 import { FormMessage } from "./FormMessage";
 import { SubmitButton } from "./SubmitButton";
+import { useFormAction } from "./useFormAction";
 
 type Item = { description: string; quantity: string; unitPrice: string; vatRate: string };
 
@@ -27,7 +28,7 @@ export function DocumentEditor({
   initial: EditorInitial;
   clients: { id: string; name: string }[];
 }) {
-  const [state, action] = useActionState(saveDocument, undefined);
+  const { state, pending, onSubmit } = useFormAction(saveDocument);
   const [items, setItems] = useState<Item[]>(initial.items);
   const [currency, setCurrency] = useState(initial.currency);
   const defaultVat = initial.items[0]?.vatRate ?? "20";
@@ -51,7 +52,7 @@ export function DocumentEditor({
   const isQuote = initial.type === "QUOTE";
 
   return (
-    <form action={action} className="space-y-6">
+    <form onSubmit={onSubmit} className="space-y-6">
       {initial.id && <input type="hidden" name="id" value={initial.id} />}
       <input type="hidden" name="type" value={initial.type} />
       <input type="hidden" name="items" value={JSON.stringify(items)} />
@@ -153,7 +154,7 @@ export function DocumentEditor({
 
       <FormMessage state={state} />
       <div className="flex justify-end">
-        <SubmitButton>{initial.id ? "Enregistrer les modifications" : isQuote ? "Créer le devis" : "Créer la facture"}</SubmitButton>
+        <SubmitButton pending={pending}>{initial.id ? "Enregistrer les modifications" : isQuote ? "Créer le devis" : "Créer la facture"}</SubmitButton>
       </div>
     </form>
   );

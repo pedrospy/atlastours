@@ -1,10 +1,10 @@
 "use client";
 
-import { useActionState } from "react";
 import { saveSettings } from "@/app/actions/settings";
 import { currencies } from "@/lib/money";
 import { FormMessage } from "./FormMessage";
 import { SubmitButton } from "./SubmitButton";
+import { useFormAction } from "./useFormAction";
 
 type Values = {
   name: string;
@@ -18,10 +18,10 @@ type Values = {
 };
 
 export function SettingsForm({ values }: { values: Values }) {
-  const [state, action] = useActionState(saveSettings, undefined);
+  const { state, pending, onSubmit } = useFormAction(saveSettings);
 
   return (
-    <form action={action} className="card space-y-5">
+    <form onSubmit={onSubmit} className="card space-y-5">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label className="label" htmlFor="name">Votre nom</label>
@@ -67,7 +67,7 @@ export function SettingsForm({ values }: { values: Values }) {
       </div>
       <FormMessage state={state} />
       <div className="flex justify-end">
-        <SubmitButton>Enregistrer</SubmitButton>
+        <SubmitButton pending={pending}>Enregistrer</SubmitButton>
       </div>
     </form>
   );

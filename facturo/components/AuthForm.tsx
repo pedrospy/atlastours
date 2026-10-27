@@ -1,14 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useActionState } from "react";
 import { login, signup } from "@/app/actions/auth";
 import { FormMessage } from "./FormMessage";
 import { SubmitButton } from "./SubmitButton";
 import { Logo } from "./Logo";
+import { useFormAction } from "./useFormAction";
 
 export function AuthForm({ mode }: { mode: "login" | "signup" }) {
-  const [state, action] = useActionState(mode === "login" ? login : signup, undefined);
+  const { state, pending, onSubmit } = useFormAction(mode === "login" ? login : signup);
   const isSignup = mode === "signup";
 
   return (
@@ -22,7 +22,7 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
           <p className="mt-1 text-sm text-ink/60">
             {isSignup ? "Votre première facture dans 1 minute." : "Content de vous revoir."}
           </p>
-          <form action={action} className="mt-6 space-y-4">
+          <form onSubmit={onSubmit} className="mt-6 space-y-4">
             {isSignup && (
               <div>
                 <label className="label" htmlFor="name">Nom ou nom de l&apos;entreprise</label>
@@ -46,7 +46,7 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
               />
             </div>
             <FormMessage state={state} />
-            <SubmitButton className="btn-primary w-full" pendingLabel="Un instant…">
+            <SubmitButton pending={pending} className="btn-primary w-full" pendingLabel="Un instant…">
               {isSignup ? "Créer mon compte" : "Se connecter"}
             </SubmitButton>
           </form>

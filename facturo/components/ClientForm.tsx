@@ -1,12 +1,13 @@
 "use client";
 
-import { useActionState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { createClient } from "@/app/actions/clients";
 import { FormMessage } from "./FormMessage";
 import { SubmitButton } from "./SubmitButton";
+import { useFormAction } from "./useFormAction";
 
 export function ClientForm() {
-  const [state, action] = useActionState(createClient, undefined);
+  const { state, pending, onSubmit } = useFormAction(createClient);
   const ref = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -14,7 +15,7 @@ export function ClientForm() {
   }, [state]);
 
   return (
-    <form ref={ref} action={action} className="card space-y-4">
+    <form ref={ref} onSubmit={onSubmit} className="card space-y-4">
       <h2 className="font-semibold">Nouveau client</h2>
       <div>
         <label className="label" htmlFor="name">Nom / Raison sociale *</label>
@@ -33,7 +34,7 @@ export function ClientForm() {
         <input id="taxId" name="taxId" className="field" />
       </div>
       <FormMessage state={state} />
-      <SubmitButton className="btn-primary w-full">Ajouter le client</SubmitButton>
+      <SubmitButton pending={pending} className="btn-primary w-full">Ajouter le client</SubmitButton>
     </form>
   );
 }
